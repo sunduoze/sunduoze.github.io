@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <base href="http://sunduoze.github.io//">
+  <script>
+    document._writeOriginal = document.write;
+    document.write = function(str) {
+        if (str.indexOf('livereload.js') > -1) {
+            document._writeOriginal(str);
+        } else {
+            document._writeOriginal('<!-- Be Hijack!! -->');
+        }
+    }
+  </script>
+  <title>嵌入式人员应该知道的0x10个C语言Tips - Sun&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="嵌入式,">
+<meta name="description" content="嵌入式程序员应知道的0x10个C语言Tips C语言是衡量嵌入式系统程序员必须而且有效的方法。 这些年，我既参加也组织了许多测试，我意识到这些测">
+<meta name="author" content="sunduoze">
+<meta name="publisher" content="sunduoze">
+<meta name="generator" content="http://gohugo.io/"/>
+
+<meta itemprop="name" content="嵌入式人员应该知道的0x10个C语言Tips - Sun&#39;s Blog">
+<meta itemprop="description" content="嵌入式程序员应知道的0x10个C语言Tips C语言是衡量嵌入式系统程序员必须而且有效的方法。 这些年，我既参加也组织了许多测试，我意识到这些测">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+
+<meta property="og:title" content="嵌入式人员应该知道的0x10个C语言Tips - Sun&#39;s Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sunduoze.github.io/post/2016/%E5%B5%8C%E5%85%A5%E5%BC%8F%E4%BA%BA%E5%91%98%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%840x10%E4%B8%AAC%E8%AF%AD%E8%A8%80Tips/" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.jpg" />
+<meta property="og:description" content="嵌入式程序员应知道的0x10个C语言Tips C语言是衡量嵌入式系统程序员必须而且有效的方法。 这些年，我既参加也组织了许多测试，我意识到这些测">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sunduoze">
+<meta name="twitter:title" content="嵌入式人员应该知道的0x10个C语言Tips - Sun&#39;s Blog">
+<meta name="twitter:description" content="嵌入式程序员应知道的0x10个C语言Tips C语言是衡量嵌入式系统程序员必须而且有效的方法。 这些年，我既参加也组织了许多测试，我意识到这些测">
+<meta name="twitter:creator" content="@sunduoze">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+  <link rel="canonical" href="http://sunduoze.github.io/post/2016/%E5%B5%8C%E5%85%A5%E5%BC%8F%E4%BA%BA%E5%91%98%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%840x10%E4%B8%AAC%E8%AF%AD%E8%A8%80Tips/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/2016/%E5%B5%8C%E5%85%A5%E5%BC%8F%E4%BA%BA%E5%91%98%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%840x10%E4%B8%AAC%E8%AF%AD%E8%A8%80Tips/"/>
+  <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
+  
+<link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="human-style-css2" href="http://sunduoze.github.io/wp-content/themes/hueman-child/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="responsive-css" href="http://sunduoze.github.io/wp-content/themes/hueman/responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-css" href="http://sunduoze.github.io/wp-content/themes/hueman/fonts/font-awesome.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="http://sunduoze.github.io/public/highlight/styles/github.css">
+<script src="http://sunduoze.github.io/public/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" id="human-style-css3" href="http://sunduoze.github.io/wp-content/themes/hueman-child/user.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="public/font/hack/css/hack.min.css">
+
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/scripts.js"></script>
+<script type="text/javascript" src="assets/picturefill/picturefill.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" async defer src="assets/js/myblog.js"></script>
+
+</head>
+
+<body class="single single-post single-format-standard col-3cm full-width topbar-enabled chrome">
+<div id="wrapper">
+  <header id="header">
+
+  <nav class="nav-container group" id="nav-topbar">
+    <div class="nav-toggle"><i class="fa fa-bars"></i></div>
+    <div class="nav-text"></div>
+    <div class="nav-wrap container">
+      <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.jpg" alt="sunduoze" title="Home">
+      </a>
+      <ul id="menu-default-menu" class="nav container-inner group">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/">首页</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/post/">归档</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-text">
+        _Tags
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container-inner">
+        <div class="toggle-search"><i class="fa fa-search"></i></div>
+        <div class="search-expand">
+          <div class="search-expand-inner">
+            <form method="get" class="searchform themeform" action="https://www.google.com/search">
+              <div>
+                <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+  </nav>
+  
+
+  <div class="container group">
+    <div class="container-inner">
+
+      <div class="group pad">
+
+        <div class="group pad">
+          <h1 class="site-title">
+            <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
+              <img style="border-radius: 50%;width:72px;height:72px;margin:0 auto;" alt="coderzh" src="http://sunduoze.github.io/public/coderzh.jpg"></img>
+              Sun&#39;s Blog
+            </a>
+          </h1>
+          <p class="site-description"> Resonance,natural language communication </p>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+  
+
+</header>
+
+
+
+  <div class="container" id="page">
+    <div class="container-inner">
+      <div class="main">
+        <div class="main-inner group">
+          <section class="content">
+            <div class="page-title pad group">
+              <ul class="meta-single group">
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E7%AB%9E%E8%B5%9B/" rel="category tag">竞赛</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="pad group">
+
+              <article
+                  class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
+                <div class="post-inner group">
+
+                  <h1 class="post-title">嵌入式人员应该知道的0x10个C语言Tips</h1>
+
+                  <p class="post-byline">
+                    by  · 2016年08月09日 · 7068 Words ·
+                    ~15min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze_blog/master/content/post/2016/%e5%b5%8c%e5%85%a5%e5%bc%8f%e4%ba%ba%e5%91%98%e5%ba%94%e8%af%a5%e7%9f%a5%e9%81%93%e7%9a%840x10%e4%b8%aaC%e8%af%ad%e8%a8%80Tips.md"
+                       target="_blank">Improve on <i class="fa fa-github"></i></a>
+                  </p>
+
+                  <div class="clear"></div>
+
+                  <div class="entry">
+                    <div class="entry-inner">
+                      
+                      <h2 id="嵌入式程序员应知道的0x10个c语言tips"><strong>嵌入式程序员应知道的0x10个C语言Tips</strong></h2>
+<pre><code>C语言是衡量嵌入式系统程序员必须而且有效的方法。
+</code></pre><p>这些年，我既参加也组织了许多测试，我意识到这些测试
+能为interviewer(面试官)和interviewee(被面试者)提供许多有用信息。
+此外，撇开面试的压力不谈，这种测试也是 相当有趣的。 从interviewee的角度来讲，
+你能了解许多关于出题者或面试官的情况。比如，这些测试很可能只是interviewer
+为了彰显其对ANSI标准细节的熟知而不是探究某些技术技巧设计出来的。
+再如，要你答出某个字符的ASCII值、考察 你关于系统调用和内存分配
+策略方面的能力……这标志着出题者很可能花了大量时间在微机上而不上在嵌入式系统上。
+如果确实是这样的话，我得认真考虑我是否应该去做这份工作。 从interviewer的角度
+来讲，一个测试也许能从多方面揭示应试者的素质：最基本的，你能了解应试者C语言的水平。
+不管怎么样，看一下这人如何回答他不会的问题也是满有趣的。应试者是以好的直觉做出明智
+的回答，还是只是瞎蒙呢？当应试者在某个问题上卡住时是找借口呢，还是表现出对问题的真
+正的好奇心，把这看成学习的机会呢？我 发现这些信息与他们的测试成绩一样有用。 有了这
+些想法，我决定出一些真正针对嵌入式系统的考题，希望这些令人头痛的考题能给应试者一点
+帮住。这些 问题都是我这些年实际遇到的。其中有些问题很难，但它们应该都能给你一点启迪。
+这些问题有一定的区分的度：大多数初级水平的应试者的成绩会很差，而经验丰富的程序员应
+该有很好的成绩。</p>
+<h2 id="1-预处理器preprocessor">1. 预处理器（Preprocessor）</h2>
+<p>请您用预处理指令#define声明一个常数，用以表明1年中有多少秒(忽略闰年的情况)。
+#define SECONDS_PER_YEAR (60 * 60 * 24 * 365)UL
+我在这想看到几件事情：
+<!-- raw HTML omitted --> #define语法的基本知识(例如：不能以分号结束，括号的使用，等等)。
+<!-- raw HTML omitted --> 知道预处理器会为你计算表达式的值的，因此，直接写出你是如何计算一年中有多少秒
+而不需要计算出实际 的值，这样代码更清晰、更可读。
+<!-- raw HTML omitted --> 知道这个表达式将使一个16位机的整型数溢出，因此要用到长整型符号L,告诉编译器这个常数是个长整型数。
+<!-- raw HTML omitted --> 如果你的表达式中用到UL(表示无符号长整型)，说明你有了一个好的起点。记住，第一印象很重要。</p>
+<h2 id="2-写一个宏定义min这个宏返回两个参数中较小含相等的情况的一个">2. 写一个宏定义MIN，这个宏返回两个参数中较小(含相等的情况)的一个。</h2>
+<pre><code>#define  MIN(A,B)   ((A) &lt;= (B) ? (A) : (B))
+</code></pre><p>这个测试是为下面的目的而设的：
+标识#define在宏中应用的基本知识。这是很重要的，因为直到嵌入(inline)操作符变为标准C的一部分，
+宏是产生嵌入代码的唯一方法，对于嵌入式系统来说，为了能达到要求的性能，嵌入代码经常是必须的方法。
+<!-- raw HTML omitted --> 三目运算符(?:)的知识。这个操作符存在C语言中的原因是它使得编译器能产生比if-else更优化的代码，
+了解这个用法是很重要的。
+<!-- raw HTML omitted -->  懂得在宏定义中小心地把参数用括号括起来。
+<!-- raw HTML omitted --> 我也会用这个问题来讨论宏的副作用，例如：当你写下面的代码时会出现什么问题？</p>
+<pre><code>    least = MIN(*p++, b);
+</code></pre><h2 id="3-预处理指令error的作用是什么">3. 预处理指令#error的作用是什么？</h2>
+<p>如果你不知道答案，请看参考文献1。这问题对区分一个正常的coder和一个书呆子是很有用的。只有书呆子才会
+读C语言课本的附录去找出像这种问题的答案。(#error: 停止编译并显示错误信息)</p>
+<h2 id="4-死循环infinite-loops">4. 死循环（Infinite loops）</h2>
+<p>嵌入式系统中经常要用到无限循环，你怎么样用C编写死循环呢？
+这个问题有几个解决方案。我的首选方案是：while(1) {……}，然而一些程序员会喜欢这个方案：for(;;) {……}。
+这种答案让我为难，因为这个语法没有确切表达到底怎么回事。如果一个应试者给出这个作为方案，我将用这个
+作为 一个机会去探究他们这样做的基本原理，显然for(;;)比while(1)要执行更多的指令。如果他们的答案是：
+“我看别人 这样做的，从没有想到过为什么”，这会给我留下一个坏印象。还有一种方案是用goto语句：</p>
+<pre><code>Lable: ...
+...
+goto Lable;
+</code></pre><p>应试者如果给出这种方案，这说明他可能是一个汇编语言程序员(这也许是好事)，或者他是一个想进入新领域的BASIC 或FORTRAN程序员。</p>
+<h2 id="5-数据声明data-declarations">5. 数据声明（Data declarations）</h2>
+<p>用变量a给出下面的定义：</p>
+<pre><code>a). 一个整型数
+    (An integer)
+b). 一个指向整型数的指针
+    (A pointer to an integer)
+c). 一个指向指针的指针，它指向的指针是指向一个整型数
+    (A pointer to a pointer to an integer)
+d). 一个有10个整型数的数组
+    (An array of 10 integers)
+e). 一个有10个指针的数组，指针均是指向整型数的
+    (An array of 10 pointers to integers)
+f). 一个指向有10个整型数数组的指针
+    (A pointer to an array of 10 integers)
+g). 一个指向函数的指针，该函数有一个整型参数并返回一个整型数
+    (A pointer to a function that takes an integer as an argument and returns an integer)
+h). 一个有10个指针的数组，该指针指向一个函数，该函数有一个整型参数并返回一个整型数
+    (An array of ten pointers to functions that take an integer argument and return an integer)
+</code></pre><p>答案是：</p>
+<pre><code>a). int a; 
+b). int *a; 
+c). int **a; 
+d). int a[10]; 
+e). int *a[10]; 
+f). int (*a)[10];
+g). int (*a)(int);
+h). int (*a[10])(int); 
+</code></pre><p>经常有人说这里有几个问题要翻一下书才能回答，我同意这种说法。我写这篇文章时，为了确定语法的正确性，
+我的确也查了一下书。但是当我被面试的时候，我期望被问到这些问题(或者类似的问题)。因为在被面试的这段时 间里，
+我确定我知道这个问题的答案。应试者如果不知道所有的答案(或至少大部分答案)，那么也就没有为这次面 试做准备，如果该面试者没有为这次面试做准备，那么他又能为什么出准备呢？</p>
+<h2 id="6-static">6. static</h2>
+<p>关键字static的作用是什么？
+这个简单的问题很少有人能回答完全。在C语言中，关键字static有三个明显的作用：
+<!-- raw HTML omitted -->
+static修饰局部变量时，表示希望这个局部变量的值在程序运行期间维持不变。
+<!-- raw HTML omitted -->
+static修饰全局变量时，表示希望这个全局变量仅可以在本模块内被访问和引用，对其他模块不可见。
+<!-- raw HTML omitted -->
+static修饰一个函数时，表示希望这个函数仅可以在本模块内被调用，对其他模块不可见。
+大多数应试者能正确回答第一部分，一部分能正确回答第二部分，很少的人能懂得第三部分。这是一个应试者
+的严重的缺陷，因为他显然不懂得本地化数据和代码的好处和重要性。</p>
+<h2 id="7-const">7. const</h2>
+<p>关键字const有什么含意？
+我只要一听到interviewee说：“const修饰的变量意味着常量”，我就知道我正在和一个业余者打交道。去年
+Dan Saks已经在他的文章里完全概括了const的所有用法，因此ESP(译者：Embedded Systems Programming)
+的每一位读者应该非常熟悉const能做什么和不能做什么。如果你从没有读到那篇文章，只要能说出const意味着“只读”就可以了。
+尽管这个答案不是完全的答案，但我接受它作为一个正确的答案。如果你想知道更详细的答案，仔细读一 下Saks的文章吧。
+(译者：const修饰的是变量而不是常量，我们称其为“只读型变量”，其初始化之后只读不可写)。 如果应试者能正确回答这个问题，
+我将问他一个附加的问题：下面的声明都是什么意思？</p>
+<pre><code>	const int a;
+	int const a;
+	const int *a;
+	int * const a;
+	int const * a const;
+</code></pre><p>前两个的作用是一样，a是一个只读型整数。第三个意味着a是一个指向只读型整数的指针(也就是说，整数是不
+可修改的，但指针可以)。第四个a是一个指向整型数的常指针(也就是说，指针指向的整型数是可以修改的，但指针 不可修改)。
+最后一个a是一个指向常整型数的常指针(也就是说，指针指向的整型数是不可修改的，同时指针也是不 可修改的)。
+如果应试者能正确回答这些问题，那么他就给我留下了一个好印象。顺带提一句，你可能会问，即使不用关键字 const，
+也可以写出功能正确的程序，那么我为什么还要如此重视关键字const呢？我有如下的几下理由： •; 关键字const的作用是为了给
+你的代码的阅读者传达非常有用的信息。实际上，声明一个参数为常量是为了告 诉了用户这个参数的应用目的。如果你曾花很多
+时间清理他人留下的垃圾，你就会很快学会感谢这点多余的 信息。(当然，懂得用const的程序员很少会留下垃圾让别人来清理的。)
+<!-- raw HTML omitted -->  给优化器一些附加信息，使用关键字const也许能产生更紧凑的代码。 •; 合理地使用关键字const可以使编译器很自然地保护
+那些不希望被修改(你很可能是无意地)的参数，防止其被 修改。简而言之，这样可以减少bug的出现。</p>
+<h2 id="8-volatile">8. volatile</h2>
+<p>关键字volatile有什么含意？
+<!-- raw HTML omitted -->
+一个定义为volatile的变量是说这变量可能会被意想不到的情况修改，告诫编译器不要去优化和这个变量有关
+的代码。精确地说就是，优化器在用到这个变量时必须每次都小心地重新读取(有时也可能需要写入)这个变量的值，
+而不是使用其保存在寄存器里的备份。下面是应用volatile变量的几个例子：
+<!-- raw HTML omitted --> 硬件设备的某些寄存器(如：状态寄存器);
+某些ISR会访问到的非自动变量(Non-automatic variables)；
+<!-- raw HTML omitted --> 多线程应用中被几个任务共享的变量； 回答不出这个
+问题的人是不会被雇佣的。我认为这是区分C程序员和嵌入式系统程序员的最基本的问题。搞嵌入式的 家伙们经常同硬件、
+中断、RTOS等等打交道，所有这些都会用到volatile变量。不懂volatile的用法将会带来灾难。 假设interviewee正确地回
+答了这个问题，我将稍加深究，看一下这家伙是不是直正理解了volatile的重要用法：
+<!-- raw HTML omitted --> 一个参数既可以是const的也可以是volatile的吗？解释为什么。
+<!-- raw HTML omitted --> 一个指针可以是volatile的吗？解释为什么。<!-- raw HTML omitted --> 下面的函数有什么错误：</p>
+<pre><code>	int square(volatile int *ptr)
+	{
+		return (*ptr) * (*ptr);
+	}
+</code></pre><p>下面是答案：是的。一个例子是只读型寄存器。它是volatile的，因为要防止它可能被意想不到地修改。它是const的，因 为程序不应该试图去修改它。 •; 是的。尽管这并不常见。一个例子是当一个中服务子程序修该一个指向一个buffer的指针时，这个指正应该 是volatile型的。 •; 这段代码有点变态。这段代码的目的是用来返指针ptr指向值的平方。但是，由于ptr指向一个volatile型参 数，编译器将产生类似下面的代码(关键要注意到，编译器需要一次次认真地读取ptr所指向的值)：</p>
+<pre><code>	long square(volatile int *ptr)
+	{
+		int a,b;
+		a = *ptr;
+		b = *ptr;
+
+		return a * b;
+	}
+</code></pre><p>由于ptr指向的值可能会被意想不到地该变，因此a和b可能是不同的。结果，这段代码可能返回不是你所期望
+的平方值！正确的代码如下：</p>
+<pre><code>	long square(volatile int *ptr)
+	{
+		int a;
+		a = *ptr;
+
+		return a * a;
+	}
+</code></pre><h2 id="9-位操作bit-manipulation">9. 位操作（Bit manipulation）</h2>
+<p>嵌入式系统总是要用户对变量或寄存器进行位操作。
+<!-- raw HTML omitted -->
+给定一个整型变量a，写两段代码，第一个设置a的bit3，第二个清除a的bit3。在以上两个操作中，要保持其它位
+不变。对这个问题有三种基本的反应：
+<!-- raw HTML omitted --> 不知道如何下手。说明interviewee从没做过嵌入式工作。(一个嵌入式编程高手也必须得是一个位操作高手。)
+<!-- raw HTML omitted --> 用bit fields。bit fields是被扔到C语言死角的东西，它保证你的代码在不同编译器之间是不可移植的，
+同时 也保证了的你的代码是不可重用的。我最近不幸看到Infineon为其较复杂的通信芯片写的驱动程序，它用到了 bit fields，
+因此完全对我无用，因为我的编译器用其它的方式来实现bit fields的。从道德上讲：永远不要让 一个非嵌入式的家伙沾实际硬件的边。
+<!-- raw HTML omitted --> 用#defines和bit masks(位掩码)操作。这是一个有极高可移植性的方法，值得推荐。最佳的解决方案如下：</p>
+<pre><code>	#define BIT3 (0x1 &lt;&lt; 3)
+
+	static int a;
+
+	void set_bit3(void) 
+	{
+		a |= BIT3;
+	}
+
+	void clear_bit3(void) 
+	{
+		a &amp;= ~BIT3;
+	}
+</code></pre><p>一些人喜欢为设置和清除值而定义一个掩码同时定义一些说明常数，这也是完全可以接受的。总之我希望看到几个
+要点：说明常数(如上述中的BIT3)、|= 和 &amp;=~ 操作。</p>
+<h2 id="10-嵌入式系统经常具有要求程序员去访问某特定的内存位置的特点">10. 嵌入式系统经常具有要求程序员去访问某特定的内存位置的特点。</h2>
+<p>在某工程中，要求设置一绝对地址为0x67a9的整型变量的值为0xaa55。编译器是一个纯粹的ANSI编译器。写代码去
+完成这一任务。 这一问题测试你是否知道为了访问一绝对地址把一个整型数强制转换(typecast)为一个指针是合法
+的。这一问题的 实现方式随着个人风格不同而不同。典型的类似代码如下：</p>
+<pre><code>	int *ptr;
+	ptr = (int *)0x67a9;
+	*ptr = 0xaa55;
+</code></pre><p>另一个较晦涩的方法是：</p>
+<pre><code>	*(int * const)(0x67a9) = 0xaa55;
+</code></pre><p>即使你的品味更接近第二种方案，但我建议你在面试时使用第一种方案。</p>
+<h2 id="11-中断interrupts">11. 中断（Interrupts）</h2>
+<p>中断是嵌入式系统中重要的组成部分，这导致了很多编译器开发商提供一种扩展关键字，让标准C支持中断。
+<!-- raw HTML omitted -->
+最可能的是，产生了一个新的关键字 __interrupt。(这里暂且以“__interrupt”为例子)。下面的代码就使用了
+__interrupt关键字定义一个中断服务子程序(ISR)，请评论一下这段代码的：</p>
+<pre><code>	__interrupt double compute_area (double radius)
+	{
+		double area = PI * radius * radius;
+		printf(&quot;/nArea = %f&quot;, area);
+		return area;
+	}
+</code></pre><p>这个函数有太多的错误了，让人不知从何说起了：
+<!-- raw HTML omitted --> ISR不能返回一个值。如果你不懂这个，那么你不会被雇用的。
+<!-- raw HTML omitted --> ISR不能含有形参。如果你没有看到这一点，你被雇用的机会等同第一项。
+<!-- raw HTML omitted --> 在许多处理器、编译器中，浮点一般都是不可重入的。有些处理器、编译器
+需要让额外的寄存器入栈，有些处理器、编译器就是不允许在ISR中做浮点运算。
+此外，ISR应该是短而有效率的，在ISR中做浮点运算是不明智的。
+<!-- raw HTML omitted -->  printf()经常存在重入性的问题。如果你丢掉了第三和第四点，我不会太
+为难你的。不用说，如果你连后两点也正 确回答了，那么你被雇用前景越来越光
+明了。</p>
+<h2 id="12-代码例子code-examples">12. 代码例子（Code examples）</h2>
+<p>下面的代码输出是什么，为什么？</p>
+<pre><code>	void foo(void)
+	{
+		unsigned int a = 6;
+		int b = -20;
+		(a+b &gt; 6) ? puts(&quot;&gt; 6&quot;) : puts(&quot;&lt;= 6&quot;);
+	}
+</code></pre><p>答案是： ”&gt;6”。 这个问题测试你是否懂得C语言中的整数自动转换原则，我发现有些开发者
+关于这些东西懂得极少。问题的答案是输出 是 ”&gt;6”。原因是当表达式中存在有符号类型和无
+符号类型时所有的操作数都自动转换为无符号类型。因此-20变成了一个非常大的正整数(具体
+有多大，补码运算)，所以该表达式计算出的结果大于6。这一点对于应当频繁用到无符号数据
+类型的嵌 入式系统来说是丰常重要的。如果你答错了这个问题，你也就到了得不到这份工作的边缘。</p>
+<h2 id="13-评价下面的代码片断">13. 评价下面的代码片断：</h2>
+<pre><code>	unsigned int zero = 0;
+	unsigned int compzero = 0xFFFF;
+</code></pre><p>对于一个int型不是16位的处理器来说，上面的代码是不正确的。应该如下：</p>
+<pre><code>	unsigned int compzero = ~0;  // 将0这个字(不管有多长)按位取反
+</code></pre><p>这一问题真正能揭露出应试者是否懂得处理器字长的重要性。在我的经验里，好的嵌入式程序员能够非常准确地明白硬
+件的细节和它的局限，然而PC机程序员往往把硬件作为一个无法避免的烦恼。</p>
+<p>到了这里，应试者或者完全垂头丧气了或者信心满满志在必得。如果显然应试者不是很好，那么这个测试就在这里结束
+了。但如果显然应试者做得不错，那么我就扔出下面的追加问题，这些问题是比较难的，我想仅仅只有非常优秀的应试者才
+能做得不错。提出这些问题，我更多的是希望看到应试者应付问题的方法，而不是答案。不管如何，你就当是这个娱乐吧……</p>
+<h2 id="14-动态内存分配dynamic-memory-allocation">14. 动态内存分配（Dynamic memory allocation）</h2>
+<p>尽管不像非嵌入式计算机那么常见，嵌入式系统还是有从堆(heap)中动态分配内存的过程的。那么嵌入式系统中，
+动态分配内存可能发生的问题是什么？这里，我期望应试者能提到内存碎片、碎片收集的问题、变量的持行时间等等。这个
+主题已经在ESP杂志中被广泛地讨论过了(主要是 P.J. Plauger, 他的解释远远超过我这里能提到的任何解释)，所以回过头
+看一下这些杂志吧！ 让应试者进入一种虚假的安全感觉后，我拿出这么一个小节目：下面的代码片段的输出是什么，为什么？</p>
+<pre><code>    char *ptr;
+    if ((ptr = (char *)malloc(0)) == NULL) {
+        puts(&quot;Got a null pointer&quot;);
+    } else {
+        puts(&quot;Got a valid pointer&quot;);
+    }
+</code></pre><p>这是一个有趣的问题。最近我的一个同事不经意把0值传给了函数malloc，得到了一个合法的指针之后，我才想到这个
+问题。这就是上面的代码。该代码的输出是“Got a valid pointer”。我用这个来开始讨论这样的一问题，看看被面试者是
+否想到库例程这样做是正确。得到正确的答案固然重要，但解决问题的方法和你做决定的基本原理更重要些。</p>
+<h2 id="15-typedef">15. typedef</h2>
+<p>typedef在C语言中频繁用以声明一个已经存在的数据类型的同义名称。也可以用预处理器做类似的事。例如，思考一下
+下面的两个语句的区别：</p>
+<pre><code>	#define dPS struct s *
+	typedef struct s * tPS;
+</code></pre><p>以上两句的意图都是要定义dPS和tPS为一个指向结构s指针。哪种方法(如果有的话)更好呢？为什么？</p>
+<p>这是一个非常微妙的问题，任何人答对这个问题都是值得祝贺的。答案是：typedef更好。比如下面的例子：</p>
+<pre><code>    dPS p1,p2;
+    tPS p3,p4;
+</code></pre><p>这样的话，第一个扩展为</p>
+<pre><code>    struct s * p1, p2;   // 编译器仅对#define指令作文本(字面上地)替换
+</code></pre><p>上面的代码定义p1为一个指向结构的指，p2为一个实际的结构，这也许不是你想要的。第二个例子正确地定义了p3和p4两个 指针。</p>
+<h2 id="16--c语言同意一些令人震惊的结构下面的结构是合法的吗如果是它做些什么">16 . C语言同意一些令人震惊的结构,下面的结构是合法的吗，如果是它做些什么？</h2>
+<pre><code>	int a = 5, b = 7, c;
+	c = a+++b;
+</code></pre><p>这个问题将做为这次面试的一个愉快的结尾。不管你相不相信，上面的例子是完全合乎语法的。问题是编译器如何处理
+它？水平不高的编程工作者经常会争论这个问题，而编译器应当能处理尽可能所有合法的用法。上面的代码可被处理成：</p>
+<pre><code>	c = a++ + b;
+</code></pre><p>因此, 这段代码持行后</p>
+<pre><code>	a = 6, b = 7, c = 12
+</code></pre><p>如果你知道答案，或猜出正确答案，做得好。如果你不知道答案，我也不把这个当作问题。我发现这个问题的最大好处
+是这是一个关于代码编写风格，代码的可读性，代码的可修改性的好的话题。</p>
+<p>好了，伙计们，你现在已经做完所有的测试了。这就是我出的C语言测试题，我怀着愉快的心情写完它，希望你以同样
+的心情读完它。如果你认为这是一个好的测试，那么请你多加学习。 Nigel Jones是一个顾问，现在住在Maryland，当他不在水下时，
+你能在多个领域的嵌入项目中找到他。他很高兴能收到 读者的来信，他的email地址是: <a href="mailto:NAJones@compuserve.com">NAJones@compuserve.com</a></p>
+<p>References：
+<!-- raw HTML omitted --></p>
+<pre><code>[1]Jones, Nigel, “In Praise of the #error directive”,Embedded Systems Programming, September 1999, p. 114. 
+[2]Jones, Nigel, “Efficient C Code for Eight-bit MCUs”,Embedded Systems Programming, November 1998, p. 66.
+</code></pre>
+                      
+                    </div>
+                    <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                        <div style="float:left;margin-top:0px;">
+                        <img src="http://sunduoze.github.io/public/qrcode.jpg" width="129px" height="129px"/>
+                        <div style="text-align:center;">微信扫一扫交流</div>
+                        </div>
+                        <div>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://www.enzo-sun.top/">sunduoze</a>
+                            <br />微信关注：勿忘初兴
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/2016/%E5%B5%8C%E5%85%A5%E5%BC%8F%E4%BA%BA%E5%91%98%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%840x10%E4%B8%AAC%E8%AF%AD%E8%A8%80Tips/">http://sunduoze.github.io/post/2016/%E5%B5%8C%E5%85%A5%E5%BC%8F%E4%BA%BA%E5%91%98%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%840x10%E4%B8%AAC%E8%AF%AD%E8%A8%80Tips/</a>
+                            <br />
+                            文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  
+
+                </div>
+                
+              </article>
+              
+              <div class="clear"></div>
+              
+              
+              
+            </div>
+          </section>
+          <div class="sidebar s1">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>Follow:</p>
+      <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="widget qrcode">
+    <img src="http://sunduoze.github.io/public/qrcode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
+</div>
+
+    <ul class="post-nav group">
+      <li class="next">
+        
+        <a href="http://sunduoze.github.io/post/2016/Latex%E5%88%9D%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="next">
+          <i class="fa fa-chevron-right"></i>
+          <strong>Next post</strong>
+          <span>Latex初学笔记</span>
+        </a>
+        
+      </li>
+      <li class="previous">
+        
+        <a href="http://sunduoze.github.io/about/" rel="prev">
+          <i class="fa fa-chevron-left"></i>
+          <strong>Previous Post</strong>
+          <span>about</span>
+        </a>
+        
+      </li>
+    </ul>
+    <div id="search-2" class="widget widget_search"><h3>Search</h3>
+      <form method="get" class="searchform themeform" action="https://www.google.com/search">
+        <div>
+          <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+          <div class="sidebar s2">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>More</p>
+    </div>
+    <div id="categories-2" class="widget widget_categories"><h3>Categories</h3>
+      <ul>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  <section class="container" id="footer-bottom">
+    <div class="container-inner">
+      <a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+      <div class="pad group">
+        <div class="grid one-half">
+          <div id="copyright">
+              <p>Copyright (c) 2015. All rights reserved.<br>Powered by
+              <a rel="nofollow" href="http://gohugo.io/" target="_blank">Hugo - the static site generator</a>.
+              <a rel="nofollow" href="http://golang.org" target="_blank">#golang</a>.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="grid one-half last">
+          <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+  
+</footer>
+
+</div>
+
+</body>
+</html>
+

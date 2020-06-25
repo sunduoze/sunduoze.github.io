@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <base href="http://sunduoze.github.io//">
+  <script>
+    document._writeOriginal = document.write;
+    document.write = function(str) {
+        if (str.indexOf('livereload.js') > -1) {
+            document._writeOriginal(str);
+        } else {
+            document._writeOriginal('<!-- Be Hijack!! -->');
+        }
+    }
+  </script>
+  <title>开关电源中功率线路的布线及散热 - Sun&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="电源,">
+<meta name="description" content="为什么要考虑布局布线和散热问题 功率电子电路（系统） = 小功率电路 &#43; 大功率电路； 完整的功率电子电路通常包括有 １． 控制电路 ２． 驱动电路 ３． 功率输出">
+<meta name="author" content="sunduoze">
+<meta name="publisher" content="sunduoze">
+<meta name="generator" content="http://gohugo.io/"/>
+
+<meta itemprop="name" content="开关电源中功率线路的布线及散热 - Sun&#39;s Blog">
+<meta itemprop="description" content="为什么要考虑布局布线和散热问题 功率电子电路（系统） = 小功率电路 &#43; 大功率电路； 完整的功率电子电路通常包括有 １． 控制电路 ２． 驱动电路 ３． 功率输出">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+
+<meta property="og:title" content="开关电源中功率线路的布线及散热 - Sun&#39;s Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sunduoze.github.io/post/2016/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E4%B8%AD%E5%8A%9F%E7%8E%87%E7%BA%BF%E8%B7%AF%E7%9A%84%E5%B8%83%E7%BA%BF%E5%8F%8A%E6%95%A3%E7%83%AD/" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.jpg" />
+<meta property="og:description" content="为什么要考虑布局布线和散热问题 功率电子电路（系统） = 小功率电路 &#43; 大功率电路； 完整的功率电子电路通常包括有 １． 控制电路 ２． 驱动电路 ３． 功率输出">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sunduoze">
+<meta name="twitter:title" content="开关电源中功率线路的布线及散热 - Sun&#39;s Blog">
+<meta name="twitter:description" content="为什么要考虑布局布线和散热问题 功率电子电路（系统） = 小功率电路 &#43; 大功率电路； 完整的功率电子电路通常包括有 １． 控制电路 ２． 驱动电路 ３． 功率输出">
+<meta name="twitter:creator" content="@sunduoze">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+  <link rel="canonical" href="http://sunduoze.github.io/post/2016/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E4%B8%AD%E5%8A%9F%E7%8E%87%E7%BA%BF%E8%B7%AF%E7%9A%84%E5%B8%83%E7%BA%BF%E5%8F%8A%E6%95%A3%E7%83%AD/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/2016/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E4%B8%AD%E5%8A%9F%E7%8E%87%E7%BA%BF%E8%B7%AF%E7%9A%84%E5%B8%83%E7%BA%BF%E5%8F%8A%E6%95%A3%E7%83%AD/"/>
+  <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
+  
+<link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="human-style-css2" href="http://sunduoze.github.io/wp-content/themes/hueman-child/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="responsive-css" href="http://sunduoze.github.io/wp-content/themes/hueman/responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-css" href="http://sunduoze.github.io/wp-content/themes/hueman/fonts/font-awesome.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="http://sunduoze.github.io/public/highlight/styles/github.css">
+<script src="http://sunduoze.github.io/public/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" id="human-style-css3" href="http://sunduoze.github.io/wp-content/themes/hueman-child/user.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="public/font/hack/css/hack.min.css">
+
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/scripts.js"></script>
+<script type="text/javascript" src="assets/picturefill/picturefill.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" async defer src="assets/js/myblog.js"></script>
+
+</head>
+
+<body class="single single-post single-format-standard col-3cm full-width topbar-enabled chrome">
+<div id="wrapper">
+  <header id="header">
+
+  <nav class="nav-container group" id="nav-topbar">
+    <div class="nav-toggle"><i class="fa fa-bars"></i></div>
+    <div class="nav-text"></div>
+    <div class="nav-wrap container">
+      <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.jpg" alt="sunduoze" title="Home">
+      </a>
+      <ul id="menu-default-menu" class="nav container-inner group">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/">首页</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/post/">归档</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-text">
+        _Tags
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container-inner">
+        <div class="toggle-search"><i class="fa fa-search"></i></div>
+        <div class="search-expand">
+          <div class="search-expand-inner">
+            <form method="get" class="searchform themeform" action="https://www.google.com/search">
+              <div>
+                <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+  </nav>
+  
+
+  <div class="container group">
+    <div class="container-inner">
+
+      <div class="group pad">
+
+        <div class="group pad">
+          <h1 class="site-title">
+            <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
+              <img style="border-radius: 50%;width:72px;height:72px;margin:0 auto;" alt="coderzh" src="http://sunduoze.github.io/public/coderzh.jpg"></img>
+              Sun&#39;s Blog
+            </a>
+          </h1>
+          <p class="site-description"> Resonance,natural language communication </p>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+  
+
+</header>
+
+
+
+  <div class="container" id="page">
+    <div class="container-inner">
+      <div class="main">
+        <div class="main-inner group">
+          <section class="content">
+            <div class="page-title pad group">
+              <ul class="meta-single group">
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E7%AB%9E%E8%B5%9B/" rel="category tag">竞赛</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="pad group">
+
+              <article
+                  class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
+                <div class="post-inner group">
+
+                  <h1 class="post-title">开关电源中功率线路的布线及散热</h1>
+
+                  <p class="post-byline">
+                    by  · 2016年08月09日 · 3006 Words ·
+                    ~6min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze_blog/master/content/post/2016/%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90%e4%b8%ad%e5%8a%9f%e7%8e%87%e7%ba%bf%e8%b7%af%e7%9a%84%e5%b8%83%e7%ba%bf%e5%8f%8a%e6%95%a3%e7%83%ad.md"
+                       target="_blank">Improve on <i class="fa fa-github"></i></a>
+                  </p>
+
+                  <div class="clear"></div>
+
+                  <div class="entry">
+                    <div class="entry-inner">
+                      
+                      <h2 id="为什么要考虑布局布线和散热问题"><strong>为什么要考虑布局布线和散热问题</strong></h2>
+<p>功率电子电路（系统） = 小功率电路 +　大功率电路； 完整的功率电子电路通常包括有
+　<!-- raw HTML omitted -->１．　控制电路
+　<!-- raw HTML omitted -->２．　驱动电路
+　<!-- raw HTML omitted -->３．　功率输出电路三个组成部分。
+<!-- raw HTML omitted --></p>
+<h3 id="1-电磁干扰emi">1. 电磁干扰EMI。</h3>
+<p>功率电子电路的功率输出部分通常采用开关工作方式，电路中讲发生大电压和大电 流的突变。这种突变可通过电源和信号线对相连的电路产生干扰（传导干扰），同时对 周围环境产生较强的电磁辐射（辐射干扰）。 而功率电路中的控制电路部分属于小功率电路，其信号幅度较低，对噪声比较敏感， 抗干扰性差。噪声干扰可能导致控制电路部分的逻辑或时序错误，轻则影响电路性能， 重则是电路无法工作。 对于传导干扰，可以通过电源隔离、信号隔离、滤波等方式抑制。而对于辐射干扰， 通常只能通过合理的电路布局、走线以及屏蔽等措施来削弱电磁干扰的影响。</p>
+<h3 id="2-强弱电隔离">2. 强弱电隔离。</h3>
+<p>在功率电子电路中，控制电路部分采用低电压供电，通常只有几伏或十几伏，属于 弱电范畴；而功率输出部分的电压比较高，在几十伏至几千伏的范围内，属于强电范畴。 强弱电之间隔离不当，会发生大火或部分短路现象，造成弱点部分电路的损坏。 布局和布线时，应注意强弱电之间的导线间距符合爬电距离规范。</p>
+<h3 id="3-大电流">3. 大电流。</h3>
+<p>功率输出部分是大电流输出，可达几安至几千安。大电流会导致导线发热，严重情 况下，会烧断导线，是电路无法失效。 布线时，应注意合理计算导线宽度以承载正常工作时的大电流。</p>
+<h3 id="4-器件散热">4. 器件散热。</h3>
+<p>功率输出器件由于本身的开关损耗和管耗等因素影响，发热会比较严重，需要采用 有效的手段进行散热，以保证器件连续长时间正常工作。可加装散热片或散热器来解决。 综上，除了合理的电路设计之外，电路安装方面，合理的电路布局、走线及有效的 散热也是保障电路正常工作必不可少的因素。</p>
+<h2 id="如何进行合理布局布线以及解决散热问题"><strong>如何进行合理布局布线以及解决散热问题</strong></h2>
+<h3 id="1-布局">1. 布局</h3>
+<p>控制电路部分，其信号幅度小，精度要求高，抗干扰性差，尤其是其模拟部分。 驱动电路部分是连接控制电路和功率输出电路的中间环节，输入时控制电路所提供的信号， 有一定抗干扰能力，但对于驱动输出部分的大信号而言，抗干扰能力还是很脆弱。 因此，驱动电路一方面应防止外来噪声的干扰，同时，也应防止自身输出信号对输 入信号的噪声干扰。 功率输出部分电压高、电流大，一般以开关形式工作。是电路的最主要干扰源。 应防止其对其他电路的干扰，另外，应避免引线电感引起的栅极（MOSFET/IGBT）电路振荡。</p>
+<p>布局基本原则：</p>
+<pre><code>a. 控制电路部分尽量远离功率输出部分和驱动电路的输出端，尤其是其模拟部分。 
+b. 驱动电路信号输入部分尽量远离功率输出部分。 
+c. 控制和驱动电路的元件应围绕其电路核心部件进行布局，以尽量缩短器件之间 连线为原则进行合理排列。（连线短意味着少接收电磁辐射。） 
+d. 驱动电路输出端与功率输出器件的位置靠近，避免引线电感引起的栅极振荡。 （MOSFET/IGBT 适用。） 
+e. 如有必要，可采用电磁屏蔽方式以降低干扰。
+</code></pre><h3 id="2-布线">2. 布线</h3>
+<p>合理走线的前提</p>
+<pre><code>1.了解哪些导线传送模拟信号，哪些是数字信号； 
+2.哪些导线的信号频率高，哪些是低频； 
+3.哪些导线是强电，哪些上面加 载的是弱电； 
+4.哪些导线是大电流工作，哪些是小电流； 
+5.大电流的导线上电流的为多少等。
+</code></pre><blockquote>
+<p>a. 合理走线
+<!-- raw HTML omitted -->
+合理走线，就是设法减小电路中的分布电容、杂散电感及其对电路的影响。
+分布电容：对于高频信号，或者对脉冲信号的上升沿、下降沿要求较高的电路，要尽量减小分布电路。
+具体做法：增大导线间距或避免导线平行，双层板尤其要避免导线平行，应尽量保持相互垂直 （双层板上的导线如果平行，分布电容比单面的更大）。 杂散电感：传送高频信号的部件尽可能离得近一些，其连线尽可能短，而 相互间传送低频信号的部件即使离得稍远一些，连线稍长一些也无妨。</p>
+</blockquote>
+<blockquote>
+<p>b. 地线连接
+<!-- raw HTML omitted -->
+较大的工作电流流过比较长的地线，在地线两端就会产生一个电位差， 这个电位差有可能会引起控制电路的自激或信号串扰，破坏控制电路工作的精度。 而驱动电路部分和功率输出部分的电流更大，在地线两端产生的电位差同样不容忽视； 还有一种情况，就是数字电路和模拟电路同时存在的情况，为了避免互相干扰， 两条回路需要分开走，即数字地与模拟地分开，然后采用下述一点 接地将两个地连接起来。
+解决方法：
+单点接地即，将一个单元的所有接地线先连接在一起， 形成一个集中的接地点，然后再与其他单元电路的接地点并接在一起构成整个地线。这样，即使地线两端有一定得电位差， 作为每一个单元电路，其内部元件所接的电位是基本相同的，单元电路的工作不会受到影响。 此外，电源线与地线最好并行相邻排列，这样可使每个环路所包围的面积最小，减小电磁干扰。</p>
+</blockquote>
+<blockquote>
+<p>c. 导线的宽度及间距
+<!-- raw HTML omitted -->
+导线宽度越宽，其导通电阻就越小，过流能力就越强，但分布电容也会随之增加。
+因此，电流比较小的弱信号线，可使导线宽度窄一些，一般 12mil足矣，如果导线长度短，
+导线宽度还可再窄些；而通过大电流的导线则应足 够宽，一般来说，在线路板上， 每 1mm
+导线宽度可承载 1A 的连续电流（这个 值为经验估算值，此值留有充足安全裕量-Margin）， 可按此比例计算承载大电
+流时的导线宽度。（具体线宽、铜箔厚度与电流关系请参照附表 1） 对于电压比较高的导线，为安全起见，
+应与其他导线之间留有足够的间隔， 这个间隔称为爬电距离。 爬电距离主要用于防止导线间因空气击穿而打火。一般经验，
+爬电距离为 1mm/50V。但在高湿度环境下， 该距离是不够的，这时 线路板表面要浸盖绝缘树脂，进行防湿和绝缘处理。
+具体爬电距离参考各国爬电距离标准。</p>
+</blockquote>
+<h3 id="3-散热">3. 散热</h3>
+<p>功率器件在工作中，由于自身的功率损耗，将引起器件本身的发热。功率损耗原因有两个： 功率器件导通时的通态损耗；功率器件开关过程中产生的开关损耗。
+<!-- raw HTML omitted -->
+通态损耗：功率管导通时存在饱和压降，于是产生通态损耗。
+<!-- raw HTML omitted -->通态损耗与功率器件的饱和压降 Uon、承载电流 IT 以及占空比 D 有关。
+<!-- raw HTML omitted --></p>
+<pre><code>Pc = It*Uon*D 
+</code></pre><p>开关损耗：功率器件在开通时不能瞬间完全导通，逐渐下降的电压和逐渐上升的电 流将产生开通损耗 Pon。同样，在关断时器件
+无法瞬间完全截止，逐渐下降的电流和逐 渐上升的电压将产生关断损耗 Poff。开通损耗与关断损耗的总和即为功率器件的开关损
+耗 Ps。开关损耗主要与器件的承载电压 UT、电流 IT 以及开关频率有关：
+<!-- raw HTML omitted --></p>
+<pre><code>阻性负载： Ps = It*Ut *(ton + toff)*fS／6 
+感性负载： Ps = It*Ut *(ton + toff)*fS／2 
+</code></pre><p>其中，
+<!-- raw HTML omitted -->ton —— 功率器件的结温
+<!-- raw HTML omitted -->toff —— 外界环境的温度，通常将外界环境温度取值为 25℃
+<!-- raw HTML omitted -->热传输遵循热路欧姆定律：
+<!-- raw HTML omitted -->TJ － TA = PRθ</p>
+<p><!-- raw HTML omitted -->TJ —— 功率器件的结温
+<!-- raw HTML omitted -->TA —— 外界环境的温度，通常将外界环境温度取值为 25℃
+<!-- raw HTML omitted -->P —— 器件的功率损耗，即热流（W）
+<!-- raw HTML omitted -->Rθ —— 热阻（℃／W）</p>
+<p>由于功率器件的 PN 结到大气环境的热阻相当高，通常是数十℃/W，因此，如果功 耗过大的话，需要通过加装散热器来解决散热问题。 采用散热器散热时的热阻为：</p>
+<pre><code>Rθ = RθJC + RθCS + RθSA 
+</code></pre><p>其中，
+<!-- raw HTML omitted -->RθJC —— 功率器件 PN 结到外壳的热阻
+<!-- raw HTML omitted -->RθCS—— 功率器件外壳与散热片接触面处的热阻
+<!-- raw HTML omitted -->RθSA—— 散热片到大气环境的热阻</p>
+<table>
+<thead>
+<tr>
+<th>PCB 设计铜箔厚度、线宽和电流关系表 (25℃)</th>
+<th></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>铜厚/35um</th>
+<th align="center">铜厚/50um</th>
+<th align="right">铜厚/70um</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>电流(A)</th>
+<th align="center">线宽(mm)</th>
+<th align="right">电流(A)</th>
+<th>线宽(mm)</th>
+<th align="center">电流(A)</th>
+<th align="right">线宽(mm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.5</td>
+<td align="center">2.5</td>
+<td align="right">5.1</td>
+<td>2.5</td>
+<td align="center">6</td>
+<td align="right">2.5</td>
+</tr>
+<tr>
+<td>4</td>
+<td align="center">2</td>
+<td align="right">4.3</td>
+<td>2.5</td>
+<td align="center">5.1</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td align="center">1.5</td>
+<td align="right">3.5</td>
+<td>1.5</td>
+<td align="center">4.2</td>
+<td align="right">1.5</td>
+</tr>
+<tr>
+<td>2.7</td>
+<td align="center">1.2</td>
+<td align="right">3</td>
+<td>1.2</td>
+<td align="center">3.6</td>
+<td align="right">1.2</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td align="center">1</td>
+<td align="right">2.6</td>
+<td>1</td>
+<td align="center">3.2</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>2</td>
+<td align="center">0.8</td>
+<td align="right">2.4</td>
+<td>0.8</td>
+<td align="center">2.8</td>
+<td align="right">0.8</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td align="center">0.6</td>
+<td align="right">1.9</td>
+<td>0.6</td>
+<td align="center">2.3</td>
+<td align="right">0.6</td>
+</tr>
+<tr>
+<td>1.35</td>
+<td align="center">0.5</td>
+<td align="right">1.7</td>
+<td>0.5</td>
+<td align="center">2</td>
+<td align="right">0.5</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td align="center">0.4</td>
+<td align="right">1.35</td>
+<td>0.4</td>
+<td align="center">1.7</td>
+<td align="right">0.4</td>
+</tr>
+<tr>
+<td>0.8</td>
+<td align="center">0.3</td>
+<td align="right">1.1</td>
+<td>0.3</td>
+<td align="center">1.3</td>
+<td align="right">0.3</td>
+</tr>
+<tr>
+<td>0.55</td>
+<td align="center">0.2</td>
+<td align="right">0.7</td>
+<td>0.2</td>
+<td align="center">0.9</td>
+<td align="right">0.2</td>
+</tr>
+<tr>
+<td>0.2</td>
+<td align="center">0.15</td>
+<td align="right">0.5</td>
+<td>0.15</td>
+<td align="center">0.7</td>
+<td align="right">0.15</td>
+</tr>
+</tbody>
+</table>
+<pre><code>导线阻抗:0.0005×L/W(线长/线宽) 
+</code></pre><p>电流承载值与线路上元器件数量/焊盘以及过孔都直接关系
+导线的电流承载值与导线线的过孔数量焊盘存在的直接关系</p>
+
+                      
+                    </div>
+                    <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                        <div style="float:left;margin-top:0px;">
+                        <img src="http://sunduoze.github.io/public/qrcode.jpg" width="129px" height="129px"/>
+                        <div style="text-align:center;">微信扫一扫交流</div>
+                        </div>
+                        <div>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://www.enzo-sun.top/">sunduoze</a>
+                            <br />微信关注：勿忘初兴
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/2016/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E4%B8%AD%E5%8A%9F%E7%8E%87%E7%BA%BF%E8%B7%AF%E7%9A%84%E5%B8%83%E7%BA%BF%E5%8F%8A%E6%95%A3%E7%83%AD/">http://sunduoze.github.io/post/2016/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E4%B8%AD%E5%8A%9F%E7%8E%87%E7%BA%BF%E8%B7%AF%E7%9A%84%E5%B8%83%E7%BA%BF%E5%8F%8A%E6%95%A3%E7%83%AD/</a>
+                            <br />
+                            文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  
+
+                </div>
+                
+              </article>
+              
+              <div class="clear"></div>
+              
+              
+              
+            </div>
+          </section>
+          <div class="sidebar s1">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>Follow:</p>
+      <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="widget qrcode">
+    <img src="http://sunduoze.github.io/public/qrcode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
+</div>
+
+    <ul class="post-nav group">
+      <li class="next">
+        
+        <a href="http://sunduoze.github.io/post/2016/%E5%85%B3%E4%BA%8EMSP432ADC%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BA%94%E5%BD%93%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98/" rel="next">
+          <i class="fa fa-chevron-right"></i>
+          <strong>Next post</strong>
+          <span>关于MSP432ADC应用中应当注意的问题</span>
+        </a>
+        
+      </li>
+      <li class="previous">
+        
+        <a href="http://sunduoze.github.io/post/2016/Latex%E5%88%9D%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="prev">
+          <i class="fa fa-chevron-left"></i>
+          <strong>Previous Post</strong>
+          <span>Latex初学笔记</span>
+        </a>
+        
+      </li>
+    </ul>
+    <div id="search-2" class="widget widget_search"><h3>Search</h3>
+      <form method="get" class="searchform themeform" action="https://www.google.com/search">
+        <div>
+          <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+          <div class="sidebar s2">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>More</p>
+    </div>
+    <div id="categories-2" class="widget widget_categories"><h3>Categories</h3>
+      <ul>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  <section class="container" id="footer-bottom">
+    <div class="container-inner">
+      <a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+      <div class="pad group">
+        <div class="grid one-half">
+          <div id="copyright">
+              <p>Copyright (c) 2015. All rights reserved.<br>Powered by
+              <a rel="nofollow" href="http://gohugo.io/" target="_blank">Hugo - the static site generator</a>.
+              <a rel="nofollow" href="http://golang.org" target="_blank">#golang</a>.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="grid one-half last">
+          <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+  
+</footer>
+
+</div>
+
+</body>
+</html>
+

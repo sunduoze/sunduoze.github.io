@@ -7,10 +7,163 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 09 Aug 2016 13:47:14 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Oct 2018 16:12:14 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BU_系统校准方案</title>
+      <link>http://sunduoze.github.io/post/2018/BU_%E7%B3%BB%E7%BB%9F%E6%A0%A1%E5%87%86%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Sat, 27 Oct 2018 16:12:14 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2018/BU_%E7%B3%BB%E7%BB%9F%E6%A0%A1%E5%87%86%E6%96%B9%E6%A1%88/</guid>
+      <description>校准方案 校准流程 稳定性分析 数据采集及分段 分段校准 结果验证（校验）校准：数据拟合-数据-滤波-拟合-判断拐点-分段-拟合-去除不连续点 校准类型</description>
+    </item>
+    
+    <item>
+      <title>Magical hormone~</title>
+      <link>http://sunduoze.github.io/post/2017/Magical-hormone/</link>
+      <pubDate>Thu, 04 May 2017 15:03:40 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/Magical-hormone/</guid>
+      <description>已经感受过高浓度的PEA之后，你那样的表现很是正常。但是平均不到1000天之后的高浓度PEA分泌之后 让我对你的感觉可以消耗殆尽而不需试图挽回</description>
+    </item>
+    
+    <item>
+      <title>mood20170419</title>
+      <link>http://sunduoze.github.io/post/2017/mood20170419/</link>
+      <pubDate>Wed, 19 Apr 2017 23:17:01 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/mood20170419/</guid>
+      <description>时间煮雨，相识半载，破我寂夜，百感交集。 细细算来仅剩余10周左右的时光，不知此时所想的是害怕离别亦或是其他。 此时，回想过去，你带给我的是满满</description>
+    </item>
+    
+    <item>
+      <title>日常记录</title>
+      <link>http://sunduoze.github.io/post/2017/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 04 Apr 2017 19:54:33 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</guid>
+      <description>类型 号码1 号码2 号码3 羊毛呢 170 M 88A 48 羽绒服 175 L 92A 50 最新风衣 170 M 88A 小夹克 180 XL 偏大 佑天雷蒙 170A 胸围98 中腰88 肩宽44 腰围77 2尺3 裤长 106 裤子(退</description>
+    </item>
+    
+    <item>
+      <title>我也谈谈PID</title>
+      <link>http://sunduoze.github.io/post/2017/%E6%88%91%E4%B9%9F%E8%B0%88%E8%B0%88PID/</link>
+      <pubDate>Tue, 21 Mar 2017 10:57:59 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/%E6%88%91%E4%B9%9F%E8%B0%88%E8%B0%88PID/</guid>
+      <description>PID推导 拉普拉斯变换表</description>
+    </item>
+    
+    <item>
+      <title>曾国藩家书_札记</title>
+      <link>http://sunduoze.github.io/post/2017/%E6%9B%BE%E5%9B%BD%E8%97%A9%E5%AE%B6%E4%B9%A6_%E6%9C%AD%E8%AE%B0/</link>
+      <pubDate>Mon, 20 Mar 2017 22:29:48 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/%E6%9B%BE%E5%9B%BD%E8%97%A9%E5%AE%B6%E4%B9%A6_%E6%9C%AD%E8%AE%B0/</guid>
+      <description>温经须先穷一经，一经通后，再治他经，切不可兼营并鹜，一无所得。 用功譬如掘井，与其多掘数井而皆不及泉，何若老守一井，力求及泉而用之不竭乎？ 吾辈</description>
+    </item>
+    
+    <item>
+      <title>转EE_不用浮点胜于浮点</title>
+      <link>http://sunduoze.github.io/post/2017/%E8%BD%ACEE_%E4%B8%8D%E7%94%A8%E6%B5%AE%E7%82%B9%E8%83%9C%E4%BA%8E%E6%B5%AE%E7%82%B9/</link>
+      <pubDate>Sun, 12 Mar 2017 10:40:51 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/%E8%BD%ACEE_%E4%B8%8D%E7%94%A8%E6%B5%AE%E7%82%B9%E8%83%9C%E4%BA%8E%E6%B5%AE%E7%82%B9/</guid>
+      <description>例： 有一个16位数（以下运算后不会溢出），需要乘以2.8865xxx（它是ADC校准时用的，4096/1419），如果直接使之乘以2.886</description>
+    </item>
+    
+    <item>
+      <title>Google_Skil</title>
+      <link>http://sunduoze.github.io/post/2017/Google_Skil/</link>
+      <pubDate>Sat, 04 Mar 2017 12:33:14 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/Google_Skil/</guid>
+      <description>第一篇 在搜索框上输入：“indexof/”inurl:lib 再按搜索你将进入许多图书馆，并且一定能下载自己喜欢的书籍。 在搜索框上输入：“in</description>
+    </item>
+    
+    <item>
+      <title>万学教育_笔记</title>
+      <link>http://sunduoze.github.io/post/2017/%E4%B8%87%E5%AD%A6%E6%95%99%E8%82%B2_%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 04 Mar 2017 12:24:59 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/%E4%B8%87%E5%AD%A6%E6%95%99%E8%82%B2_%E7%AC%94%E8%AE%B0/</guid>
+      <description>简历 数据 他方评价 独特性 专业性 体现自身能力 面试 高端能力：考察语言表达能力和人格魅力 中端能力：心理素质、性格匹配度等 基础能力：学历层次及专业契合</description>
+    </item>
+    
+    <item>
+      <title>Saber_中级篇_CosmosScope</title>
+      <link>http://sunduoze.github.io/post/2017/Saber_%E4%B8%AD%E7%BA%A7%E7%AF%87_CosmosScope/</link>
+      <pubDate>Sat, 04 Mar 2017 12:04:52 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/Saber_%E4%B8%AD%E7%BA%A7%E7%AF%87_CosmosScope/</guid>
+      <description>CosmosScope Lession1 File-&amp;gt;Open -&amp;gt;Export 导出波形为图片等 -&amp;gt;Merge Plotfiles 合并波形 Edit-&amp;gt;Find Signal 根据名称寻找波形-&amp;gt; Filter 选择关键字 -&amp;gt;Matlab 与MATLAB协同仿真 -&amp;gt;HotKeys 热键 修改后需要Validate 验证 -&amp;gt;Preferences</description>
+    </item>
+    
+    <item>
+      <title>Saber_初级篇_Saber_Sketch</title>
+      <link>http://sunduoze.github.io/post/2017/Saber_%E5%88%9D%E7%BA%A7%E7%AF%87_Saber_Sketch/</link>
+      <pubDate>Sat, 04 Mar 2017 12:04:39 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/Saber_%E5%88%9D%E7%BA%A7%E7%AF%87_Saber_Sketch/</guid>
+      <description>Saber saber仿真软件是美国Synopsys公司的一款EDA软件，被誉为全球最先进的系统仿真软件，是唯一的多技术、 多领域的系统仿真产品，现已成</description>
+    </item>
+    
+    <item>
+      <title>Printf_Scanf_Redefine</title>
+      <link>http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/</link>
+      <pubDate>Sat, 04 Mar 2017 11:58:38 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/</guid>
+      <description>嵌入式 Printf Scanf 重新定义 /* Init CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去 如下语句解决第1个字节无法正确发送出去的问题： 清发</description>
+    </item>
+    
+    <item>
+      <title>如何降低辐射EMI</title>
+      <link>http://sunduoze.github.io/post/2017/%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%BE%90%E5%B0%84EMI/</link>
+      <pubDate>Wed, 11 Jan 2017 16:03:50 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%BE%90%E5%B0%84EMI/</guid>
+      <description>合理的PCB Layout 来降低设计中辐射EMI SMPS中，开关动作电流产生高频分量（方波中含有丰富的高频分量） ！Buck电路中 只有一条线的支路电流是断</description>
+    </item>
+    
+    <item>
+      <title>CompanyIntroduction</title>
+      <link>http://sunduoze.github.io/post/2017/CompanyIntroduction/</link>
+      <pubDate>Mon, 31 Oct 2016 11:04:16 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/CompanyIntroduction/</guid>
+      <description>应聘的公司简介 Mark 长园-运泰利(珠海运泰利自动化设备有限公司) 深圳-通业(深圳通业科技股份有限公司)</description>
+    </item>
+    
+    <item>
+      <title>MindMapSkil</title>
+      <link>http://sunduoze.github.io/post/2016/MindMapSkil/</link>
+      <pubDate>Thu, 20 Oct 2016 19:41:55 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2016/MindMapSkil/</guid>
+      <description>【Mind Map】 A. Can help you 1.Clear up your mind and clear it. 2.Effectly and swiftly to study and remember 3.More creative 4.Stay focus 5.Better communication B. Tools 1.Your brain 2.Your imagination C. Methods 1.Start from a paper center 2.Always useImage to express yourself 3.Using different colors to draw the tree curve 4.Every node use a keyword 5.Using number to sign orders</description>
+    </item>
+    
+    <item>
+      <title>Latex初学笔记</title>
+      <link>http://sunduoze.github.io/post/2016/Latex%E5%88%9D%E5%AD%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 09 Aug 2016 18:43:00 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2016/Latex%E5%88%9D%E5%AD%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description>转自：http://www.eetop.cn/blog/html/03/6503-33757.html 两个quad空格 a \qquad b a \qquad b 两个m的宽</description>
+    </item>
+    
+    <item>
+      <title>hosts</title>
+      <link>http://sunduoze.github.io/post/2016/hosts/</link>
+      <pubDate>Tue, 09 Aug 2016 15:56:03 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2016/hosts/</guid>
+      <description>改自laod网站发布版本 # Localhost (DO NOT REMOVE) 127.0.0.1 localhost 255.255.255.255 broadcasthost ::1 localhost fe80::1%lo0 localhost #自己添加的HOSTS start 103.245.222.133 github.map.fastly.net 68.142.107.1 www.victorpower.com 192.30.252.153 sunze.top 192.30.252.153 www.sunze.top 192.30.252.129 github.com #Adobe激活屏蔽 100.0.0.1 activate.adobe.com 100.0.0.1 practivate.adobe.com 100.0.0.1 ereg.adobe.com 100.0.0.1 activate.wip3.adobe.com 100.0.0.1 wip3.adobe.com 100.0.0.1 3dns-3.adobe.com 100.0.0.1</description>
+    </item>
     
     <item>
       <title>【转载】整理</title>

@@ -12,41 +12,38 @@
         }
     }
   </script>
-  <title>Sun&#39;s Blog</title>
+  <title>Printf_Scanf_Redefine - Sun&#39;s Blog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="keywords" content="思考,EE,笔记,其他">
-<meta name="description" content="Sun&#39;s Blog">
+<meta name="keywords" content="嵌入式,">
+<meta name="description" content="嵌入式 Printf Scanf 重新定义 /* Init CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去 如下语句解决第1个字节无法正确发送出去的问题： 清发">
 <meta name="author" content="sunduoze">
 <meta name="publisher" content="sunduoze">
 <meta name="generator" content="http://gohugo.io/"/>
 
-<meta itemprop="name" content="Sun&#39;s Blog">
-<meta itemprop="description" content="Sun&#39;s Blog">
+<meta itemprop="name" content="Printf_Scanf_Redefine - Sun&#39;s Blog">
+<meta itemprop="description" content="嵌入式 Printf Scanf 重新定义 /* Init CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去 如下语句解决第1个字节无法正确发送出去的问题： 清发">
 <meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.jpg">
 
-<meta property="og:title" content="Sun&#39;s Blog" />
+<meta property="og:title" content="Printf_Scanf_Redefine - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunduoze.github.io/" />
+<meta property="og:url" content="http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/" />
 <meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.jpg" />
-<meta property="og:description" content="Sun&#39;s Blog">
+<meta property="og:description" content="嵌入式 Printf Scanf 重新定义 /* Init CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去 如下语句解决第1个字节无法正确发送出去的问题： 清发">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sunduoze">
-<meta name="twitter:title" content="Sun&#39;s Blog">
-<meta name="twitter:description" content="Sun&#39;s Blog">
+<meta name="twitter:title" content="Printf_Scanf_Redefine - Sun&#39;s Blog">
+<meta name="twitter:description" content="嵌入式 Printf Scanf 重新定义 /* Init CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去 如下语句解决第1个字节无法正确发送出去的问题： 清发">
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.jpg">
 
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
-  <link rel="canonical" href="http://sunduoze.github.io/">
-  <link rel='shortlink' href="http://sunduoze.github.io/"/>
+  <link rel="canonical" href="http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
   
-  <link href="http://sunduoze.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sun&#39;s Blog" />
-  <link href="http://sunduoze.github.io/index.xml" rel="feed" type="application/rss+xml" title="Sun&#39;s Blog" />
-
 <link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
 <link rel="stylesheet" id="human-style-css2" href="http://sunduoze.github.io/wp-content/themes/hueman-child/style.css" type="text/css" media="all"/>
 <link rel="stylesheet" id="responsive-css" href="http://sunduoze.github.io/wp-content/themes/hueman/responsive.css" type="text/css" media="all"/>
@@ -66,8 +63,7 @@
 
 </head>
 
-<body class="archive category col-3cm full-width topbar-enabled chrome">
-
+<body class="single single-post single-format-standard col-3cm full-width topbar-enabled chrome">
 <div id="wrapper">
   <header id="header">
 
@@ -105,8 +101,6 @@
         </li>
         
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
-          
-          <a rel="nofollow" href="http://sunduoze.github.io/index.xml" type="application/rss+xml" target="_blank">订阅</a>
           
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-text">
@@ -159,113 +153,143 @@
 </header>
 
 
+
   <div class="container" id="page">
     <div class="container-inner">
       <div class="main">
         <div class="main-inner group">
           <section class="content">
-            <div class="pad group">
-              
-              <div class="featured">
-  <article class="post type-post status-publish format-standard has-post-thumbnail hentry group">
-      <div class="post-inner post-hover">
-          <div class="post-meta group">
-              <p class="post-category">
-              
-              <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" title="All posts in 笔记" rel="category tag">笔记</a>
-              
-              </p>
-              <p class="post-date">2018年10月27日</p>
-          </div>
-          <h2 class="post-title">
-              <a href="http://sunduoze.github.io/post/2018/BU_%E7%B3%BB%E7%BB%9F%E6%A0%A1%E5%87%86%E6%96%B9%E6%A1%88/" rel="bookmark" title="BU_系统校准方案">BU_系统校准方案</a>
-          </h2>
-          <div class="entry excerpt">
-              <p>校准方案 校准流程 稳定性分析 数据采集及分段 分段校准 结果验证（校验）校准：数据拟合-数据-滤波-拟合-判断拐点-分段-拟合-去除不连续点 校准类型</p>
-          </div>
-      </div>
-  </article>
-</div>
+            <div class="page-title pad group">
+              <ul class="meta-single group">
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="category tag">笔记</a>
+                </li>
+                
+              </ul>
+            </div>
 
-              
-              <div class="post-list group">
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-              </div>
-              <nav class="pagination group">
-                <div class="wp-pagenavi">
-                  <a class="page" href="http://sunduoze.github.io/post/">More...</a>
+            <div class="pad group">
+
+              <article
+                  class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
+                <div class="post-inner group">
+
+                  <h1 class="post-title">Printf_Scanf_Redefine</h1>
+
+                  <p class="post-byline">
+                    by  · 2017年03月04日 · 414 Words ·
+                    ~1min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze_blog/master/content/post/2017/Printf_Scanf_Redefine.md"
+                       target="_blank">Improve on <i class="fa fa-github"></i></a>
+                  </p>
+
+                  <div class="clear"></div>
+
+                  <div class="entry">
+                    <div class="entry-inner">
+                      
+                      <!-- raw HTML omitted -->
+<h2 id="嵌入式-printf-scanf-重新定义">嵌入式 Printf Scanf 重新定义</h2>
+<pre><code>/* 
+Init
+	CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去
+	如下语句解决第1个字节无法正确发送出去的问题：
+	清发送完成标志，Transmission Complete flag 
+*/
+</code></pre><pre><code>USART_ClearFlag(USART1, USART_FLAG_TC);    
+/*
+*********************************************************************************************************
+*	函 数 名: fputc
+*	功能说明: 重定义putc函数，这样可以使用printf函数从串口1打印输出
+*	形    参: 无
+*	返 回 值: 无
+*********************************************************************************************************
+*/
+int fputc(int ch, FILE *f)
+{
+	/* 写一个字节到USART1 */
+	USART_SendData(USART1, (uint8_t) ch);
+
+	/* 等待发送结束 */
+	while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
+	{}
+
+	return ch;
+}
+
+
+/**
+  * 函数功能: 重定向c库函数printf到DEBUG_USARTx
+  * 输入参数: 无
+  * 返 回 值: 无
+  * 说    明：无
+  */
+int fputc(int ch, FILE *f)
+{
+  HAL_UART_Transmit(&amp;husart_debug, (uint8_t *)&amp;ch, 1, 0xffff);
+  return ch;
+}
+
+
+</code></pre><pre><code>/*
+*********************************************************************************************************
+*	函 数 名: fgetc
+*	功能说明: 重定义getc函数，这样可以使用scanff函数从串口1输入数据
+*	形    参: 无
+*	返 回 值: 无
+*********************************************************************************************************
+*/
+int fgetc(FILE *f)
+{
+	/* 等待串口1输入数据 */
+	while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
+
+	return (int)USART_ReceiveData(USART1);
+}
+
+
+/**
+  * 函数功能: 重定向c库函数getchar,scanf到DEBUG_USARTx
+  * 输入参数: 无
+  * 返 回 值: 无
+  * 说    明：无
+  */
+int fgetc(FILE * f)
+{
+  uint8_t ch = 0;
+  HAL_UART_Receive(&amp;husart_debug,&amp;ch, 1, 0xffff);
+  return ch;
+}
+</code></pre><!-- raw HTML omitted -->
+
+                      
+                    </div>
+                    <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                        <div style="float:left;margin-top:0px;">
+                        <img src="http://sunduoze.github.io/public/qrcode.jpg" width="129px" height="129px"/>
+                        <div style="text-align:center;">微信扫一扫交流</div>
+                        </div>
+                        <div>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://www.enzo-sun.top/">sunduoze</a>
+                            <br />微信关注：勿忘初兴
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/">http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/</a>
+                            <br />
+                            文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  
+
                 </div>
-              </nav>
+                
+              </article>
+              
+              <div class="clear"></div>
+              
+              
+              
             </div>
           </section>
           <div class="sidebar s1">
@@ -300,6 +324,26 @@
     <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
 </div>
 
+    <ul class="post-nav group">
+      <li class="next">
+        
+        <a href="http://sunduoze.github.io/post/2017/Saber_%E5%88%9D%E7%BA%A7%E7%AF%87_Saber_Sketch/" rel="next">
+          <i class="fa fa-chevron-right"></i>
+          <strong>Next post</strong>
+          <span>Saber_初级篇_Saber_Sketch</span>
+        </a>
+        
+      </li>
+      <li class="previous">
+        
+        <a href="http://sunduoze.github.io/post/2017/%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/" rel="prev">
+          <i class="fa fa-chevron-left"></i>
+          <strong>Previous Post</strong>
+          <span>棠梨煎雪</span>
+        </a>
+        
+      </li>
+    </ul>
     <div id="search-2" class="widget widget_search"><h3>Search</h3>
       <form method="get" class="searchform themeform" action="https://www.google.com/search">
         <div>
@@ -308,6 +352,7 @@
       </form>
     </div>
   </div>
+  
 </div>
 
           <div class="sidebar s2">

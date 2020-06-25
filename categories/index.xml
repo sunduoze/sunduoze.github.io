@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 09 Aug 2016 13:47:14 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Oct 2018 16:12:14 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,27 @@
     <item>
       <title>笔记</title>
       <link>http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Tue, 09 Aug 2016 13:47:14 +0800</pubDate>
+      <pubDate>Sat, 27 Oct 2018 16:12:14 +0800</pubDate>
       
       <guid>http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>感悟</title>
+      <link>http://sunduoze.github.io/categories/%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Mon, 28 May 2018 21:59:57 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/categories/%E6%84%9F%E6%82%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>竞赛</title>
+      <link>http://sunduoze.github.io/categories/%E7%AB%9E%E8%B5%9B/</link>
+      <pubDate>Thu, 04 May 2017 15:03:40 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/categories/%E7%AB%9E%E8%B5%9B/</guid>
       <description></description>
     </item>
     

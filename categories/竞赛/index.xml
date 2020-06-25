@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>竞赛 on Sun&#39;s Blog</title>
+    <link>http://sunduoze.github.io/categories/%E7%AB%9E%E8%B5%9B/</link>
+    <description>Recent content in 竞赛 on Sun&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2015. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 04 May 2017 15:03:40 +0800</lastBuildDate>
+    
+	<atom:link href="http://sunduoze.github.io/categories/%E7%AB%9E%E8%B5%9B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Magical hormone~</title>
+      <link>http://sunduoze.github.io/post/2017/Magical-hormone/</link>
+      <pubDate>Thu, 04 May 2017 15:03:40 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/Magical-hormone/</guid>
+      <description>已经感受过高浓度的PEA之后，你那样的表现很是正常。但是平均不到1000天之后的高浓度PEA分泌之后 让我对你的感觉可以消耗殆尽而不需试图挽回</description>
+    </item>
+    
+    <item>
+      <title>mood20170419</title>
+      <link>http://sunduoze.github.io/post/2017/mood20170419/</link>
+      <pubDate>Wed, 19 Apr 2017 23:17:01 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2017/mood20170419/</guid>
+      <description>时间煮雨，相识半载，破我寂夜，百感交集。 细细算来仅剩余10周左右的时光，不知此时所想的是害怕离别亦或是其他。 此时，回想过去，你带给我的是满满</description>
+    </item>
+    
+    <item>
+      <title>读《精通开关电源设计》笔记</title>
+      <link>http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 28 Nov 2016 17:50:48 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/</guid>
+      <description>开关功率变换原理 经验：10℃的温升会使失效率加倍 1.线性调整器（串联调整器）——输入到输出串联晶体管 特点：晶体管工作在线性放大区（类似于可变</description>
+    </item>
+    
+    <item>
+      <title>关于MSP432ADC应用中应当注意的问题</title>
+      <link>http://sunduoze.github.io/post/2016/%E5%85%B3%E4%BA%8EMSP432ADC%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BA%94%E5%BD%93%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 09 Aug 2016 18:44:02 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2016/%E5%85%B3%E4%BA%8EMSP432ADC%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BA%94%E5%BD%93%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>SAR 型 ADC 的设计技巧 德州仪器高性能单片机和模拟器件在高校中的应用手册-精密信号链[.P25] 在运放和 SAR ADC 间插入 RC 组合 其中Cin通常选为1nF； MSP432</description>
+    </item>
+    
+    <item>
+      <title>开关电源中功率线路的布线及散热</title>
+      <link>http://sunduoze.github.io/post/2016/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E4%B8%AD%E5%8A%9F%E7%8E%87%E7%BA%BF%E8%B7%AF%E7%9A%84%E5%B8%83%E7%BA%BF%E5%8F%8A%E6%95%A3%E7%83%AD/</link>
+      <pubDate>Tue, 09 Aug 2016 18:43:28 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2016/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E4%B8%AD%E5%8A%9F%E7%8E%87%E7%BA%BF%E8%B7%AF%E7%9A%84%E5%B8%83%E7%BA%BF%E5%8F%8A%E6%95%A3%E7%83%AD/</guid>
+      <description>为什么要考虑布局布线和散热问题 功率电子电路（系统） = 小功率电路 + 大功率电路； 完整的功率电子电路通常包括有 １． 控制电路 ２． 驱动电路 ３． 功率输出</description>
+    </item>
+    
+    <item>
+      <title>嵌入式人员应该知道的0x10个C语言Tips</title>
+      <link>http://sunduoze.github.io/post/2016/%E5%B5%8C%E5%85%A5%E5%BC%8F%E4%BA%BA%E5%91%98%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%840x10%E4%B8%AAC%E8%AF%AD%E8%A8%80Tips/</link>
+      <pubDate>Tue, 09 Aug 2016 16:18:25 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2016/%E5%B5%8C%E5%85%A5%E5%BC%8F%E4%BA%BA%E5%91%98%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%840x10%E4%B8%AAC%E8%AF%AD%E8%A8%80Tips/</guid>
+      <description>嵌入式程序员应知道的0x10个C语言Tips C语言是衡量嵌入式系统程序员必须而且有效的方法。 这些年，我既参加也组织了许多测试，我意识到这些测</description>
+    </item>
+    
+  </channel>
+</rss>
