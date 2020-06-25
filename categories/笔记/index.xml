@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>笔记 on Sun&#39;s Blog</title>
+    <link>http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on Sun&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2015. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 09 Aug 2016 13:47:14 +0800</lastBuildDate>
+    
+	<atom:link href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【转载】整理</title>
+      <link>http://sunduoze.github.io/post/%E8%BD%AC%E8%BD%BD%E6%95%B4%E7%90%86/</link>
+      <pubDate>Tue, 09 Aug 2016 13:47:14 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/%E8%BD%AC%E8%BD%BD%E6%95%B4%E7%90%86/</guid>
+      <description>部署及托管 转载自： http://www.xuebuyuan.com/651322.html 假设你需要部署在 GitHub Pages 上，首先在GitHub上创建一个Repository， 命名为：sunduoze.github.io （</description>
+    </item>
+    
+  </channel>
+</rss>
