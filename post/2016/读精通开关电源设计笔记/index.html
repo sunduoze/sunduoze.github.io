@@ -24,12 +24,12 @@
 
 <meta itemprop="name" content="读《精通开关电源设计》笔记 - Sun&#39;s Blog">
 <meta itemprop="description" content="开关功率变换原理 经验：10℃的温升会使失效率加倍 1.线性调整器（串联调整器）——输入到输出串联晶体管 特点：晶体管工作在线性放大区（类似于可变">
-<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
 <meta property="og:title" content="读《精通开关电源设计》笔记 - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/" />
-<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.jpg" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
 <meta property="og:description" content="开关功率变换原理 经验：10℃的温升会使失效率加倍 1.线性调整器（串联调整器）——输入到输出串联晶体管 特点：晶体管工作在线性放大区（类似于可变">
 
 <meta name="twitter:card" content="summary">
@@ -37,7 +37,7 @@
 <meta name="twitter:title" content="读《精通开关电源设计》笔记 - Sun&#39;s Blog">
 <meta name="twitter:description" content="开关功率变换原理 经验：10℃的温升会使失效率加倍 1.线性调整器（串联调整器）——输入到输出串联晶体管 特点：晶体管工作在线性放大区（类似于可变">
 <meta name="twitter:creator" content="@sunduoze">
-<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
   <link rel="canonical" href="http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/">
@@ -72,7 +72,7 @@
     <div class="nav-text"></div>
     <div class="nav-wrap container">
       <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
-        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.jpg" alt="sunduoze" title="Home">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
       </a>
       <ul id="menu-default-menu" class="nav container-inner group">
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
@@ -100,9 +100,12 @@
           <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
         </li>
         
+		
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
           
         </li>
+		
+	    
         <li class="menu-item menu-item-type-post_type menu-item-text">
         _Tags
         </li>
@@ -137,7 +140,7 @@
         <div class="group pad">
           <h1 class="site-title">
             <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
-              <img style="border-radius: 50%;width:72px;height:72px;margin:0 auto;" alt="coderzh" src="http://sunduoze.github.io/public/coderzh.jpg"></img>
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
               Sun&#39;s Blog
             </a>
           </h1>
@@ -178,9 +181,9 @@
                   <h1 class="post-title">读《精通开关电源设计》笔记</h1>
 
                   <p class="post-byline">
-                    by  · 2016年11月28日 · 1505 Words ·
+                    by  · 2016年11月28日 · 1509 Words ·
                     ~4min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze_blog/master/content/post/2016/%e8%af%bb%e3%80%8a%e7%b2%be%e9%80%9a%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90%e8%ae%be%e8%ae%a1%e3%80%8b%e7%ac%94%e8%ae%b0.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/2016/%e8%af%bb%e3%80%8a%e7%b2%be%e9%80%9a%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90%e8%ae%be%e8%ae%a1%e3%80%8b%e7%ac%94%e8%ae%b0.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -189,55 +192,71 @@
                   <div class="entry">
                     <div class="entry-inner">
                       
-                      <h3 id="开关功率变换原理">开关功率变换原理</h3>
+                      
+
+<h3 id="开关功率变换原理">开关功率变换原理</h3>
+
 <p>经验：10℃的温升会使失效率加倍</p>
+
 <p>1.线性调整器（串联调整器）——输入到输出串联晶体管
 特点：晶体管工作在线性放大区（类似于可变电阻，故工作在有损模式）由于本身特定决定其只能降压
-<!-- raw HTML omitted --> 严格来讲LDO的压降在200mV以内，但有时会用LDO指代线性调整器，传统的线性调整器
+</br> 严格来讲LDO的压降在200mV以内，但有时会用LDO指代线性调整器，传统的线性调整器
 压降在2V左右，准LDO压降在1V左右
 2.开关速度几乎全由外部驱动能力及其有效性决定，根本来讲是某种电“惯性”限制了开关速度。
-<!-- raw HTML omitted --> 开关管不能达到理想状态致使关断时导通电流I=0，导通时导通压降V=0，从而产生交叉损耗（开关损耗）
-<!-- raw HTML omitted --> 自举电路 使得输入电压“泵高”的电路 泵高的电压称之为自举电压	为更好的驱动N-MOS
-<!-- raw HTML omitted --> 由Vin接小型号二极管到小电容一端，电容的另外一端接到电压会随开关跳变的结点，形成最简单的自举电路
+</br> 开关管不能达到理想状态致使关断时导通电流I=0，导通时导通压降V=0，从而产生交叉损耗（开关损耗）
+</br> 自举电路 使得输入电压“泵高”的电路 泵高的电压称之为自举电压   为更好的驱动N-MOS
+</br> 由Vin接小型号二极管到小电容一端，电容的另外一端接到电压会随开关跳变的结点，形成最简单的自举电路
 开关管选择：导通损耗与开关损耗矛盾，需要折中考虑</p>
+
 <h3 id="利用电抗器件提高效率">利用电抗器件提高效率</h3>
-<p><!-- raw HTML omitted --> 电容：存储静电能=C<em>V</em>V/2 寄生参数：ESR 金属箔和引线及端子存在的小电感
-<!-- raw HTML omitted --> 电感：存储磁能=L<em>I</em>I/2	寄生参数：DCR 非零直流电阻 电感绕组之间的寄生电容
-<!-- raw HTML omitted -->MOSFET 的封装内的电容
-<!-- raw HTML omitted --> 线性调整器的输入输出电容是为了封阻过剩的电压
-<!-- raw HTML omitted --> 开关状态下，控制器件的损耗=I*V 若I=0 or V=0 那么损耗极小
+
+<p></br> 电容：存储静电能=C*V*V/2 寄生参数：ESR 金属箔和引线及端子存在的小电感
+</br> 电感：存储磁能=L*I*I/2   寄生参数：DCR 非零直流电阻 电感绕组之间的寄生电容
+</br>MOSFET 的封装内的电容
+</br> 线性调整器的输入输出电容是为了封阻过剩的电压
+</br> 开关状态下，控制器件的损耗=I*V 若I=0 or V=0 那么损耗极小
 同时利用平均能量流理论控制占空比来调整输出，
 但是负载需要持续的电压，所以引入电容来维持输出电压，但是直接接入直流电源的电容会遭遇不可控的浪涌电流
 （会导致噪声和电磁干扰且降低效率），可通过串联电阻（有损）或电感（无损）来抑制浪涌电流</p>
+
 <h3 id="寄生参数影响">寄生参数影响</h3>
-<p><!-- raw HTML omitted -->R-C -&gt;esr
-电容两端电压：Vc = V*（1-e^(-τ/t) <!-- raw HTML omitted --> τ=RC
-<!-- raw HTML omitted -->R-L -&gt;dcr
-电感两端电流：Il = I*（1-e^(-τ/t) <!-- raw HTML omitted --> τ=L/R
-<!-- raw HTML omitted --> LC型开关调整器中二极管（逆向电压保护二极管、续流二极管、换流二极管、输出二极管等D）
+
+<p><br/>R-C -&gt;esr
+电容两端电压：Vc = V*（1-e^(-τ/t) <br/> τ=RC
+ <br/>R-L -&gt;dcr
+电感两端电流：Il = I*（1-e^(-τ/t) <br/> τ=L/R
+</br> LC型开关调整器中二极管（逆向电压保护二极管、续流二极管、换流二极管、输出二极管等D）
 元器件的寄生参数增强电路稳定性的同时也是影响效率的罪魁祸首。
-<!-- raw HTML omitted -->Eg.电压型控制开关调整器是依赖输出电容的ESR来保证环路稳定性（电源输入或负载突变时快速调整输出而不产生过度的震荡和振铃的能力）
-<!-- raw HTML omitted -->Eg.寄生电感 某一寄生电感在开关导通时限制开关电流尖峰但是关断时产生电压尖峰
-<!-- raw HTML omitted -->Eg.开关管的寄生电容 对于开关管关断有益（关断时，吸收电压尖峰，有助于钳位开关管两端具破坏性的电压尖峰，而且可以减缓开关管上升率，减小开关管暂态的电压与电流交叠），但是对开关管导通无益（释放静电能，无法直接观察，只能从开关损耗和温升表现出来）</p>
+</br>Eg.电压型控制开关调整器是依赖输出电容的ESR来保证环路稳定性（电源输入或负载突变时快速调整输出而不产生过度的震荡和振铃的能力）
+</br>Eg.寄生电感 某一寄生电感在开关导通时限制开关电流尖峰但是关断时产生电压尖峰
+</br>Eg.开关管的寄生电容 对于开关管关断有益（关断时，吸收电压尖峰，有助于钳位开关管两端具破坏性的电压尖峰，而且可以减缓开关管上升率，减小开关管暂态的电压与电流交叠），但是对开关管导通无益（释放静电能，无法直接观察，只能从开关损耗和温升表现出来）</p>
+
 <h3 id="高频开关时候的问题">高频开关时候的问题</h3>
+
 <p>温度：MOSFET导通损耗为正温度系数 BJT在小电流工作下的导通损耗为负温度系数 铝电解电容的ESR是负温度系数
 电感磁芯的新型铁氧体的磁芯损耗为倒钟型曲线80-90℃时附近出现最小值
-<!-- raw HTML omitted -->
+</br>
 铝电解电容的ESR随开关频率的提高而减小</p>
-<p><!-- raw HTML omitted -->开关频率越高，其噪声产生的电磁干扰就越高？？？why
-<!-- raw HTML omitted -->高频状态下细小的导线和PCB走线会成为有效的天线造成电磁辐射
-<!-- raw HTML omitted -->频率的提高减小了L、C的尺寸也成比例的增强了环路响应。
-<!-- raw HTML omitted -->
+
+<p></br>开关频率越高，其噪声产生的电磁干扰就越高？？？why
+</br>高频状态下细小的导线和PCB走线会成为有效的天线造成电磁辐射
+</br>频率的提高减小了L、C的尺寸也成比例的增强了环路响应。
+</br>
 |高频带来的唯一的障碍为开关损耗</p>
-<h3 id="可靠性寿命热管理">可靠性、寿命、热管理</h3>
+
+<h3 id="可靠性-寿命-热管理">可靠性、寿命、热管理</h3>
+
 <p>平均无故障时间</p>
+
 <p>相同的器件型号有着不同的技术指标（厂商美化部分指标）
 Eg.半导体温度高于150℃时，半导体本身不会损坏，但是会使封装老化、失效
 Eg.铁粉芯电感在长期高温下失效
 推荐的电容使用寿命计算规则与失效率经验法则极其相似</p>
-<p><!-- raw HTML omitted -->延长电源寿命和提高可靠性的方法-&gt;降低器件温度及其附近的温度
-<!-- raw HTML omitted -->应力降额 电压-&gt;80% 电流—&gt;70%-80%
+
+<p></br>延长电源寿命和提高可靠性的方法-&gt;降低器件温度及其附近的温度
+</br>应力降额 电压-&gt;80% 电流—&gt;70%-80%
 肖特基二极管（理论零反向恢复时间，但寄生的并联体电容影响反向恢复时间。较大的漏电流，低反向阻断电压？）</p>
+
 <p>反激能量：开关断开时电感释放的能量
 续流电流：强迫连续导通的电流
 类似飞轮，
@@ -248,11 +267,11 @@ Eg.铁粉芯电感在长期高温下失效
                     </div>
                     <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
                         <div style="float:left;margin-top:0px;">
-                        <img src="http://sunduoze.github.io/public/qrcode.jpg" width="129px" height="129px"/>
-                        <div style="text-align:center;">微信扫一扫交流</div>
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
                         </div>
                         <div>
-                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://www.enzo-sun.top/">sunduoze</a>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
                             <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/">http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/</a>
                             <br />
@@ -301,26 +320,26 @@ Eg.铁粉芯电感在长期高温下失效
 
     </div>
     <div class="widget qrcode">
-    <img src="http://sunduoze.github.io/public/qrcode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
     <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
 </div>
 
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/2017/%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%BE%90%E5%B0%84EMI/" rel="next">
+        <a href="http://sunduoze.github.io/post/2016/%E8%BF%99%E4%B8%80%E4%BB%97%E5%8F%88%E8%BE%93%E4%BA%86/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>如何降低辐射EMI</span>
+          <span>这一仗又输了</span>
         </a>
         
       </li>
       <li class="previous">
         
-        <a href="http://sunduoze.github.io/post/2016/%E8%BF%99%E4%B8%80%E4%BB%97%E5%8F%88%E8%BE%93%E4%BA%86/" rel="prev">
+        <a href="http://sunduoze.github.io/post/2017/%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%BE%90%E5%B0%84EMI/" rel="prev">
           <i class="fa fa-chevron-left"></i>
           <strong>Previous Post</strong>
-          <span>这一仗又输了</span>
+          <span>如何降低辐射EMI</span>
         </a>
         
       </li>

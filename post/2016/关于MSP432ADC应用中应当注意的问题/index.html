@@ -24,12 +24,12 @@
 
 <meta itemprop="name" content="关于MSP432ADC应用中应当注意的问题 - Sun&#39;s Blog">
 <meta itemprop="description" content="SAR 型 ADC 的设计技巧 德州仪器高性能单片机和模拟器件在高校中的应用手册-精密信号链[.P25] 在运放和 SAR ADC 间插入 RC 组合 其中Cin通常选为1nF； MSP432">
-<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
 <meta property="og:title" content="关于MSP432ADC应用中应当注意的问题 - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://sunduoze.github.io/post/2016/%E5%85%B3%E4%BA%8EMSP432ADC%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BA%94%E5%BD%93%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98/" />
-<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.jpg" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
 <meta property="og:description" content="SAR 型 ADC 的设计技巧 德州仪器高性能单片机和模拟器件在高校中的应用手册-精密信号链[.P25] 在运放和 SAR ADC 间插入 RC 组合 其中Cin通常选为1nF； MSP432">
 
 <meta name="twitter:card" content="summary">
@@ -37,7 +37,7 @@
 <meta name="twitter:title" content="关于MSP432ADC应用中应当注意的问题 - Sun&#39;s Blog">
 <meta name="twitter:description" content="SAR 型 ADC 的设计技巧 德州仪器高性能单片机和模拟器件在高校中的应用手册-精密信号链[.P25] 在运放和 SAR ADC 间插入 RC 组合 其中Cin通常选为1nF； MSP432">
 <meta name="twitter:creator" content="@sunduoze">
-<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
   <link rel="canonical" href="http://sunduoze.github.io/post/2016/%E5%85%B3%E4%BA%8EMSP432ADC%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BA%94%E5%BD%93%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98/">
@@ -72,7 +72,7 @@
     <div class="nav-text"></div>
     <div class="nav-wrap container">
       <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
-        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.jpg" alt="sunduoze" title="Home">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
       </a>
       <ul id="menu-default-menu" class="nav container-inner group">
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
@@ -100,9 +100,12 @@
           <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
         </li>
         
+		
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
           
         </li>
+		
+	    
         <li class="menu-item menu-item-type-post_type menu-item-text">
         _Tags
         </li>
@@ -137,7 +140,7 @@
         <div class="group pad">
           <h1 class="site-title">
             <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
-              <img style="border-radius: 50%;width:72px;height:72px;margin:0 auto;" alt="coderzh" src="http://sunduoze.github.io/public/coderzh.jpg"></img>
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
               Sun&#39;s Blog
             </a>
           </h1>
@@ -180,7 +183,7 @@
                   <p class="post-byline">
                     by  · 2016年08月09日 · 180 Words ·
                     ~1min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze_blog/master/content/post/2016/%e5%85%b3%e4%ba%8eMSP432ADC%e5%ba%94%e7%94%a8%e4%b8%ad%e5%ba%94%e5%bd%93%e6%b3%a8%e6%84%8f%e7%9a%84%e9%97%ae%e9%a2%98.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/2016/%e5%85%b3%e4%ba%8eMSP432ADC%e5%ba%94%e7%94%a8%e4%b8%ad%e5%ba%94%e5%bd%93%e6%b3%a8%e6%84%8f%e7%9a%84%e9%97%ae%e9%a2%98.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -189,30 +192,47 @@
                   <div class="entry">
                     <div class="entry-inner">
                       
-                      <h2 id="sar-型-adc-的设计技巧">SAR 型 ADC 的设计技巧</h2>
+                      
+
+<h2 id="sar-型-adc-的设计技巧">SAR 型 ADC 的设计技巧</h2>
+
 <p>德州仪器高性能单片机和模拟器件在高校中的应用手册-精密信号链[.P25]
-<!-- raw HTML omitted --></p>
+<br/></p>
+
 <blockquote>
 <p>在运放和 SAR ADC 间插入 RC 组合</p>
 </blockquote>
-<!-- raw HTML omitted -->
+
+<div>
+    <img src="http://sunduoze.github.io/media/note_img/1_1_MSP432ADC.jpg" width="609px" height="184px"/>
+    <img src="http://sunduoze.github.io/media/note_img/1_2_MSP432ADC.jpg" width="624px" height="465px"/>
+    <img src="http://sunduoze.github.io/media/note_img/1_3_MSP432ADC.jpg" width="609px" height="566px"/>
+    <img src="http://sunduoze.github.io/media/note_img/1_4_MSP432ADC.jpg" width="690px" height="403px"/> 
+</div>
+
 <p>其中Cin通常选为1nF；
-<!-- raw HTML omitted -->
-MSP432 DS中有关12位SAR ADC 的介绍</p>
-<!-- raw HTML omitted -->
+<br/>
+MSP432 DS中有关12位SAR ADC 的介绍
+<div>
+    <img src="http://sunduoze.github.io/media/note_img/1_5_MSP432ADC.jpg" width="609px" height="184px"/>
+</div></p>
+
 <p>根据上边要求的值计算，先选择放大器到ADC的电容Cfilter选1000pF（常常选1nF，银云母 or
 CoG电容）-稳定的电压、频率特性 那么，放大器到ADC的电阻Rfilter选14-20欧姆</p>
-<!-- raw HTML omitted -->
+
+<p><br/>
+<br/>
+<br/></p>
 
                       
                     </div>
                     <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
                         <div style="float:left;margin-top:0px;">
-                        <img src="http://sunduoze.github.io/public/qrcode.jpg" width="129px" height="129px"/>
-                        <div style="text-align:center;">微信扫一扫交流</div>
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
                         </div>
                         <div>
-                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://www.enzo-sun.top/">sunduoze</a>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
                             <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/2016/%E5%85%B3%E4%BA%8EMSP432ADC%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BA%94%E5%BD%93%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98/">http://sunduoze.github.io/post/2016/%E5%85%B3%E4%BA%8EMSP432ADC%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BA%94%E5%BD%93%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98/</a>
                             <br />
@@ -261,26 +281,26 @@ CoG电容）-稳定的电压、频率特性 那么，放大器到ADC的电阻Rfi
 
     </div>
     <div class="widget qrcode">
-    <img src="http://sunduoze.github.io/public/qrcode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
     <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
 </div>
 
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/2016/mylife/" rel="next">
+        <a href="http://sunduoze.github.io/post/2016/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E4%B8%AD%E5%8A%9F%E7%8E%87%E7%BA%BF%E8%B7%AF%E7%9A%84%E5%B8%83%E7%BA%BF%E5%8F%8A%E6%95%A3%E7%83%AD/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>mylife</span>
+          <span>开关电源中功率线路的布线及散热</span>
         </a>
         
       </li>
       <li class="previous">
         
-        <a href="http://sunduoze.github.io/post/2016/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E4%B8%AD%E5%8A%9F%E7%8E%87%E7%BA%BF%E8%B7%AF%E7%9A%84%E5%B8%83%E7%BA%BF%E5%8F%8A%E6%95%A3%E7%83%AD/" rel="prev">
+        <a href="http://sunduoze.github.io/post/2016/mylife/" rel="prev">
           <i class="fa fa-chevron-left"></i>
           <strong>Previous Post</strong>
-          <span>开关电源中功率线路的布线及散热</span>
+          <span>mylife</span>
         </a>
         
       </li>

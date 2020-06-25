@@ -24,12 +24,12 @@
 
 <meta itemprop="name" content="如何降低辐射EMI - Sun&#39;s Blog">
 <meta itemprop="description" content="合理的PCB Layout 来降低设计中辐射EMI SMPS中，开关动作电流产生高频分量（方波中含有丰富的高频分量） ！Buck电路中 只有一条线的支路电流是断">
-<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
 <meta property="og:title" content="如何降低辐射EMI - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://sunduoze.github.io/post/2017/%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%BE%90%E5%B0%84EMI/" />
-<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.jpg" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
 <meta property="og:description" content="合理的PCB Layout 来降低设计中辐射EMI SMPS中，开关动作电流产生高频分量（方波中含有丰富的高频分量） ！Buck电路中 只有一条线的支路电流是断">
 
 <meta name="twitter:card" content="summary">
@@ -37,7 +37,7 @@
 <meta name="twitter:title" content="如何降低辐射EMI - Sun&#39;s Blog">
 <meta name="twitter:description" content="合理的PCB Layout 来降低设计中辐射EMI SMPS中，开关动作电流产生高频分量（方波中含有丰富的高频分量） ！Buck电路中 只有一条线的支路电流是断">
 <meta name="twitter:creator" content="@sunduoze">
-<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
   <link rel="canonical" href="http://sunduoze.github.io/post/2017/%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%BE%90%E5%B0%84EMI/">
@@ -72,7 +72,7 @@
     <div class="nav-text"></div>
     <div class="nav-wrap container">
       <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
-        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.jpg" alt="sunduoze" title="Home">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
       </a>
       <ul id="menu-default-menu" class="nav container-inner group">
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
@@ -100,9 +100,12 @@
           <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
         </li>
         
+		
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
           
         </li>
+		
+	    
         <li class="menu-item menu-item-type-post_type menu-item-text">
         _Tags
         </li>
@@ -137,7 +140,7 @@
         <div class="group pad">
           <h1 class="site-title">
             <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
-              <img style="border-radius: 50%;width:72px;height:72px;margin:0 auto;" alt="coderzh" src="http://sunduoze.github.io/public/coderzh.jpg"></img>
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
               Sun&#39;s Blog
             </a>
           </h1>
@@ -180,7 +183,7 @@
                   <p class="post-byline">
                     by  · 2017年01月11日 · 263 Words ·
                     ~1min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze_blog/master/content/post/2017/%e5%a6%82%e4%bd%95%e9%99%8d%e4%bd%8e%e8%be%90%e5%b0%84EMI.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/2017/%e5%a6%82%e4%bd%95%e9%99%8d%e4%bd%8e%e8%be%90%e5%b0%84EMI.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -189,32 +192,48 @@
                   <div class="entry">
                     <div class="entry-inner">
                       
-                      <!-- raw HTML omitted -->
+                      
+
+<p><br/></p>
+
 <h2 id="合理的pcb-layout-来降低设计中辐射emi">合理的PCB Layout 来降低设计中辐射EMI</h2>
+
 <p>SMPS中，开关动作电流产生高频分量（方波中含有丰富的高频分量）
-<!-- raw HTML omitted -->！Buck电路中 只有一条线的支路电流是断续的</p>
-<p><!-- raw HTML omitted -->Key1：保证电流断续的回路所包围的面积最小
-<!-- raw HTML omitted -->Key2：使反馈管脚的走线（敏感节点）短而细（寄生电容最小）两个分压电阻尽可能的靠近反馈管脚和AGND（Vout拉长线到FB脚附近的分压电阻）
-<!-- raw HTML omitted -->Key3：中间增加接地层</p>
-<!-- raw HTML omitted -->
+<br/>！Buck电路中 只有一条线的支路电流是断续的</p>
+
+<p><br/>Key1：保证电流断续的回路所包围的面积最小
+<br/>Key2：使反馈管脚的走线（敏感节点）短而细（寄生电容最小）两个分压电阻尽可能的靠近反馈管脚和AGND（Vout拉长线到FB脚附近的分压电阻）
+<br/>Key3：中间增加接地层</p>
+
+<div>
+    <img src="http://sunduoze.github.io/media/competition_img/合理布局降低EMI.png" width="609px" height="184px"/>
+</div>
+
 <h3 id="layout-attention">Layout Attention</h3>
+
 <ol>
 <li>High frequency bypass capacitors should be located as close as VIN &amp; PGND Pins.</li>
 <li>Cboot capacitor（高边自举电容）should be located as close as IC Pins.</li>
 <li>FB pin&rsquo;s divider resistance should be located as close as IC（FB &amp; AGND Pins）</li>
 </ol>
+
 <p><strong>测试环境</strong> 3m实验室 铁氧体墙壁+天线</p>
-<!-- raw HTML omitted -->
+
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
 
                       
                     </div>
                     <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
                         <div style="float:left;margin-top:0px;">
-                        <img src="http://sunduoze.github.io/public/qrcode.jpg" width="129px" height="129px"/>
-                        <div style="text-align:center;">微信扫一扫交流</div>
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
                         </div>
                         <div>
-                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://www.enzo-sun.top/">sunduoze</a>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
                             <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/2017/%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%BE%90%E5%B0%84EMI/">http://sunduoze.github.io/post/2017/%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%BE%90%E5%B0%84EMI/</a>
                             <br />
@@ -263,26 +282,26 @@
 
     </div>
     <div class="widget qrcode">
-    <img src="http://sunduoze.github.io/public/qrcode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
     <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
 </div>
 
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/2017/%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/" rel="next">
+        <a href="http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>棠梨煎雪</span>
+          <span>读《精通开关电源设计》笔记</span>
         </a>
         
       </li>
       <li class="previous">
         
-        <a href="http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/" rel="prev">
+        <a href="http://sunduoze.github.io/post/2017/%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/" rel="prev">
           <i class="fa fa-chevron-left"></i>
           <strong>Previous Post</strong>
-          <span>读《精通开关电源设计》笔记</span>
+          <span>棠梨煎雪</span>
         </a>
         
       </li>

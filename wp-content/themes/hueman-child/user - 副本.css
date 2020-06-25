@@ -1,11 +1,11 @@
 /* custom colors, etc */
 
 ::selection {
-    background-color: #B5B5B5;
+    background-color: #d36430;
 }
 
 ::-moz-selection {
-    background-color: #B5B5B5;/*#c7edcc豆沙绿 护眼色*/
+    background-color: #d36430;
 }
 
 a,
@@ -36,7 +36,7 @@ a,
 .child-menu a:hover,
 .child-menu .current_page_item > a,
 .wp-pagenavi a {
-    color: #8B008B;/*主页中，各个标题字体颜色*/
+    color: #d36430;
 }
 
 .themeform input[type="submit"],
@@ -50,11 +50,11 @@ a,
 .author-bio .bio-avatar:after,
 .commentlist li.bypostauthor > .comment-body:after,
 .commentlist li.comment-author-admin > .comment-body:after {
-    background-color: #3c78d8;/*左边边条颜色*/
+    background-color: #d36430;
 }
 
 .post-format .format-container {
-    border-color: #B5B5B5;
+    border-color: #d36430;
 }
 
 .s1 .alx-tabs-nav li.active a,
@@ -63,7 +63,7 @@ a,
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
 .wp-pagenavi span.current {
-    border-bottom-color: #B5B5B5 !important;/*主页下边 more 复选颜色*/
+    border-bottom-color: #d36430 !important;
 }
 
 .s2 .post-nav li a:hover i,
@@ -74,7 +74,7 @@ a,
 .s2 .alx-tab li:hover .tab-item-title a,
 .s2 .alx-tab li:hover .tab-item-comment a,
 .s2 .alx-posts li:hover .post-item-title a {
-    color: #3c78d8;
+    color: #e2864d;
 }
 
 .s2 .sidebar-top,
@@ -83,15 +83,15 @@ a,
 .jp-play-bar,
 .jp-volume-bar-value,
 .s2 .widget_calendar caption {
-    background-color: #3c78d8;/*右边边条颜色*/
+    background-color: #ef6430;
 }
 
 .s2 .alx-tabs-nav li.active a {
-    border-bottom-color: #3c78d8;
+    border-bottom-color: #e2864d;
 }
 
 .post-comments span:before {
-    border-right-color: #3c78d8;
+    border-right-color: #e2864d;
 }
 
 /*header*/
@@ -245,7 +245,7 @@ a,
 }
 
 .post-byline a:hover {
-    color: #B5B5B5;
+    color: #d36430;
     text-decoration: none;
 }
 

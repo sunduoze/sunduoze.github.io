@@ -24,12 +24,12 @@
 
 <meta itemprop="name" content="Printf_Scanf_Redefine - Sun&#39;s Blog">
 <meta itemprop="description" content="嵌入式 Printf Scanf 重新定义 /* Init CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去 如下语句解决第1个字节无法正确发送出去的问题： 清发">
-<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
 <meta property="og:title" content="Printf_Scanf_Redefine - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/" />
-<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.jpg" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
 <meta property="og:description" content="嵌入式 Printf Scanf 重新定义 /* Init CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去 如下语句解决第1个字节无法正确发送出去的问题： 清发">
 
 <meta name="twitter:card" content="summary">
@@ -37,7 +37,7 @@
 <meta name="twitter:title" content="Printf_Scanf_Redefine - Sun&#39;s Blog">
 <meta name="twitter:description" content="嵌入式 Printf Scanf 重新定义 /* Init CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去 如下语句解决第1个字节无法正确发送出去的问题： 清发">
 <meta name="twitter:creator" content="@sunduoze">
-<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
   <link rel="canonical" href="http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/">
@@ -72,7 +72,7 @@
     <div class="nav-text"></div>
     <div class="nav-wrap container">
       <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
-        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.jpg" alt="sunduoze" title="Home">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
       </a>
       <ul id="menu-default-menu" class="nav container-inner group">
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
@@ -100,9 +100,12 @@
           <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
         </li>
         
+		
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
           
         </li>
+		
+	    
         <li class="menu-item menu-item-type-post_type menu-item-text">
         _Tags
         </li>
@@ -137,7 +140,7 @@
         <div class="group pad">
           <h1 class="site-title">
             <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
-              <img style="border-radius: 50%;width:72px;height:72px;margin:0 auto;" alt="coderzh" src="http://sunduoze.github.io/public/coderzh.jpg"></img>
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
               Sun&#39;s Blog
             </a>
           </h1>
@@ -180,7 +183,7 @@
                   <p class="post-byline">
                     by  · 2017年03月04日 · 414 Words ·
                     ~1min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze_blog/master/content/post/2017/Printf_Scanf_Redefine.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/2017/Printf_Scanf_Redefine.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -189,33 +192,40 @@
                   <div class="entry">
                     <div class="entry-inner">
                       
-                      <!-- raw HTML omitted -->
+                      
+
+<p><br/>
+<br/></p>
+
 <h2 id="嵌入式-printf-scanf-重新定义">嵌入式 Printf Scanf 重新定义</h2>
+
 <pre><code>/* 
 Init
-	CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去
-	如下语句解决第1个字节无法正确发送出去的问题：
-	清发送完成标志，Transmission Complete flag 
+    CPU的小缺陷：串口配置好，如果直接Send，则第1个字节发送不出去
+    如下语句解决第1个字节无法正确发送出去的问题：
+    清发送完成标志，Transmission Complete flag 
 */
-</code></pre><pre><code>USART_ClearFlag(USART1, USART_FLAG_TC);    
+</code></pre>
+
+<pre><code>USART_ClearFlag(USART1, USART_FLAG_TC);    
 /*
 *********************************************************************************************************
-*	函 数 名: fputc
-*	功能说明: 重定义putc函数，这样可以使用printf函数从串口1打印输出
-*	形    参: 无
-*	返 回 值: 无
+*   函 数 名: fputc
+*   功能说明: 重定义putc函数，这样可以使用printf函数从串口1打印输出
+*   形    参: 无
+*   返 回 值: 无
 *********************************************************************************************************
 */
 int fputc(int ch, FILE *f)
 {
-	/* 写一个字节到USART1 */
-	USART_SendData(USART1, (uint8_t) ch);
+    /* 写一个字节到USART1 */
+    USART_SendData(USART1, (uint8_t) ch);
 
-	/* 等待发送结束 */
-	while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
-	{}
+    /* 等待发送结束 */
+    while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
+    {}
 
-	return ch;
+    return ch;
 }
 
 
@@ -232,20 +242,22 @@ int fputc(int ch, FILE *f)
 }
 
 
-</code></pre><pre><code>/*
+</code></pre>
+
+<pre><code>/*
 *********************************************************************************************************
-*	函 数 名: fgetc
-*	功能说明: 重定义getc函数，这样可以使用scanff函数从串口1输入数据
-*	形    参: 无
-*	返 回 值: 无
+*   函 数 名: fgetc
+*   功能说明: 重定义getc函数，这样可以使用scanff函数从串口1输入数据
+*   形    参: 无
+*   返 回 值: 无
 *********************************************************************************************************
 */
 int fgetc(FILE *f)
 {
-	/* 等待串口1输入数据 */
-	while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
+    /* 等待串口1输入数据 */
+    while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
 
-	return (int)USART_ReceiveData(USART1);
+    return (int)USART_ReceiveData(USART1);
 }
 
 
@@ -261,17 +273,23 @@ int fgetc(FILE * f)
   HAL_UART_Receive(&amp;husart_debug,&amp;ch, 1, 0xffff);
   return ch;
 }
-</code></pre><!-- raw HTML omitted -->
+</code></pre>
+
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
 
                       
                     </div>
                     <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
                         <div style="float:left;margin-top:0px;">
-                        <img src="http://sunduoze.github.io/public/qrcode.jpg" width="129px" height="129px"/>
-                        <div style="text-align:center;">微信扫一扫交流</div>
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
                         </div>
                         <div>
-                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://www.enzo-sun.top/">sunduoze</a>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
                             <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/">http://sunduoze.github.io/post/2017/Printf_Scanf_Redefine/</a>
                             <br />
@@ -320,26 +338,26 @@ int fgetc(FILE * f)
 
     </div>
     <div class="widget qrcode">
-    <img src="http://sunduoze.github.io/public/qrcode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
     <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
 </div>
 
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/2017/Saber_%E5%88%9D%E7%BA%A7%E7%AF%87_Saber_Sketch/" rel="next">
+        <a href="http://sunduoze.github.io/post/2017/%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>Saber_初级篇_Saber_Sketch</span>
+          <span>棠梨煎雪</span>
         </a>
         
       </li>
       <li class="previous">
         
-        <a href="http://sunduoze.github.io/post/2017/%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/" rel="prev">
+        <a href="http://sunduoze.github.io/post/2017/Saber_%E5%88%9D%E7%BA%A7%E7%AF%87_Saber_Sketch/" rel="prev">
           <i class="fa fa-chevron-left"></i>
           <strong>Previous Post</strong>
-          <span>棠梨煎雪</span>
+          <span>Saber_初级篇_Saber_Sketch</span>
         </a>
         
       </li>

@@ -133,7 +133,7 @@ a,
 
 @media only screen and (min-width: 1921px) {
     #header {
-        background-image: url("img/jpg-3200.jpg");
+        background-image: url("img/syd-bridge-oper-3200.jpg");
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -141,28 +141,18 @@ a,
 
 @media only screen and (min-width: 1025px) and  (max-width: 1920px) {
     #header {
-        background-image: url("img/jpg-1920.jpg");
+        background-image: url("img/syd-bridge-oper-1920.jpg");
     }
 }
 
-@media only screen and (min-width: 721px) and  (max-width: 1024px) {
+@media only screen and (min-width: 720px) and  (max-width: 1024px) {
     #header {
-        background-image: url("img/jpg-1024.jpg");
+        background-image: url("img/syd-bridge-oper-1024.jpg");
     }
 }
 
-@media only screen and (min-width: 641px) and  (max-width: 720px) {
+@media only screen and (max-width: 719px) {
     #header {
-        background-image: url("img/jpg-720.jpg");
-    }
-}
-@media only screen and (min-width: 321px) and  (max-width: 640px) {
-    #header {
-        background-image: url("img/jpg-640.jpg");
-    }
-}
-@media only screen and (max-width: 320px) {
-    #header {
-        background-image: url("img/jpg-320.jpg");
+        background-image: url("img/syd-bridge-oper-720.jpg");
     }
 }

@@ -24,12 +24,12 @@
 
 <meta itemprop="name" content="【转载】整理 - Sun&#39;s Blog">
 <meta itemprop="description" content="Resonance,natural language communication">
-<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
 <meta property="og:title" content="【转载】整理 - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://sunduoze.github.io/post/%E8%BD%AC%E8%BD%BD%E6%95%B4%E7%90%86/" />
-<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.jpg" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
 <meta property="og:description" content="Resonance,natural language communication">
 
 <meta name="twitter:card" content="summary">
@@ -37,7 +37,7 @@
 <meta name="twitter:title" content="【转载】整理 - Sun&#39;s Blog">
 <meta name="twitter:description" content="Resonance,natural language communication">
 <meta name="twitter:creator" content="@sunduoze">
-<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.jpg">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
   <link rel="canonical" href="http://sunduoze.github.io/post/%E8%BD%AC%E8%BD%BD%E6%95%B4%E7%90%86/">
@@ -72,7 +72,7 @@
     <div class="nav-text"></div>
     <div class="nav-wrap container">
       <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
-        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.jpg" alt="sunduoze" title="Home">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
       </a>
       <ul id="menu-default-menu" class="nav container-inner group">
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
@@ -100,9 +100,12 @@
           <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
         </li>
         
+		
         <li class="menu-item menu-item-type-post_type menu-item-object-page">
           
         </li>
+		
+	    
         <li class="menu-item menu-item-type-post_type menu-item-text">
         _Tags
         </li>
@@ -137,7 +140,7 @@
         <div class="group pad">
           <h1 class="site-title">
             <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
-              <img style="border-radius: 50%;width:72px;height:72px;margin:0 auto;" alt="coderzh" src="http://sunduoze.github.io/public/coderzh.jpg"></img>
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
               Sun&#39;s Blog
             </a>
           </h1>
@@ -178,9 +181,9 @@
                   <h1 class="post-title">【转载】整理</h1>
 
                   <p class="post-byline">
-                    by  · 2016年08月09日 · 1925 Words ·
+                    by  · 2016年08月09日 · 1924 Words ·
                     ~4min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze_blog/master/content/post/%e3%80%90%e8%bd%ac%e8%bd%bd%e3%80%91%e6%95%b4%e7%90%86.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/%e3%80%90%e8%bd%ac%e8%bd%bd%e3%80%91%e6%95%b4%e7%90%86.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -189,50 +192,87 @@
                   <div class="entry">
                     <div class="entry-inner">
                       
-                      <!-- raw HTML omitted -->
+                      
+
+<div>
+    <img src="http://sunduoze.github.io/整理.png" width="650px" height="365px"/> 
+</div>
+
 <h2 id="部署及托管"><strong>部署及托管</strong></h2>
+
 <blockquote>
 <p>转载自： <a href="http://www.xuebuyuan.com/651322.html">http://www.xuebuyuan.com/651322.html</a> 假设你需要部署在 GitHub Pages 上，首先在GitHub上创建一个Repository，
 命名为：sunduoze.github.io （sunduoze替换为你的github用户名）。</p>
 </blockquote>
+
 <p>在站点根目录执行 Hugo 命令生成最终页面：</p>
+
 <pre><code>hugo --theme=hugo-theme --baseUrl=&quot;http://sunduoze.github.io/&quot;
-</code></pre><p>（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 draft=true 再重新生成。）</p>
+</code></pre>
+
+<p>（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 draft=true 再重新生成。）</p>
+
 <p>如果一切顺利，所有静态页面都会生成到 public 目录，将pubilc目录里所有文件 push 到刚创建的Repository的 master 分支。</p>
+
 <pre><code>cd public
 git init
 git remote add origin https://github.com/sunduoze/sunduoze.github.io.git
 git add -A
 git commit -m &quot;first commit&quot;
 git push -u origin master
-</code></pre><p>浏览器里访问：http://sunduoze.github.io/</p>
+</code></pre>
+
+<p>浏览器里访问：<a href="http://sunduoze.github.io/">http://sunduoze.github.io/</a></p>
+
 <p>撤销push</p>
+
 <pre><code>git revert &lt;SHA&gt; 哈希值 7位
-</code></pre><h2 id="使用github托管代码"><strong>使用github托管代码</strong></h2>
+</code></pre>
+
+<h2 id="使用github托管代码"><strong>使用github托管代码</strong></h2>
+
 <h3 id="提交">提交</h3>
+
 <pre><code>git remote add xxx https://github.com/sunduoze/sunduoze.github.io.git
 git push -u xxx master
-</code></pre><p>如里有报错误：</p>
+</code></pre>
+
+<p>如里有报错误：</p>
+
 <pre><code>git push -f 
-</code></pre><pre><code>ERROR: Total 2332669 (delta 1949888), reused 2330461 (delta 1949349)
+</code></pre>
+
+<pre><code>ERROR: Total 2332669 (delta 1949888), reused 2330461 (delta 1949349)
 fatal: The remote end hung up unexpectedly
 
-</code></pre><p>git config http.postBuffer 524288000</p>
+</code></pre>
+
+<p>git config http.postBuffer 524288000</p>
+
 <pre><code>
 ok.
 
 ### 克隆代码
-</code></pre><p>git clone git@github..com:用户名/项目名.git</p>
+</code></pre>
+
+<p>git clone git@github..com:用户名/项目名.git</p>
+
 <pre><code>&lt;br/&gt;
 &lt;br/&gt;
 **将Hugo官方的所有主题模板都下载下来**
-</code></pre><p>git clone &ndash;recursive <a href="https://github.com/spf13/hugoThemes">https://github.com/spf13/hugoThemes</a> themes</p>
+</code></pre>
+
+<p>git clone &ndash;recursive <a href="https://github.com/spf13/hugoThemes">https://github.com/spf13/hugoThemes</a> themes</p>
+
 <pre><code>
 ## 安装皮肤
 到 皮肤列表 挑选一个心仪的皮肤，比如你觉得 Hyde 皮肤不错，找到相关的 GitHub 地址，创建目录 themes，在 themes 目录里把皮肤 git clone 下来：
-</code></pre><p>创建 themes 目录
+</code></pre>
+
+<p>创建 themes 目录
 cd themes
 git clone <a href="https://github.com/spf13/hyde.git">https://github.com/spf13/hyde.git</a></p>
+
 <pre><code>&lt;br/&gt;
 ## **Start**
 
@@ -247,7 +287,10 @@ Hugo二进制下载地址：https://github.com/spf13/hugo/releases
 
 下载下来后，只有一个叫hugo或者hugo.exe的程序，接下来开始生成自己的站点：
 
-</code></pre><p>hugo new site /path/to/site</p>
+</code></pre>
+
+<p>hugo new site /path/to/site</p>
+
 <pre><code>然后hugo会自动生成这样一个目录结构：
 &lt;br/&gt;
 ▸ archetypes/
@@ -262,10 +305,16 @@ content目录里放的是你写的markdown文章，layouts目录里放的是网�
 
 ### 创建一个页面：
 
-</code></pre><p>hugo new about.md</p>
+</code></pre>
+
+<p>hugo new about.md</p>
+
 <pre><code>
 如果是博客日志，最好将md文件放在content的post目录里。
-</code></pre><p>hugo new post/first.md</p>
+</code></pre>
+
+<p>hugo new post/first.md</p>
+
 <pre><code>执行完后，会在content/post目录自动生成一个MarkDown格式的first.md文件：
 
 +++ date = “2015-01-08T08:36:54-07:00” draft = true title = “first” +++ +++可以替换为Jekyll一样的—，里面的内容是这篇文章的一些信息。下面就可以开始写你的文章内容，比如：
@@ -273,36 +322,45 @@ content目录里放的是你写的markdown文章，layouts目录里放的是网�
 +++ date = “2015-01-08T08:36:54-07:00” draft = true title = “first” +++ ### Hello Hugo 1. aaa 1. bbb 1. ccc OK，刚才的about.md也有内容，该看看最后的效果了。然后你屁颠屁颠的使用hugo server启动，打开浏览器里一看，发现毛都没有！这是肿么了！
 
 这是Hugo对初学者非常不友好的地方，默认生成的网站是没有任何皮肤模板的。为了看看第一个写的示例，还得去Github上把一个网页模板下载下来。如果你网络够好，网速够快，你可以在刚才的目录将Hugo官方的所有模板都下载下来：
-</code></pre><p>git clone &ndash;recursive <a href="https://github.com/spf13/hugoThemes">https://github.com/spf13/hugoThemes</a> themes</p>
-<pre><code>我尝试过，也失败过，且从未成功一次性将所有的模板下载下来。所以，我们还是老老实实只下载其中一个模板来看看效果吧：
-</code></pre><p>cd themes $ git clone <a href="https://github.com/spf13/hyde.git">https://github.com/spf13/hyde.git</a></p>
-<pre><code>启动本地调试：
-</code></pre><p>hugo server &ndash;theme=hyde &ndash;buildDrafts &ndash;watch</p>
-<pre><code>浏览器里打开：http://127.0.0.1:1313
-
-### HugoFirstPost
-
-–watch或者-w 选项打开的话，将会监控到文章的改动从而自动去刷新浏览器，不需要自己手工去刷新浏览器，非常方便。
-官方文档：https://gohugo.io/overview/introduction/ 
-皮肤列表：https://github.com/spf13/hugoThemes
-
-### 常用文档：
-
-Configuring Hugo：https://gohugo.io/overview/configuration/ 
-Front Matter：https://gohugo.io/content/front-matter/ 
-Menus：https://gohugo.io/extras/menus/ 
-Template Variables：https://gohugo.io/templates/variables/ 
-Hosting on GitHub Pages：https://gohugo.io/tutorials/github-pages-blog/
 </code></pre>
+
+<p>git clone &ndash;recursive <a href="https://github.com/spf13/hugoThemes">https://github.com/spf13/hugoThemes</a> themes</p>
+
+<pre><code>我尝试过，也失败过，且从未成功一次性将所有的模板下载下来。所以，我们还是老老实实只下载其中一个模板来看看效果吧：
+</code></pre>
+
+<p>cd themes $ git clone <a href="https://github.com/spf13/hyde.git">https://github.com/spf13/hyde.git</a></p>
+
+<pre><code>启动本地调试：
+</code></pre>
+
+<p>hugo server &ndash;theme=hyde &ndash;buildDrafts &ndash;watch
+```
+浏览器里打开：<a href="http://127.0.0.1:1313">http://127.0.0.1:1313</a></p>
+
+<h3 id="hugofirstpost">HugoFirstPost</h3>
+
+<p>–watch或者-w 选项打开的话，将会监控到文章的改动从而自动去刷新浏览器，不需要自己手工去刷新浏览器，非常方便。
+官方文档：<a href="https://gohugo.io/overview/introduction/">https://gohugo.io/overview/introduction/</a>
+皮肤列表：<a href="https://github.com/spf13/hugoThemes">https://github.com/spf13/hugoThemes</a></p>
+
+<h3 id="常用文档">常用文档：</h3>
+
+<p>Configuring Hugo：<a href="https://gohugo.io/overview/configuration/">https://gohugo.io/overview/configuration/</a>
+Front Matter：<a href="https://gohugo.io/content/front-matter/">https://gohugo.io/content/front-matter/</a>
+Menus：<a href="https://gohugo.io/extras/menus/">https://gohugo.io/extras/menus/</a>
+Template Variables：<a href="https://gohugo.io/templates/variables/">https://gohugo.io/templates/variables/</a>
+Hosting on GitHub Pages：<a href="https://gohugo.io/tutorials/github-pages-blog/">https://gohugo.io/tutorials/github-pages-blog/</a></p>
+
                       
                     </div>
                     <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
                         <div style="float:left;margin-top:0px;">
-                        <img src="http://sunduoze.github.io/public/qrcode.jpg" width="129px" height="129px"/>
-                        <div style="text-align:center;">微信扫一扫交流</div>
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
                         </div>
                         <div>
-                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://www.enzo-sun.top/">sunduoze</a>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
                             <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/%E8%BD%AC%E8%BD%BD%E6%95%B4%E7%90%86/">http://sunduoze.github.io/post/%E8%BD%AC%E8%BD%BD%E6%95%B4%E7%90%86/</a>
                             <br />
@@ -351,21 +409,21 @@ Hosting on GitHub Pages：https://gohugo.io/tutorials/github-pages-blog/
 
     </div>
     <div class="widget qrcode">
-    <img src="http://sunduoze.github.io/public/qrcode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
     <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
 </div>
 
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/2016/hosts/" rel="next">
-          <i class="fa fa-chevron-right"></i>
-          <strong>Next post</strong>
-          <span>hosts</span>
-        </a>
-        
       </li>
       <li class="previous">
+        
+        <a href="http://sunduoze.github.io/post/2016/hosts/" rel="prev">
+          <i class="fa fa-chevron-left"></i>
+          <strong>Previous Post</strong>
+          <span>hosts</span>
+        </a>
         
       </li>
     </ul>
