@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 28 May 2018 21:59:57 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 21:01:30 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/%E6%84%9F%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>20200625_test</title>
+      <link>http://sunduoze.github.io/post/20200625_test/</link>
+      <pubDate>Thu, 25 Jun 2020 21:01:30 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/20200625_test/</guid>
+      <description>test &amp;lt;audio autoplay=&amp;quot;autoplay&amp;rdquo; controls=&amp;quot;controls&amp;quot;loop=&amp;quot;loop&amp;rdquo; preload=&amp;quot;auto&amp;rdquo; src=&amp;rdquo;/media/music/Bruce Lee Theme.mp3&amp;quot;&amp;gt; 你的浏览器不支持audio标签</description>
+    </item>
     
     <item>
       <title>固执任性与无知</title>

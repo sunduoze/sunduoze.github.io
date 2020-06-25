@@ -8,7 +8,7 @@
                     var target = event.currentTarget || event.target;
                     var $form = w.jQuery(target);
                     var orgVal = $form.find('.search').val();
-                    $form.find('.search').val('site:blog.coderzh.com/ ' + orgVal);
+                    $form.find('.search').val('site:enzo-sun.top/ ' + orgVal);
                     done = true;
                     $form.submit();
                 }
