@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <base href="http://sunduoze.github.io//">
+  <script>
+    document._writeOriginal = document.write;
+    document.write = function(str) {
+        if (str.indexOf('livereload.js') > -1) {
+            document._writeOriginal(str);
+        } else {
+            document._writeOriginal('<!-- Be Hijack!! -->');
+        }
+    }
+  </script>
+  <title>C语言高端用法 - Sun&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="嵌入式,">
+<meta name="description" content="from:(https://www.zhihu.com/question/386657140/answer/1172560546) 泛型 基本操作 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; //#define pair(T1,T2, ...) pair$_##T1##_$$_##T2##_$##__VA_ARGS__ // $：貌似没有作用 #define pair(T1,T2, ...) pair##T1##T2##__VA_ARGS__ #define pair_def(T1,T2) \ typedef struct pair(T1,T2) pair(T1,T2);\ struct pair(T1,T2) {\ T1 first;\ T2 second;\ } typedef char* str; pair_def(int, char); pair_def(str, float); int main() { pair(int, char) p1; pair(str, float) p2; p1.first = 123; p1.second = &#39;a&#39;; p2.first = &quot;hello&quot;; p2.second =">
+<meta name="author" content="sunduoze">
+<meta name="publisher" content="sunduoze">
+<meta name="generator" content="http://gohugo.io/"/>
+
+<meta itemprop="name" content="C语言高端用法 - Sun&#39;s Blog">
+<meta itemprop="description" content="from:(https://www.zhihu.com/question/386657140/answer/1172560546) 泛型 基本操作 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; //#define pair(T1,T2, ...) pair$_##T1##_$$_##T2##_$##__VA_ARGS__ // $：貌似没有作用 #define pair(T1,T2, ...) pair##T1##T2##__VA_ARGS__ #define pair_def(T1,T2) \ typedef struct pair(T1,T2) pair(T1,T2);\ struct pair(T1,T2) {\ T1 first;\ T2 second;\ } typedef char* str; pair_def(int, char); pair_def(str, float); int main() { pair(int, char) p1; pair(str, float) p2; p1.first = 123; p1.second = &#39;a&#39;; p2.first = &quot;hello&quot;; p2.second =">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+<meta property="og:title" content="C语言高端用法 - Sun&#39;s Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sunduoze.github.io/post/c%E8%AF%AD%E8%A8%80%E9%AB%98%E7%AB%AF%E7%94%A8%E6%B3%95/" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
+<meta property="og:description" content="from:(https://www.zhihu.com/question/386657140/answer/1172560546) 泛型 基本操作 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; //#define pair(T1,T2, ...) pair$_##T1##_$$_##T2##_$##__VA_ARGS__ // $：貌似没有作用 #define pair(T1,T2, ...) pair##T1##T2##__VA_ARGS__ #define pair_def(T1,T2) \ typedef struct pair(T1,T2) pair(T1,T2);\ struct pair(T1,T2) {\ T1 first;\ T2 second;\ } typedef char* str; pair_def(int, char); pair_def(str, float); int main() { pair(int, char) p1; pair(str, float) p2; p1.first = 123; p1.second = &#39;a&#39;; p2.first = &quot;hello&quot;; p2.second =">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sunduoze">
+<meta name="twitter:title" content="C语言高端用法 - Sun&#39;s Blog">
+<meta name="twitter:description" content="from:(https://www.zhihu.com/question/386657140/answer/1172560546) 泛型 基本操作 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; //#define pair(T1,T2, ...) pair$_##T1##_$$_##T2##_$##__VA_ARGS__ // $：貌似没有作用 #define pair(T1,T2, ...) pair##T1##T2##__VA_ARGS__ #define pair_def(T1,T2) \ typedef struct pair(T1,T2) pair(T1,T2);\ struct pair(T1,T2) {\ T1 first;\ T2 second;\ } typedef char* str; pair_def(int, char); pair_def(str, float); int main() { pair(int, char) p1; pair(str, float) p2; p1.first = 123; p1.second = &#39;a&#39;; p2.first = &quot;hello&quot;; p2.second =">
+<meta name="twitter:creator" content="@sunduoze">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+  <link rel="canonical" href="http://sunduoze.github.io/post/c%E8%AF%AD%E8%A8%80%E9%AB%98%E7%AB%AF%E7%94%A8%E6%B3%95/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/c%E8%AF%AD%E8%A8%80%E9%AB%98%E7%AB%AF%E7%94%A8%E6%B3%95/"/>
+  <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
+  
+<link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="human-style-css2" href="http://sunduoze.github.io/wp-content/themes/hueman-child/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="responsive-css" href="http://sunduoze.github.io/wp-content/themes/hueman/responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-css" href="http://sunduoze.github.io/wp-content/themes/hueman/fonts/font-awesome.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="http://sunduoze.github.io/public/highlight/styles/github.css">
+<script src="http://sunduoze.github.io/public/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" id="human-style-css3" href="http://sunduoze.github.io/wp-content/themes/hueman-child/user.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="public/font/hack/css/hack.min.css">
+
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/scripts.js"></script>
+<script type="text/javascript" src="assets/picturefill/picturefill.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" async defer src="assets/js/myblog.js"></script>
+
+</head>
+
+<body class="single single-post single-format-standard col-3cm full-width topbar-enabled chrome">
+<div id="wrapper">
+  <header id="header">
+
+  <nav class="nav-container group" id="nav-topbar">
+    <div class="nav-toggle"><i class="fa fa-bars"></i></div>
+    <div class="nav-text"></div>
+    <div class="nav-wrap container">
+      <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
+      </a>
+      <ul id="menu-default-menu" class="nav container-inner group">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/">首页</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/post/">归档</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
+        </li>
+        
+		
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          
+        </li>
+		
+	    
+        <li class="menu-item menu-item-type-post_type menu-item-text">
+        _Tags
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container-inner">
+        <div class="toggle-search"><i class="fa fa-search"></i></div>
+        <div class="search-expand">
+          <div class="search-expand-inner">
+            <form method="get" class="searchform themeform" action="https://www.google.com/search">
+              <div>
+                <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+  </nav>
+  
+
+  <div class="container group">
+    <div class="container-inner">
+
+      <div class="group pad">
+
+        <div class="group pad">
+          <h1 class="site-title">
+            <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
+              Sun&#39;s Blog
+            </a>
+          </h1>
+          <p class="site-description"> Resonance,natural language communication </p>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+  
+
+</header>
+
+
+
+  <div class="container" id="page">
+    <div class="container-inner">
+      <div class="main">
+        <div class="main-inner group">
+          <section class="content">
+            <div class="page-title pad group">
+              <ul class="meta-single group">
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="category tag">笔记</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="pad group">
+
+              <article
+                  class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
+                <div class="post-inner group">
+
+                  <h1 class="post-title">C语言高端用法</h1>
+
+                  <p class="post-byline">
+                    by  · 2020年11月02日 · 1180 Words ·
+                    ~3min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/c%e8%af%ad%e8%a8%80%e9%ab%98%e7%ab%af%e7%94%a8%e6%b3%95.md"
+                       target="_blank">Improve on <i class="fa fa-github"></i></a>
+                  </p>
+
+                  <div class="clear"></div>
+
+                  <div class="entry">
+                    <div class="entry-inner">
+                      
+                      
+
+<p><br/>
+<br/>
+from:(<a href="https://www.zhihu.com/question/386657140/answer/1172560546">https://www.zhihu.com/question/386657140/answer/1172560546</a>)</p>
+
+<h2 id="泛型">泛型</h2>
+
+<h4 id="基本操作">基本操作</h4>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+//#define pair(T1,T2, ...) pair$_##T1##_$$_##T2##_$##__VA_ARGS__ // $：貌似没有作用
+#define pair(T1,T2, ...) pair##T1##T2##__VA_ARGS__
+
+#define pair_def(T1,T2) \
+typedef struct pair(T1,T2) pair(T1,T2);\
+struct pair(T1,T2) {\
+T1 first;\
+T2 second;\
+}
+
+typedef char* str;
+
+pair_def(int, char);
+pair_def(str, float);
+
+int main()
+{
+    pair(int, char) p1;
+    pair(str, float) p2;
+
+    p1.first = 123;
+    p1.second = 'a';
+
+    p2.first = &quot;hello&quot;;
+    p2.second = 3.14f;
+
+    printf(&quot;p1:%d,%c\r\n&quot;, p1.first, p1.second);
+    printf(&quot;p2:%s,%f\r\n&quot;, p2.first, p2.second);
+
+    return 0;
+}
+
+output:
+p1:123,a
+p2:hello,3.140000
+
+</code></pre>
+
+<h4 id="增加构造函数">增加构造函数</h4>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+//#define pair(T1,T2, ...) pair$_##T1##_$$_##T2##_$##__VA_ARGS__
+#define pair(T1,T2, ...) pair##T1##T2##__VA_ARGS__
+
+#define pair_def(T1,T2) \
+typedef struct pair(T1,T2) pair(T1,T2);\
+struct pair(T1,T2) {\
+T1 first;\
+T2 second;\
+}; \
+\
+void pair(T1, T2, init)(pair(T1, T2)* _this,\
+                             T1 t1,\
+                             T2 t2)\
+                        {\
+                          _this-&gt;first = t1;\
+                          _this-&gt;second = t2;\
+                        } // add 构造函数
+
+typedef char* str;
+
+pair_def(int, char);
+pair_def(str, float);
+
+int main()
+{
+    pair(int, char) p1;
+    pair(str, float) p2;
+
+    p1.first = 123;
+    p1.second = 'a';
+
+    p2.first = &quot;hello&quot;;
+    p2.second = 3.14f;
+
+    printf(&quot;p1:%d,%c\r\n&quot;, p1.first, p1.second);
+    printf(&quot;p2:%s,%f\r\n&quot;, p2.first, p2.second);
+
+    // add 构造函数
+    pair(int, char, init)(&amp;p1, 123, 'a');
+    pair(str, float, init)(&amp;p2, &quot;hello&quot;, 3.14f);
+
+    printf(&quot;p1:%d,%c\r\n&quot;, p1.first, p1.second);
+    printf(&quot;p2:%s,%f\r\n&quot;, p2.first, p2.second);
+    return 0;
+}
+
+output:
+p1:123,a
+p2:hello,3.140000
+p1:123,a
+p2:hello,3.140000
+
+</code></pre>
+
+<h4 id="增加静态成员函数">增加静态成员函数</h4>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+//#define pair(T1,T2, ...) pair$_##T1##_$$_##T2##_$##__VA_ARGS__
+#define pair(T1,T2, ...) pair##T1##T2##__VA_ARGS__
+
+#define pair_def(T1,T2) \
+typedef struct pair(T1,T2) pair(T1,T2);\
+struct pair(T1,T2) {\
+T1 first;\
+T2 second;\
+void (*print_type)(void);\
+}; \
+\
+void pair(T1, T2, print_type)(void) {\
+    printf(&quot;T1:&quot;#T1&quot;, T2:&quot;#T2&quot;\r\n&quot;);\
+}\
+void pair(T1, T2, init)(pair(T1, T2)* _this,\
+                             T1 t1,\
+                             T2 t2)\
+                        {\
+                          _this-&gt;print_type = pair(T1, T2, print_type);\
+                          _this-&gt;first = t1;\
+                          _this-&gt;second = t2;\
+                        } // add 构造函数
+
+typedef char* str;
+
+pair_def(int, char);
+pair_def(str, float);
+
+int main()
+{
+    pair(int, char) p1;
+    pair(str, float) p2;
+
+    p1.first = 123;
+    p1.second = 'a';
+
+    p2.first = &quot;hello&quot;;
+    p2.second = 3.14f;
+
+    printf(&quot;p1:%d,%c\r\n&quot;, p1.first, p1.second);
+    printf(&quot;p2:%s,%f\r\n&quot;, p2.first, p2.second);
+
+    // add 构造函数
+    pair(int, char, init)(&amp;p1, 123, 'a');
+    pair(str, float, init)(&amp;p2, &quot;hello&quot;, 3.14f);
+
+    printf(&quot;p1:%d,%c\r\n&quot;, p1.first, p1.second);
+    printf(&quot;p2:%s,%f\r\n&quot;, p2.first, p2.second);
+
+    // add 静态成员函数
+    p1.print_type();
+    printf(&quot;p1:%d,%c\r\n&quot;, p1.first, p1.second);
+    p2.print_type();
+    printf(&quot;p2:%s,%f\r\n&quot;, p2.first, p2.second);
+
+    return 0;
+}
+
+output:
+p1:123,a
+p2:hello,3.140000
+p1:123,a
+p2:hello,3.140000
+T1:int, T2:char
+p1:123,a
+T1:str, T2:float
+p2:hello,3.140000
+</code></pre>
+
+<h4 id="增加静态成员函数-必须得传入this指针的">增加静态成员函数（必须得传入this指针的）</h4>
+
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+//#define pair(T1,T2, ...) pair$_##T1##_$$_##T2##_$##__VA_ARGS__
+#define pair(T1,T2, ...) pair##T1##T2##__VA_ARGS__
+
+#define pair_def(T1, T2) \
+typedef struct pair(T1, T2) pair(T1, T2); \
+struct pair(T1, T2) { \
+    T1 first; \
+    T2 second; \
+    void (*print_type)(void); \
+    void (*print_val)(const pair(T1, T2)* _this); \
+}; \
+\
+void pair(T1, T2, print_type)(void) { \
+    printf(&quot;T1: &quot;#T1&quot;, T2: &quot;#T2&quot;\n&quot;); \
+} \
+\
+void pair(T1, T2, init)( \
+    pair(T1, T2)* _this, \
+    void (*pair(T1, T2, print_val))(const pair(T1, T2)*), \
+    T1 t1, \
+    T2 t2) \
+{ \
+    _this-&gt;print_type = pair(T1, T2, print_type); \
+    _this-&gt;print_val = pair(T1, T2, print_val); \
+    _this-&gt;first = t1; \
+    _this-&gt;second = t2; \
+}
+
+typedef const char* str;
+
+pair_def(int, char);
+pair_def(str, float);
+
+void pair(int, char, print_val)(const pair(int, char)* _this) {
+    printf(&quot;%d, %c\n&quot;, _this-&gt;first, _this-&gt;second);
+}
+
+void pair(str, float, print_val)(const pair(str, float)* _this) {
+    printf(&quot;%s, %f\n&quot;, _this-&gt;first, _this-&gt;second);
+}
+
+int main() {
+    // Pair(int, char)模仿C++的Pair&lt;int, char&gt;写法
+    // 该宏将被扩展为Pair$_int_$$_char_$
+    pair(int, char) p1;
+    pair(str, float) p2;
+
+    // Pair(int, char, Init)()模仿C++的访问成员函数Pair&lt;int, char&gt;::Init()写法
+    // 该宏将被扩展为Pair$_int_$$_char_$Init()
+    pair(int, char, init)(&amp;p1, pair(int, char, print_val), 123, 'a');
+    pair(str, float, init)(&amp;p2, pair(str, float, print_val), &quot;pi&quot;, 3.14f);
+
+    p1.print_type();
+    p1.print_val(&amp;p1);
+
+    p2.print_type();
+    p2.print_val(&amp;p2);
+
+    return 0;
+}
+
+</code></pre>
+
+<h4 id="封装成头">封装成头</h4>
+
+<p>header</p>
+
+<pre><code>#ifndef __PAIR_H_
+#define __PAIR_H_
+
+/* pair_template.h */
+#include &lt;stdio.h&gt;
+
+#define pair(T1, T2, T3, ...) pair$##T1##$##T2##$##T3##$##__VA_ARGS__
+
+// declaration /////////////////////////////////////////////////////////////////
+#define pair_decl(T1, T2, T3) \
+typedef struct pair(T1, T2, T3) pair(T1, T2, T3); \
+struct pair(T1, T2, T3) { \
+    T1 first; \
+    T2 second; \
+    T3 third; \
+    void (*print_type)(void); \
+    void (*print_val)(const pair(T1, T2, T3)* _this); \
+}; \
+\
+void pair(T1, T2, T3, init)( \
+    pair(T1, T2, T3)* _this, \
+    T1 t1, \
+    T2 t2, \
+    T3 t3)
+
+// definition //////////////////////////////////////////////////////////////////
+#define pair_def(T1, T2, T3) \
+static void pair(T1, T2, T3, print_type)(void) { \
+    printf(&quot;T1: &quot;#T1&quot;, T2: &quot;#T2&quot;, T3: &quot;#T3&quot;\n&quot;); \
+} \
+\
+void pair(T1, T2, T3, init)( \
+    pair(T1, T2, T3)* _this, \
+    T1 t1, \
+    T2 t2, \
+    T3 t3) \
+{ \
+    _this-&gt;print_type = pair(T1, T2, T3, print_type); \
+    _this-&gt;print_val = pair(T1, T2, T3, print_val); \
+    _this-&gt;first = t1; \
+    _this-&gt;second = t2; \
+    _this-&gt;third = t3; \
+}
+
+typedef const char* str;
+
+pair_decl(int, char, str);
+pair_decl(str, float, str);
+pair_decl(float, str, str);
+pair_decl(str, str, str);
+
+#endif // __PAIR_H_
+
+</code></pre>
+
+<pre><code>#include &quot;pair.h&quot;
+
+static void pair(int, char, str, print_val)(const pair(int, char, str)* _this) {
+    printf(&quot;%d, %c, %s\n&quot;, _this-&gt;first, _this-&gt;second, _this-&gt;third);
+}
+
+static void pair(str, float, str, print_val)(const pair(str, float, str)* _this) {
+    printf(&quot;%s, %f, %s\n&quot;, _this-&gt;first, _this-&gt;second, _this-&gt;third);
+}
+
+static void pair(float, str, str, print_val)(const pair(float, str, str)* _this) {
+    printf(&quot;%f, %s, %s\n&quot;, _this-&gt;first, _this-&gt;second, _this-&gt;third);
+}
+
+static void pair(str, str, str, print_val)(const pair(str, str, str)* _this) {
+    printf(&quot;%s, %s, %s\n&quot;, _this-&gt;first, _this-&gt;second, _this-&gt;third);
+}
+
+
+pair_def(int, char, str);
+pair_def(str, float, str);
+pair_def(float, str, str);
+pair_def(str, str, str);
+
+</code></pre>
+
+<p>main function</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#include &quot;pair.h&quot;
+
+int main() {
+    // Pair(int, char)模仿C++的Pair&lt;int, char&gt;写法
+    // 该宏将被扩展为Pair$_int_$$_char_$
+    pair(int, char ,str) p1;
+    pair(str, float,str) p2;
+    pair(float, str,str) p3;
+    pair(str, str,str)   p4;
+
+
+    // pair(int, char, init)()模仿C++的访问成员函数Pair&lt;int, char&gt;::init()写法
+    // 该宏将被扩展为Pair$_int_$$_char_$init()
+    pair(int, char ,str, init)(&amp;p1, 123, 'a', &quot;!&quot;);
+    pair(str, float,str, init)(&amp;p2, &quot;pi&quot;, 3.14f, &quot;&quot;);
+    pair(float, str,str, init)(&amp;p3, 3.14f, &quot;hello world&quot;, &quot;!&quot;);
+    pair(str, str,str, init)(&amp;p4, &quot;hello&quot;, &quot;world&quot;, &quot;!&quot;);
+
+    p1.print_type();
+    p1.print_val(&amp;p1);
+
+    p2.print_type();
+    p2.print_val(&amp;p2);
+
+    p3.print_type();
+    p3.print_val(&amp;p3);
+
+    p4.print_type();
+    p4.print_val(&amp;p4);
+
+    return 0;
+}
+</code></pre>
+
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
+
+                      
+                    </div>
+                    <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                        <div style="float:left;margin-top:0px;">
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
+                        </div>
+                        <div>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
+                            <br />微信关注：勿忘初兴
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/c%E8%AF%AD%E8%A8%80%E9%AB%98%E7%AB%AF%E7%94%A8%E6%B3%95/">http://sunduoze.github.io/post/c%E8%AF%AD%E8%A8%80%E9%AB%98%E7%AB%AF%E7%94%A8%E6%B3%95/</a>
+                            <br />
+                            文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  
+
+                </div>
+                
+              </article>
+              
+              <div class="clear"></div>
+              
+              
+              
+            </div>
+          </section>
+          <div class="sidebar s1">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>Follow:</p>
+      <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="widget qrcode">
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
+</div>
+
+    <ul class="post-nav group">
+      <li class="next">
+        
+        <a href="http://sunduoze.github.io/post/%E5%89%8D%E5%AE%A2%E6%88%B7Jimmy-mark/" rel="next">
+          <i class="fa fa-chevron-right"></i>
+          <strong>Next post</strong>
+          <span>前客户Jimmy mark</span>
+        </a>
+        
+      </li>
+      <li class="previous">
+        
+      </li>
+    </ul>
+    <div id="search-2" class="widget widget_search"><h3>Search</h3>
+      <form method="get" class="searchform themeform" action="https://www.google.com/search">
+        <div>
+          <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+          <div class="sidebar s2">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>More</p>
+    </div>
+    <div id="categories-2" class="widget widget_categories"><h3>Categories</h3>
+      <ul>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  <section class="container" id="footer-bottom">
+    <div class="container-inner">
+      <a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+      <div class="pad group">
+        <div class="grid one-half">
+          <div id="copyright">
+              <p>Copyright (c) 2015. All rights reserved.<br>Powered by
+              <a rel="nofollow" href="http://gohugo.io/" target="_blank">Hugo - the static site generator</a>.
+              <a rel="nofollow" href="http://golang.org" target="_blank">#golang</a>.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="grid one-half last">
+          <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+  
+</footer>
+
+</div>
+
+</body>
+</html>
+

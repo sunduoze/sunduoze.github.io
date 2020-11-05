@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 26 Sep 2020 14:45:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 10:45:42 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C语言高端用法</title>
+      <link>http://sunduoze.github.io/post/c%E8%AF%AD%E8%A8%80%E9%AB%98%E7%AB%AF%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Mon, 02 Nov 2020 10:45:42 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/c%E8%AF%AD%E8%A8%80%E9%AB%98%E7%AB%AF%E7%94%A8%E6%B3%95/</guid>
+      <description>from:(https://www.zhihu.com/question/386657140/answer/1172560546) 泛型 基本操作 #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; //#define pair(T1,T2, ...) pair$_##T1##_$$_##T2##_$##__VA_ARGS__ // $：貌似没有作用 #define pair(T1,T2, ...) pair##T1##T2##__VA_ARGS__ #define pair_def(T1,T2) \ typedef struct pair(T1,T2) pair(T1,T2);\ struct pair(T1,T2) {\ T1 first;\ T2 second;\ } typedef char* str; pair_def(int, char); pair_def(str, float); int main() { pair(int, char) p1; pair(str, float) p2; p1.first = 123; p1.second = &#39;a&#39;; p2.first = &amp;quot;hello&amp;quot;; p2.second =</description>
+    </item>
     
     <item>
       <title>前客户Jimmy mark</title>
