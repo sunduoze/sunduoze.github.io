@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 07 Nov 2020 16:13:07 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2020 18:10:03 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python_instrument_lib_build</title>
+      <link>http://sunduoze.github.io/post/python_instrument_lib_build/</link>
+      <pubDate>Sun, 08 Nov 2020 18:10:03 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/python_instrument_lib_build/</guid>
+      <description>1. instrument library build serial has been verify ethernet socket server &amp;amp; cilent need verify more # utf-8 import os import socket import time import threading import serial import serial.tools.list_ports &amp;quot;&amp;quot;&amp;quot;Function to looks for connected USB instruments&amp;quot;&amp;quot;&amp;quot; def list_instruments(): # This isn&#39;t implemented yet. inst_list = [] return inst_list # 处理客户端，sock为socket，ad</description>
+    </item>
+    
+    <item>
+      <title>Python_start</title>
+      <link>http://sunduoze.github.io/post/python_start/</link>
+      <pubDate>Sun, 08 Nov 2020 15:32:43 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/python_start/</guid>
+      <description>1. IDE Pycharm install Pycharm (1.安装包 2.补丁jar 3.增加补丁路径 4.离线后输入激活码) install Python python-3.6.6-amd64.exe (记得勾选添加环境变量) PyCharm 2019.3.1 (Professional Edition) Build #PY-193.5662.61, built on December 18, 2019 Licensed to pig6 Subscription is active until</description>
+    </item>
     
     <item>
       <title>FT2232</title>

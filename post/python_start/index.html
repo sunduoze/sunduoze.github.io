@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <base href="http://sunduoze.github.io//">
+  <script>
+    document._writeOriginal = document.write;
+    document.write = function(str) {
+        if (str.indexOf('livereload.js') > -1) {
+            document._writeOriginal(str);
+        } else {
+            document._writeOriginal('<!-- Be Hijack!! -->');
+        }
+    }
+  </script>
+  <title>Python_start - Sun&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="嵌入式,">
+<meta name="description" content="1. IDE Pycharm install Pycharm (1.安装包 2.补丁jar 3.增加补丁路径 4.离线后输入激活码) install Python python-3.6.6-amd64.exe (记得勾选添加环境变量) PyCharm 2019.3.1 (Professional Edition) Build #PY-193.5662.61, built on December 18, 2019 Licensed to pig6 Subscription is active until">
+<meta name="author" content="sunduoze">
+<meta name="publisher" content="sunduoze">
+<meta name="generator" content="http://gohugo.io/"/>
+
+<meta itemprop="name" content="Python_start - Sun&#39;s Blog">
+<meta itemprop="description" content="1. IDE Pycharm install Pycharm (1.安装包 2.补丁jar 3.增加补丁路径 4.离线后输入激活码) install Python python-3.6.6-amd64.exe (记得勾选添加环境变量) PyCharm 2019.3.1 (Professional Edition) Build #PY-193.5662.61, built on December 18, 2019 Licensed to pig6 Subscription is active until">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+<meta property="og:title" content="Python_start - Sun&#39;s Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sunduoze.github.io/post/python_start/" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
+<meta property="og:description" content="1. IDE Pycharm install Pycharm (1.安装包 2.补丁jar 3.增加补丁路径 4.离线后输入激活码) install Python python-3.6.6-amd64.exe (记得勾选添加环境变量) PyCharm 2019.3.1 (Professional Edition) Build #PY-193.5662.61, built on December 18, 2019 Licensed to pig6 Subscription is active until">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sunduoze">
+<meta name="twitter:title" content="Python_start - Sun&#39;s Blog">
+<meta name="twitter:description" content="1. IDE Pycharm install Pycharm (1.安装包 2.补丁jar 3.增加补丁路径 4.离线后输入激活码) install Python python-3.6.6-amd64.exe (记得勾选添加环境变量) PyCharm 2019.3.1 (Professional Edition) Build #PY-193.5662.61, built on December 18, 2019 Licensed to pig6 Subscription is active until">
+<meta name="twitter:creator" content="@sunduoze">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+  <link rel="canonical" href="http://sunduoze.github.io/post/python_start/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/python_start/"/>
+  <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
+  
+<link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="human-style-css2" href="http://sunduoze.github.io/wp-content/themes/hueman-child/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="responsive-css" href="http://sunduoze.github.io/wp-content/themes/hueman/responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-css" href="http://sunduoze.github.io/wp-content/themes/hueman/fonts/font-awesome.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="http://sunduoze.github.io/public/highlight/styles/github.css">
+<script src="http://sunduoze.github.io/public/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" id="human-style-css3" href="http://sunduoze.github.io/wp-content/themes/hueman-child/user.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="public/font/hack/css/hack.min.css">
+
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/scripts.js"></script>
+<script type="text/javascript" src="assets/picturefill/picturefill.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" async defer src="assets/js/myblog.js"></script>
+
+</head>
+
+<body class="single single-post single-format-standard col-3cm full-width topbar-enabled chrome">
+<div id="wrapper">
+  <header id="header">
+
+  <nav class="nav-container group" id="nav-topbar">
+    <div class="nav-toggle"><i class="fa fa-bars"></i></div>
+    <div class="nav-text"></div>
+    <div class="nav-wrap container">
+      <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
+      </a>
+      <ul id="menu-default-menu" class="nav container-inner group">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/">首页</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/post/">归档</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
+        </li>
+        
+		
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          
+        </li>
+		
+	    
+        <li class="menu-item menu-item-type-post_type menu-item-text">
+        _Tags
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container-inner">
+        <div class="toggle-search"><i class="fa fa-search"></i></div>
+        <div class="search-expand">
+          <div class="search-expand-inner">
+            <form method="get" class="searchform themeform" action="https://www.google.com/search">
+              <div>
+                <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+  </nav>
+  
+
+  <div class="container group">
+    <div class="container-inner">
+
+      <div class="group pad">
+
+        <div class="group pad">
+          <h1 class="site-title">
+            <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
+              Sun&#39;s Blog
+            </a>
+          </h1>
+          <p class="site-description"> Resonance,natural language communication </p>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+  
+
+</header>
+
+
+
+  <div class="container" id="page">
+    <div class="container-inner">
+      <div class="main">
+        <div class="main-inner group">
+          <section class="content">
+            <div class="page-title pad group">
+              <ul class="meta-single group">
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="category tag">笔记</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="pad group">
+
+              <article
+                  class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
+                <div class="post-inner group">
+
+                  <h1 class="post-title">Python_start</h1>
+
+                  <p class="post-byline">
+                    by  · 2020年11月08日 · 1866 Words ·
+                    ~4min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/python_start.md"
+                       target="_blank">Improve on <i class="fa fa-github"></i></a>
+                  </p>
+
+                  <div class="clear"></div>
+
+                  <div class="entry">
+                    <div class="entry-inner">
+                      
+                      
+
+<p><br/>
+<br/></p>
+
+<h4 id="1-ide-pycharm">1. IDE Pycharm</h4>
+
+<p>install Pycharm (1.安装包 2.补丁jar 3.增加补丁路径 4.离线后输入激活码) <br/>
+install Python python-3.6.6-amd64.exe (记得勾选添加环境变量) <br/></p>
+
+<pre><code>PyCharm 2019.3.1 (Professional Edition)
+Build #PY-193.5662.61, built on December 18, 2019
+Licensed to pig6
+Subscription is active until July 8, 2089
+Runtime version: 11.0.5+10-b520.17 amd64
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
+Windows 10 10.0
+GC: ParNew, ConcurrentMarkSweep
+Memory: 958M
+Cores: 8
+Registry: 
+Non-Bundled Plugins: 
+</code></pre>
+
+<p>将补丁文件jetbrains-agent.jar放置到D:\Program Files\JetBrains\PyCharm 2019.3.1\bin <br/>
+然后打开pycharm安装路径下bin文件夹中 pycharm64.exe vmoptions文件，在最后一行添加你的补丁路径，<br/></p>
+
+<pre><code>-javaagent:D:\Program Files\JetBrains\PyCharm 2019.3.1\bin\jetbrains-agent.jar
+</code></pre>
+
+<p>激活码</p>
+
+<pre><code>520E5894E2-eyJsaWNlbnNlSWQiOiI1MjBFNTg5NEUyIiwibGljZW5zZWVOYW1lIjoicGlnNiIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiJVbmxpbWl0ZWQgbGljZW5zZSB0aWxsIGVuZCBvZiB0aGUgY2VudHVyeS4iLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IklJIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSRCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJEQiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiRE0iLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkdPIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In1dLCJoYXNoIjoiODkwNzA3MC8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-DZ/oNHBfyho0XrrCJJvAOKg5Q1tLBgOdbCmzCKwkuM+Yryce0RoOi3OOmH6Ba/uTcCh/L37meyD0FJdJIprv59y4+n+k2kIeF/XKrKqg0dEsDUQRw0lUqqMt99ohqa+zmbJ44Yufdwwx/F1CtoRGvEQ2Mn0QjuqRoZJZ3wiT5Am22JiJW8MaNUl3wg9YPj+OPGARKKJUdUJ0NGUDQBcBAv5ds8LhbSbJSbPkbkwH/a1QMz4nEdn6lRDKI1aFIn43QhBSCFqvUq6TPJlbIJ0ZjE+PyZjHFBKCgkry0DHPXU2BbtIZPsksQnN3fx240a9K6sN7peZnLpEoMoq23FEz4g==-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE4MTEwMTEyMjk0NloXDTIwMTEwMjEyMjk0NlowaDELMAkGA1UEBhMCQ1oxDjAMBgNVBAgMBU51c2xlMQ8wDQYDVQQHDAZQcmFndWUxGTAXBgNVBAoMEEpldEJyYWlucyBzLnIuby4xHTAbBgNVBAMMFHByb2QzeS1mcm9tLTIwMTgxMTAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5ndaik1GD0nyTdqkZgURQZGW+RGxCdBITPXIwpjhhaD0SXGa4XSZBEBoiPdY6XV6pOfUJeyfi9dXsY4MmT0D+sKoST3rSw96xaf9FXPvOjn4prMTdj3Ji3CyQrGWeQU2nzYqFrp1QYNLAbaViHRKuJrYHI6GCvqCbJe0LQ8qqUiVMA9wG/PQwScpNmTF9Kp2Iej+Z5OUxF33zzm+vg/nYV31HLF7fJUAplI/1nM+ZG8K+AXWgYKChtknl3sW9PCQa3a3imPL9GVToUNxc0wcuTil8mqveWcSQCHYxsIaUajWLpFzoO2AhK4mfYBSStAqEjoXRTuj17mo8Q6M2SHOcwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQBonMu8oa3vmNAa4RQP8gPGlX3SQaA3WCRUAj6Zrlk8AesKV1YSkh5D2l+yUk6njysgzfr1bIR5xF8eup5xXc4/G7NtVYRSMvrd6rfQcHOyK5UFJLm+8utmyMIDrZOzLQuTsT8NxFpbCVCfV5wNRu4rChrCuArYVGaKbmp9ymkw1PU6+HoO5i2wU3ikTmRv8IRjrlSStyNzXpnPTwt7bja19ousk56r40SmlmC04GdDHErr0ei2UbjUua5kw71Qn9g02tL9fERI2sSRjQrvPbn9INwRWl5+k05mlKekbtbu2ev2woJFZK4WEXAd/GaAdeZZdumv8T2idDFL7cAirJwcrbfpawPeXr52oKTPnXfi0l5+g9Gnt/wfiXCrPElX6ycTR6iL3GC2VR4jTz6YatT4Ntz59/THOT7NJQhr6AyLkhhJCdkzE2cob/KouVp4ivV7Q3Fc6HX7eepHAAF/DpxwgOrg9smX6coXLgfp0b1RU2u/tUNID04rpNxTMueTtrT8WSskqvaJd3RH8r7cnRj6Y2hltkja82HlpDURDxDTRvv+krbwMr26SB/40BjpMUrDRCeKuiBahC0DCoU/4+ze1l94wVUhdkCfL0GpJrMSCDEK+XEurU18Hb7WT+ThXbkdl6VpFdHsRvqAnhR2g4b+Qzgidmuky5NUZVfEaZqV/g==
+
+</code></pre>
+
+<h4 id="2-新项目开始">2. 新项目开始</h4>
+
+<ol>
+<li>File -&gt; New Project -&gt; Pure Python -&gt; Create &hellip;.</li>
+<li>File -&gt; Settings  &ndash;&gt; Project: xxx -&gt;Project Interpreter <br/></li>
+<li>project interpreter: python 3.6 (3.6.6) <br/>
+click &lsquo;+&rdquo; -&gt; click Manage Repositories click &lsquo;+&rsquo; 镜像源</li>
+</ol>
+
+<p>以下选择一个即可：</p>
+
+<pre><code>初始：
+https://pypi.python.org/simple 
+国内：
+清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
+中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+阿里云 http://mirrors.aliyun.com/pypi/simple/
+豆瓣(douban) http://pypi.douban.com/simple/
+</code></pre>
+
+<p>然后 click &lsquo;刷新按钮&rsquo;
+然后 。。。。 搜索“pyserial” 然后click Install Package</p>
+
+<p>坑：不知为何国内的源没法安装成功</p>
+
+<h4 id="3-串口基本操作">3. 串口基本操作</h4>
+
+<p>pyserial库常用函数：</p>
+
+<pre><code>serial = serial.Serial('COM1', 115200)   #打开COM1并设置波特率为115200，COM1只适用于Windows
+serial = serial.Serial('/dev/ttyS0', 115200)  #打开/dev/ttyS0并设置波特率为115200, 只适用于Linux
+print(serial.portstr)   #能看到第一个串口的标识
+serial.write(&quot;hello&quot;)   #往串口里面写数据
+serial .close()    #关闭serial 表示的串口
+
+serial .open()    #打开串口
+data = serial .read(num)   # 读num个字符
+data = serial .readline()    #读一行数据，以/n结束，要是没有/n就一直读，阻塞。
+serial .baudrate = 9600   # 设置波特率
+print serial    #可查看当前串口的状态信息
+serial.isOpen()    #当前串口是否已经打开
+serial.inWaiting()    #判断当前接收的数据
+serial.flushInput()   # 清除输入缓冲区数据
+serial.flushOutput()    #中止当前输出并清除输出缓冲区数据
+</code></pre>
+
+<pre><code># utf-8
+import serial
+import serial.tools.list_ports
+
+port_list = list(serial.tools.list_ports.comports())
+print(port_list)
+
+if len(port_list) == 0:
+    print(&quot;无可用串口！&quot;)
+else:
+    for i in range(0, len(port_list)):
+        print(port_list[i])
+try:
+    portx = &quot;COM1&quot;  # 端口：CNU； Linux上的/dev /ttyUSB0等； windows上的COM3等
+    bps = 115200
+    # 超时设置，None：永远等待操作；
+    #         0：立即返回请求结果；
+    #        其他：等待超时时间（单位为秒）
+    timex = 5
+
+    ser = serial.Serial(portx, bps, timeout=timex)  # 打开串口，并得到串口对象
+    print(&quot;串口详情参数：&quot;, ser)
+    result = ser.write(&quot;hello world !\r\n&quot;.encode(&quot;gbk&quot;))  # 写数据
+    print(&quot;写总字节数：&quot;, result)
+    # # 十六进制的发送
+    # result = ser.write(chr(0x06).encode(&quot;utf-8&quot;)) # 写数据
+    # print(&quot;写总字节数：&quot;, result)
+    #
+    # 十六进制的读取
+    # print(ser.read().hex()+&quot;\r\n&quot;)  # 读一个字节
+    ser.close()  # 关闭串口
+
+except Exception as e:
+    print(&quot;error!&quot;, e)
+
+
+# BIF build in funciton 内置函数
+# 逐渐割掉瑕疵，才能产生卓越体验
+# print(&quot;test\r\n&quot; * 8)
+temp = input(&quot;Please input a number:\r\n&quot;)
+guess = int(temp)
+
+if guess == 8:
+    test_str = r'fish cccc\n'
+    print(test_str)
+    test_str = 'fish cccc\n'
+    print(test_str)
+    print(&quot;input right\n&quot;)
+else:
+    print(&quot;input error\n&quot;)
+print(&quot;game over\n&quot;)
+
+
+</code></pre>
+
+<h4 id="串口-echo">串口 echo</h4>
+
+<pre><code>import threading
+import serial
+import serial.tools.list_ports
+
+DATA = &quot;&quot;  # 读取的数据
+NOEND = True  # 是否读取结束
+
+
+# 读数据的本体
+def read_data(ser):
+    global DATA, NOEND
+
+    # 循环接收数据（此为死循环，可用线程实现）
+    while NOEND:
+        if ser.in_waiting:
+            DATA = ser.read(ser.in_waiting).decode(&quot;gbk&quot;)
+            print(&quot;\n&gt;&gt; receive: &quot;, DATA, &quot;\n&gt;&gt;&quot;, end=&quot;&quot;)
+            # print(&quot;&gt;&gt;&quot;, end=&quot;&quot;)
+            if (DATA == &quot;quit&quot; or DATA == &quot;quit\n&quot;):
+                print(&quot;oppo seri has closen.\n&gt;&gt;&quot;, end=&quot;&quot;)
+
+# 列出串口清单
+def list_seri():
+    ret = False
+    try:
+
+        port_list = list(serial.tools.list_ports.comports())
+        print(port_list)
+
+        if len(port_list) == 0:
+            test_str = r'无可用串口！\n'
+            print(test_str)
+            test_str = '无可用串口！\n'
+            print(test_str)
+            ret = False
+        else:
+            ret = True
+            for i in range(0, len(port_list)):
+                print(port_list[i])
+
+    except Exception as e:
+        print(&quot;error!&quot;, e)
+    return ret
+
+# 打开串口
+def open_seri(portx, bps, timeout):
+    ret = False
+    try:
+        # 打开串口，并得到串口对象
+        ser = serial.Serial(portx, bps, timeout=timeout)
+
+        # 判断是否成功打开
+        if (ser.is_open):
+            ret = True
+            th = threading.Thread(target=read_data, args=(ser,))  # 创建一个子线程去等待读数据
+            th.start()
+    except Exception as e:
+        print(&quot;error!&quot;, e)
+
+    return ser, ret
+
+
+# 关闭串口
+def close_seri(ser):
+    global NOEND
+    NOEND = False
+    ser.close()
+
+
+# 写数据
+def write_to_seri(ser, text):
+    res = ser.write(text.encode(&quot;gbk&quot;))  # 写
+    return res
+
+
+# 读数据
+def read_from_seri():
+    global DATA
+    data = DATA
+    DATA = &quot;&quot;  # 清空当次读取
+    return data
+
+# import serial.tools.list_ports
+
+if __name__ == &quot;__main__&quot;:
+    # 列出串口清单
+    ret = list_seri()
+    # 打开一个串口
+    port = input(&quot;输入串口名：&quot;)
+    ser, ret = open_seri(port, 115200, None)  # 串口com3、bps为115200，等待时间为永久
+    # oprate_lst = {&quot;quit&quot;:close_seri}
+    # print(&quot;操作数字所对应的行为，1:read_from_seri 2:write_to_seri 3:close_seri: &quot;)
+    while True:
+        text = input(&quot;&gt;&gt;&quot;)
+        write_to_seri(ser, text)
+        if text == &quot;quit&quot;:
+            close_seri(ser)
+            print(&quot;bye!&quot;)
+            break
+
+</code></pre>
+
+<h3 id="add-file-write">add file write</h3>
+
+<pre><code>import sys
+import threading
+import datetime
+import serial
+import serial.tools.list_ports
+
+DATA = &quot;&quot;  # 读取的数据
+NOEND = True  # 是否读取结束
+
+# def log_init():
+file_name = str(sys.argv[0])
+log_file = open(file_name + '.log', 'w')
+data_file = open(file_name + '.csv', 'w')
+
+
+# 读数据的本体
+def read_data(ser):
+    global DATA, NOEND
+
+    # 循环接收数据（此为死循环，可用线程实现）
+    while NOEND:
+        if ser.in_waiting:
+            DATA = ser.read(ser.in_waiting).decode(&quot;gbk&quot;)
+            print(&quot;\n&gt;&gt; receive: &quot;, DATA, &quot;\n&gt;&gt;&quot;, end=&quot;&quot;)
+            data_file.write('rd:' + DATA)
+            # print(&quot;&gt;&gt;&quot;, end=&quot;&quot;)
+            if (DATA == &quot;quit&quot; or DATA == &quot;quit\n&quot;):
+                print(&quot;oppo seri has closen.\n&gt;&gt;&quot;, end=&quot;&quot;)
+
+# 列出串口清单
+def list_seri():
+    ret = False
+    try:
+
+        port_list = list(serial.tools.list_ports.comports())
+        print(port_list)
+
+        if len(port_list) == 0:
+            test_str = r'无可用串口！\n'
+            print(test_str)
+            test_str = '无可用串口！\n'
+            print(test_str)
+            ret = False
+        else:
+            ret = True
+            for i in range(0, len(port_list)):
+                print(port_list[i])
+
+    except Exception as e:
+        print(&quot;error!&quot;, e)
+    return ret
+
+# 打开串口
+def open_seri(portx, bps, timeout):
+    ret = False
+    try:
+        # 打开串口，并得到串口对象
+        ser = serial.Serial(portx, bps, timeout=timeout)
+
+        # 判断是否成功打开
+        if (ser.is_open):
+            ret = True
+            th = threading.Thread(target=read_data, args=(ser,))  # 创建一个子线程去等待读数据
+            th.start()
+    except Exception as e:
+        print(&quot;error!&quot;, e)
+
+    return ser, ret
+
+
+# 关闭串口
+def close_seri(ser):
+    global NOEND
+    NOEND = False
+    ser.close()
+
+
+# 写数据
+def write_to_seri(ser, text):
+    res = ser.write(text.encode(&quot;gbk&quot;))  # 写
+    return res
+
+
+# 读数据
+def read_from_seri():
+    global DATA
+    data = DATA
+    DATA = &quot;&quot;  # 清空当次读取
+    return data
+
+# import serial.tools.list_ports
+
+if __name__ == &quot;__main__&quot;:
+    # 列出串口清单
+    ret = list_seri()
+    # 打开一个串口
+    port = input(&quot;输入串口名：&quot;)
+    ser, ret = open_seri(port, 115200, None)  # 串口com3、bps为115200，等待时间为永久
+    # oprate_lst = {&quot;quit&quot;:close_seri}
+    # print(&quot;操作数字所对应的行为，1:read_from_seri 2:write_to_seri 3:close_seri: &quot;)
+    data_file.write('user: ')
+    data_file.write('date: ' + datetime.datetime.now().strftime(&quot;%Y-%m-%d&quot;) + '\n')
+    data_file.write('time: ' + datetime.datetime.now().strftime(&quot;%H-%M-%S&quot;) + '\n')
+    # eg = raw_input('sample used:')
+
+    while True:
+        text = input(&quot;&gt;&gt;&quot;)
+        write_to_seri(ser, text)
+        data_file.write('wt:' + text + '\n')
+        if text == &quot;quit&quot;:
+            close_seri(ser)
+            print(&quot;bye!&quot;)
+            break
+</code></pre>
+
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
+
+                      
+                    </div>
+                    <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                        <div style="float:left;margin-top:0px;">
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
+                        </div>
+                        <div>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
+                            <br />微信关注：勿忘初兴
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/python_start/">http://sunduoze.github.io/post/python_start/</a>
+                            <br />
+                            文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  
+
+                </div>
+                
+              </article>
+              
+              <div class="clear"></div>
+              
+              
+              
+            </div>
+          </section>
+          <div class="sidebar s1">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>Follow:</p>
+      <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="widget qrcode">
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
+</div>
+
+    <ul class="post-nav group">
+      <li class="next">
+        
+        <a href="http://sunduoze.github.io/post/FT2232/" rel="next">
+          <i class="fa fa-chevron-right"></i>
+          <strong>Next post</strong>
+          <span>FT2232</span>
+        </a>
+        
+      </li>
+      <li class="previous">
+        
+        <a href="http://sunduoze.github.io/post/python_instrument_lib_build/" rel="prev">
+          <i class="fa fa-chevron-left"></i>
+          <strong>Previous Post</strong>
+          <span>Python_instrument_lib_build</span>
+        </a>
+        
+      </li>
+    </ul>
+    <div id="search-2" class="widget widget_search"><h3>Search</h3>
+      <form method="get" class="searchform themeform" action="https://www.google.com/search">
+        <div>
+          <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+          <div class="sidebar s2">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>More</p>
+    </div>
+    <div id="categories-2" class="widget widget_categories"><h3>Categories</h3>
+      <ul>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  <section class="container" id="footer-bottom">
+    <div class="container-inner">
+      <a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+      <div class="pad group">
+        <div class="grid one-half">
+          <div id="copyright">
+              <p>Copyright (c) 2015. All rights reserved.<br>Powered by
+              <a rel="nofollow" href="http://gohugo.io/" target="_blank">Hugo - the static site generator</a>.
+              <a rel="nofollow" href="http://golang.org" target="_blank">#golang</a>.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="grid one-half last">
+          <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+  
+</footer>
+
+</div>
+
+</body>
+</html>
+
