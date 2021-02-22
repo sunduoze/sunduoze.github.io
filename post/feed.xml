@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 03 Dec 2020 13:38:57 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 Feb 2021 14:45:33 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Crc_algorithm</title>
+      <link>http://sunduoze.github.io/post/crc_algorithm/</link>
+      <pubDate>Mon, 22 Feb 2021 14:45:33 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/crc_algorithm/</guid>
+      <description>CRC 循环冗余校验（Cyclic Redundancy Check， CRC）是一种根据网络数据包或计算机文件等数据产生简短固定位数校验码的一种信道编码技术，主要用来检</description>
+    </item>
     
     <item>
       <title>Excel_解锁</title>

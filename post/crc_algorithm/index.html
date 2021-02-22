@@ -12,36 +12,36 @@
         }
     }
   </script>
-  <title>Excel_解锁 - Sun&#39;s Blog</title>
+  <title>Crc_algorithm - Sun&#39;s Blog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="keywords" content="技术,">
-<meta name="description" content="解锁excel 测试用附件下载">
+<meta name="description" content="CRC 循环冗余校验（Cyclic Redundancy Check， CRC）是一种根据网络数据包或计算机文件等数据产生简短固定位数校验码的一种信道编码技术，主要用来检">
 <meta name="author" content="sunduoze">
 <meta name="publisher" content="sunduoze">
 <meta name="generator" content="http://gohugo.io/"/>
 
-<meta itemprop="name" content="Excel_解锁 - Sun&#39;s Blog">
-<meta itemprop="description" content="解锁excel 测试用附件下载">
+<meta itemprop="name" content="Crc_algorithm - Sun&#39;s Blog">
+<meta itemprop="description" content="CRC 循环冗余校验（Cyclic Redundancy Check， CRC）是一种根据网络数据包或计算机文件等数据产生简短固定位数校验码的一种信道编码技术，主要用来检">
 <meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
-<meta property="og:title" content="Excel_解锁 - Sun&#39;s Blog" />
+<meta property="og:title" content="Crc_algorithm - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunduoze.github.io/post/excel_%E8%A7%A3%E9%94%81/" />
+<meta property="og:url" content="http://sunduoze.github.io/post/crc_algorithm/" />
 <meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
-<meta property="og:description" content="解锁excel 测试用附件下载">
+<meta property="og:description" content="CRC 循环冗余校验（Cyclic Redundancy Check， CRC）是一种根据网络数据包或计算机文件等数据产生简短固定位数校验码的一种信道编码技术，主要用来检">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sunduoze">
-<meta name="twitter:title" content="Excel_解锁 - Sun&#39;s Blog">
-<meta name="twitter:description" content="解锁excel 测试用附件下载">
+<meta name="twitter:title" content="Crc_algorithm - Sun&#39;s Blog">
+<meta name="twitter:description" content="CRC 循环冗余校验（Cyclic Redundancy Check， CRC）是一种根据网络数据包或计算机文件等数据产生简短固定位数校验码的一种信道编码技术，主要用来检">
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
-  <link rel="canonical" href="http://sunduoze.github.io/post/excel_%E8%A7%A3%E9%94%81/">
-  <link rel='shortlink' href="http://sunduoze.github.io/post/excel_%E8%A7%A3%E9%94%81/"/>
+  <link rel="canonical" href="http://sunduoze.github.io/post/crc_algorithm/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/crc_algorithm/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
   
 <link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
@@ -178,12 +178,12 @@
                   class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
                 <div class="post-inner group">
 
-                  <h1 class="post-title">Excel_解锁</h1>
+                  <h1 class="post-title">Crc_algorithm</h1>
 
                   <p class="post-byline">
-                    by  · 2020年12月03日 · 14 Words ·
-                    ~1min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/excel_%e8%a7%a3%e9%94%81.md"
+                    by  · 2021年02月22日 · 1096 Words ·
+                    ~3min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/crc_algorithm.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -194,34 +194,216 @@
                       
                       
 
+<h2 id="crc">CRC</h2>
+
+<p>循环冗余校验（Cyclic Redundancy Check， CRC）是一种根据网络数据包或计算机文件等数据产生简短固定位数校验码的一种信道编码技术，主要用来检测或校验数据传输或者保存后可能出现的错误。它是利用除法及余数的原理来作错误侦测的。</p>
+
+<h2 id="crc8">CRC8</h2>
+
+<p>常用CRC8的生成多项式 Poly(最终只取低8Bits)
+Reverse order is from (Bin &amp; 0xFF) Eg.0x31（0011 0001）变成了0x8C (1000 1100)</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Poly</th>
+<th align="center">Bin</th>
+<th align="center">Poly val</th>
+<th align="center">Raw val</th>
+<th align="center">Reverse order</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">CRC-8</td>
+<td align="center">x8+x2+x1+1</td>
+<td align="center">1 0000 0111</td>
+<td align="center">0x07</td>
+<td align="center">（0x107）</td>
+<td align="center">0xE0</td>
+</tr>
+
+<tr>
+<td align="center">CRC-8/MAXIM</td>
+<td align="center">x8+x5+x4+1</td>
+<td align="center">1 0011 0001</td>
+<td align="center">0x31</td>
+<td align="center">（0x131）</td>
+<td align="center">0x8C</td>
+</tr>
+
+<tr>
+<td align="center">CRC-8</td>
+<td align="center">x8+x6+x4+x3+x2+x1</td>
+<td align="center">1 0101 1110</td>
+<td align="center">0x5E</td>
+<td align="center">（0x15E）</td>
+<td align="center">0x7A</td>
+</tr>
+</tbody>
+</table>
+
+<p></br>
+XOR从数据的高位开始，称为顺序异或；对于数据低位先
+传的方式，XOR从数据的低位开始，称之为反序异或</p>
+
+<ul>
+<li>区别1：CRC判断的高低位区别，0x01 or 0x80</li>
+<li>区别2：CRC poly 不同，顺序和逆序值二进制方式颠倒
+</br></li>
+</ul>
+
+<h3 id="顺序异或crc8">顺序异或CRC8</h3>
+
+<pre><code>unsigned char crc_msb(unsigned char *ptr, unsigned char len)
+{
+    unsigned char poly = 0x07;//0x31;
+    unsigned char init = 0x00;/* 初始crc值 */
+    unsigned char i;
+
+    unsigned char crc=init;
+    while(len--)
+    {
+        crc ^= *ptr++;    /* 每次先与需要计算的数据异或,计算完指向下一数据 */
+        for(i=0;i&lt;8;i++)  /* 计算一个字节crc */
+        {
+            if (crc &amp; 0x80)
+                crc = (crc &lt;&lt; 1) ^ poly;
+            else
+                crc = (crc &lt;&lt; 1);
+        }
+    }
+    return (crc);
+}
+</code></pre>
+
+<h3 id="逆序异或crc8">逆序异或CRC8</h3>
+
+<pre><code>unsigned char crc_lsb(unsigned char *ptr, unsigned char len)
+{
+    unsigned char poly_inverse = 0xE0;//0x8C;
+    unsigned char init = 0x00;/* 初始crc值 */
+    unsigned char i;
+
+    unsigned char crc=init;
+    while(len--)
+    {
+        crc ^= *ptr++;  /* 每次先与需要计算的数据异或,计算完指向下一数据 */
+        for(i=0;i&lt;8;i++)/* 同样需要计算8次 */
+        {
+            if (crc &amp; 0x01)  /* 反序异或变成判断最低位是否为1 */
+                /* 数据变成往右移位了 */
+                /* 计算的多项式从0x31（0011 0001）变成了0x8C (1000 1100) */
+                /* 多项式d值，原来的最高位变成了最低位，原来的最低位变成最高位，8位数据高低位交换一下位置 */
+                crc = (crc &gt;&gt; 1) ^ poly_inverse;
+            else
+                crc = (crc &gt;&gt; 1);
+        }
+    }
+    return (crc);
+}
+</code></pre>
+
+<h3 id="crc8测试用例">CRC8测试用例</h3>
+
+<p>demo:</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdint.h&gt;
+
+//DA 01 A0 FF FF 19 14 07 D0 25 6D FF 74 FF 32 02 B8 6D FF FF FF FF FF FF FF FF FF FF FF FF 4B FF
+unsigned char data_raw[] = {0xDA,0x01,0xA0,0xFF,0xFF,0x19,0x14,0x07,0xD0, \
+                            0x25,0x6D,0xFF,0x74,0xFF,0x32,0x02,0xB8,0x6D, \
+                            0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF, \
+                            0xFF,0xFF,0xFF,0x4B,0xFF};// CRC8 0x77   maxim
+
+//16 f1 34 12 11
+unsigned char data_raw2[] = {0x16, 0xf1, 0x34, 0x12, 0x11};// CRC8---- 0xC7
+
+unsigned char crc_msb(unsigned char *ptr, unsigned char len)
+{
+    unsigned char poly = 0x07;//0x31;
+    unsigned char init = 0x00;/* 初始crc值 */
+    unsigned char i;
+
+    unsigned char crc=init;
+    while(len--)
+    {
+        crc ^= *ptr++;    /* 每次先与需要计算的数据异或,计算完指向下一数据 */
+        for(i=0;i&lt;8;i++)  /* 下面这段计算过程与计算一个字节crc一样 */
+        {
+            if (crc &amp; 0x80)
+                crc = (crc &lt;&lt; 1) ^ poly;
+            else
+                crc = (crc &lt;&lt; 1);
+        }
+    }
+    return (crc);
+}
+
+unsigned char crc_lsb(unsigned char *ptr, unsigned char len)
+{
+    unsigned char poly_inverse = 0xE0;//0x8C;
+    unsigned char init = 0x00;/* 初始crc值 */
+    unsigned char i;
+
+    unsigned char crc=init;
+    while(len--)
+    {
+        crc ^= *ptr++;  /* 每次先与需要计算的数据异或,计算完指向下一数据 */
+        for(i=0;i&lt;8;i++)/* 同样需要计算8次 */
+        {
+            if (crc &amp; 0x01)  /* 反序异或变成判断最低位是否为1 */
+                /* 数据变成往右移位了 */
+                /* 计算的多项式从0x31（0011 0001）变成了0x8C (1000 1100) */
+                /* 多项式d值，原来的最高位变成了最低位，原来的最低位变成最高位，8位数据高低位交换一下位置 */
+                crc = (crc &gt;&gt; 1) ^ poly_inverse;
+            else
+                crc = (crc &gt;&gt; 1);
+        }
+    }
+    return (crc);
+}
+
+
+int main()
+{
+    unsigned int crc_value = 0;
+    unsigned char data_len = sizeof(data_raw)/sizeof(unsigned char);
+
+    crc_value = crc_msb(data_raw, data_len);
+    printf(&quot;crc msb is:0x%x\r\n&quot;, crc_value);
+    crc_value = crc_lsb(data_raw, data_len);
+    printf(&quot;crc lsb is:0x%x\r\n&quot;, crc_value);
+
+    return 0;
+}
+
+</code></pre>
+
+<p>console output info:</p>
+
+<pre><code>crc msb is:0x69
+crc lsb is:0x6f
+
+Process returned 0 (0x0) execution time : 0.035 s
+Press any key to continue.
+</code></pre>
+
+<div>
+    <a href="http://sunduoze.github.io/media/note_img/CRC/CRC8/test_crc8.zip">测试用例工程 附件下载</a>
+</div>
+
+<p><br/></p>
+
+<div>
+    <a href="http://sunduoze.github.io/media/note_img/CRC/CRC8/CRC_Calc+v0.1.exe">CRC小工具 附件下载</a>
+</div>
+
 <p><br/>
-<br/></p>
-
-<h4 id="解锁excel">解锁excel</h4>
-
-<div>
-    <img src="http://sunduoze.github.io/media/note_img/excel/工作表保护_before.png" width="1200px" height="184px"/>
-</div>
-<br/>
-<div>
-    <img src="http://sunduoze.github.io/media/note_img/excel/工作表保护_after.png" width="1200px" height="184px"/>
-</div>
-<br/>
-<div>
-    <img src="http://sunduoze.github.io/media/note_img/excel/工作表保护_修改1.png" width="1200px" height="184px"/>
-</div>
-<br/>
-<div>
-    <img src="http://sunduoze.github.io/media/note_img/excel/工作表保护_修改2.png" width="1200px" height="184px"/>
-</div>
-<br/>
-
-<div>
-    <a href="http://sunduoze.github.io/media/note_img/excel/LM5145 Wide Vin Synchronous Buck Controller Quickstart Calculator r12-7.xlsm">测试用附件下载</a>
-</div>
-
-<p><br/>
-<br/>
 <br/>
 <br/>
 <br/></p>
@@ -236,7 +418,7 @@
                         <div>
                             <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
-                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/excel_%E8%A7%A3%E9%94%81/">http://sunduoze.github.io/post/excel_%E8%A7%A3%E9%94%81/</a>
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/crc_algorithm/">http://sunduoze.github.io/post/crc_algorithm/</a>
                             <br />
                             文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
                         </div>
@@ -290,20 +472,14 @@
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/dfm/" rel="next">
+        <a href="http://sunduoze.github.io/post/excel_%E8%A7%A3%E9%94%81/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>Dfm</span>
+          <span>Excel_解锁</span>
         </a>
         
       </li>
       <li class="previous">
-        
-        <a href="http://sunduoze.github.io/post/crc_algorithm/" rel="prev">
-          <i class="fa fa-chevron-left"></i>
-          <strong>Previous Post</strong>
-          <span>Crc_algorithm</span>
-        </a>
         
       </li>
     </ul>
