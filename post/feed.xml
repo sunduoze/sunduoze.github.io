@@ -7,10 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 22 Feb 2021 14:45:33 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Feb 2021 11:31:31 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>I2c电气规范</title>
+      <link>http://sunduoze.github.io/post/i2c%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/</link>
+      <pubDate>Fri, 26 Feb 2021 11:31:31 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/i2c%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/</guid>
+      <description>I2C总线的电气连接 1.上拉电阻Rp的选择 不同模式基本参数信息 Mode Sink Curr Iol Speed Max capacitive load tr Vol @Vdd&amp;gt;2V Vol @Vdd&amp;lt;2V Standard-mode 3mA 0 Hz to 100 kHz 400pF 1000ns 0.4V@3mA sink 0.2*Vdd Fast-mode 3mA 0 Hz to 400 kHz 400pF 300ns 0.4V@3mA sink 0.2*Vdd Fast-mode Plus</description>
+    </item>
+    
+    <item>
+      <title>Current sense amplifier error analysis</title>
+      <link>http://sunduoze.github.io/post/Current-sense-amplifier-error-analysis/</link>
+      <pubDate>Tue, 23 Feb 2021 19:50:55 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/Current-sense-amplifier-error-analysis/</guid>
+      <description>RSS Error Analysis Ideal shunt resistor: An ideal shunt resistor is a resistor with 0% tolerance error and zero variation over temperature
+Sensed current range: These fields enable you to select an operational current range.
+Common-mode voltage: The common-mode voltage range is determined by the node voltage to which the device is connected where the current is being measured.
+Supply voltage: The supply voltage is the voltage required for the device to operate.</description>
+    </item>
     
     <item>
       <title>Crc_algorithm</title>
