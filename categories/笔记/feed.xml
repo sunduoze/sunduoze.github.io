@@ -97,15 +97,6 @@ Supply voltage: The supply voltage is the voltage required for the device to ope
     </item>
     
     <item>
-      <title>前客户Jimmy mark</title>
-      <link>http://sunduoze.github.io/post/%E5%89%8D%E5%AE%A2%E6%88%B7Jimmy-mark/</link>
-      <pubDate>Sat, 26 Sep 2020 14:45:49 +0800</pubDate>
-      
-      <guid>http://sunduoze.github.io/post/%E5%89%8D%E5%AE%A2%E6%88%B7Jimmy-mark/</guid>
-      <description>理念 时刻充满积极能量，忌老气横秋 跳出舒适圈，勇敢面对困难，现在犯的错误是在积累经验 做主动，积极，负责任的人 不抱怨问题，只面对问题 沟通 收到消息</description>
-    </item>
-    
-    <item>
       <title>有效沟通与反馈</title>
       <link>http://sunduoze.github.io/post/%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A%E4%B8%8E%E5%8F%8D%E9%A6%88/</link>
       <pubDate>Sat, 26 Sep 2020 13:59:49 +0800</pubDate>
@@ -157,24 +148,6 @@ Supply voltage: The supply voltage is the voltage required for the device to ope
       
       <guid>http://sunduoze.github.io/post/2018/BU_%E7%B3%BB%E7%BB%9F%E6%A0%A1%E5%87%86%E6%96%B9%E6%A1%88/</guid>
       <description>校准方案 1.标准源校准 L. C. R &amp;hellip; 2.校准仪器校准 V. I. f &amp;hellip; 校准流程 稳定性分析 数据采集及分段 分段校准 结果验证（校验） 校准：数据拟合-数据-滤波-拟</description>
-    </item>
-    
-    <item>
-      <title>Magical hormone~</title>
-      <link>http://sunduoze.github.io/post/2017/Magical-hormone/</link>
-      <pubDate>Thu, 04 May 2017 15:03:40 +0800</pubDate>
-      
-      <guid>http://sunduoze.github.io/post/2017/Magical-hormone/</guid>
-      <description>Magical hormone 已经感受过高浓度的PEA之后，你那样的表现很是正常。但是平均不到1000天之后的高浓度PEA分泌之后 让我对你的感觉可以消耗殆尽而不需试图</description>
-    </item>
-    
-    <item>
-      <title>mood20170419</title>
-      <link>http://sunduoze.github.io/post/2017/mood20170419/</link>
-      <pubDate>Wed, 19 Apr 2017 23:17:01 +0800</pubDate>
-      
-      <guid>http://sunduoze.github.io/post/2017/mood20170419/</guid>
-      <description>时间煮雨 时间煮雨，相识半载，破我寂夜，百感交集。 细细算来仅剩余10周左右的时光，不知此时所想的是害怕离别亦或是其他。 此时，回想过去，你带给我</description>
     </item>
     
     <item>
@@ -265,6 +238,15 @@ Supply voltage: The supply voltage is the voltage required for the device to ope
       
       <guid>http://sunduoze.github.io/post/2017/%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%BE%90%E5%B0%84EMI/</guid>
       <description>合理的PCB Layout 来降低设计中辐射EMI SMPS中，开关动作电流产生高频分量（方波中含有丰富的高频分量） ！Buck电路中 只有一条线的支路电流是断</description>
+    </item>
+    
+    <item>
+      <title>读《精通开关电源设计》笔记</title>
+      <link>http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 28 Nov 2016 17:50:48 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/2016/%E8%AF%BB%E7%B2%BE%E9%80%9A%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/</guid>
+      <description>开关功率变换原理 经验：10℃的温升会使失效率加倍 1.线性调整器（串联调整器）——输入到输出串联晶体管 特点：晶体管工作在线性放大区（类似于可变</description>
     </item>
     
     <item>
