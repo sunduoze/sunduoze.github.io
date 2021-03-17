@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 26 Feb 2021 11:31:31 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Mar 2021 19:22:22 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C高级用法</title>
+      <link>http://sunduoze.github.io/post/c%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Fri, 05 Mar 2021 19:22:22 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/c%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</guid>
+      <description>思想 高内聚 低耦合 语言只是工具，思想才是用好工具的关键 Eg. 面向对象编程思想 块：Block 空间换时间 流：Stream 时间换空间 C实现面向对象的基本</description>
+    </item>
     
     <item>
       <title>i2c设计规范</title>

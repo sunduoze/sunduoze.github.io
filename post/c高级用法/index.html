@@ -12,36 +12,36 @@
         }
     }
   </script>
-  <title>i2c设计规范 - Sun&#39;s Blog</title>
+  <title>C高级用法 - Sun&#39;s Blog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="keywords" content="技术,">
-<meta name="description" content="I2C总线的电气连接 1.上拉电阻Rp的选择 不同模式基本参数信息 Mode Sink Curr Iol Speed Max capacitive load tr Vol @Vdd&gt;2V Vol @Vdd&lt;2V Standard-mode 3mA 0 Hz to 100 kHz 400pF 1000ns 0.4V@3mA sink 0.2*Vdd Fast-mode 3mA 0 Hz to 400 kHz 400pF 300ns 0.4V@3mA sink 0.2*Vdd Fast-mode Plus">
+<meta name="description" content="Resonance,natural language communication">
 <meta name="author" content="sunduoze">
 <meta name="publisher" content="sunduoze">
 <meta name="generator" content="http://gohugo.io/"/>
 
-<meta itemprop="name" content="i2c设计规范 - Sun&#39;s Blog">
-<meta itemprop="description" content="I2C总线的电气连接 1.上拉电阻Rp的选择 不同模式基本参数信息 Mode Sink Curr Iol Speed Max capacitive load tr Vol @Vdd&gt;2V Vol @Vdd&lt;2V Standard-mode 3mA 0 Hz to 100 kHz 400pF 1000ns 0.4V@3mA sink 0.2*Vdd Fast-mode 3mA 0 Hz to 400 kHz 400pF 300ns 0.4V@3mA sink 0.2*Vdd Fast-mode Plus">
+<meta itemprop="name" content="C高级用法 - Sun&#39;s Blog">
+<meta itemprop="description" content="Resonance,natural language communication">
 <meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
-<meta property="og:title" content="i2c设计规范 - Sun&#39;s Blog" />
+<meta property="og:title" content="C高级用法 - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunduoze.github.io/post/i2c%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" />
+<meta property="og:url" content="http://sunduoze.github.io/post/c%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/" />
 <meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
-<meta property="og:description" content="I2C总线的电气连接 1.上拉电阻Rp的选择 不同模式基本参数信息 Mode Sink Curr Iol Speed Max capacitive load tr Vol @Vdd&gt;2V Vol @Vdd&lt;2V Standard-mode 3mA 0 Hz to 100 kHz 400pF 1000ns 0.4V@3mA sink 0.2*Vdd Fast-mode 3mA 0 Hz to 400 kHz 400pF 300ns 0.4V@3mA sink 0.2*Vdd Fast-mode Plus">
+<meta property="og:description" content="Resonance,natural language communication">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sunduoze">
-<meta name="twitter:title" content="i2c设计规范 - Sun&#39;s Blog">
-<meta name="twitter:description" content="I2C总线的电气连接 1.上拉电阻Rp的选择 不同模式基本参数信息 Mode Sink Curr Iol Speed Max capacitive load tr Vol @Vdd&gt;2V Vol @Vdd&lt;2V Standard-mode 3mA 0 Hz to 100 kHz 400pF 1000ns 0.4V@3mA sink 0.2*Vdd Fast-mode 3mA 0 Hz to 400 kHz 400pF 300ns 0.4V@3mA sink 0.2*Vdd Fast-mode Plus">
+<meta name="twitter:title" content="C高级用法 - Sun&#39;s Blog">
+<meta name="twitter:description" content="Resonance,natural language communication">
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
-  <link rel="canonical" href="http://sunduoze.github.io/post/i2c%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/">
-  <link rel='shortlink' href="http://sunduoze.github.io/post/i2c%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/"/>
+  <link rel="canonical" href="http://sunduoze.github.io/post/c%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/c%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
   
 <link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
@@ -166,7 +166,7 @@
               <ul class="meta-single group">
                 
                 <li class="category">
-                  <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="category tag">笔记</a>
+                  <a href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/" rel="category tag">思考</a>
                 </li>
                 
               </ul>
@@ -178,12 +178,12 @@
                   class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
                 <div class="post-inner group">
 
-                  <h1 class="post-title">i2c设计规范</h1>
+                  <h1 class="post-title">C高级用法</h1>
 
                   <p class="post-byline">
-                    by  · 2021年02月26日 · 921 Words ·
+                    by  · 2021年03月05日 · 819 Words ·
                     ~2min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/i2c%e8%ae%be%e8%ae%a1%e8%a7%84%e8%8c%83.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/c%e9%ab%98%e7%ba%a7%e7%94%a8%e6%b3%95.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -194,200 +194,377 @@
                       
                       
 
-<h2 id="i2c总线的电气连接">I2C总线的电气连接</h2>
-
-<p></br></p>
-
-<h4 id="1-上拉电阻rp的选择">1.上拉电阻Rp的选择</h4>
-
-<p><strong>不同模式基本参数信息</strong></p>
-
-<table>
-<thead>
-<tr>
-<th>Mode</th>
-<th>Sink Curr Iol</th>
-<th>Speed</th>
-<th>Max capacitive load</th>
-<th>tr</th>
-<th>Vol @Vdd&gt;2V</th>
-<th>Vol @Vdd&lt;2V</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>Standard-mode</td>
-<td>3mA</td>
-<td>0 Hz to 100 kHz</td>
-<td>400pF</td>
-<td>1000ns</td>
-<td>0.4V@3mA sink</td>
-<td>0.2*Vdd</td>
-</tr>
-
-<tr>
-<td>Fast-mode</td>
-<td>3mA</td>
-<td>0 Hz to 400 kHz</td>
-<td>400pF</td>
-<td>300ns</td>
-<td>0.4V@3mA sink</td>
-<td>0.2*Vdd</td>
-</tr>
-
-<tr>
-<td>Fast-mode Plus</td>
-<td>20mA</td>
-<td>0 Hz to 1 MHz</td>
-<td>550pF</td>
-<td>120ns</td>
-<td>0.4V@3mA sink</td>
-<td>0.2*Vdd</td>
-</tr>
-
-<tr>
-<td>Hs mode</td>
-<td>20mA</td>
-<td>0 Hz to 3.4 MHz</td>
-<td>400pF</td>
-<td>160ns@400pF 80ns@10-100pF</td>
-<td>0.4V@3mA sink</td>
-<td>0.2*Vdd</td>
-</tr>
-
-<tr>
-<td>Ultra Fs mode</td>
-<td>? mA</td>
-<td>0 Hz to 5.0 MHz</td>
-<td>?pF</td>
-<td>50ns</td>
-<td>0.4V@4mA sink</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-
-<p></br></p>
-
-<p><strong>Rp上限</strong></p>
-
-<p>总线电容由导线，连接和pin决定，由于特定的上升时间，总线电容限制了Rp的最大值。
-考虑Vdd的高低电平阈值，Vih=0.7*Vdd，Vil=0.3<em>Vdd，借此计算RC值，V(t)=Vdd</em>(1-e^(-t/RC));</p>
-
-<pre><code>V(tl) = 0.3 * Vdd = Vdd * (1 - e ^ (-tl / RC)), then tl = 0.3566749 × RC;
-V(th) = 0.7 * Vdd = Vdd * (1 - e ^ (-th / RC)), then th = 1.2039729 × RC;
-T = th - tl = 0.8473 * RC;
-所以
-Rp(max) = tr / (0.8473 * Cb);
-tr:不同总线速率下的最大上升时间.
-Cb:预估总线电容
-</code></pre>
-
-<p>200pF极限情况下：
-</br>
-Eg. 100kHz Cb=200pF -&gt; tr = 1000ns -&gt; Rp(max) = 5.71k
-</br>
-Eg. 400kHz Cb=200pF -&gt; tr = 300ns -&gt; Rp(max) = 1.71k</p>
-
-<p><strong>Rp下限</strong></p>
-
-<pre><code>Rp(min) = (Vdd - Vol(max)) / Iol
-Vdd: I2C上拉电阻供电电源电压最小值
-Vol(max)：低电平输出电压最大值 LOW-level output voltage
-Iol: 低电平输出电流 LOW-level output current
-</code></pre>
-
-<p></br>
-Eg. Vdd = 5.0V Vol(max) = 0.4V Iol = 3mA -&gt; Rp(min) = 1.53k
-</br>
-Eg. Vdd = 3.3V Vol(max) = 0.4V Iol = 3mA -&gt; Rp(min) = 967</p>
-
-<p></br></p>
-
-<p><strong>TI USB to GPIO Adaptor Hardware Config</strong></p>
-
-<pre><code>VDD:3.3V 
-2.2k, 1k, 688(1k//2k)[此值与设计Rp min 冲突？]三种上拉电阻配置选择
-use BSS84 P-MOS, Rg=33R from mcu gpio driver config Rp
-I2C pin use GL05T low cap TVS to protect.
-
-USB Dp enum resistor design: usb vdd + 15k res ctrl MMBT2222A B base (C: PUR pin ? may be mcu VDD, E:mcu dp pin)  usb port dp &amp; dn use 33R res then to mcu
-</code></pre>
-
-<p><br/>
-<div>
-    <img src="http://sunduoze.github.io/media/note_img/i2c_规范/usb_to_gpio_catch_wave.png" width="1153px" height="203px"/>
-</div>
-<br/>
-<div>
-    <img src="http://sunduoze.github.io/media/note_img/i2c_规范/usb_to_gpio_400kHz_Read.png" width="1200px" height="184px"/>
-</div>
-<br/>
-<div>
-    <img src="http://sunduoze.github.io/media/note_img/i2c_规范/usb_to_gpio_400kHz Write.png" width="1200px" height="184px"/>
-</div></p>
-
-<p></br></p>
-
-<h4 id="2-串联保护电阻rs的选择">2.串联保护电阻Rs的选择</h4>
-
-<p>Eg. 300 Ω can be used for protection against high-voltage spikes on the SDA and SCL lines (resulting from the flash-over of a TV picture tube, for example). If series resistors are used, designers must add the additional resistance into their calculations for Rp and allowable bus capacitance.</p>
-
-<p>The required noise margin of 0.1VDD for the LOW level, limits the maximum value of Rs.
-Rs(max) as a function of Rp is shown in Figure 46. Note that series resistors affect the
-output fall time.</p>
-
-<p><div>
-    <img src="http://sunduoze.github.io/media/note_img/i2c_规范/i2c_串行电阻及调试.png" width="1200px" height="184px"/>
-</div>
-<br/></p>
-
-<h3 id="3-smbus-i2c-pmbus">3. SMBus &amp; I2C &amp; PMBus</h3>
-
-<p>SMBus 1.0 &amp; 2.0主要的区别在Vol = 0.4V 下sink电流能力的差异.
-PMBus是在SMBus 1.1基础上拓展部分指令构成</p>
+<h2 id="思想">思想</h2>
 
 <ul>
-<li>SMBus low power = 350 μA (SMBus 1.0 main for Smart Batteries)</li>
-<li>SMBus high power = 4 mA  (SMBus 2.0)</li>
-<li>I2C-bus = 3 mA</li>
+<li>高内聚 低耦合</li>
+<li>语言只是工具，思想才是用好工具的关键 Eg. 面向对象编程思想</li>
 </ul>
 
-<p>SMBus &lsquo;high power&rsquo; devices and I2C-bus devices will work together if the pull-up resistor is sized for 3 mA.</p>
-
-<p><strong>SMBus and I2C 差异</strong></p>
-
-<ul>
-<li>通信速率</li>
-</ul>
-
-<p>SMBus and I2C protocols are basically the same: A SMBus master is able to control I2C devices and vice versa at the protocol level. The SMBus clock is defined from 10 kHz to 100 kHz while I2C can be 0 Hz to 100 kHz, 0 Hz to 400 kHz, 0 Hz to 1 MHz and 0 Hz to 3.4 MHz, depending on the mode. This means that an I2C-bus running at less than 10 kHz is not SMBus compliant since the SMBus devices may time-out.</p>
-
-<ul>
-<li>逻辑电平</li>
-</ul>
-
-<p>Logic levels are slightly different also: TTL for SMBus: LOW = 0.8 V and HIGH = 2.1 V, versus the 30% / 70% VDD CMOS level for I2C.
-This is not a problem if VDD &gt; 3.0 V. If the I2C device is below 3.0 V,
-then there could be a problem if the logic HIGH/LOW levels are not properly recognized.</p>
+<p>块：Block 空间换时间
+流：Stream 时间换空间</p>
 
 <p></br></p>
 
-<h2 id="参考文档">参考文档</h2>
+<h1 id="c实现面向对象的基本形式及用例">C实现面向对象的基本形式及用例</h1>
 
-<p><div>
-    <a href="http://sunduoze.github.io/media/note_img/i2c_规范/I2C-bus specification and user manual_UM10204.pdf">NXP I2C 总线规范&amp;UM UM10204</a>
-</div>
-<br/>
-<div>
-    <a href="http://sunduoze.github.io/media/note_img/i2c_规范/I2C总线规范.pdf">周立功 I2C总线规范</a>
-</div>
-<br/>
-<div>
-    <a href="http://sunduoze.github.io/media/note_img/i2c_规范/System Management Bus (SMBus) Specification_SMBus_3_0_20141220.pdf">SMBUS Spec</a>
-</div>
-<br/></p>
+<h2 id="封装">封装</h2>
+
+<p>数据的组织形式，把属于一个对象的所有属性（数据）组织起来</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdint.h&gt;
+
+typedef struct _class_fun_t{
+    uint8_t num;
+    void (*tao)(struct _class_fun_t *p)
+}fun_t;
+
+void print_num(fun_t *p)
+{
+    printf(&quot;print_num:%d\r\n&quot;, p-&gt;num);
+}
+
+int main()
+{
+    fun_t fun1;
+    fun_t fun2;
+
+    fun1.num = 123;
+    fun2.num = 234;
+
+    fun1.tao = print_num;
+    fun2.tao = print_num;
+
+    fun1.tao(&amp;fun1);
+    fun2.tao(&amp;fun2);
+
+    return 0;
+}
+
+</code></pre>
+
+<h2 id="继承-child-可以继承-parent-所有的-基因">继承 (child 可以继承 parent 所有的‘基因’)</h2>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdint.h&gt;
+
+typedef struct _class_fun_parent_t{
+    uint8_t num;
+    void (*tao)(struct _class_fun_parent_t *p)
+}fun_parent_t;
+
+typedef struct _class_fun_child_t{
+    fun_parent_t parent; // 父类必须放到前边，不能与后边的成员交换顺序，原因不清楚
+    uint8_t child_num;
+    void (*tao)(struct _class_fun_child_t *p)
+}fun_child_t;
+
+void parent_print_num(fun_parent_t *p)
+{
+    printf(&quot;parent_num:%d\r\n&quot;, p-&gt;num);
+}
+
+void child_print_num(fun_child_t *p)
+{
+    printf(&quot;child_num :%d\r\n&quot;, p-&gt;child_num);
+}
+
+void p_fun(fun_parent_t *p)
+{
+    p-&gt;tao(p);
+}
+
+int main()
+{
+    fun_parent_t fun1;
+    fun_child_t fun2;
+
+    fun1.num = 11;
+    fun1.tao = parent_print_num;
+
+    fun1.tao(&amp;fun1);
+
+    fun2.parent.num = 222;
+    fun2.parent.tao = parent_print_num;
+    fun2.child_num = 111;
+    fun2.tao = child_print_num;
+
+    fun2.tao(&amp;fun2);
+    fun2.parent.tao(&amp;fun2);
+
+    //p_fun((fun_parent_t *)&amp;fun1);
+    //p_fun((fun_parent_t *)&amp;fun2);
+
+    return 0;
+}
+</code></pre>
+
+<h2 id="多态-一个接口可产生多种执行状态">多态 (一个接口可产生多种执行状态)</h2>
+
+<ul>
+<li>编译时多态 （函数重载 &amp; 类重载）</li>
+<li>运行时多态 （虚函数 等）
+！如果一门语言只支持类而不支持多态，它只能称之为基于对象而非面向对象
+
+<br /></li>
+</ul>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdint.h&gt;
+
+typedef struct _class_fun_t{
+    uint8_t num;
+    void (*tao)(struct _class_fun_t *p)
+}fun_t;
+
+void print_num_dec(fun_t *p)
+{
+    printf(&quot;print_num:0d%d\r\n&quot;, p-&gt;num);
+}
+
+void print_num_hex(fun_t *p)
+{
+    printf(&quot;print_num:0x%x\r\n&quot;, p-&gt;num);
+}
+
+int main()
+{
+    fun_t fun1;
+
+    fun1.num = 123;
+
+    fun1.tao = print_num_dec;
+    fun1.tao(&amp;fun1);
+    fun1.tao = print_num_hex;
+    fun1.tao(&amp;fun1);
+
+    return 0;
+}
+
+</code></pre>
+
+<h2 id="动态接口">动态接口</h2>
+
+<p>static/media/note_img/C高级用法/c_code_if_test.zip</p>
+
+<p>main.c</p>
+
+<pre><code>#include &lt;stdint.h&gt;
+
+#include &quot;led.h&quot;
+#include &quot;type_a_led.h&quot;
+#include &quot;type_b_led.h&quot;
+
+int main()
+{
+    register_led(a_led);
+    led_on();
+    led_off();
+
+    register_led(b_led);
+    led_on();
+    led_off();
+
+    return 0;
+}
+</code></pre>
+
+<p>led.h</p>
+
+<pre><code>#ifndef LED_H_
+#define LED_H_
+
+typedef struct
+{
+    void (*on)(void);
+    void (*off)(void);
+}led_if_t;
+
+void register_led(led_if_t led);
+void led_on(void);
+void led_off(void);
+
+#endif // LED_H_INCLUDED
+</code></pre>
+
+<p>led.c</p>
+
+<pre><code>#include &quot;led.h&quot;
+
+static led_if_t led_if;
+
+void register_led(led_if_t led)
+{
+    led_if = led;
+}
+
+void led_on(void)
+{
+    led_if.on();
+}
+
+void led_off(void)
+{
+    led_if.off();
+}
+</code></pre>
+
+<p>type_a_led.h</p>
+
+<pre><code>#ifndef TYPE_A_LED_H_
+#define TYPE_A_LED_H_
+
+#include &quot;led.h&quot;
+
+extern led_if_t a_led;
+extern void test(void);
+
+#endif // TYPE_A_LED_H_INCLUDED
+</code></pre>
+
+<p>type_a_led.c</p>
+
+<pre><code>#include &quot;type_a_led.h&quot;
+
+static void on(void)
+{
+    printf(&quot;type_a on\r\n&quot;);
+}
+static void off(void)
+{
+    printf(&quot;type_a off\r\n&quot;);
+}
+
+led_if_t a_led = {
+    on,
+    off,
+};
+
+</code></pre>
+
+<p>type_b_led.h</p>
+
+<pre><code>#ifndef TYPE_B_LED_H_
+#define TYPE_B_LED_H_
+
+#include &quot;led.h&quot;
+
+led_if_t b_led;
+
+
+#endif // TYPE_B_LED_H_INCLUDED
+</code></pre>
+
+<p>type_b_led.c</p>
+
+<pre><code>#include &quot;type_b_led.h&quot;
+
+static void on(void)
+{
+    printf(&quot;type_b on\r\n&quot;);
+}
+static void off(void)
+{
+    printf(&quot;type_b off\r\n&quot;);
+}
+
+led_if_t b_led = {
+    on,
+    off,
+};
+</code></pre>
+
+<h1 id="c-优化内存">C 优化内存</h1>
+
+<h2 id="union-共用体">union 共用体</h2>
+
+<pre><code></code></pre>
+
+<h2 id="位域-bit-fields">位域 bit fields</h2>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdint.h&gt;
+
+typedef struct
+{
+    uint8_t a : 1;
+    uint8_t b : 1;
+    uint8_t c : 1;
+    uint8_t d : 5;
+}bit_area1_t;
+
+typedef struct
+{
+    uint8_t a : 1;
+    uint8_t b : 1;
+    uint8_t c : 1;
+    uint8_t   : 1;// 无名位域 同样占用bit位空间
+    uint8_t d : 5;
+}bit_area2_t;
+
+/*
+typedef struct
+{
+    uint8_t a : 1;
+    uint8_t b : 1;
+    uint8_t c : 1;
+    uint8_t d : 9;// 不能超过 uint8_t 的bit大小
+}bit_area2_t;
+*/
+
+int main()
+{
+    bit_area1_t test;
+    printf(&quot;bit_area1_t size:%d\r\n&quot;, sizeof(bit_area1_t));
+    printf(&quot;bit_area2_t size:%d\r\n&quot;, sizeof(bit_area2_t));
+    test.a = 2;
+    test.b = 1;
+    test.c = 2;
+    test.d = 5;
+    printf(&quot;%d\r\n&quot;, test.a);
+    printf(&quot;%d\r\n&quot;, test.b);
+    printf(&quot;%d\r\n&quot;, test.c);
+    printf(&quot;%d\r\n&quot;, test.d);
+
+    return 0;
+}
+</code></pre>
+
+<h2 id="结构体对齐">结构体对齐</h2>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdint.h&gt;
+
+//#pragma pack(1)
+
+//有字节对齐预编译结果为：12，8
+//无字节对齐预编译结果为：6，6
+
+typedef struct{
+    uint8_t a;
+    uint32_t b;
+    uint8_t c;
+}align1_t;
+
+typedef struct{
+    uint8_t a;
+    uint8_t c;
+    uint32_t b;
+}align2_t;
+
+int main()
+{
+    printf(&quot;align1_t size:%d\r\n&quot;, sizeof(align1_t));
+    printf(&quot;align2_t size:%d\r\n&quot;, sizeof(align2_t));
+    return 0;
+}
+
+</code></pre>
 
                       
                     </div>
@@ -399,7 +576,7 @@ then there could be a problem if the logic HIGH/LOW levels are not properly reco
                         <div>
                             <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
-                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/i2c%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/">http://sunduoze.github.io/post/i2c%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/</a>
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/c%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/">http://sunduoze.github.io/post/c%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</a>
                             <br />
                             文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
                         </div>
@@ -453,20 +630,14 @@ then there could be a problem if the logic HIGH/LOW levels are not properly reco
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/Current-sense-amplifier-error-analysis/" rel="next">
+        <a href="http://sunduoze.github.io/post/i2c%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>Current sense amplifier error analysis</span>
+          <span>i2c设计规范</span>
         </a>
         
       </li>
       <li class="previous">
-        
-        <a href="http://sunduoze.github.io/post/c%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/" rel="prev">
-          <i class="fa fa-chevron-left"></i>
-          <strong>Previous Post</strong>
-          <span>C高级用法</span>
-        </a>
         
       </li>
     </ul>
