@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 05 Mar 2021 19:22:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Mar 2021 16:25:17 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IA大佬讲座</title>
+      <link>http://sunduoze.github.io/post/IA%E5%A4%A7%E4%BD%AC%E8%AE%B2%E5%BA%A7/</link>
+      <pubDate>Wed, 17 Mar 2021 16:25:17 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/IA%E5%A4%A7%E4%BD%AC%E8%AE%B2%E5%BA%A7/</guid>
+      <description>王建生 IA董事 定制化解决方案 嵌入式仪器 制造管理 严谨的逻辑 Teamwork 沟通 Army-企业 魏仁忠 成电电子 电子产品检测、装配 RD：800 all：1500 Target: 一</description>
+    </item>
+    
+    <item>
+      <title>电源环路稳定性评价方法</title>
+      <link>http://sunduoze.github.io/post/%E7%94%B5%E6%BA%90%E7%8E%AF%E8%B7%AF%E7%A8%B3%E5%AE%9A%E6%80%A7%E8%AF%84%E4%BB%B7%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 17 Mar 2021 16:07:13 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/%E7%94%B5%E6%BA%90%E7%8E%AF%E8%B7%AF%E7%A8%B3%E5%AE%9A%E6%80%A7%E8%AF%84%E4%BB%B7%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>电子负载杂记</title>
+      <link>http://sunduoze.github.io/post/%E7%94%B5%E5%AD%90%E8%B4%9F%E8%BD%BD%E6%9D%82%E8%AE%B0/</link>
+      <pubDate>Wed, 17 Mar 2021 15:30:53 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/%E7%94%B5%E5%AD%90%E8%B4%9F%E8%BD%BD%E6%9D%82%E8%AE%B0/</guid>
+      <description>Agilent 364x N3306A 设计注意事项 普通mosfet在线性区不能直接并联，需要增加均流电阻方可并联， 电阻压降 ≈ (1&amp;frasl;5 ~ 1&amp;frasl;4) * Vgs 选取零温度点对应电流很小的管子， Eg. IR</description>
+    </item>
     
     <item>
       <title>C高级用法</title>

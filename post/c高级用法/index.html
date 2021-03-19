@@ -212,7 +212,7 @@
 
 <p>数据的组织形式，把属于一个对象的所有属性（数据）组织起来</p>
 
-<pre><code>#include &lt;stdio.h&gt;
+<pre><code class="language-C">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 
@@ -247,7 +247,7 @@ int main()
 
 <h2 id="继承-child-可以继承-parent-所有的-基因">继承 (child 可以继承 parent 所有的‘基因’)</h2>
 
-<pre><code>#include &lt;stdio.h&gt;
+<pre><code class="language-C">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 
@@ -312,7 +312,7 @@ int main()
 <br /></li>
 </ul>
 
-<pre><code>#include &lt;stdio.h&gt;
+<pre><code class="language-C">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 
@@ -353,7 +353,7 @@ int main()
 
 <p>main.c</p>
 
-<pre><code>#include &lt;stdint.h&gt;
+<pre><code class="language-C">#include &lt;stdint.h&gt;
 
 #include &quot;led.h&quot;
 #include &quot;type_a_led.h&quot;
@@ -375,7 +375,7 @@ int main()
 
 <p>led.h</p>
 
-<pre><code>#ifndef LED_H_
+<pre><code class="language-C">#ifndef LED_H_
 #define LED_H_
 
 typedef struct
@@ -393,7 +393,7 @@ void led_off(void);
 
 <p>led.c</p>
 
-<pre><code>#include &quot;led.h&quot;
+<pre><code class="language-C">#include &quot;led.h&quot;
 
 static led_if_t led_if;
 
@@ -415,7 +415,7 @@ void led_off(void)
 
 <p>type_a_led.h</p>
 
-<pre><code>#ifndef TYPE_A_LED_H_
+<pre><code class="language-C">#ifndef TYPE_A_LED_H_
 #define TYPE_A_LED_H_
 
 #include &quot;led.h&quot;
@@ -428,7 +428,7 @@ extern void test(void);
 
 <p>type_a_led.c</p>
 
-<pre><code>#include &quot;type_a_led.h&quot;
+<pre><code class="language-C">#include &quot;type_a_led.h&quot;
 
 static void on(void)
 {
@@ -448,7 +448,7 @@ led_if_t a_led = {
 
 <p>type_b_led.h</p>
 
-<pre><code>#ifndef TYPE_B_LED_H_
+<pre><code class="language-C">#ifndef TYPE_B_LED_H_
 #define TYPE_B_LED_H_
 
 #include &quot;led.h&quot;
@@ -461,7 +461,7 @@ led_if_t b_led;
 
 <p>type_b_led.c</p>
 
-<pre><code>#include &quot;type_b_led.h&quot;
+<pre><code class="language-C">#include &quot;type_b_led.h&quot;
 
 static void on(void)
 {
@@ -486,7 +486,7 @@ led_if_t b_led = {
 
 <h2 id="位域-bit-fields">位域 bit fields</h2>
 
-<pre><code>#include &lt;stdio.h&gt;
+<pre><code class="language-C">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 
@@ -537,7 +537,7 @@ int main()
 
 <h2 id="结构体对齐">结构体对齐</h2>
 
-<pre><code>#include &lt;stdio.h&gt;
+<pre><code class="language-C">#include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
 //#pragma pack(1)
@@ -638,6 +638,12 @@ int main()
         
       </li>
       <li class="previous">
+        
+        <a href="http://sunduoze.github.io/post/%E7%94%B5%E5%AD%90%E8%B4%9F%E8%BD%BD%E6%9D%82%E8%AE%B0/" rel="prev">
+          <i class="fa fa-chevron-left"></i>
+          <strong>Previous Post</strong>
+          <span>电子负载杂记</span>
+        </a>
         
       </li>
     </ul>
