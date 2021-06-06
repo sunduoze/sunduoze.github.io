@@ -39,7 +39,7 @@
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
-  <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+  <script> = document.documentElement.className.replace("no-js", "js");</script>
   <link rel="canonical" href="http://sunduoze.github.io/post/markdown%E4%B9%8Bmermaid/">
   <link rel='shortlink' href="http://sunduoze.github.io/post/markdown%E4%B9%8Bmermaid/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
@@ -122,6 +122,10 @@ code.has-jax {
   }
 </style>
 
+
+
+
+  
 
 
   
@@ -245,8 +249,8 @@ code.has-jax {
                   <h1 class="post-title">Markdown之mermaid</h1>
 
                   <p class="post-byline">
-                    by  · 2021年06月06日 · 371 Words ·
-                    ~1min reading time |
+                    by  · 2021年06月06日 · 515 Words ·
+                    ~2min reading time |
                     <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/markdown%e4%b9%8bmermaid.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
@@ -355,6 +359,75 @@ sequenceDiagram
     Bob-->>John: Jolly good!
 </div>
 
+<div class="mermaid">
+flowchart TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+    one --> two
+    three --> two
+    two --> c2
+    
+    start-->start: 开始
+    e-->end: 结束
+    start->e
+</div>
+
+<div class="mermaid">
+graph LR
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+</div>
+    <!-- mermaid.flowchartConfig = {
+    width: 100%
+} -->
+
+<div class="mermaid">
+
+st=>start: 页面加载
+
+e=>end: End:>http://www.google.com
+
+op1=>operation: get_hotel_ids|past
+op2=>operation: get_proxy|current
+sub1=>subroutine: get_proxy|current
+op3=>operation: save_comment|current
+op4=>operation: set_sentiment|current
+op5=>operation: set_record|current
+
+cond1=>condition: ids_remain空?
+cond2=>condition: proxy_list空?
+cond3=>condition: ids_got空?
+cond4=>condition: 爬取成功??
+cond5=>condition: ids_remain空?
+
+io1=>inputoutput: ids-remain
+io2=>inputoutput: proxy_list
+io3=>inputoutput: ids-got
+
+st->op1(right)->io1->cond1
+cond1(yes)->sub1->io2->cond2
+cond2(no)->op3
+cond2(yes)->sub1
+cond1(no)->op3->cond4
+cond4(yes)->io3->cond3
+cond4(no)->io1
+cond3(no)->op4
+cond3(yes, right)->cond5
+cond5(yes)->op5
+cond5(no)->cond3
+op5->e
+</div>
+
                       
                     </div>
                     <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
@@ -427,6 +500,12 @@ sequenceDiagram
         
       </li>
       <li class="previous">
+        
+        <a href="http://sunduoze.github.io/post/markdown%E4%B9%8Bflow_and_wavedrom/" rel="prev">
+          <i class="fa fa-chevron-left"></i>
+          <strong>Previous Post</strong>
+          <span>markdown之flow_and_wavedrom</span>
+        </a>
         
       </li>
     </ul>
