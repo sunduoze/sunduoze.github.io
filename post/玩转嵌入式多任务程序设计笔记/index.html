@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <base href="http://sunduoze.github.io//">
+  <script>
+    document._writeOriginal = document.write;
+    document.write = function(str) {
+        if (str.indexOf('livereload.js') > -1) {
+            document._writeOriginal(str);
+        } else {
+            document._writeOriginal('<!-- Be Hijack!! -->');
+        }
+    }
+  </script>
+  <title>《玩转嵌入式多任务程序设计》笔记 - Sun&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="其他,">
+<meta name="description" content="Resonance,natural language communication">
+<meta name="author" content="sunduoze">
+<meta name="publisher" content="sunduoze">
+<meta name="generator" content="http://gohugo.io/"/>
+
+<meta itemprop="name" content="《玩转嵌入式多任务程序设计》笔记 - Sun&#39;s Blog">
+<meta itemprop="description" content="Resonance,natural language communication">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+<meta property="og:title" content="《玩转嵌入式多任务程序设计》笔记 - Sun&#39;s Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sunduoze.github.io/post/%E7%8E%A9%E8%BD%AC%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
+<meta property="og:description" content="Resonance,natural language communication">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sunduoze">
+<meta name="twitter:title" content="《玩转嵌入式多任务程序设计》笔记 - Sun&#39;s Blog">
+<meta name="twitter:description" content="Resonance,natural language communication">
+<meta name="twitter:creator" content="@sunduoze">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+  <link rel="canonical" href="http://sunduoze.github.io/post/%E7%8E%A9%E8%BD%AC%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/%E7%8E%A9%E8%BD%AC%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/"/>
+  <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
+  
+<link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="human-style-css2" href="http://sunduoze.github.io/wp-content/themes/hueman-child/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="responsive-css" href="http://sunduoze.github.io/wp-content/themes/hueman/responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-css" href="http://sunduoze.github.io/wp-content/themes/hueman/fonts/font-awesome.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="http://sunduoze.github.io/public/highlight/styles/github.css">
+<script src="http://sunduoze.github.io/public/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" id="human-style-css3" href="http://sunduoze.github.io/wp-content/themes/hueman-child/user.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="public/font/hack/css/hack.min.css">
+
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/scripts.js"></script>
+<script type="text/javascript" src="assets/picturefill/picturefill.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" async defer src="assets/js/myblog.js"></script>
+
+  
+  
+
+
+  
+</head>
+
+<body class="single single-post single-format-standard col-3cm full-width topbar-enabled chrome">
+<div id="wrapper">
+  <header id="header">
+
+  <nav class="nav-container group" id="nav-topbar">
+    <div class="nav-toggle"><i class="fa fa-bars"></i></div>
+    <div class="nav-text"></div>
+    <div class="nav-wrap container">
+      <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
+      </a>
+      <ul id="menu-default-menu" class="nav container-inner group">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/">首页</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/post/">归档</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
+        </li>
+        
+		
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          
+        </li>
+		
+	    
+        <li class="menu-item menu-item-type-post_type menu-item-text">
+        _Tags
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container-inner">
+        <div class="toggle-search"><i class="fa fa-search"></i></div>
+        <div class="search-expand">
+          <div class="search-expand-inner">
+            <form method="get" class="searchform themeform" action="https://www.google.com/search">
+              <div>
+                <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+  </nav>
+  
+
+  <div class="container group">
+    <div class="container-inner">
+
+      <div class="group pad">
+
+        <div class="group pad">
+          <h1 class="site-title">
+            <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
+              Sun&#39;s Blog
+            </a>
+          </h1>
+          <p class="site-description"> Resonance,natural language communication </p>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+  
+
+</header>
+
+
+
+  <div class="container" id="page">
+    <div class="container-inner">
+      <div class="main">
+        <div class="main-inner group">
+          <section class="content">
+            <div class="page-title pad group">
+              <ul class="meta-single group">
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="category tag">笔记</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="pad group">
+
+              <article
+                  class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
+                <div class="post-inner group">
+
+                  <h1 class="post-title">《玩转嵌入式多任务程序设计》笔记</h1>
+
+                  <p class="post-byline">
+                    by  · 2021年06月04日 · 4962 Words ·
+                    ~10min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/%e3%80%8a%e7%8e%a9%e8%bd%ac%e5%b5%8c%e5%85%a5%e5%bc%8f%e5%a4%9a%e4%bb%bb%e5%8a%a1%e7%a8%8b%e5%ba%8f%e8%ae%be%e8%ae%a1%e3%80%8b%e7%ac%94%e8%ae%b0.md"
+                       target="_blank">Improve on <i class="fa fa-github"></i></a>
+                  </p>
+
+                  <div class="clear"></div>
+
+                  <div class="entry">
+                    <div class="entry-inner">
+                      
+                      
+
+<h2 id="什么是上下文">什么是上下文</h2>
+
+<h3 id="通用寄存器rn">通用寄存器Rn</h3>
+
+<p>在Cortex-M内核中，提供了R~0~ to R~14~ 共15个通用寄存器来保存ALU运算所需的操作数和操作结果
+</br>
+嵌入式系统中，编译器会优先使用通用寄存器以减少总线操作（SRAM挂在其上）</p>
+
+<pre><code>STR r1, [r3] ;将R1的数据存储到R3指定的地址
+STR r2, [r3, #0x4] ;将R2保存的数据存储到以R3为基地址，偏移量为4的地址中
+</code></pre>
+
+<p>如上R3是指针，保存的是外部存储器的某个对象的基地址</p>
+
+<blockquote>
+<p>对于静态变量（静态局部变量和全局变量），在开启优化的情况下编译器会根据情况尽可能利用通用寄存器进行优化</p>
+</blockquote>
+
+<p>Eg. 某函数需要对某个全局变量多次读取，那么开启优化的情况下会在函数的开始将此变量读取到某个通用寄存器中，随后与其在通过寄存器的值调用或比较&mdash;<strong>窥孔优化</strong>（Peephole Optimize）
+但是某些情况下由于优化（Eg. 软延时死在死循环中）导致问题，故通过开启<strong>volatile</strong> 来关闭某目标变量的窥孔优化
+</br>
+对变量进行volatile修饰时，有时需要手动进行代码优化，但切记注意<em>数据操作的完整性</em>
+</br>
+由于volatile使用的广泛性，几乎所有的外设寄存器都可以通过如下方式表达</p>
+
+<pre><code>#define xxx_IO_REG (*((volatile uint32_t *)xxx_IO_REG_BASE_ADDR))
+
+故实际情况下对外设寄存器连续操作时，可以通过“手工窥孔优化”来大幅提高效率
+</code></pre>
+
+<h3 id="栈顶指针sp-stack-pointer">栈顶指针SP(Stack Pointer)</h3>
+
+<p>SP是寄存器页的核心，用来只想系统栈的栈顶位置，某些情况下可以用作通用寄存器，Eg，Cortex-M中，SP可作为R13来使用。由于栈是函数式语言的核心，故操作系统中SP的地位举足轻重</p>
+
+<h3 id="pc-program-counter-lr-link-return">PC(Program Counter) &amp; LR(Link Return)</h3>
+
+<p>PC指针和LR指针是寄存器页的核心，用于实现流水线执行和分支，某些情况下可以用作通用寄存器使用，Eg，Cortex-M中，LR可作为R14来使用。</p>
+
+<h3 id="内核状态寄存器-sr-status-register">内核状态寄存器 SR(Status Register)</h3>
+
+<p>SR是寄存器页的核心，用于保存<strong>ALU</strong>(数字逻辑运算单元：+ &lt;&lt; &gt;&gt; &amp; | ~ ^ 等)的状态标志（Eg 经典的N Z C V 标志）以及内核运行状态</p>
+
+<h3 id="summy">Summy</h3>
+
+<p>对于不同的内核架构而言，寄存器页可能还包含其他寄存器，但时基本结构中的一个标准寄存器页通常包含：R0-Rn,PC,LR,SP,SP. 寄存器页是内核与外界数据交换的唯一接口</p>
+
+<hr />
+
+<h3 id="上下文-context">上下文 context</h3>
+
+<p>每个task都需要使用resource，保存代码的rom，保存变量的ram，内核core &amp; peripieral。当多任务都必须使用相同资源时，为确保所有任务都有机会正确执行，系统不得不在多任务中寻求某种方式的share这一资源</p>
+
+<p></br></p>
+
+<p>由于资源的紧缺性或唯一性，共享必然是排他的exclusive或互斥的mutually exclusive。必然需要天道来引领，让“执政者”维持秩序，避免问题。</p>
+
+<blockquote>
+<p><strong>依靠任务自觉</strong>，每个任务都需要有“仁”，不仅要知道是否有竞争，而且要自觉遵守约定规则（FIFO，LIFO，或者尊老爱幼等）。风险：一旦有人不遵守规则，整个系统将乱糟糟</p>
+</blockquote>
+
+<p></br></p>
+
+<blockquote>
+<p><strong>依赖第三方维护</strong>，服从服务机构的安排“自由”的使用资源而无需考虑资源问题。实际嵌入式系统中，这种服务通常是强制性的</p>
+</blockquote>
+
+<h3 id="服务机构的资源管理-操作系统">服务机构的资源管理&ndash;操作系统</h3>
+
+<ul>
+<li><p>服务机构只关心共享资源
+资源很多，但是并非都是共享，故需要避免某个任务“永久独占”，所谓共享，不过是一段时间内temporal排他性exclusive的占有和使用，无法永久permanent的排他性的占有和使用，Eg core无法被某个任务永久占用，否则也无所谓多任务</p></li>
+
+<li><p>服务机构以某一共享资源为核心考虑多任务的切换
+当某一资源被服务机构管理是，需要考虑其在多任务上的资源“透明”的切换，当任务对资源使用打断时，应该：</p></li>
+</ul>
+
+<pre><code>1. suspend or stop 任务执行
+2. 保护资源的使用现象
+</code></pre>
+
+<p>当任务获得资源使用权时：</p>
+
+<pre><code>1. 恢复先前保护的资源使用现场
+2. 恢复任务执行
+</code></pre>
+
+<p><strong>对任务而言，每个共享资源都有一个“工作现场”需要保护或恢复</strong></p>
+
+<p>|共享资源 |工作现场 |保护/恢复|说明|
+|-|-|-|-|
+|系统栈 |栈顶指针 |保存在任务控制块中|处理函数调用，局部变量及现场保护|
+内核|寄存器页中的值|压栈，出栈|指令的执行|
+|<em>协处理器</em>|其中的寄存器页的值|压栈，出栈|浮点运算单元，DSP协处理器等|</p>
+
+<p>虽然外设peripheral也是任务共享资源，但其外设寄存器往往不具有可保存和恢复的特性，无法视为工作现场。多任务共享时多采用“合作”的方式或由第三方对其包装伪装成非共享资源。Eg 操作系统每个任务都提供独立FIFO，从而可将usart的共享问题转化为FIFO的独享形式。</p>
+
+<p><strong>上下文是一个集合，包含任务所有共享资源的“工作现场”</strong></p>
+
+<p><strong>任务切换就是上下文切换，浓缩后成为栈顶指针的切换</strong></p>
+
+<hr />
+
+<h3 id="时间和空间的游戏">时间和空间的游戏</h3>
+
+<ul>
+<li><p>以时间换空间的“上下文切换”技术
+</br>
+对于成本敏感MCU中，内核仅提供一套寄存器页作为上下文的容器，故不同任务必须共享同一容器，故上下文切换需要栈的力量，故切换需要花费较多时间。Eg Cortex-M</p></li>
+
+<li><p>以空间换时间的硬件“多线程”技术
+</br>
+对于性能敏感的MCU中，内核为特定的任务，中断or异常处理提供了多套寄存器页，故中断和异常处理上下文切换无需栈的帮助而直接使用专用寄存器页，从而节省时间。Eg Cortex-A</p></li>
+</ul>
+
+<hr />
+
+<h3 id="由切换带来的原子性atomicity问题">由切换带来的原子性atomicity问题</h3>
+
+<blockquote>
+<p>对于一个具有多步骤的操作而言，操作时，针对全部或部分特定任务无法进行上下文切换，我们就说该操作对其他全部任务或某些特定任务具有原子性，是一个原子操作</p>
+</blockquote>
+
+<p></br>
+原子操作进行时，其他任务是无法打断的</p>
+
+<p>以Cortex为例，内核的位宽并非总线的位宽而是ALU操作数的位宽，习惯称之为字长
+Eg 32位的ALU对32为的数据运算具有天然的原子性，其ALU运算过程不会被打断</p>
+
+<blockquote>
+<p>为了提升效率，内核往往规定数据的读写地址需要对齐到字，当且仅当数据的地址对齐到字长是，内核的天然原子性才能表达
+</br></p>
+
+<p>对于小于字长的变量，如果也对齐到了自己的长度字长（Eg uint16_t 对齐到了偶数地址），则内核对于该量也具有天然原子性（有专门的指令与之对应，LDRB STRB对字节读写，LDRH STRH对半字存取） 。许多编译器为提升内核效率，默认对结构体变量采取了相同的策略来获得最佳的访问效率</p>
+</blockquote>
+
+<h2 id="什么是-任务">什么是“任务”</h2>
+
+<h3 id="完全切换">完全切换：</h3>
+
+<pre><code>将整个上下文入栈
+运行调度算法，找到下一个运行的任务，取出该任务的栈指针并更新SP寄存器
+将目标任务的上下文出栈
+</code></pre>
+
+<p>完全切换是最安全，最直接，最彻底的方式。只要可以实现完全切换，细个调度算法（轮转）就可以称之为操作系统。</p>
+
+<pre><code>任务切换时间= 调度算法时间 + 出入栈时间
+</code></pre>
+
+<p>通常而言，出入栈时间决定了任务切换的最小值，即理论最短时间，一个好的操作系统，调度算法的执行时间应该是常量，由于出入栈时间也是常量，故确保了操作系统调度时间的确定性。实际上，并非任务切换的时间越短越好，从RTOS角度来说是片面的。实时操作系统首先需要保证任务切换时间的确定性，其次才是越快越好。</p>
+
+<h3 id="部分切换">部分切换</h3>
+
+<p>只有部分上下文在任务切换的时候被压栈或弹栈。
+</br>
+上下文切换不仅在任务上，函数调用也存在，两者是合作关系：</p>
+
+<pre><code>每个函数或任务很清楚自己用到上下文哪些部分
+每个函数或任务在执行时会自动将自己用的那部分上下文入栈（因为它用到的这部分上下文会覆盖原有内容，故保存现场）
+当函数或任务退出时，会根据所用上下文，将原本入栈保护的内容弹出从而恢复现场
+</code></pre>
+
+<pre><code>上下文切换是编译器实现的，是软件切换
+每次上下文切换都需要耗费代码资源，函数越多，资源消耗越多。而完全的切换是通过公共的切换代码实现的，消耗在任务切换的代码资源时固定的。
+每个函数对上下文的占用本着“按需分配”的原则，是时间效率最高的上下文切换方式
+每个函数只根据自己对上下文的使用进行切换，与前后执行的函数或任务无关
+</code></pre>
+
+<pre><code>Eg.
+void func_x(void)
+{
+    ...
+}
+
+extern void func_z(void);
+
+void func_y(void)
+{
+    ...
+    func_z();
+    ...
+}
+
+void main()
+{
+    ...
+    func_x();
+    func_z();
+    ...
+}
+
+函数y调用函数z，z清楚自己使用多少资源而与y的使用哪些上下文无关。
+</code></pre>
+
+<p>中断或异常处理是另一类部分切换。函数的合作式切换是编译器计划好的，那么中断或异常处理带来的资源抢占时切换是“临时切换”：</p>
+
+<pre><code>临时切换是一种部分切换。系统根据其使用上下文范围来确定出入栈上下文范围
+临时切换由硬件中断源引发，由内核响应并执行，是随机的
+临时切换在追求处理能力的中高端处理器中完全是由硬件实现的，用于实现最快的响应；另外一些处理器中，为获得效率与灵活性的平衡，处理器只进行最小的现场保护和恢复（仅通过硬件对PC SP LR以及部分通用寄存器[Cortex-Mv6 Mv7 的R0-R4]进行出入栈，剩余工作交给中断或异常处理程序完成）。总而言之，临时切换是一种硬件主导软件配合的上下文切换方式
+</code></pre>
+
+<h3 id="任务-线程thread-进程process-中断isr-协程coroutine-状态机fsm等都属于任务">任务：线程thread，进程process，中断ISR，协程coroutine，状态机FSM等都属于任务</h3>
+
+<p>进程管理资源（虚拟空间地址），线程管理调度</p>
+
+<p>&hellip;</p>
+
+<h4 id="状态机-fsm">状态机 fsm</h4>
+
+<p>状态机与协程都强调协作的任务形式，对程序而言极具掌控力。区别在于fsm任务之间共享一个栈，使用合作式上下文切换（*部分切换*），而协程拥有自己的独立上下文和栈，采用*完全切换*的上下文切换形式。由于状态机任务之间共享同一栈，故不需要项协程或线程一样为每个任务分配足够大小的栈区，因而更节省内存资源。
+</br>
+以上两者都要求程序员手工将具体任务分成小的执行单元，由他们协同完成整个任务。不同的是，协程拥有独立的上下文和栈，其任务编写简单（自然的阻塞形式进行组织）；状态机则强调每个任务都是非阻塞的方式进行，一旦等待或出现较大的延迟则应当释放CPU给其他状态机使用。
+</br>
+由于状态机的非阻塞性，因而多任务协同时具有较好的实时性，这是缺乏调度算法的协程所难以实现的。
+相比线程，状态机编写更复杂，但掌控性更强，资源的占用较少；相比协程，状态机的编写更复杂，但提高任务的实时性方面更容易。
+</br>
+进程需要内核引入MMU的硬件支持，提供独占主机的开发环境；线程是传统嵌入式实时操作系统的最小调度单元，允许任务中使用阻塞代码，开发容易；状态机是裸机黄金中最常见的多任务实现形式，尽管资源消耗小，但是强制程序员必须编写非阻塞代码，因而开发难度较大；协程在资源消耗上与线程接近，开发难度却与状态机类似（需要手动规划任务的执行细节，甚至有些时候不如状态机灵活），因而在嵌入式中并不常见；几乎所有系统，中断和异常都会得到应用，用于专门处理紧急且重要的工作</p>
+
+<p><center> <b>根据上下文切换划分的任务类型</b></center></p>
+
+<table>
+    <tr>
+        <td colspan="4">实地址空间</td>
+        <td>虚地址空间</td>
+    </tr>
+    <tr>
+        <td colspan="4">上下文切换 contex switching</td>
+        <td rowspan="4" >进程 </br> 
+            Process</td>
+    </tr>
+    <tr>
+        <td colspan= "2">部分切换</br>
+            （所有任务共享栈）  </td>
+        <td colspan= "2">完全切换</br>
+            （每个任务独享栈）  </td>
+    </tr>
+    <tr>
+        <td>合作式切换</td>
+        <td>抢占式切换</br>
+            （临时切换）</td>
+        <td>合作式切换</td>
+        <td>抢占式切换</td>
+    </tr>
+    <tr>
+        <td>状态机</br>FSM</td>
+        <td>中断、异常处理</br>ISR</td>
+        <td>协程</br>Coroutine</td>
+        <td>线程</br>Thread</td>
+    </tr>
+</table>
+
+<p><center> <b>任务的多种形式</b></center></p>
+
+<table>
+<thead>
+<tr>
+<th align="center">任务形式</th>
+<th align="center">上下文</th>
+<th align="center">栈</th>
+<th align="center">虚拟地址空间</th>
+<th align="center">调度方式</th>
+<th align="center">编写难度</th>
+<th align="center">其他</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">进程</td>
+<td align="center">独占</td>
+<td align="center">独占</td>
+<td align="center">独占</td>
+<td align="center">抢占式</td>
+<td align="center">*</td>
+<td align="center">独占主机</td>
+</tr>
+
+<tr>
+<td align="center">线程</td>
+<td align="center">独占</td>
+<td align="center">独占</td>
+<td align="center">共享</td>
+<td align="center">抢占式</td>
+<td align="center">**</td>
+<td align="center">自动调度</td>
+</tr>
+
+<tr>
+<td align="center">协程</td>
+<td align="center">独占</td>
+<td align="center">独占</td>
+<td align="center">共享</td>
+<td align="center">合作式</td>
+<td align="center">****</td>
+<td align="center">手动切换</td>
+</tr>
+
+<tr>
+<td align="center">中断进程</td>
+<td align="center">共享*</td>
+<td align="center">共享*</td>
+<td align="center">共享</td>
+<td align="center">抢占式</td>
+<td align="center">o</td>
+<td align="center">内核原生支持</td>
+</tr>
+
+<tr>
+<td align="center">状态机</td>
+<td align="center">共享</td>
+<td align="center">共享</td>
+<td align="center">共享</td>
+<td align="center">合作式</td>
+<td align="center">*****</td>
+<td align="center">必须非阻塞</td>
+</tr>
+</tbody>
+</table>
+
+<p>*有些MCU为提高中断或异常响应速度，硬件上为每个中断向量都提供了独立的寄存器页，此种情况下中断是独占上下文的，栈也是独占的</p>
+
+<h3 id="如何实现上下文切换">如何实现上下文切换</h3>
+
+<h4 id="如何实现完全切换">如何实现完全切换</h4>
+
+<p>借顺藤摸瓜之意，上下文是挂，那么栈顶指针SP是瓜藤。任务的切换离不开上下文（现场）的保护与恢复。栈顶指针SP在保护现场时会一并压栈</p>
+
+<p><strong>任务的切换就是上下文的切换，上下文的切换就是栈顶指针的切换</strong></p>
+
+<p>上下文切换汇总，无需SP压栈或弹栈。线程控制块中至少包含SP指针。</p>
+
+<h4 id="如何实现部分切换">如何实现部分切换</h4>
+
+<p>当中断或异常发生时，内核会将当前的关键上下文自动压栈，若操作系统可以利用这点，那么只需要手工压栈剩余的上下文信息来实现完全切换。但是若想实现，需要有手动触发中断或异常的能力（PendSV异常 &amp; SVCall，详见ARM 《编译工具开发指南》）
+</br>
+RT-Thread的Cortex-M版本上，利用PendSV异常实现上下文切换的</p>
+
+<p>此处省略一票代码</p>
+
+<hr />
+
+<h3 id="什么是多任务">什么是多任务</h3>
+
+<h3 id="malloc-缺陷">malloc 缺陷</h3>
+
+<p>RTOS的内存池管理和对象管理是不能解决碎片化问题
+</br>《垃圾回收算法手册:自动内存管理的艺术》</p>
+
+<p>过掩码结构体隐藏了结构体的成员信息（有多少成员，成员各自的大小，成员的布局等等信息）。
+对普通使用者来说，这个足以阻止他们简单的访问结构体内的信息了。</p>
+
+<p>我在github上开源了
+<a href="https://github.com/GorgonMeducer/PLOOC/tree/master/example">https://github.com/GorgonMeducer/PLOOC/tree/master/example</a></p>
+
+<p>现在移除了以下限制：
+1、以前需要一个额外的 extern_class宏放在.h里，现在不需要了
+2、以前需要.c和.h里各放一个同样的内容，现在不需要了
+3、以前不允许.c包涵自己的接口头文件，现在没有这个限制了
+4、以前强制用户使用，现在不强制了</p>
+
+<p>例子我上传了：</p>
+
+<p><a href="https://gitee.com/versaloon_simo">https://gitee.com/versaloon_simo</a> &hellip; /utilities/template</p>
+
+<p>这里的vsf_pool模块：</p>
+
+<p>vsf_pool.h  模块的接口头文件
+vsf_pool.c  模块的C源文件
+__class_pool.h  类的定义文件</p>
+
+<p>新的掩码结构体支持文件在这里（被从ooc.h里分离出来了）：
+<a href="https://gitee.com/versaloon_simo">https://gitee.com/versaloon_simo</a> &hellip; ilities/ooc_class.h
+<a href="https://gitee.com/versaloon_simonqian/vsf_dev/tree/master/vsf/utilities/template">https://gitee.com/versaloon_simonqian/vsf_dev/tree/master/vsf/utilities/template</a></p>
+
+                      
+                    </div>
+                    <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                        <div style="float:left;margin-top:0px;">
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
+                        </div>
+                        <div>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
+                            <br />微信关注：勿忘初兴
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/%E7%8E%A9%E8%BD%AC%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/">http://sunduoze.github.io/post/%E7%8E%A9%E8%BD%AC%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/</a>
+                            <br />
+                            文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  
+
+                </div>
+                
+              </article>
+              
+              <div class="clear"></div>
+              
+              
+              
+            </div>
+          </section>
+          <div class="sidebar s1">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>Follow:</p>
+      <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="widget qrcode">
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
+</div>
+
+    <ul class="post-nav group">
+      <li class="next">
+        
+        <a href="http://sunduoze.github.io/post/IA%E5%A4%A7%E4%BD%AC%E8%AE%B2%E5%BA%A7/" rel="next">
+          <i class="fa fa-chevron-right"></i>
+          <strong>Next post</strong>
+          <span>IA大佬讲座</span>
+        </a>
+        
+      </li>
+      <li class="previous">
+        
+        <a href="http://sunduoze.github.io/post/markdown%E4%B9%8B%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" rel="prev">
+          <i class="fa fa-chevron-left"></i>
+          <strong>Previous Post</strong>
+          <span>Markdown之数学公式</span>
+        </a>
+        
+      </li>
+    </ul>
+    <div id="search-2" class="widget widget_search"><h3>Search</h3>
+      <form method="get" class="searchform themeform" action="https://www.google.com/search">
+        <div>
+          <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+          <div class="sidebar s2">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>More</p>
+    </div>
+    <div id="categories-2" class="widget widget_categories"><h3>Categories</h3>
+      <ul>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  <section class="container" id="footer-bottom">
+    <div class="container-inner">
+      <a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+      <div class="pad group">
+        <div class="grid one-half">
+          <div id="copyright">
+              <p>Copyright (c) 2015. All rights reserved.<br>Powered by
+              <a rel="nofollow" href="http://gohugo.io/" target="_blank">Hugo - the static site generator</a>.
+              <a rel="nofollow" href="http://golang.org" target="_blank">#golang</a>.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="grid one-half last">
+          <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+  
+</footer>
+
+</div>
+
+</body>
+</html>
+

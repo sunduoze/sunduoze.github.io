@@ -12,36 +12,36 @@
         }
     }
   </script>
-  <title>FT2232 - Sun&#39;s Blog</title>
+  <title>Markdown之mermaid - Sun&#39;s Blog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="keywords" content="嵌入式,">
-<meta name="description" content="from:csersoft(https://blog.csersoft.net/archives/83) Windows下基于FT2232H的OpenOCD调试环境配置 准备工具 OpenOCD For Windows 最新版 http://www.freddiechopin.info/en/download/category/4-openocd Zadig http://zadig.akeo.ie/ FT2232H 开发板一块 准备工作: 将FT2232H开发板连接到">
+<meta name="keywords" content="其他,">
+<meta name="description" content="Resonance,natural language communication">
 <meta name="author" content="sunduoze">
 <meta name="publisher" content="sunduoze">
 <meta name="generator" content="http://gohugo.io/"/>
 
-<meta itemprop="name" content="FT2232 - Sun&#39;s Blog">
-<meta itemprop="description" content="from:csersoft(https://blog.csersoft.net/archives/83) Windows下基于FT2232H的OpenOCD调试环境配置 准备工具 OpenOCD For Windows 最新版 http://www.freddiechopin.info/en/download/category/4-openocd Zadig http://zadig.akeo.ie/ FT2232H 开发板一块 准备工作: 将FT2232H开发板连接到">
+<meta itemprop="name" content="Markdown之mermaid - Sun&#39;s Blog">
+<meta itemprop="description" content="Resonance,natural language communication">
 <meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
-<meta property="og:title" content="FT2232 - Sun&#39;s Blog" />
+<meta property="og:title" content="Markdown之mermaid - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunduoze.github.io/post/FT2232/" />
+<meta property="og:url" content="http://sunduoze.github.io/post/markdown%E4%B9%8Bmermaid/" />
 <meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
-<meta property="og:description" content="from:csersoft(https://blog.csersoft.net/archives/83) Windows下基于FT2232H的OpenOCD调试环境配置 准备工具 OpenOCD For Windows 最新版 http://www.freddiechopin.info/en/download/category/4-openocd Zadig http://zadig.akeo.ie/ FT2232H 开发板一块 准备工作: 将FT2232H开发板连接到">
+<meta property="og:description" content="Resonance,natural language communication">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sunduoze">
-<meta name="twitter:title" content="FT2232 - Sun&#39;s Blog">
-<meta name="twitter:description" content="from:csersoft(https://blog.csersoft.net/archives/83) Windows下基于FT2232H的OpenOCD调试环境配置 准备工具 OpenOCD For Windows 最新版 http://www.freddiechopin.info/en/download/category/4-openocd Zadig http://zadig.akeo.ie/ FT2232H 开发板一块 准备工作: 将FT2232H开发板连接到">
+<meta name="twitter:title" content="Markdown之mermaid - Sun&#39;s Blog">
+<meta name="twitter:description" content="Resonance,natural language communication">
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
-  <link rel="canonical" href="http://sunduoze.github.io/post/FT2232/">
-  <link rel='shortlink' href="http://sunduoze.github.io/post/FT2232/"/>
+  <link rel="canonical" href="http://sunduoze.github.io/post/markdown%E4%B9%8Bmermaid/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/markdown%E4%B9%8Bmermaid/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
   
 <link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
@@ -62,7 +62,66 @@
 <script type="text/javascript" async defer src="assets/js/myblog.js"></script>
 
   
+<script type="text/javascript"
+        async
+         src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> 
+         
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
   
+<script 
+  src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+</script>
+<script>
+  mermaid.initialize({startOnLoad:true});
+</script>
+<script>
+  
+  Array.from(document.getElementsByClassName("language-mermaid")).forEach(
+    (el) => {
+      el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`;
+    }
+  );
+</script>
+<style>
+   
+  .mermaid svg {
+    display: block;
+    margin: auto;
+  }
+</style>
+
 
 
   
@@ -183,12 +242,12 @@
                   class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
                 <div class="post-inner group">
 
-                  <h1 class="post-title">FT2232</h1>
+                  <h1 class="post-title">Markdown之mermaid</h1>
 
                   <p class="post-byline">
-                    by  · 2020年11月07日 · 479 Words ·
+                    by  · 2021年06月06日 · 350 Words ·
                     ~1min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/FT2232.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/markdown%e4%b9%8bmermaid.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -197,79 +256,103 @@
                   <div class="entry">
                     <div class="entry-inner">
                       
-                      
+                      <div class="mermaid">
+gantt
+    title Team 项目周进度
+    excludes    weekends
+    dateFormat  MM-DD-HH
+    axisFormat  %d
 
-<p><br/>
-<br/>
-from:csersoft(<a href="https://blog.csersoft.net/archives/83">https://blog.csersoft.net/archives/83</a>)</p>
+    section 2 weeks
+    last week :done, 4-19, a1, 5d
+    this week:done, after a1, 5d
 
-<h2 id="windows下基于ft2232h的openocd调试环境配置">Windows下基于FT2232H的OpenOCD调试环境配置</h2>
+    section 恺城
+    DT3S1P           :4-18, a1, 2d
+    P2007            :after a1, 4h
+    P2150            :4h
+    Ascend           :4-18, 48h
 
-<p><br/></p>
+    section 兴辉
+    Tenma            :after a1, 4h
+</div>
 
-<h4 id="准备工具">准备工具</h4>
-
-<p><br/>OpenOCD For Windows 最新版
-<a href="http://www.freddiechopin.info/en/download/category/4-openocd">http://www.freddiechopin.info/en/download/category/4-openocd</a>
-<br/>Zadig
-<a href="http://zadig.akeo.ie/">http://zadig.akeo.ie/</a>
-<br/>FT2232H 开发板一块
-<br/>
-<br/></p>
-
-<h4 id="准备工作">准备工作:</h4>
-
-<p>将FT2232H开发板连接到PC。
-打开Zadig，点击菜单 Options -&gt; List All Devices ，找到FT2232H板子的设备选项(因为2232是双端口设备，所以有2个设备)，FT2232H默认的VID应该是0403，PID是6010。这两个值可以通过FTDI提供的FT_PROG来更改。选中目标设备后，右侧的选择框里切换到WinUSB驱动，然后点击Replace Driver。这里要注意，虽然openocd使用的是libusb。但是替换驱动一定得是WinUSB，否则会出现各种各样的问题。</p>
-
-<p><br/>
-编写测试配置文件:</p>
-
-<pre><code>#
-# FT2232H
-#
-
-interface ftdi
-ftdi_vid_pid 0x0403 0x6010
-
-adapter_khz 12000
-# ftdi_tdo_sample_edge falling
-transport select jtag
-
-ftdi_layout_init 0x0508 0x0f1b
-# ftdi_layout_signal nTRST -data 0x0200 -noe 0x0100
-# ftdi_layout_signal nSRST -data 0x0800 -noe 0x0400
+<pre><code>Input       Example             Description:
+YYYY        2014                4 digit year
+YY          14                  2 digit year
+Q           1..4                Quarter of year. Sets month to first month in quarter.
+M MM        1..12               Month number
+MMM MMMM    January..Dec        Month name in locale set by moment.locale()
+D DD        1..31               Day of month
+Do          1st..31st           Day of month with ordinal
+DDD DDDD    1..365              Day of year
+X           1410715640.579      Unix timestamp
+x           1410715640579       Unix ms timestamp
+H HH        0..23               24 hour time
+h hh        1..12               12 hour time used with a A.
+a A         am pm               Post or ante meridiem
+m mm        0..59               Minutes
+s ss        0..59               Seconds
+S           0..9                Tenths of a second
+SS          0..99               Hundreds of a second
+SSS         0..999              Thousandths of a second
+Z ZZ        +12:00              Offset from UTC as +-HH:mm, +-HHmm, or Z
 </code></pre>
 
-<p>这个配置文件很简陋，仅能让openocd启动以及测试JTAG设备是否正常。</p>
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>  
 
-<p>将以上内容另存为ft2232h.cfg</p>
+<div class="mermaid">
+journey
+    title 工作日
+    section 去工作
+      Make tea: 5: 我
+      Go upstairs: 3: 我
+      Do work: 1: 我, 猫
+    section 回家
+      Go downstairs: 5: 我
+      Sit down:      0: 我,猫,was,hen
+  Go downstairs: 5: 我
+  Sit down:      0: 我,猫,was,hen
+</div>
 
-<p>为OpenOCD指定配置文件并启动:
-打开cmd，切换到openocd.exe所在目录，将ft2232h.cfg复制过来。</p>
+<div class="mermaid">
+pie title What Voldemort doesn't have?
+         "FRIENDS" : 2
+         "FAMILY" : 3
+         "NOSE" : 45
+</div> 
 
-<p>然后执行:</p>
+<div class="mermaid">
+sequenceDiagram
+    Alice ->> Bob: Hello Bob, how are you?
+    Bob-->>John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
 
-<pre><code>openocd.exe -f ft2232h.cfg
-</code></pre>
+    Bob-->Alice: Checking with John...
+    Alice->John: Yes... John, how are you?
+</div>
 
-<p>如果没有什么</p>
-
-<pre><code>Error: failed to reset FTDI device
-</code></pre>
-
-<p>以及</p>
-
-<pre><code>Error: libusb_open() failed with LIBUSB_ERROR_NOT_FOUND
-</code></pre>
-
-<p>就说明成功了</p>
-
-<p><br/>
-<br/>
-<br/>
-<br/>
-<br/></p>
+<div class="mermaid">
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts<br/>prevail...
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+</div>
 
                       
                     </div>
@@ -281,7 +364,7 @@ ftdi_layout_init 0x0508 0x0f1b
                         <div>
                             <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
-                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/FT2232/">http://sunduoze.github.io/post/FT2232/</a>
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/markdown%E4%B9%8Bmermaid/">http://sunduoze.github.io/post/markdown%E4%B9%8Bmermaid/</a>
                             <br />
                             文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
                         </div>
@@ -335,20 +418,14 @@ ftdi_layout_init 0x0508 0x0f1b
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/c%E8%AF%AD%E8%A8%80%E9%AB%98%E7%AB%AF%E7%94%A8%E6%B3%95/" rel="next">
+        <a href="http://sunduoze.github.io/post/markdown%E4%B9%8B%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>C语言高端用法</span>
+          <span>Markdown之数学公式</span>
         </a>
         
       </li>
       <li class="previous">
-        
-        <a href="http://sunduoze.github.io/post/python_start/" rel="prev">
-          <i class="fa fa-chevron-left"></i>
-          <strong>Previous Post</strong>
-          <span>Python_start</span>
-        </a>
         
       </li>
     </ul>
