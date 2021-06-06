@@ -245,7 +245,7 @@ code.has-jax {
                   <h1 class="post-title">Markdown之mermaid</h1>
 
                   <p class="post-byline">
-                    by  · 2021年06月06日 · 350 Words ·
+                    by  · 2021年06月06日 · 371 Words ·
                     ~1min reading time |
                     <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/markdown%e4%b9%8bmermaid.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
@@ -261,20 +261,21 @@ gantt
     title Team 项目周进度
     excludes    weekends
     dateFormat  MM-DD-HH
-    axisFormat  %d
-
-    section 2 weeks
-    last week :done, 4-19, a1, 5d
-    this week:done, after a1, 5d
-
-    section 恺城
-    DT3S1P           :4-18, a1, 2d
-    P2007            :after a1, 4h
-    P2150            :4h
-    Ascend           :4-18, 48h
-
-    section 兴辉
-    Tenma            :after a1, 4h
+    axisFormat  %m-%d
+    section 3C
+    任务A            :active,a1, 4-18-12, 8h
+    任务B            :after a1, 56h
+    section VC
+    任务C            :crit,done,4-19-02, 12h
+    任务D            :crit,17h
+    section MC
+    任务E            :active,4-18-02, 2d
+    任务F            :2d
+    section 高风险
+    任务E            :4-18-02, 48h
+    任务F            :3d
+    section 新系统开发
+    Tenma            :4-19-18, 1d
 </div>
 
 <pre><code>Input       Example             Description:
