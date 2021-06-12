@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/</loc>
+    <lastmod>2021-06-12T21:22:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sunduoze.github.io/post/ARM_AC5_to_AC6/</loc>
+    <lastmod>2021-06-12T21:10:51+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://sunduoze.github.io/post/markdown%E4%B9%8Bflow_and_wavedrom/</loc>
     <lastmod>2021-06-06T21:19:19+08:00</lastmod>
   </url>
@@ -309,13 +319,13 @@
   
   <url>
     <loc>http://sunduoze.github.io/post/</loc>
-    <lastmod>2021-06-06T21:19:19+08:00</lastmod>
+    <lastmod>2021-06-12T21:22:49+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sunduoze.github.io/</loc>
-    <lastmod>2021-06-06T21:19:19+08:00</lastmod>
+    <lastmod>2021-06-12T21:22:49+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -338,13 +348,13 @@
   
   <url>
     <loc>http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2017-03-04T12:04:52+08:00</lastmod>
+    <lastmod>2021-06-12T21:22:49+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-06-06T21:19:19+08:00</lastmod>
+    <lastmod>2021-06-12T21:22:49+08:00</lastmod>
     <priority>0</priority>
   </url>
   

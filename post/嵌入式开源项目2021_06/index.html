@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <base href="http://sunduoze.github.io//">
+  <script>
+    document._writeOriginal = document.write;
+    document.write = function(str) {
+        if (str.indexOf('livereload.js') > -1) {
+            document._writeOriginal(str);
+        } else {
+            document._writeOriginal('<!-- Be Hijack!! -->');
+        }
+    }
+  </script>
+  <title>嵌入式开源项目2021_06 - Sun&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="其他,">
+<meta name="description" content="Resonance,natural language communication">
+<meta name="author" content="sunduoze">
+<meta name="publisher" content="sunduoze">
+<meta name="generator" content="http://gohugo.io/"/>
+
+<meta itemprop="name" content="嵌入式开源项目2021_06 - Sun&#39;s Blog">
+<meta itemprop="description" content="Resonance,natural language communication">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+<meta property="og:title" content="嵌入式开源项目2021_06 - Sun&#39;s Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
+<meta property="og:description" content="Resonance,natural language communication">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sunduoze">
+<meta name="twitter:title" content="嵌入式开源项目2021_06 - Sun&#39;s Blog">
+<meta name="twitter:description" content="Resonance,natural language communication">
+<meta name="twitter:creator" content="@sunduoze">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+  <script> = document.documentElement.className.replace("no-js", "js");</script>
+  <link rel="canonical" href="http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/"/>
+  <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
+  
+<link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="human-style-css2" href="http://sunduoze.github.io/wp-content/themes/hueman-child/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="responsive-css" href="http://sunduoze.github.io/wp-content/themes/hueman/responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-css" href="http://sunduoze.github.io/wp-content/themes/hueman/fonts/font-awesome.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="http://sunduoze.github.io/public/highlight/styles/github.css">
+<script src="http://sunduoze.github.io/public/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" id="human-style-css3" href="http://sunduoze.github.io/wp-content/themes/hueman-child/user.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="public/font/hack/css/hack.min.css">
+
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/scripts.js"></script>
+<script type="text/javascript" src="assets/picturefill/picturefill.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" async defer src="assets/js/myblog.js"></script>
+
+  
+  
+
+
+
+  
+<script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/wavedrom/2.6.8/skins/default.js" 
+  type="text/javascript">
+</script>
+<script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/wavedrom/2.6.8/wavedrom.min.js" 
+  type="text/javascript">
+</script>
+
+<body 
+  onload="WaveDrom.ProcessAll()">
+</body>
+
+<script>
+  console.log("debug") 
+  var ids = document.getElementsByClassName("language-mermaid")
+  
+  console.log(ids)
+  console.log("end-debug")
+  
+  Array.from(document.getElementsByClassName("language-wavedrom")).forEach(
+    (el) => {
+      console.log("asdas")
+      el.parentElement.outerHTML = `<script type="wavedrom">${el.innerText}</script>`;
+      
+    }
+  );
+</script>
+
+
+
+
+
+
+
+  
+</head>
+
+<body class="single single-post single-format-standard col-3cm full-width topbar-enabled chrome">
+<div id="wrapper">
+  <header id="header">
+
+  <nav class="nav-container group" id="nav-topbar">
+    <div class="nav-toggle"><i class="fa fa-bars"></i></div>
+    <div class="nav-text"></div>
+    <div class="nav-wrap container">
+      <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
+      </a>
+      <ul id="menu-default-menu" class="nav container-inner group">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/">首页</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/post/">归档</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
+        </li>
+        
+		
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          
+        </li>
+		
+	    
+        <li class="menu-item menu-item-type-post_type menu-item-text">
+        _Tags
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container-inner">
+        <div class="toggle-search"><i class="fa fa-search"></i></div>
+        <div class="search-expand">
+          <div class="search-expand-inner">
+            <form method="get" class="searchform themeform" action="https://www.google.com/search">
+              <div>
+                <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+  </nav>
+  
+
+  <div class="container group">
+    <div class="container-inner">
+
+      <div class="group pad">
+
+        <div class="group pad">
+          <h1 class="site-title">
+            <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
+              Sun&#39;s Blog
+            </a>
+          </h1>
+          <p class="site-description"> Resonance,natural language communication </p>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+  
+
+</header>
+
+
+
+  <div class="container" id="page">
+    <div class="container-inner">
+      <div class="main">
+        <div class="main-inner group">
+          <section class="content">
+            <div class="page-title pad group">
+              <ul class="meta-single group">
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="category tag">笔记</a>
+                </li>
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/" rel="category tag">技术</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="pad group">
+
+              <article
+                  class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
+                <div class="post-inner group">
+
+                  <h1 class="post-title">嵌入式开源项目2021_06</h1>
+
+                  <p class="post-byline">
+                    by  · 2021年06月12日 · 3328 Words ·
+                    ~7min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/%e5%b5%8c%e5%85%a5%e5%bc%8f%e5%bc%80%e6%ba%90%e9%a1%b9%e7%9b%ae2021_06.md"
+                       target="_blank">Improve on <i class="fa fa-github"></i></a>
+                  </p>
+
+                  <div class="clear"></div>
+
+                  <div class="entry">
+                    <div class="entry-inner">
+                      
+                      
+
+<h3 id="转载-侵删">转载，侵删</h3>
+
+<h3 id="1-os">1、OS</h3>
+
+<p><a href="https://openharmony.gitee.com/openharmony">鸿蒙OS</a>： 一款面向全场景的开源分布式操作系统。</p>
+
+<p><a href="https://github.com/RT-Thread">RT-Thread</a>：一款小而美的物联网操作系统。</p>
+
+<p><a href="https://github.com/Tencent/TencentOS-tiny">TencentOS tiny</a>：一款面向物联网领域开发的实时操作系统。</p>
+
+<p><a href="https://www.freertos.org/">freertos</a>： 一个轻量级的操作系统。</p>
+
+<p><a href="https://www.micrium.com/rtos/">µC/OS </a>：一个功能齐全的嵌入式操作系统。</p>
+
+<p><a href="https://github.com/ARMmbed/mbed-os">mbed-os</a> ：ARM自己打造、主打IoT的一整套软件解决方案 。</p>
+
+<p><a href="https://gitee.com/notrynohigh/BabyOS">BabyOS</a>： 专为MCU项目开发提速的代码框架 。</p>
+
+<p><a href="https://gitee.com/openLuat/LuatOS">LuatOS</a> ： LuatOS是运行在嵌入式硬件的实时操作系统，只需要少量内存的flash空间就能运行，用户编写lua代码就可完成各种功能。</p>
+
+<p><a href="https://github.com/contiki-os/contiki">Contiki-OS</a>： 一个小型的，开源的，极易移植的多任务操作系统。</p>
+
+<p><a href="http://www.djyos.com/">DJYOS</a>： 都江堰操作系统。</p>
+
+<p><a href="https://gitee.com/kerndev/klite">klite</a> ： 简洁易用的嵌入式操作系统内核。</p>
+
+<p><a href="https://gitee.com/lmnos/lmosem">lmosem</a> ： 一个完全从第一行引导代码开始编写，基于ARM平台，支持多进程、多CPU、内存管理、文件与设备管理的全32位操作系统内核。</p>
+
+<p><a href="http://www.freenos.org/">freenos</a>：FreeNOS微内核操作系统。</p>
+
+<p>更多资源敬请期待&hellip;&hellip;</p>
+
+<h3 id="2-实用库-框架">2、实用库/框架</h3>
+
+<p><a href="https://github.com/DaveGamble/cJSON">cJSON</a>：一个基于C语言的轻量级的JSON解析库。</p>
+
+<p><a href="https://github.com/zserge/jsmn">jsmn</a>：一个小巧的基于C语言的JSON解析库。</p>
+
+<p><a href="https://github.com/0x1abin/MultiTimer"> MultiTimer </a>： 一个软件定时器扩展模块。</p>
+
+<p><a href="https://github.com/0x1abin/MultiButton">MultiButton</a>： 一个小巧简单易用的事件驱动型按键驱动模块。</p>
+
+<p><a href="https://github.com/lmooml/SmartTimer"> SmartTimer </a>： 一个轻量级的基于STM32的定时器调度器 。</p>
+
+<p><a href="https://github.com/armink/CmBacktrace">CmBacktrace</a> ： 一款针对 ARM Cortex-M 系列 MCU 的错误代码自动追踪库。</p>
+
+<p><a href="https://github.com/armink/EasyLogger">EasyLogger</a>：一款超轻量级、高性能的 C/C++ 日志库。</p>
+
+<p><a href="https://github.com/armink/EasyFlash">EasyFlash</a>：一款开源的轻量级嵌入式Flash存储器库 。</p>
+
+<p><a href="https://github.com/armink/SFUD">SFUD</a>：一款开源的串行 SPI Flash 通用驱动库。</p>
+
+<p><a href="https://sourceforge.net/projects/lwoopc/">lw_oopc</a>：轻量级的C语言面向对象编程框架。</p>
+
+<p><a href="https://github.com/GorgonMeducer/PLOOC">PLOOC</a>：受保护的低开销面向对象编程。</p>
+
+<p><a href="https://github.com/jiejieTop/cmd-parser">cmd-parser</a>：一个非常简单好用的命令解析器。</p>
+
+<p><a href="https://github.com/jiejieTop/mqttclient">mqttclient</a>：一个省资源、高稳定的MQTT客户端。</p>
+
+<p><a href="https://gitee.com/PISCES_X/NorthFrame">NorthFrame</a> ：一个单片机极简图形化状态机框架 。</p>
+
+<p><a href="https://github.com/NevermindZZT/letter-shell">letter-shell</a>：一个功能强大的嵌入式shell。</p>
+
+<p><a href="https://github.com/izzimat/pigweed">pigweed</a>：谷歌开源的嵌入式目标库（模块）集合。</p>
+
+<p><a href="https://github.com/MaJerle/lwrb">lwrb</a>：一个轻量级通用环缓冲区管理器库。</p>
+
+<p><a href="https://gitee.com/yorkjia/cQueue">cQueue</a> ：使用ANSI C 编写的消息队列功能函数。</p>
+
+<p><a href="https://github.com/ThrowTheSwitch/Unity/releases">Unity</a>：一个轻量级的、适合嵌入式的测试框架。</p>
+
+<p><a href="https://sourceforge.net/projects/embunit">Embedded Unit</a>： 是个纯标准c构建的单元测试框架。</p>
+
+<p><a href="https://sourceforge.net/projects/cutest/">CuTest </a>：一款微小的C语言单元测试框， 全部代码加起来不到一千行。</p>
+
+<p><a href="https://github.com/google/cmockery">cmockery</a>： 谷歌C单元测试框架。</p>
+
+<p><a href="https://github.com/google/googletest">googletest</a>：谷歌C++测试框架。</p>
+
+<p><a href="https://gitee.com/dbembed/znfat?_from=gitee_search"> znfat </a>：振南fat，国产嵌入式文件系统方案 。</p>
+
+<p><a href="https://github.com/koanlogic/libu">libu</a>：一个C语言写的多平台工具库。</p>
+
+<p><a href="http://savannah.nongnu.org/projects/lwip/">LWIP</a>： 一个小型开源的TCP/IP协议栈 。</p>
+
+<p><a href="https://www.sqlite.org/download.html"> SQLite </a>：一个开源的嵌入式关系数据库。</p>
+
+<p><a href="https://sourceforge.net/projects/openblt/files/">OpenBLT</a>：一种开源引导加载程序。</p>
+
+<p><a href="https://gitee.com/tinylab/linux-lab">Linux Lab</a> ： Linux 内核实验室，基于 Docker/Qemu 的极速 Linux 内核学习、开发和测试环境。</p>
+
+<p><a href="https://github.com/heyuanjie87/airkissOpen">airkissOpen</a> ：腾讯airkiss协议解析库 。</p>
+
+<p><a href="https://gitee.com/nrush/nr_micro_shell">nr_micro_shell</a> ： shell for MCU，单片机命令行交互。</p>
+
+<p><a href="https://github.com/murphyzhao/FlexibleButton">FlexibleButton</a>： FlexibleButton 是一个基于标准 C 语言的小巧灵活的按键处理库。</p>
+
+<p><a href="https://github.com/ARMmbed/mbedtls">mbedtls</a> ：一个开源、便携,易于使用,可读的和灵活的SSL库。</p>
+
+<p><a href="https://github.com/eclipse/mosquitto">mosquitto</a>或<a href="https://gitee.com/zhengnianli/mosquitto">mosquitto(下载速度快)</a>：一个开源的MQTT代理。</p>
+
+<p><a href="https://github.com/benhoyt/inih">inih</a>：  C 语言编写的 INI 文件解析器。</p>
+
+<p><a href="http://www.state-machine.com/">QP</a>：QP实时嵌入式框架。</p>
+
+<p><a href="https://github.com/MS-RTOS">MS-RTOS</a>： Micro Safe RTOS 。</p>
+
+<p><a href="https://github.com/protobuf-c/protobuf-c/wiki/Examples">protobuf-c</a>：protobuf-c。</p>
+
+<p><a href="https://gitee.com/wtau_zaozao/eepromfs?_from=gitee_search">eepromfs</a>： 基于EEPROM的简易类文件的数据读写库 。</p>
+
+<p><a href="https://gitee.com/gozfreee/gear-lib">gear-lib</a> ： 适用于IOT/嵌入式/网络服务开发的C库 。</p>
+
+<p><a href="https://gitee.com/simpost/mult_timer">mult_timer</a> ： 一个Linux下的超级精简的多重定时器 。</p>
+
+<p><a href="https://gitee.com/simpost/EFSM">EFSM</a> ： 是一个基于事件驱动的有限状态机 。</p>
+
+<p><a href="https://easyx.cn/">EasyX</a>：一个免费的图形库。</p>
+
+<p>更多资源敬请期待&hellip;&hellip;</p>
+
+<h3 id="3-gui相关">3、GUI相关</h3>
+
+<p><a href="https://gitee.com/idea4good/GuiLite">GuiLite</a>：大道至简 - 5千行/仅头文件/全平台GUI库 。</p>
+
+<p><a href="https://www.yoxios.com/">yoxios</a>：  基于Linux开发的轻量级物联网系统和硬件平台。</p>
+
+<p><a href="https://www.touchgfx.com/zh/">ToughGFX</a>： 一个C++编写的GUI软件框架 。</p>
+
+<p><a href="https://www.segger.com/products/user-interface/emwin/">emwin</a>：一个老牌GUI库。</p>
+
+<p><a href="https://gitee.com/mirrors/lvgl">littlevGL</a> ： 一个免费的开源图形库。</p>
+
+<p><a href="https://gitee.com/mzy2364/LittlevGL_Demo">野牛 LittlevGL demo</a>：基于野牛开发板的 LittlevGL  demo 程序 。</p>
+
+<p><a href="https://gitee.com/liuxinouc/MonoGUI"> MonoGUI </a>：一个黑白图形用户接口系统 。</p>
+
+<p><a href="http://www.minigui.com/download">MiniGUI</a>： 一个快速、稳定、跨操作系统的GUI。</p>
+
+<p><a href="https://www.qt.io/developers">QT</a>：跨平台的应用程序和用户界面框架。</p>
+
+<p><a href="https://download.qt.io/new_archive/qt/">QT_Creator</a>：QT_Creator下载链接。</p>
+
+<p><a href="https://www.gtk.org/">Gtk</a>： 一个用于创造图形用户接口的图形库。</p>
+
+<p><a href="https://gitee.com/zlgopen/awtk?_from=gitee_search">AWTK</a>：是 ZLG 倾心打造的一套基于 C 语言开发的 GUI 框架 。</p>
+
+<p><a href="https://www.yuque.com/books/share/3317aaa7-f47f-4bfd-a4c2-7e64e7f1c4be?#">玲珑GUI</a>：玲珑GUI教程页。</p>
+
+<p>更多资源敬请期待&hellip;&hellip;</p>
+
+<h3 id="4-物联网-智能家居">4、物联网、智能家居</h3>
+
+<p><a href="https://github.com/home-assistant/corel"> HomeAssistant </a>：一款基于 Python 的智能家居开源系统。</p>
+
+<p><a href="https://github.com/domoticz/domoticz"> Domoticz </a>：一个开源的智能家居系统 。</p>
+
+<p><a href="https://www.kaaproject.org/">Kaa IoT Platform</a>：功能丰富的开放和高效的物联网云平台。</p>
+
+<p><a href="https://github.com/RT-Thread/IoT_Board"> RT-Thread IoT SDK </a>：基于RT-Thread IOT开发板的各类例程。</p>
+
+<p><a href="https://www.scaugreen.cn/posts/44755/">从零打造物联网</a>：一份适合嵌入式开发人员学习的web开发教程。</p>
+
+<p>更多资源敬请期待&hellip;&hellip;</p>
+
+<h3 id="5-实例-项目-软硬结合">5、实例/项目/软硬结合</h3>
+
+<p><a href="https://github.com/whik/qt_2019_ncov">qt_2019_ncov</a>：基于Qt/C++实现的新冠肺炎疫情监控平台。</p>
+
+<p><a href="https://gitee.com/armfly/H7-TOOL_STM32H7_App">H7-TOOL_STM32H7_App</a> ：H7-TOOL 多功能开发工具。</p>
+
+<p><a href="https://github.com/ARMmbed/DAPLink">DAPLink/CMSIS DAP</a>：一个调试器， 集成下载、调试和USB虚拟串口。</p>
+
+<p><a href="https://github.com/pengshulin/mcush">mcush</a>：MCU shell。</p>
+
+<p><a href="https://github.com/zhangyuhu/DoST">DoST</a>： Linux 下开发 STM32 。</p>
+
+<p><a href="http://www.crazepony.com/">Crazepony</a>：Crazepony开源四轴飞行器。</p>
+
+<p><a href="https://github.com/billhsu/MiniQ">MiniQ</a> ：一个迷你四轴飞行器。</p>
+
+<p><a href="https://github.com/AlexKlimaj/LiPow-Firmware">LiPow-Firmware</a>：基于STM32G0采用USB type-C供电的开源锂电池充电器。</p>
+
+<p><a href="https://github.com/avem-labs/Avem">Avem</a>： 一个轻量级无人机飞控。</p>
+
+<p><a href="https://github.com/TonyIOT/SoftWareSerial">SoftWareSerial</a>：一个STM32 IO口模拟实现软件串口程序。</p>
+
+<p><a href="https://github.com/nicekwell/stm32ISP">串口ISP程序</a>：一个stm32串口ISP程序。</p>
+
+<p><a href="https://github.com/Seeed-Studio/DSO_Nano">DSO_Nano</a> ：一个手持示波器。</p>
+
+<p><a href="https://github.com/DreamSourceLab/DSView">DSView</a>： 一个跨平台的逻辑分析仪。</p>
+
+<p><a href="https://github.com/cjeeks/MCU-Development">MCU-Development</a>： 基于51、430、STM32F10X、STM32F407X、T4MC123G平台的各常见硬件模块demo。</p>
+
+<p><a href="https://github.com/arduino/Arduino">Arduino</a> ： 开源电子原型平台。</p>
+
+<p><a href="https://github.com/lemire/EWAHBoolArray"> EWAHBoolArray</a>： bitmap算法。</p>
+
+<p>更多资源敬请期待&hellip;&hellip;</p>
+
+<h2 id="6-学习资料-资源-工具-网站">6、学习资料/资源/工具/网站</h2>
+
+<p><a href="http://download.100ask.org/">100ask download</a>：百文网资料下载中心。</p>
+
+<p><a href="http://www.armbbs.cn/forum.php">armfly</a>：安富莱/硬汉嵌入式论坛。</p>
+
+<p><a href="https://ebf-products.readthedocs.io/zh_CN/latest/">fire download</a>：野火资料下载中心。</p>
+
+<p><a href="http://www.openedv.com/docs/index.html">openedv download</a>：正点原子资料下载中心。</p>
+
+<p><a href="https://www.firebbs.cn/forum.php">野火</a>：野火电子论坛。</p>
+
+<p><a href="http://www.openedv.com/forum.php">正点</a>：正点原子论坛。</p>
+
+<p><a href="https://www.stmcu.org.cn/module/forum/forum.php">ST</a>：ST中文社区。</p>
+
+<p><a href="http://bbs.topeetboard.com/forum.php">讯为开发社区</a>：北京讯为ARM开发社区。</p>
+
+<p><a href="http://www.topeetboard.com/">讯为官网</a>：讯为官网。</p>
+
+<p><a href="https://www.nxpic.org.cn/">NXP社区</a>：恩智浦论坛。</p>
+
+<p><a href="https://www.kernel.org/">Linux</a>：Linux内核官网。</p>
+
+<p><a href="https://elixir.bootlin.com/linux/latest/source">Linux源码</a>：可在线阅读Linux内核源码。</p>
+
+<p><a href="https://buildroot.org/downloads/">Buildroot</a>：buildroot源码。</p>
+
+<p><a href="https://www.debian.org/">Debian</a>：Debian官网。</p>
+
+<p><a href="https://ubuntu.com/">Ubuntu</a>：Ubuntu官网。</p>
+
+<p><a href="https://www.kancloud.cn/lichee/lpi0/317714">荔枝派</a>：荔枝派指南。</p>
+
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华镜像站</a>：清华大学开源软件镜像站。</p>
+
+<p><a href="https://mirrors.ustc.edu.cn/">中科大镜像站</a>：中国科技大学镜像站。</p>
+
+<p><a href="https://ftp.denx.de/pub/u-boot/">u-boot</a>：u-boot源码下载页面。</p>
+
+<p><a href="https://gitee.com/morixinguan/bear-pi">bear-pi</a>：小熊派demo。</p>
+
+<p><a href="http://www.zhaixue.cc/">宅学部落</a>：一个Linux、编程语言、内核、驱动开发学习网站。</p>
+
+<p><a href="http://www.51hei.com/">单片机教程网</a>：单片机基础、设计实例、论坛。</p>
+
+<p><a href="http://www.gnu.org/">GNU</a>：GNU官网。</p>
+
+<p><a href="http://www.chinaunix.net/">ChinaUnix</a>：Linux/Unix相关。</p>
+
+<p><a href="http://code.py40.com/face">PyQt5</a>：PyQt5教程。</p>
+
+<p><a href="https://www.qter.org/">qter</a>：QT开源社区。</p>
+
+<p><a href="https://git-scm.com/book/zh/v2">git手册</a>：git学习手册。</p>
+
+<p><a href="https://zh-google-styleguide.readthedocs.io/en/latest/#">开源项目风格</a>：Google 开源项目风格指南 (中文版)。</p>
+
+<p><a href="http://www.dianzishijia.com/">电子世家</a>：一个电子类导航网站。</p>
+
+<p><a href="https://www.21ic.com/">21ic</a>：21IC中国电子网。</p>
+
+<p><a href="http://www.corecourse.cn/forum.php">芯路恒电子</a>：小梅哥博客、FPGA论坛。</p>
+
+<p><a href="http://www.51ele.net/">嵌入式开发者社区</a>：创龙论坛。</p>
+
+<p><a href="http://micropython.openioe.net/">micropython</a>：micropython中文网。</p>
+
+<p><a href="http://tinylab.org/using-linux-lab-to-do-embedded-linux-development/">泰晓科技</a>：Linux相关。</p>
+
+<p><a href="https://c.51diantang.com/">电堂科技</a>：STM32相关。</p>
+
+<p><a href="https://cpp.hotexamples.com/zh/">源代码使用示例聚合器</a>： 从超过100万个开源项目搜索CPP代码示例。</p>
+
+<p><a href="http://www.qdkingst.com/cn">KST-51 </a>：《手把手教你学51单片机》 。</p>
+
+<p><a href="https://www.yuanzige.com/">原子哥</a>：专注电子技术教学。。</p>
+
+<p><a href="http://www.digoboy.com/">digoboy</a>：地瓜派视频网。</p>
+
+<p><a href="http://c.biancheng.net/">c.biancheng</a>：C语言中文网。</p>
+
+<p><a href="https://github.com/tinyclub/open-c-book">open-c-book</a> ：《C语言编程透视》。</p>
+
+<p><a href="http://code.py40.com/">PyQt5</a>：PyQt5在线教程。</p>
+
+<p><a href="https://github.com/tinyclub/open-shell-book">open-shell-book</a>：《Shell 编程范例》 。</p>
+
+<p><a href="https://www.zlg.cn/foxmail/weixinpdf/software_unit_test.pdf">software_unit_test</a>： 《软件单元测试入门与实践》。</p>
+
+<p><a href="http://www.kerneltravel.net/">kerneltravel</a>：Linux内核之旅。</p>
+
+<p><a href="http://www.wowotech.net/">蜗窝科技</a>：慢下来，享受技术。</p>
+
+<p><a href="https://www.bookstack.cn/">bookstack</a>：书栈网。</p>
+
+<p><a href="https://www.wireshark.org/#download">wireshark</a>：抓包工具下载链接。</p>
+
+<p><a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>：一个好用的终端软件。</p>
+
+<p><a href="http://www.stduino.com/pindex.php">Stduino</a>： 一款面向32位处理器快速入门学习的集成开发平台 。</p>
+
+<p><a href="https://www.easyicon.net/">easyicon</a>：一个免费图标下载网站。</p>
+
+<p><a href="https://codingdict.com/">codingdict</a>：一个类似于菜鸟教程的编程类教程网站。</p>
+
+<p><a href="https://codingdict.com/os/">codingdict开源软件</a>：codingdict网站收集的各类开源软件集合。</p>
+
+                      
+                    </div>
+                    <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                        <div style="float:left;margin-top:0px;">
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
+                        </div>
+                        <div>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
+                            <br />微信关注：勿忘初兴
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/">http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/</a>
+                            <br />
+                            文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  
+
+                </div>
+                
+              </article>
+              
+              <div class="clear"></div>
+              
+              
+              
+            </div>
+          </section>
+          <div class="sidebar s1">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>Follow:</p>
+      <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="widget qrcode">
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
+</div>
+
+    <ul class="post-nav group">
+      <li class="next">
+        
+        <a href="http://sunduoze.github.io/post/ARM_AC5_to_AC6/" rel="next">
+          <i class="fa fa-chevron-right"></i>
+          <strong>Next post</strong>
+          <span>ARM_AC5_to_AC6</span>
+        </a>
+        
+      </li>
+      <li class="previous">
+        
+      </li>
+    </ul>
+    <div id="search-2" class="widget widget_search"><h3>Search</h3>
+      <form method="get" class="searchform themeform" action="https://www.google.com/search">
+        <div>
+          <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+          <div class="sidebar s2">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>More</p>
+    </div>
+    <div id="categories-2" class="widget widget_categories"><h3>Categories</h3>
+      <ul>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  <section class="container" id="footer-bottom">
+    <div class="container-inner">
+      <a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+      <div class="pad group">
+        <div class="grid one-half">
+          <div id="copyright">
+              <p>Copyright (c) 2015. All rights reserved.<br>Powered by
+              <a rel="nofollow" href="http://gohugo.io/" target="_blank">Hugo - the static site generator</a>.
+              <a rel="nofollow" href="http://golang.org" target="_blank">#golang</a>.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="grid one-half last">
+          <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+  
+</footer>
+
+</div>
+
+</body>
+</html>
+

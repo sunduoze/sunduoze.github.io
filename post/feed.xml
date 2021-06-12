@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 06 Jun 2021 21:19:19 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 12 Jun 2021 21:22:49 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>嵌入式开源项目2021_06</title>
+      <link>http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/</link>
+      <pubDate>Sat, 12 Jun 2021 21:22:49 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/</guid>
+      <description>转载，侵删 1、OS 鸿蒙OS： 一款面向全场景的开源分布式操作系统。 RT-Thread：一款小而美的物联网操作系统。 TencentOS tiny：一款面向物联网领</description>
+    </item>
+    
+    <item>
+      <title>ARM_AC5_to_AC6</title>
+      <link>http://sunduoze.github.io/post/ARM_AC5_to_AC6/</link>
+      <pubDate>Sat, 12 Jun 2021 21:10:51 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/ARM_AC5_to_AC6/</guid>
+      <description>Migrate ARM Compiler 5 to ARM Compiler 6 部分笔记 Incompatible Language Extensions ARM Compiler 5 ARM Compiler 6 CMSIS (Recommended) __align(x) __attribute__((aligned(x))) __ALIGNED(x) __alignof__ __alignof__ __ALIGNOF__ __alignof__ __asm See Assembler Migration __ASM __const __attribute__((const)) __forceinline __attribute__((always_inline)) __global_reg Not supported __inline __inline__. The use of this depends on the language mode. __INLINE__STATIC_INLINE __int64 No equivalent. Use long long. When you use long long in C90 mode, the compiler</description>
+    </item>
     
     <item>
       <title>markdown之flow_and_wavedrom</title>
