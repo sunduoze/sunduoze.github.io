@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 07 Sep 2021 20:14:19 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Sep 2021 17:48:35 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pcb表面处理工艺</title>
+      <link>http://sunduoze.github.io/post/pcb%E8%A1%A8%E9%9D%A2%E5%A4%84%E7%90%86%E5%B7%A5%E8%89%BA/</link>
+      <pubDate>Sat, 11 Sep 2021 17:48:35 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/pcb%E8%A1%A8%E9%9D%A2%E5%A4%84%E7%90%86%E5%B7%A5%E8%89%BA/</guid>
+      <description>处理类型 喷锡Hot Air Solder LevelingHASL热风整平 OSP（防氧化）有机保焊膜，又称护铜剂 全板镀镍金 ENIG化学镀镍浸金（沉金） 电镀硬金 沉</description>
+    </item>
     
     <item>
       <title>如何计算万用表的精度</title>
