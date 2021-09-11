@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <base href="http://sunduoze.github.io//">
+  <script>
+    document._writeOriginal = document.write;
+    document.write = function(str) {
+        if (str.indexOf('livereload.js') > -1) {
+            document._writeOriginal(str);
+        } else {
+            document._writeOriginal('<!-- Be Hijack!! -->');
+        }
+    }
+  </script>
+  <title>软件开发之感悟 - Sun&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="其他,">
+<meta name="description" content="Resonance,natural language communication">
+<meta name="author" content="sunduoze">
+<meta name="publisher" content="sunduoze">
+<meta name="generator" content="http://gohugo.io/"/>
+
+<meta itemprop="name" content="软件开发之感悟 - Sun&#39;s Blog">
+<meta itemprop="description" content="Resonance,natural language communication">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+<meta property="og:title" content="软件开发之感悟 - Sun&#39;s Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sunduoze.github.io/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B9%8B%E6%84%9F%E6%82%9F/" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
+<meta property="og:description" content="Resonance,natural language communication">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sunduoze">
+<meta name="twitter:title" content="软件开发之感悟 - Sun&#39;s Blog">
+<meta name="twitter:description" content="Resonance,natural language communication">
+<meta name="twitter:creator" content="@sunduoze">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+  <script> = document.documentElement.className.replace("no-js", "js");</script>
+  <link rel="canonical" href="http://sunduoze.github.io/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B9%8B%E6%84%9F%E6%82%9F/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B9%8B%E6%84%9F%E6%82%9F/"/>
+  <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
+  
+<link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="human-style-css2" href="http://sunduoze.github.io/wp-content/themes/hueman-child/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="responsive-css" href="http://sunduoze.github.io/wp-content/themes/hueman/responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-css" href="http://sunduoze.github.io/wp-content/themes/hueman/fonts/font-awesome.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="http://sunduoze.github.io/public/highlight/styles/github.css">
+<script src="http://sunduoze.github.io/public/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" id="human-style-css3" href="http://sunduoze.github.io/wp-content/themes/hueman-child/user.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="public/font/hack/css/hack.min.css">
+
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/scripts.js"></script>
+<script type="text/javascript" src="assets/picturefill/picturefill.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" async defer src="assets/js/myblog.js"></script>
+
+  
+  
+
+
+
+  
+
+
+  
+</head>
+
+<body class="single single-post single-format-standard col-3cm full-width topbar-enabled chrome">
+<div id="wrapper">
+  <header id="header">
+
+  <nav class="nav-container group" id="nav-topbar">
+    <div class="nav-toggle"><i class="fa fa-bars"></i></div>
+    <div class="nav-text"></div>
+    <div class="nav-wrap container">
+      <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
+      </a>
+      <ul id="menu-default-menu" class="nav container-inner group">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/">首页</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/post/">归档</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
+        </li>
+        
+		
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          
+        </li>
+		
+	    
+        <li class="menu-item menu-item-type-post_type menu-item-text">
+        _Tags
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container-inner">
+        <div class="toggle-search"><i class="fa fa-search"></i></div>
+        <div class="search-expand">
+          <div class="search-expand-inner">
+            <form method="get" class="searchform themeform" action="https://www.google.com/search">
+              <div>
+                <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+  </nav>
+  
+
+  <div class="container group">
+    <div class="container-inner">
+
+      <div class="group pad">
+
+        <div class="group pad">
+          <h1 class="site-title">
+            <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
+              Sun&#39;s Blog
+            </a>
+          </h1>
+          <p class="site-description"> Resonance,natural language communication </p>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+  
+
+</header>
+
+
+
+  <div class="container" id="page">
+    <div class="container-inner">
+      <div class="main">
+        <div class="main-inner group">
+          <section class="content">
+            <div class="page-title pad group">
+              <ul class="meta-single group">
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="category tag">笔记</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="pad group">
+
+              <article
+                  class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
+                <div class="post-inner group">
+
+                  <h1 class="post-title">软件开发之感悟</h1>
+
+                  <p class="post-byline">
+                    by  · 2021年06月20日 · 13698 Words ·
+                    ~28min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/%e8%bd%af%e4%bb%b6%e5%bc%80%e5%8f%91%e4%b9%8b%e6%84%9f%e6%82%9f.md"
+                       target="_blank">Improve on <i class="fa fa-github"></i></a>
+                  </p>
+
+                  <div class="clear"></div>
+
+                  <div class="entry">
+                    <div class="entry-inner">
+                      
+                      
+
+<h2 id="不要浪费时间写完美代码-你认同么">不要浪费时间写完美代码（你认同么？）</h2>
+
+<p>系统可以持续运行 5 年、10 年甚至 20 年或者更多年。但是，特定的代码行的生命，即使是经过设计，通常要短得多：当你通过各种方式来迭代寻求解决方案时，它会有几个月、几天甚至几分钟的生命。</p>
+
+<p>一些代码比其他代码重要</p>
+
+<p>通过研究代码如何随时间变化，Michael Feathers 确定了一个代码库的冥曲线。每个系统都有代码，通常有很多是一次性写成，永远都不会改变。但是有少量的代码，包括最重要和最有用的代码，会一次又一次地改变、会有几次重构或者从头重写。</p>
+
+<p>当你在一个系统、或者问题领域、体系结构方法中有更多经验时，会更容易了解并预测什么代码将一直改变，哪些代码将永远不会改变：什么代码重要，什么代码不重要。</p>
+
+<p>我们应该尝试编写完美的代码么？</p>
+
+<p>我们知道我们应该写干净的代码，代码应该一致、清晰也要尽可能简单。</p>
+
+<p>有些人把这变成了极端，他们迫使自己写出美丽、优雅、接近完美的代码，痴迷于重构并且纠结每个细节。</p>
+
+<p>但是，如果代码只写一次而从不改变，或者如果在另一个极端下，它一直在改变的话，就如同尝试去写完美的需求和尝试做完美的前期设计那样，写完美的代码难道不是既浪费又没有必要（也不可能实现）的么？</p>
+
+<pre><code>“你不能写出完美的软件。是不是收到了伤害？并不。把它作为生活的公理接受它、拥抱它、庆祝它。因为完美的软件不存在。在计算机的短暂历史中从没有人写过完美的软件。你不可能成为第一个。除非你接受这个事实，否则你最终会浪费时间和精力追逐不可能的梦想。”
+
+Andrew Hunt，务实的程序员: 从熟练工到大师
+</code></pre>
+
+<p>一次性写的代码不需要美观优雅。但它必须是正确的、可以理解的 —— 因为绝不会改变的代码在系统的整个生命周期内可能仍然被阅读很多次。它不需要干净并紧凑 —— 只要干净就够了。代码中复制和粘贴和其他小的裁剪是允许的，至少在某种程度上是这样的。这些是永远不需要打磨的代码。即使周围的其他代码正在更改，这些也是不需要重构的代码（除非你需要更改它）。这是不值得花费额外时间的代码。</p>
+
+<p>你一直在改变的代码怎么样了呢？纠结于代码风格以及提出最优雅的解决方案是浪费时间，因为这段代码可能会再次更改，甚至可能会在几天或几周内重写。因此，每当你进行更改时，都会痴迷重构代码，或者没有重构没有改变的代码，因为它可能会更好。代码总是可以更好。但这并不重要。</p>
+
+<p>重要的是：代码是否做了应该做的 —— 是正确的、可用的和高效的吗？它可以处理错误和不良数据而不会崩溃 —— 或者至少可以安全地失败？调试容易吗？改变是否容易且安全？这些不是美的主观方面。这些是成功与失败实际措施之间的差异。</p>
+
+<p>务实编码和重构</p>
+
+<p>精益开发Lean Development的核心思想是：不要浪费时间在不重要的事情上。这应该提醒我们该如何编写代码，以及我们如何重构它、审查它、测试它。</p>
+
+<p>为了让工作完成，只重构你需要的 —— Martin Fowler 称之为机会主义重构opportunistic refactoring（理解、清理、童子军规则 ）和准备重构preparatory refactoring。足够使改变更加容易和安全，而不是更多。如果你不改变那些代码，那么它并不会如看起来的那么重要。</p>
+
+<p>在代码审查中，只聚焦在重要的事上。代码是否正确？有防御机制吗？是否安全？你能理解么？改变是否安全？</p>
+
+<p>忘记代码风格（除非代码风格变成无法理解）。让你的 IDE 处理代码格式化。不要争议代码是否应该是“更多的 OO”。只要它有意义，它是否适当地遵循这种或那种模式并不重要。无论你喜欢还是不喜欢都没关系。你是否有更好的方式做到这一点并不重要 —— 除非你在教新接触这个平台或者语言的人，而且需要在做代码审查时做一部分指导。</p>
+
+<p>写测试很重要。测试涵盖主要流程和重要的意外情况。测试让你用最少的工作获得最多的信息和最大的信心。大面积覆盖测试，或小型针对性测试 —— 都没关系，只要一直在做这个工作，在编写代码之前或之后编写测试并不重要。</p>
+
+<p>（不只是）代码无关</p>
+
+<p>建筑和工程方面的隐喻对软件从未有效过。我们不是设计和建造几年或几代将保持基本不变的桥梁或摩天大楼。我们构建的是更加弹性和抽象、更加短暂的东西。代码写来是被修改的 —— 这就是为什么它被称为“软件”。</p>
+
+<pre><code>“经过五年的使用和修改，成功的软件程序的源码通常完全认不出它原来的样子，而一个成功建筑五年后几乎没有变化。”
+
+Kevin Tate，可持续软件开发
+</code></pre>
+
+<p>我们需要将代码看作是我们工作的一个暂时的手工制品：</p>
+
+<pre><code>有时候面对更重要的事情时，我们会迷信代码。我们经常有一个错觉，让卖出的产品有价值的是代码，然而实际上可能是对该问题领域的了解、设计难题的进展甚至是客户反馈。
+
+Dan Grover，Code and Creative Destruction
+</code></pre>
+
+<p>迭代开发教会我们来体验和检验我们工作的结果 —— 我们是否解决了这个问题，如果没有，我们学到了什么，我们如何改进？软件构建从没有止境。即使设计和代码是正确的，它们也可能只是一段时间内正确，直到环境要求再次更改或替换为更好的东西。</p>
+
+<p>我们需要编写好的代码：代码可以理解、正确、安全和可靠。我们需要重构和审查它，并写出好的有用的测试，同时知道这其中一些或者所有的代码，可能会很快被抛弃，或者它可能永远不会被再被查看，或者它可能根本不会用到。我们需要认识到，我们的一些工作必然会被浪费，并为此而进行优化。做需要做的，没有别的了。不要浪费时间尝试编写完美的代码。</p>
+
+<h2 id="aworksos的哲学思想-zlg">AWorksOS的哲学思想-ZLG</h2>
+
+<h3 id="1-思维差异">1.思维差异</h3>
+
+<p>苹果之所以成为全球最赚钱的公司，关键在于产品的性能超越了用户的预期，且因为大量可重用的核心领域知识，综合成本大幅度降低。Yourdon和Constantine在《结构化设计》一书中，将经济学作为软件设计的底层驱动力，软件设计应该致力于降低整体成本。人们发现软件的维护成本远远高于它的初始成本，因为理解现有代码需要花费时间，而且容易出错。同时改动之后，还要进行测试和部署。由于缺乏科学的软件工程方法，不仅软件难以重用，而且扩展和维护难度很大，从而导致开发成本居高不下。</p>
+
+<p>更多的时候，程序员不是在编码，而是在阅读程序。由于阅读程序需要从细节和概念上理解，因此修改程序的投入会远远大于最初编程的投入。基于这样的共识，让我们操心的一系列事情，需要不断地思考和总结使之可以重用，这就是方法论的源起。</p>
+
+<p>通过财务数据分析，由于早期决策失误和缺乏科学的软件工程方法，我们开发了一些周期长、技术难度大且回报率极低的产品，不仅软件难以重用，而且扩展和维护难度很大，从而导致开发成本居高不下。</p>
+
+<p>由此可见，从软件开发来看，软件工程与计算机科学是完全不同的两个领域的知识，其主要区别在于人，因为软件开发是以人为中心的过程。如果考虑人的因素，软件工程更接近经济学，而非计算机科学。显然，如果我们不改变思维方式，则很难开发出既好卖且成本低的产品。</p>
+
+<h3 id="2-利润模型">2.利润模型</h3>
+
+<p>产品的BOM成本很低，而毛利又很高，为何很多上市公司的年利润却买不起一套房？房子到底被谁买走了，这个问题值得我们反思！</p>
+
+<p>伟大企业除了愿景、使命和价值观之外，其核心指标就是利润，作为开发人员一个最大的痛苦就是很难精准地开发好卖的产品。因为很多企业普遍都不知道利润是如何来的？所以有必要建立一个利润模型，即“利润＝需求－设计”。需求是致力于解决“产品如何好卖”的问题，设计是致力于解决“如何降低成本”的问题。</p>
+
+<p>代码的优劣不仅直接决定了软件的质量，还将直接影响软件成本。软件成本是由开发成本和维护成本组成的，而维护成本却远高于开发成本，蛮力开发的现象比比皆是，大量来之不易的资金被无声无息地吞没，整个社会的资源浪费严重。</p>
+
+<p>为何不将复杂的技术高度抽象呢？如果实现就能做到让专业的人做专业的事，AworksOS就是在这样的背景下诞生的。由于其中融入了更多的软件工程技术方法，因此就能做到将程序员彻底从非核心域中释放出来聚焦于核心竞争力。</p>
+
+<h3 id="3-核心域和非核心域">3.核心域和非核心域</h3>
+
+<p>其实一个软件系统封装了若干领域的知识，其中一个领域知识代表了系统的核心竞争力，这个领域被称为“核心域”，其它领域称为“非核心域”。虽然更通俗的说法是“业务”和“技术”，但使用“核心域”和“非核心域”更严谨。</p>
+
+<p>非核心域就是别人的领域，比如，底层驱动、操作系统和组件，即便你有一些优势，那也是暂时的，竞争对手也能通过其它渠道获得。虽然非核心域的改进是必要的，但不充分，还是要在核心域上深入挖掘，让竞争对手无法轻易从第三方获得。因为在核心域上深入挖掘，达到基于核心域的复用，这是获得和保持竞争力的根本手段。</p>
+
+<p>要达到基于核心域的复用，有必要将核心域和非核心域分开考虑。因为过早地将各个领域的知识混杂，会增加不必要的负担，从而导致开发人员腾不出脑力思考核心域中更深刻的问题。由于待解决的问题的规模一旦变大，而人脑的容量和运算能力有限，因此必须分而治之，因为核心域与非核心域的知识都是独立的。</p>
+
+<h3 id="4-共性与差异性">4.共性与差异性</h3>
+
+<p>如果没有ARM公司的IP授权模式，则在设计MCU时势必消耗大量来之不易的财富。虽然ARM公司的规模相对来说不大，但毫不影响ARM成为一个伟大的企业，其为人类做出的贡献是有目共睹的。</p>
+
+<p>尽管如此，没有软件的支持，那么硬件就是一坨废铁。由于需求五花八门，尽管人们也做出了巨大的努力，期望最大限度地降低开发成本，似乎人们期望实现美好的心愿遥遥无期，无法做到高度地重用人类通过艰苦努力积累的知识。由于商业利益的驱使，伟大企业的不伟大之处，企图将客户绑在他们的战车上，让竞争对手绝望，大凡成功的企业无不如此。</p>
+
+<p>有没有破解的办法呢？那就是“共性与差异性分析”抽象工具。实际上，不管是基于何种内核的MCU，也不管是哪家公司的OS，其设计原理是一样，只是实现方法和实体（硬件和程序）不一样，但只要将其共性抽象为统一接口，差异性用特殊的接口应对即可。</p>
+
+<p>基于此，我们不妨做一个大胆的假设。虽然PCF85063、RX8025T和DS1302来自不同的半导体的公司，但其共性都是RTC实时日历时钟芯片，即可高度抽象共用相同的驱动接口，其差异性用特殊的驱动接口应对。虽然FreeRTOS或μC/OS-II或sysBIOS、Linux、Windows各不相同，但它们都是OS，多线程、信号量、消息、邮箱、队列等是其特有的共性，显然QT和emWin同样可以高度抽象为GUI框架。也就是说，不管什么MCU，也不管是否使用操作系统，只要修改相应的头文件，即可复用应用代码。</p>
+
+<p>由此可见，无论选择何种MCU和OS，只要AworksOS支持它，就可以在目标板上实现跨平台运行。因为无论何种OS，它只是AworksOS的一个组件，针对不同的OS，AworksOS都会提供相应的适配器，那么所有的组件都可以根据需要互换。</p>
+
+<p>由于AworksOS制定了统一的接口规范，并对各种MCU内置的功能部件与外围器件进行了高度的抽象，因此无论你选用的是ARM还是DSP，以高度复用的软件设计原则和只针对接口编程的思想为前提，则应用软件均可实现“一次编程、终生使用、跨平台”，显然AworksOS给你带来的最大价值就是不需要重新发明轮子。</p>
+
+<h3 id="5-生态系统">5.生态系统</h3>
+
+<p>如果仅有OS和应用软件框架就构成了生态系统，这是远远不够的。在万物互联的时代，一个完整的IoT系统还包括传感器、信号调理电路、算法和接入云端的技术，可以说异常复杂包罗万象，这不是一个公司拿到需求就可以在几个月之内完成的，需要长时间的大量积累。</p>
+
+<p>ZLG在成立之初就做了长期的布局，我们并没有将自己定位于芯片代理或设计，也没有将自己定位于仪器制造，更没有将自己定位于方案供应商，但随着时间的推移和时代的发展，经过艰苦的努力自然而然地成为“工业互联网生态系统”代表品牌。这不是刻意而为的，而是通过长期的奋斗顺理成章的结果。</p>
+
+<p>ZLG通过“芯片+AworksOS”设计了高附加值的模块、板卡和高端测量仪器，通过有线和无线通信接口接入ZWS IoT-PaaS云平台,，实现大数据处理，构成工业互联网生态系统。</p>
+
+<p>其商业模式既可以销售硬件，也可以销售平台，还可以针对某个有针对性的行业提供系统服务于终端用户。与此同时ZLG将在全国50所大学建立工业互联网生态系统联合实验室，通过产学研的模式培养人才服务于工业界，还可以通过天使投资打造ZLG系，帮助更多的人取得更大的成功，推动“中国智造2025”计划的高速发展。</p>
+
+<h3 id="6-专家与通才">6.专家与通才</h3>
+
+<p>任何一个组织和系统的成功都离不开专家和通才的鼎力配合与奋斗，这12年一路走来很不容易，但欣慰的是AworksOS生态系统的开发，培养了一些专家和核心骨干人才。我深深地体会到卓越人才的价值，怎么形容都不为过，所以今后我的主要工作就是寻找和发现卓越人才，为他们提供一个衣食无忧的，可以静下心创新的平台，大家共同努力改变这世界某一小部分，欢迎自我推荐或读者向我推荐有理想有抱负的人才。如果你有心，你一定能找到我。</p>
+
+<h3 id="7-丛书简介">7. 丛书简介</h3>
+
+<p>这套丛书命名为《嵌入式软件工程方法与实践丛书》，其最新动态详见www.zlg.cn（周立功旗下企业：广州致远电子有限公司）和www.zlgmcu.com（广州立功科技股份有限公司），全部以电子版的形式发布。</p>
+
+<p>目前已经完成《程序设计与数据结构》、《面向AMetal框架与接口的编程》和《面向Aworks框架与接口的编程》（上），后续还将推出《面向AWPI框架和接口的编程》、《面向AWUI框架和接口的编程》和《面向ZWS IoT框架和接口的编程》系列图书。</p>
+
+<h2 id="toc_9">&mdash;</h2>
+
+<p>一套完整的软硬件开发流程
+ • 2018-09-26 14:43:37</p>
+
+<pre><code>    一套完整的软硬件开发流程需要经过哪些步骤？首先：要看你的项目经理是当成什么层面的了，如果是负责面向客户联络沟通，内部监督控制进度的话是能做好内外沟通，两边都能协调好就可以了。如果你要深入项目管理，那么肯定要熟悉整个软件开发项目的过程，什么阶段做什么、怎么做、谁来做，时间、质量、进度三者平衡。没有一个完美的项目，因为总会有瑕疵，不要太追求完美，用户满意、适度质量的项目才好。关于软硬件开发过程的一些理解分享一下。
+
+1、首先制定项目计划：
+初计划是里程碑性质的。可以先按瀑布模型设置，里程碑点主要为需求评审、设计评审、经过代码开发和单元测试后进行集成测试、部署上线是一个很重要的里程碑，一般用户会期望系统何时能使用进入试运行期（也可以称为用户测试阶段）
+2、需求开发阶段：
+怎么样写好需求很关键，如何学会进行需求开发可以去看下经典的《需求工程》这个翻译的书，不是很厚，但需要能理解为什么那样做更好，这个需要实践经验锻炼自己。如果有项目成员，可以一起做需求，这个阶段对于业务理解、分析、如何开展调研以及文字表述、业务流程图描述还有文档编辑能力都有不少要求。
+一般分为《用户需求说明书》和《需求规格说明书》，小项目可以写一个《需求分析报告》，《用户需求说明书》是用用户的语言进行描述，让用户和开发团队对于需求的达成一致的理解，《需求规格说明书》，则是对用户需求的分析，形成系统要具有的功能，这个是真正提供用户可交互操作的文档，也就是后期设计和代码开发的重要基线。
+另外，作为了解需求，拿出用户UI和用户交流也是一项比较重要的需求获取手段，虽然这个属于设计的范畴
+3、系统设计阶段：
+系统总体架构，结合用户对系统环境、开发语言以及运行的网络硬件等要求，确定开发工具等，对应用系统关系进行架构性设计，通过需求阶段对用户的分析归类，用图的方式描述出用户和各子系统或模块的全局视图，以及和其他系统的关系。也就是搞清楚系统的边界问题。
+概要设计中除了高层架构设计，还需要设计网络拓扑图，以及系统部署图。概要设计比较重要的还有就是子系统、模块进行合理的划分。模块的名称很大程度上会成为用户的主要菜单，如何用用户的角度去取比较清楚的子系统和模块是很重要的。
+4、代码开发和单元测试阶段：
+这个阶段一般来说需要改进瀑布模型，类似跌代开发，把模块进行合理划分，把项目总体计划的代码开发测试阶段划分为多个时间段，每个时间段都包括代码开发、单元测试和集成测试，这个阶段还需要对需求变更进行跟踪控制，如果需求有变更，那么要把需求文档、设计文档都重新跟上。跌代开发的好处就是不让代码开发阶段拉的过程，没有进行及时的自我检查，不小心到了提交时间，却不是用户想要的，还有可能都不是自己想要的。
+项目经理重要的责任是控制好进度，能及早发现风险，并能拿出好的预防和解决办法的措施。合理安排好开发团队的任务，合时的任务安排和衔接，你会觉得非常有艺术感，这个要自己体会了。另外，关注项目团队各人员的状况，保持高的战斗力，及时发现并能鼓励团队共同朝一个目标前进。
+5、测试工作：
+测试是项目的很重要的环节，怎么测试，怎么准确测试，怎么有效测试，怎么覆盖测试，时间、人手、经验扽个方面都会有制约。高级测试人员能够分析系统各测试要点，在需求、设计阶段都要参与，提早了解如何去测试，能写出测试用例。
+6、文档工作：
+文档在项目开发中也占有重要位置，除非你觉得代码是项目唯一的成果，那么你把文档抛掉吧，什么都在你的脑子里，团队中人员一走，项目的一部分也就带走了。代码开发其实也需要文档，代码是成果，代码注释是成果，模块开发卷宗也是重要的成果，因为程序员在开发时候的逻辑是怎么样的，对于今后查问题很有作用。除非你的系统设计程度到了方法、类，把代码逻辑也都设计好了，那么程序员就CODEING去吧。
+7、QA测试：
+QA是对项目过程的质量保障，有些公司吧QA和测试工作合成一个岗位叫做QA&amp;测试人员，或者就叫QA人员。QA是对项目全过程的监管，独立于项目之外。监督项目经理在各项目里程碑提交相关成果，入库形成基线。
+</code></pre>
+
+<h2 id="toc_10">&mdash;</h2>
+
+<p>一张图引发的深思：你了解过架构设计体系吗？熬夜整理这份文章
+2020-05-12
+无意中在浏览文章的时候，发现了这样的一张图
+没什么大不了的，就是一个网站的系统架构设计，很简单，一目了然，但是可能小编比较能瞎想呀，由此联想到很多东西，比如架构设计体系
+大家有没有考虑过达到企业规模的软件系统该如何设计呢（已经是这个层次的大佬，膜拜）？在开始写代码之前，我们需要选择一个合适的架构，这个架构将决定软件实施过程中的功能属性和质量属性。因此，了解软件设计中的不同架构模式对我们的软件设计会有较大的帮助。
+但是，在进行这个话题之前，基础的东西我们应该知道呀，往下看
+什么是架构和架构本质
+　　在软件行业，对于什么是架构，都有很多的争论，每个人都有自己的理解。 此君说的架构和彼君理解的架构未必是一回事。
+　　我们主要针对互联网服server系统（类似网站）来定义架构：架构是系统的骨架，支撑和链接各个部分，包括组件、连接件、约束规范，以及指导这些内容设计与演化的原理。
+　　组件：类似应用服务，独立模块、数据库、nginx等等、
+　　连接件：分布式调用、进程间调用、调用使用http协议还是tcp协议、组件之间的交互关系、
+　　约束规范： 定规则做限制：例如设计原则、编码规范等等。
+　　是系统性的思考，权衡利弊之后在现有资源约束下的“最合理决策”，并有它来指导团队中的每个人思想层面上的一致。
+　　即架构=组件+交互。
+　　这类似建筑设计规划，城市总体规划等，其实就是架构，只是应用的场景不同。盖一座小房子，可以拍脑袋干起来，但是当你要盖一座大楼，如果没有一个建筑设计规划，可以想象搭理最后是什么样？
+　　架构的本质就是对系统进行有序化地重构以致符合当前业务的发展，并可以快速扩展。
+　　那什么样的系统要考虑做架构设计?
+　　1. 需求相对复杂.
+　　2. 非功能性需求在整个系统占据重要位置.
+　　3. 系统生命周期长,有扩展性需求.
+　　4.系统基于组件或者集成的需要.
+　　5.业务流程再造的需要.
+　　2、架构分类
+　　架构可细分为业务架构、应用架构、技术架构, 代码架构, 部署架构,.</p>
+
+<p>　　业务架构是战略，应用架构是战术，技术架构是装备。其中应用架构承上启下，一方面承接业务架构的落地，另一方面影响技术选型。
+　　熟悉业务，形成业务架构，根据业务架构，做出相应的应用架构，最后技术架构落地实施。
+　　如何针对当前需求，选择合适的应用架构，如何面向未来，保证架构平滑过渡，这个是软件开发者，特别是架构师，都需要深入思考的问题。
+　　一、业务架构（俯视架构）：
+　　包括业务规划，业务模块、业务流程，对整个系统的业务进行拆分，对领域模型进行设计，把现实的业务转化成抽象对象。
+　　没有最优的架构，只有最合适的架构，一切系统设计原则都要以解决业务问题为最终目标，脱离实际业务的技术情怀架构往往会给系统带入大坑，任何不基于业务做异想天开的架构都是耍流氓。
+　　所有问题的前提要搞清楚我们今天面临的业务量有多大，增长走势是什么样，而且解决高并发的过程，一定是一个循序渐进逐步的过程。 合理的架构能够提前预见业务发展1~2年为宜。这样可以付出较为合理的代价换来真正达到技术引领业务成长的效果。
+　　看看京东业务架构（网上分享图）：</p>
+
+<p>　　二、应用架构（剖面架构，也叫逻辑架构图）：
+　　硬件到应用的抽象，包括抽象层和编程接口。应用架构和业务架构是相辅相成的关系。业务架构的每一部分都有应用架构。
+　　类似：</p>
+
+<p>　　应用架构：应用作为独立可部署的单元，为系统划分了明确的边界，深刻影响系统功能组织、代码开发、部署和运维等各方面. 应用架构定义系统有哪些应用、以及应用之间如何分工和合作。这里所谓应用就是各个逻辑模块或者子系统。
+　　应用架构图关键有2点：
+　　1、职责划分: 明确应用（各个逻辑模块或者子系统）边界
+　　1）逻辑分层
+　　2）子系统、模块定义。
+　　3）关键类。
+　　2、职责之间的协作：
+　　1）接口协议：应用对外输出的接口。
+　　2）协作关系：应用之间的调用关系。
+　　应用分层有两种方式：
+　　一种是水平分（横向），按照功能处理顺序划分应用，比如把系统分为web前端/中间服务/后台任务，这是面向业务深度的划分。
+　　另一种是垂直分（纵向），按照不同的业务类型划分应用，比如进销存系统可以划分为三个独立的应用，这是面向业务广度的划分。
+　　应用的合反映应用之间如何协作，共同完成复杂的业务case，主要体现在应用之间的通讯机制和数据格式，通讯机制可以是同步调用/异步消息/共享DB访问等，数据格式可以是文本/XML/JSON/二进制等。
+　　应用的分偏向于业务，反映业务架构，应用的合偏向于技术，影响技术架构。分降低了业务复杂度，系统更有序，合增加了技术复杂度，系统更无序。
+　　应用架构的本质是通过系统拆分，平衡业务和技术复杂性，保证系统形散神不散。
+　　系统采用什么样的应用架构，受业务复杂性影响，包括企业发展阶段和业务特点；同时受技术复杂性影响，包括IT技术发展阶段和内部技术人员水平。业务复杂性（包括业务量大）必然带来技术复杂性，应用架构目标是解决业务复杂性的同时，避免技术太复杂，确保业务架构落地。
+　　三、代码架构（也叫开发架构）：
+　　子系统代码架构主要为开发人员提供切实可行的指导，如果代码架构设计不足，就会造成影响全局的架构设计。比如公司内不同的开发团队使用不同的技术栈或者组件，结果公司整体架构设计就会失控。
+　　代码架构主要定义：
+　　一、代码单元:
+　　1、配置设计
+　　2、框架、类库。
+　　二、代码单元组织：
+　　1、编码规范，编码的惯例。
+　　2、项目模块划分
+　　3、顶层文件结构设计，比如mvc设计。
+　　4、依赖关系
+　　四、技术架构，也可以叫系统架构
+　　技术架构：确定组成应用系统的实际运行组件（lvs，nginx，tomcat，php-fpm等），这些运行组件之间的关系，以及部署到硬件的策略。
+　　技术架构主要考虑系统的非功能性特征，对系统的高可用、高性能、扩展、安全、伸缩性、简洁等做系统级的把握。
+　　系统架构的设计要求架构师具备软件和硬件的功能和性能的过硬知识，这也是架构设计工作中最为困难的工作。</p>
+
+<p>　　五、部署拓扑架构图（实际物理架构图）：
+　　拓扑架构，包括架构部署了几个节点，节点之间的关系，服务器的高可用，网路接口和协议等，决定了应用如何运行，运行的性能，可维护性，可扩展性，是所有架构的基础。这个图主要是运维工程师主要关注的对象。</p>
+
+<p>　　应用架构
+　　架构演进路程：
+　　-&gt;初始阶段：LAMP,部署在一台服务器
+　　-&gt;应用服务器和数据服务器分离
+　　-&gt;使用缓存改善性能
+　　-&gt;使用集群改善并发
+　　-&gt;数据库的读写分离
+　　-&gt;使用反向代理和cdn加速
+　　-&gt;使用分布式文件和分布式数据库
+　　-&gt;业务拆分
+　　-&gt;分布式服务</p>
+
+<p>　　业务架构是生产力，应用架构是生产关系，技术架构是生产工具。业务架构决定应用架构，应用架构需要适配业务架构，并随着业务架构不断进化，同时应用架构依托技术架构最终落地。
+　　企业一开始业务比较简单，比如进销存，此时面向内部用户，提供简单的信息管理系统（MIS），支持数据增删改查即可，单体应用可以满足要求。
+　　随着业务深入，进销存每块业务都变复杂，同时新增客户关系管理，以更好支持营销，业务的深度和广度都增加，这时需要对系统按照业务拆分，变成一个分布式系统。
+　　更进一步，企业转向互联网+战略，拓展在线交易，线上系统和内部系统业务类似，没必要重做一套，此时把内部系统的逻辑做服务化改造，同时供线上线下系统使用，变成一个简单的SOA架构。
+　　紧接着业务模式越来越复杂，订单、商品、库存、价格每块玩法都很深入，比如价格区分会员等级，访问渠道（无线还是PC），销售方式（团购还是普通）等，还有大量的价格促销，这些规则很复杂，容易相互冲突，需要把分散到各个业务的价格逻辑进行统一管理，以基础价格服务的方式透明地提供给上层应用，变成一个微内核的SOA架构。
+　　同时不管是企业内部用户，还是外部顾客所需要的功能，都有很多细分的应用提供支持，需要提供portal，集成相关应用，为不同用户提供统一视图，顶层变成一个AOA的架构（application orientated architecture）。
+　　衡量架构的合理性
+　　架构为业务服务，没有最优的架构，只有最合适的架构， 架构始终以高效，稳定，安全为目标来衡量其合理性。
+　　一、稳定性。指标：
+　　1. 高可用：要尽可能的提高软件的可用性，我想每个操作人都不愿意看到自己的工作无法正常进行。黑盒白盒测试、单元测试、自动化测试、故障注入测试、提高测试覆盖率等方式来一步一步推进。
+　　二、高效指标：
+　　1. 文档化：不管是整体还是部分的整个生命周期内都必须做好文档化，变动的来源包括但不限于BUG，需求。
+　　2. 可扩展：软件的设计秉承着低耦合的理念去做，注意在合理的地方抽象。方便功能更改、新增和运用技术的迭代，并且支持在适时对架构做出重构。
+　　3. 高复用：为了避免重复劳动，为了降低成本，我们希望能够重用之前的代码、之前的设计。这点对于架构环境的依赖是最大的。
+　　三、安全指标
+　　1. 安全：组织的运作过程中产生的数据都是具有商业价值的，保证数据的安全也是刻不容缓的一部分。以免出现XX门之类丑闻。加密、https等为普遍手段
+　　常见架构误区
+　　误区1——架构专门有架构师来做，业务开发人员无需关注：架构的再好，最终还是需要代码来落地，并且组织越大这个落地的难度越大。不单单是系统架构，每个解决方案每个项目也有自己的架构，如分层、设计模式等。如果每一块砖瓦不够坚固，那么整个系统还是会有崩塌的风险。所谓“千里之堤，溃于蚁穴”。
+　　误区2——架构师确定了架构蓝图之后任务就结束了：架构不是“空中楼阁”，最终还是要落地的，但是架构师完全不去深入到第一线怎么知道“地”在哪？怎么才能落的稳稳当当。
+　　误区3——不做出完美的架构设计不开工：世上没有最好架构，只有最合适的架构。我们需要的不是一下子造出一辆汽车，而是从单轮车 &ndash;&gt; 自行车 &ndash;&gt; 摩托车，最后再到汽车。想象一下2年后才能造出的产品，当初市场还存在吗？
+但是，就像在java开发的过程中有设计模式进行参考一样，难道架构设计就是大家一拍脑门就出来的嘛？那肯定不是啊，继续看
+软件架构模式
+什么是架构模式？根据维基百科：架构模式是针对特定软件架构场景常见问题的通用、可重用解决方案。架构模式类似于软件设计模式，但范围更广。本文将简要解释10种常见架构模式及其用法、优缺点。
+•   分层模式（Layered pattern）
+•   客户端-服务器模式（Client-server pattern）
+•   主从模式（Master-slave pattern）
+•   管道-过滤器模式（Pipe-filter pattern）
+•   代理模式（Broker pattern）
+•   点对点模式（Peer-to-peer pattern）
+•   事件-总线模式（Event-bus pattern）
+•   模型-视图-控制器模式（Model-view-controller pattern）
+•   黑板模式（Blackboard pattern）
+•   解释器模式（Interpreter pattern）
+1. 分层模式
+此模式用于可分解为子任务的结构化程序，每个子任务都位于特定的抽象层级，每一层都为上一层提供服务。一般信息系统最常见的4个层次如下。
+•   表示层(也称为UI层)
+•   应用层(也称为服务层)
+•   业务逻辑层(也称为领域层)
+•   数据访问层(也称为持久层)
+应用场景：
+•   一般的桌面应用程序
+•   电子商务web应用程序
+•   一般的移动App</p>
+
+<ol>
+<li>客户端-服务器模式
+这种模式由两部分组成：服务器和多个客户端。服务器将向多个客户端提供服务。客户端从服务器请求服务，服务器向这些客户端提供相关服务。此外，服务器继续侦听客户端请求。
+应用场景：
+•   电子邮件、文档共享和银行等在线应用程序。
+•   基于IPC的应用程序</li>
+</ol>
+
+<p>3.主从模式
+这种模式由两部分组成：主节点和从节点。主节点将工作分配给相同的从节点，并根据从节点返回的结果计算最终结果。
+应用场景：
+•   在数据库复制中，主数据库被视为权威源数据库，从数据库与之同步。
+•   通过总线连接到计算机系统(主驱动器和从驱动器)的外围设备。
+•   进程内的多线程应用。</p>
+
+<p>4.管道-过滤器模式
+这种模式可用于构造生成和处理数据流的系统。每个处理步骤都包含一个过滤器组件。要处理的数据通过管道传递。这些管道可用于缓冲或同步目的。
+应用场景：
+•   编译器。连续过滤器执行词法分析、词法解析、语义分析和代码生成。
+•   生物信息学的工作流
+•   工具链式的应用程序
+5. 代理模式
+这种模式通过解耦组件来构造分布式系统。这些组件可以通过远程服务调用彼此交互。代理组件负责协调组件之间的通信。服务器向代理发布功能(服务和特征)。客户端向代理请求服务，然后代理将客户端重定向到合适的服务。需要注意broker，agent，proxy以及delegate的区别。
+应用场景：
+•   消息代理软件，例如：Apache ActiveMQ、Apache Kafka、RabbitMQ和JBoss消息传递。
+•   网络传输中的代理软件。
+6. P2P模式
+在这种模式中，每个组件都称为对等节点。对等节点既可以作为客户机(从其他对等节点请求服务)，也可以作为服务器(向其他对等节点提供服务)。对等节点可以充当单个客户机或服务器，也可以同时充当客户机和服务器，并且可以随着时间变化动态地更改角色。
+使用场景：
+•   文件共享网络，例如Gnutella和G2等。
+•   多媒体协议，如P2PTV和PDTP。</p>
+
+<ol>
+<li><p>事件-总线模式
+这种模式也被称为订阅发布模式，主要处理事件，有4个主要组件：事件源、事件监听者、通道和事件总线。事件源将消息发布到事件总线上的特定通道，监听者订阅特定的通道。消息发布到监听者之前订阅的通道，监听者将收到消息的通知。
+使用场景：
+•   安卓开发
+•   通知服务
+•   注册中心</p></li>
+
+<li><p>模型-视图-控制器模式
+这种模式，也称为MVC模式，将一个交互应用程序分为三个部分：
+•   模型-包含核心功能和数据
+•   视图——向用户显示信息(可以定义多个视图)
+•   控制器——处理来自用户的输入
+这样做是为了将信息的内部表示、信息呈现给用户的方式、接受用户输入的方式分离开来。这种模式解耦组件并允许有效的代码重用。
+应用场景：
+•   一般的web应用程序架构
+•   Django和Rails等Web框架
+•   一般的GUI 应用程序</p></li>
+
+<li><p>黑板模式
+这种模式对于没有确定解决方案策略的问题非常有用。黑板图案由三个主要部分组成：
+•   黑板：一个结构化的全局内存，包含来自解决方案空间的对象
+•   知识源：具有自己表示形式的专门化模块
+•   控制组件：选择、配置和执行模块
+所有的组件都可以到达黑板。组件可以生成添加到黑板上的新数据对象。组件在黑板上查找特定类型的数据，并通过与现有的知识源进行模式匹配找到这些数据。
+应用场景：
+•   语音识别
+•   车辆识别及追踪
+•   蛋白质结构识别
+•   声纳信号的解释</p></li>
+
+<li><p>解释器模式
+这种模式用于设计一个解释专用语言编写的程序组件。它主要指定如何评估每一行程序，即用特定语言编写的句子或表达式。其基本思想是语言的每个符号都有一个类。
+应用场景：
+•   数据库查询语言，如SQL。
+•   用于描述通信协议的语言。</p></li>
+</ol>
+
+<p>好了，今天的内容，基本就到这里结束了
+最后，给大家推荐几本书，有我自己看过的，有我老大推荐给我的，希望对各位能有所帮助
+　　架构书籍推荐
+　　1. 《大型网站技术架构：核心原理与案例分析》
+　　这是比较早，比较系统介绍大型网站技术架构的书，通俗易懂又充满智慧，即便你之前完全没接触过网站开发，通读前几章，也能快速获取到常见的网站技术架构及其应用场景。非常赞。
+　　2. 《亿级流量网站架构核心技术》
+　　相比《大型网站技术架构》的高屋建瓴，开涛的这本《亿级流量网站架构核心技术》则落实到细节，网站架构中常见的各种技术，比如缓存、队列、线程池、代理……，统统都讲到了，而且配有核心代码。甚至连 Nginx 的配置都有！
+　　如果你想在实现大流量网站时找参考技术和代码，这本书最合适啦。
+　　3. 《架构即未来》
+　　这是一本“神书”啦，超越具体技术层面，着重剖析架构问题的根源，帮助我们弄清楚应该以何种方式管理、领导、组织和配置团队。
+　　4. 《分布式服务架构：原理、设计与实战》
+　　这本书全面介绍了分布式服务架构的原理与设计，并结合作者在实施微服务架构过程中的实践经验，总结了保障线上服务健康、可靠的最佳方案，是一本架构级、实战型的重量级著作。
+　　5. 《聊聊架构》
+　　这算是架构方面的一本神书了，从架构的原初谈起，从业务的拆分谈起，谈到架构的目的，架构师的角色，架构师如何将架构落地……强烈推荐。
+　　不过，对于没有架构实践经验的小伙伴来讲，可能会觉得这本书比较虚，概念多，实战少。但如果你有过一两个项目的架构经验，就会深深认同书中追本溯源探讨的架构理念。
+　　6. 《软件架构师的12项修炼》
+　　大多数时候所谓的“技术之玻璃天花板”其实只是缺乏软技能而已。这些技能可以学到，缺乏的知识可以通过决定改变的努力来弥补。</p>
+
+                      
+                    </div>
+                    <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                        <div style="float:left;margin-top:0px;">
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
+                        </div>
+                        <div>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
+                            <br />微信关注：勿忘初兴
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B9%8B%E6%84%9F%E6%82%9F/">http://sunduoze.github.io/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B9%8B%E6%84%9F%E6%82%9F/</a>
+                            <br />
+                            文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  
+
+                </div>
+                
+              </article>
+              
+              <div class="clear"></div>
+              
+              
+              
+            </div>
+          </section>
+          <div class="sidebar s1">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>Follow:</p>
+      <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="widget qrcode">
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
+</div>
+
+    <ul class="post-nav group">
+      <li class="next">
+        
+        <a href="http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/" rel="next">
+          <i class="fa fa-chevron-right"></i>
+          <strong>Next post</strong>
+          <span>嵌入式开源项目2021_06</span>
+        </a>
+        
+      </li>
+      <li class="previous">
+        
+        <a href="http://sunduoze.github.io/post/%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E4%B8%87%E7%94%A8%E8%A1%A8%E7%9A%84%E7%B2%BE%E5%BA%A6/" rel="prev">
+          <i class="fa fa-chevron-left"></i>
+          <strong>Previous Post</strong>
+          <span>如何计算万用表的精度</span>
+        </a>
+        
+      </li>
+    </ul>
+    <div id="search-2" class="widget widget_search"><h3>Search</h3>
+      <form method="get" class="searchform themeform" action="https://www.google.com/search">
+        <div>
+          <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+          <div class="sidebar s2">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>More</p>
+    </div>
+    <div id="categories-2" class="widget widget_categories"><h3>Categories</h3>
+      <ul>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  <section class="container" id="footer-bottom">
+    <div class="container-inner">
+      <a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+      <div class="pad group">
+        <div class="grid one-half">
+          <div id="copyright">
+              <p>Copyright (c) 2015. All rights reserved.<br>Powered by
+              <a rel="nofollow" href="http://gohugo.io/" target="_blank">Hugo - the static site generator</a>.
+              <a rel="nofollow" href="http://golang.org" target="_blank">#golang</a>.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="grid one-half last">
+          <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+  
+</footer>
+
+</div>
+
+</body>
+</html>
+

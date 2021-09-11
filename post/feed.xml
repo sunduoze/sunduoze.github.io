@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 12 Jun 2021 21:22:49 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Sep 2021 20:14:19 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何计算万用表的精度</title>
+      <link>http://sunduoze.github.io/post/%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E4%B8%87%E7%94%A8%E8%A1%A8%E7%9A%84%E7%B2%BE%E5%BA%A6/</link>
+      <pubDate>Tue, 07 Sep 2021 20:14:19 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E4%B8%87%E7%94%A8%E8%A1%A8%E7%9A%84%E7%B2%BE%E5%BA%A6/</guid>
+      <description>如何计算万用表的精度 精度取决于测量值中包含的误差。精度规格按以下形式表示：&amp;rdquo;% of reading + % of range&amp;rdquo; ， 其中 &amp;rdquo;% of reading&amp;rdquo; 与读数成正比；&amp;rdquo</description>
+    </item>
+    
+    <item>
+      <title>软件开发之感悟</title>
+      <link>http://sunduoze.github.io/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B9%8B%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Sun, 20 Jun 2021 18:29:24 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B9%8B%E6%84%9F%E6%82%9F/</guid>
+      <description>不要浪费时间写完美代码（你认同么？） 系统可以持续运行 5 年、10 年甚至 20 年或者更多年。但是，特定的代码行的生命，即使是经过设计，通常要短得多：</description>
+    </item>
     
     <item>
       <title>嵌入式开源项目2021_06</title>
@@ -41,7 +59,7 @@
     </item>
     
     <item>
-      <title>Markdown之mermaid</title>
+      <title>markdown之mermaid</title>
       <link>http://sunduoze.github.io/post/markdown%E4%B9%8Bmermaid/</link>
       <pubDate>Sun, 06 Jun 2021 20:10:29 +0800</pubDate>
       
@@ -50,7 +68,7 @@
     </item>
     
     <item>
-      <title>Markdown之数学公式</title>
+      <title>markdown之数学公式</title>
       <link>http://sunduoze.github.io/post/markdown%E4%B9%8B%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
       <pubDate>Sun, 06 Jun 2021 16:53:33 +0800</pubDate>
       

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 12 Jun 2021 21:22:49 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Sep 2021 20:14:19 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何计算万用表的精度</title>
+      <link>http://sunduoze.github.io/post/%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E4%B8%87%E7%94%A8%E8%A1%A8%E7%9A%84%E7%B2%BE%E5%BA%A6/</link>
+      <pubDate>Tue, 07 Sep 2021 20:14:19 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E4%B8%87%E7%94%A8%E8%A1%A8%E7%9A%84%E7%B2%BE%E5%BA%A6/</guid>
+      <description>如何计算万用表的精度 精度取决于测量值中包含的误差。精度规格按以下形式表示：&amp;rdquo;% of reading + % of range&amp;rdquo; ， 其中 &amp;rdquo;% of reading&amp;rdquo; 与读数成正比；&amp;rdquo</description>
+    </item>
     
     <item>
       <title>嵌入式开源项目2021_06</title>
