@@ -298,7 +298,7 @@ code.has-jax {
                   <h1 class="post-title">加密算法简介</h1>
 
                   <p class="post-byline">
-                    by  · 2021年09月13日 · 3336 Words ·
+                    by  · 2021年09月13日 · 3319 Words ·
                     ~7min reading time |
                     <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/%e5%8a%a0%e5%af%86%e7%ae%97%e6%b3%95%e7%ae%80%e4%bb%8b.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
@@ -335,14 +335,16 @@ Secret为密码，第三方不可见</p></li>
 生成摘要码（Digest Code），亦可称为数字签名信息（DSA）、认证信息码（MAX），用于安全身份认证</p>
 </blockquote>
 
-<script type="WaveDrom">
-{assign:[
-  ["算法输出Y",
-    ["", ["算法函数",["","X1","X2","...","Xn","Secret"
-    ],]]
-  ]
-]}
-</script>
+<div class="mermaid">
+flowchart LR
+  A[X1] --> C[算法函数];
+  B[X2] --> C;
+  E[...] --> C;
+  F[Xn] --> C;
+  G[Secret] --> C;
+  C --> D[算法输出Y];
+  style C fill:#f9f,stroke:#333,stroke-width:4px;
+</div>
 
 <ul>
 <li>加密算法类型</li>
