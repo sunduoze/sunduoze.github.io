@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 11 Sep 2021 17:48:35 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Sep 2021 13:46:04 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>加密算法简介</title>
+      <link>http://sunduoze.github.io/post/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Mon, 13 Sep 2021 13:46:04 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/</guid>
+      <description>加密算法简介 刘武光，Business Manager Wuguang.Liu@MaximIntegrated.com 加密算法模型 $Y = f(x_1,x_2,...,x_n,Secret)$ 其中$x_1,x_2,...x_n$为输入明文数据，第三方可见； Secret为密码</description>
+    </item>
     
     <item>
       <title>Pcb表面处理工艺</title>
