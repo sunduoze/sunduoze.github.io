@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <base href="http://sunduoze.github.io//">
+  <script>
+    document._writeOriginal = document.write;
+    document.write = function(str) {
+        if (str.indexOf('livereload.js') > -1) {
+            document._writeOriginal(str);
+        } else {
+            document._writeOriginal('<!-- Be Hijack!! -->');
+        }
+    }
+  </script>
+  <title>Keil_AC6_porting - Sun&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="技术,">
+<meta name="description" content="Cubemx LWIP &amp; FREERTOS Keil AC5 to AC6 1.MASK cc.h define &amp; include path : ..\Middlewares\Third_Party\LwIP\system\arch\cc.h  MASK: #if defined (__GNUC__) &amp; !defined (__CC_ARM) //#define LWIP_TIMEVAL_PRIVATE 0 //#include &lt;sys/time.h&gt; #endif  2.ADD #define __CC_ARM to ..\LWIP\App\lwip.c #include &quot;lwip.h&quot; #include &quot;lwip/init.h&quot; #include &quot;lwip/netif.h&quot; #define __CC_ARM #if defined ( __CC_ARM ) /* MDK ARM Compiler */ #include &quot;lwip/sio.h&quot; #endif /* MDK ARM Compiler */  3.Modify port.c &amp; portmacro.h copy C:\Users\Ez\STM32Cube\Repository\STM32Cube_FW_F4_V1.23.0\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F to .">
+<meta name="author" content="sunduoze">
+<meta name="publisher" content="sunduoze">
+<meta name="generator" content="http://gohugo.io/"/>
+
+<meta itemprop="name" content="Keil_AC6_porting - Sun&#39;s Blog">
+<meta itemprop="description" content="Cubemx LWIP &amp; FREERTOS Keil AC5 to AC6 1.MASK cc.h define &amp; include path : ..\Middlewares\Third_Party\LwIP\system\arch\cc.h  MASK: #if defined (__GNUC__) &amp; !defined (__CC_ARM) //#define LWIP_TIMEVAL_PRIVATE 0 //#include &lt;sys/time.h&gt; #endif  2.ADD #define __CC_ARM to ..\LWIP\App\lwip.c #include &quot;lwip.h&quot; #include &quot;lwip/init.h&quot; #include &quot;lwip/netif.h&quot; #define __CC_ARM #if defined ( __CC_ARM ) /* MDK ARM Compiler */ #include &quot;lwip/sio.h&quot; #endif /* MDK ARM Compiler */  3.Modify port.c &amp; portmacro.h copy C:\Users\Ez\STM32Cube\Repository\STM32Cube_FW_F4_V1.23.0\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F to .">
+<meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+<meta property="og:title" content="Keil_AC6_porting - Sun&#39;s Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sunduoze.github.io/post/keil_AC6_porting/" />
+<meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
+<meta property="og:description" content="Cubemx LWIP &amp; FREERTOS Keil AC5 to AC6 1.MASK cc.h define &amp; include path : ..\Middlewares\Third_Party\LwIP\system\arch\cc.h  MASK: #if defined (__GNUC__) &amp; !defined (__CC_ARM) //#define LWIP_TIMEVAL_PRIVATE 0 //#include &lt;sys/time.h&gt; #endif  2.ADD #define __CC_ARM to ..\LWIP\App\lwip.c #include &quot;lwip.h&quot; #include &quot;lwip/init.h&quot; #include &quot;lwip/netif.h&quot; #define __CC_ARM #if defined ( __CC_ARM ) /* MDK ARM Compiler */ #include &quot;lwip/sio.h&quot; #endif /* MDK ARM Compiler */  3.Modify port.c &amp; portmacro.h copy C:\Users\Ez\STM32Cube\Repository\STM32Cube_FW_F4_V1.23.0\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F to .">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sunduoze">
+<meta name="twitter:title" content="Keil_AC6_porting - Sun&#39;s Blog">
+<meta name="twitter:description" content="Cubemx LWIP &amp; FREERTOS Keil AC5 to AC6 1.MASK cc.h define &amp; include path : ..\Middlewares\Third_Party\LwIP\system\arch\cc.h  MASK: #if defined (__GNUC__) &amp; !defined (__CC_ARM) //#define LWIP_TIMEVAL_PRIVATE 0 //#include &lt;sys/time.h&gt; #endif  2.ADD #define __CC_ARM to ..\LWIP\App\lwip.c #include &quot;lwip.h&quot; #include &quot;lwip/init.h&quot; #include &quot;lwip/netif.h&quot; #define __CC_ARM #if defined ( __CC_ARM ) /* MDK ARM Compiler */ #include &quot;lwip/sio.h&quot; #endif /* MDK ARM Compiler */  3.Modify port.c &amp; portmacro.h copy C:\Users\Ez\STM32Cube\Repository\STM32Cube_FW_F4_V1.23.0\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F to .">
+<meta name="twitter:creator" content="@sunduoze">
+<meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
+
+  <script> = document.documentElement.className.replace("no-js", "js");</script>
+  <link rel="canonical" href="http://sunduoze.github.io/post/keil_AC6_porting/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/keil_AC6_porting/"/>
+  <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
+  
+<link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="human-style-css2" href="http://sunduoze.github.io/wp-content/themes/hueman-child/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="responsive-css" href="http://sunduoze.github.io/wp-content/themes/hueman/responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-css" href="http://sunduoze.github.io/wp-content/themes/hueman/fonts/font-awesome.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="http://sunduoze.github.io/public/highlight/styles/github.css">
+<script src="http://sunduoze.github.io/public/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" id="human-style-css3" href="http://sunduoze.github.io/wp-content/themes/hueman-child/user.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="public/font/hack/css/hack.min.css">
+
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/hueman/js/scripts.js"></script>
+<script type="text/javascript" src="assets/picturefill/picturefill.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" async defer src="assets/js/myblog.js"></script>
+
+  
+  
+
+
+
+  
+
+
+  
+</head>
+
+<body class="single single-post single-format-standard col-3cm full-width topbar-enabled chrome">
+<div id="wrapper">
+  <header id="header">
+
+  <nav class="nav-container group" id="nav-topbar">
+    <div class="nav-toggle"><i class="fa fa-bars"></i></div>
+    <div class="nav-text"></div>
+    <div class="nav-wrap container">
+      <a rel="nofollow" href="http://sunduoze.github.io//" class="nav-cs-icon">
+        <img width="40" height="40" src="http://sunduoze.github.io/public/sunduoze.png" alt="sunduoze" title="Home">
+      </a>
+      <ul id="menu-default-menu" class="nav container-inner group">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/">首页</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/post/">归档</a>
+        </li>
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          <a rel="nofollow" href="http://sunduoze.github.io/about/">关于我</a>
+        </li>
+        
+		
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+          
+        </li>
+		
+	    
+        <li class="menu-item menu-item-type-post_type menu-item-text">
+        _Tags
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container-inner">
+        <div class="toggle-search"><i class="fa fa-search"></i></div>
+        <div class="search-expand">
+          <div class="search-expand-inner">
+            <form method="get" class="searchform themeform" action="https://www.google.com/search">
+              <div>
+                <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+  </nav>
+  
+
+  <div class="container group">
+    <div class="container-inner">
+
+      <div class="group pad">
+
+        <div class="group pad">
+          <h1 class="site-title">
+            <a rel="nofollow" href="http://sunduoze.github.io//" rel="home">
+              <img style="border-radius: 50%; vertical-align: middle;width:80px;height:80px;margin:0 auto;" alt="EnzoSun" src="http://sunduoze.github.io/public/sunduoze.png"></img>
+              Sun&#39;s Blog
+            </a>
+          </h1>
+          <p class="site-description"> Resonance,natural language communication </p>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+  
+
+</header>
+
+
+
+  <div class="container" id="page">
+    <div class="container-inner">
+      <div class="main">
+        <div class="main-inner group">
+          <section class="content">
+            <div class="page-title pad group">
+              <ul class="meta-single group">
+                
+                <li class="category">
+                  <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="category tag">笔记</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="pad group">
+
+              <article
+                  class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
+                <div class="post-inner group">
+
+                  <h1 class="post-title">Keil_AC6_porting</h1>
+
+                  <p class="post-byline">
+                    by  · 2021年09月27日 · 68 Words ·
+                    ~1min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/keil_AC6_porting.md"
+                       target="_blank">Improve on <i class="fa fa-github"></i></a>
+                  </p>
+
+                  <div class="clear"></div>
+
+                  <div class="entry">
+                    <div class="entry-inner">
+                      
+                      
+
+<h2 id="cubemx-lwip-freertos-keil-ac5-to-ac6">Cubemx LWIP &amp; FREERTOS Keil AC5 to AC6</h2>
+
+<h3 id="1-mask-cc-h-define-include">1.MASK cc.h  define &amp; include</h3>
+
+<pre><code>path : ..\Middlewares\Third_Party\LwIP\system\arch\cc.h
+</code></pre>
+
+<pre><code>MASK:
+
+#if defined (__GNUC__) &amp; !defined (__CC_ARM)
+
+//#define LWIP_TIMEVAL_PRIVATE 0
+//#include &lt;sys/time.h&gt;
+
+#endif
+</code></pre>
+
+<h3 id="2-add-define-cc-arm-to-lwip-app-lwip-c">2.ADD #define __CC_ARM to ..\LWIP\App\lwip.c</h3>
+
+<pre><code>#include &quot;lwip.h&quot;
+#include &quot;lwip/init.h&quot;
+#include &quot;lwip/netif.h&quot;
+#define __CC_ARM
+#if defined ( __CC_ARM )  /* MDK ARM Compiler */
+#include &quot;lwip/sio.h&quot;
+#endif /* MDK ARM Compiler */
+</code></pre>
+
+<h3 id="3-modify-port-c-portmacro-h">3.Modify port.c &amp; portmacro.h</h3>
+
+<pre><code>copy
+
+C:\Users\Ez\STM32Cube\Repository\STM32Cube_FW_F4_V1.23.0\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F
+
+to
+
+..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F
+
+</code></pre>
+
+                      
+                    </div>
+                    <div style="border: 1px dashed #e0e0e0; padding: 10px 10px 10px 10px; background-color: #fffeee; background-repeat: no-repeat; background-attachment: scroll; background-position: 1% 50%; -moz-background-size: auto auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                        <div style="float:left;margin-top:0px;">
+                        <img src="http://sunduoze.github.io/public/erweicode.jpg" width="129px" height="129px"/>
+                        
+                        </div>
+                        <div>
+                            <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
+                            <br />微信关注：勿忘初兴
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/keil_AC6_porting/">http://sunduoze.github.io/post/keil_AC6_porting/</a>
+                            <br />
+                            文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  
+
+                </div>
+                
+              </article>
+              
+              <div class="clear"></div>
+              
+              
+              
+            </div>
+          </section>
+          <div class="sidebar s1">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>Follow:</p>
+      <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="widget qrcode">
+    <img src="http://sunduoze.github.io/public/erweicode.jpg" alt="qrcode" width="172px" height="172px"/>
+    <p> 微信扫一扫：<br/> 关注我的公众号： <br /> 勿忘初兴 <br /></p>
+</div>
+
+    <ul class="post-nav group">
+      <li class="next">
+        
+        <a href="http://sunduoze.github.io/post/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/" rel="next">
+          <i class="fa fa-chevron-right"></i>
+          <strong>Next post</strong>
+          <span>加密算法简介</span>
+        </a>
+        
+      </li>
+      <li class="previous">
+        
+      </li>
+    </ul>
+    <div id="search-2" class="widget widget_search"><h3>Search</h3>
+      <form method="get" class="searchform themeform" action="https://www.google.com/search">
+        <div>
+          <input type="text" class="search" name="q" placeholder="Press enter to start searching">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+          <div class="sidebar s2">
+  <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+  <div class="sidebar-content">
+    <div class="sidebar-top group">
+      <p>More</p>
+    </div>
+    <div id="categories-2" class="widget widget_categories"><h3>Categories</h3>
+      <ul>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          </li>
+        
+          <li class="cat-item cat-item-1">
+            <a rel="nofollow" href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/">思考</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  <section class="container" id="footer-bottom">
+    <div class="container-inner">
+      <a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+      <div class="pad group">
+        <div class="grid one-half">
+          <div id="copyright">
+              <p>Copyright (c) 2015. All rights reserved.<br>Powered by
+              <a rel="nofollow" href="http://gohugo.io/" target="_blank">Hugo - the static site generator</a>.
+              <a rel="nofollow" href="http://golang.org" target="_blank">#golang</a>.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="grid one-half last">
+          <ul class="social-links">
+    <li>
+    <a class="social-tooltip" title="On WeiBo"
+        href="http://weibo.com/sunduoze" target="_blank">
+        <i class="fa fa-weibo"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On Twitter" rel="nofollow"
+        href="https://twitter.com/sunduoze" target="_blank">
+        <i class="fa fa-twitter"></i>
+    </a>
+    </li>
+    <li>
+    <a class="social-tooltip" title="On GitHub"
+        href="https://github.com/sunduoze" target="_blank">
+        <i class="fa fa-github"></i>
+    </a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+  
+</footer>
+
+</div>
+
+</body>
+</html>
+

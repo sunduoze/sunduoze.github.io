@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 13 Sep 2021 13:46:04 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Sep 2021 13:33:08 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Keil_AC6_porting</title>
+      <link>http://sunduoze.github.io/post/keil_AC6_porting/</link>
+      <pubDate>Mon, 27 Sep 2021 13:33:08 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/keil_AC6_porting/</guid>
+      <description>Cubemx LWIP &amp;amp; FREERTOS Keil AC5 to AC6 1.MASK cc.h define &amp;amp; include path : ..\Middlewares\Third_Party\LwIP\system\arch\cc.h  MASK: #if defined (__GNUC__) &amp;amp; !defined (__CC_ARM) //#define LWIP_TIMEVAL_PRIVATE 0 //#include &amp;lt;sys/time.h&amp;gt; #endif  2.ADD #define __CC_ARM to ..\LWIP\App\lwip.c #include &amp;quot;lwip.h&amp;quot; #include &amp;quot;lwip/init.h&amp;quot; #include &amp;quot;lwip/netif.h&amp;quot; #define __CC_ARM #if defined ( __CC_ARM ) /* MDK ARM Compiler */ #include &amp;quot;lwip/sio.h&amp;quot; #endif /* MDK ARM Compiler */  3.Modify port.c &amp;amp; portmacro.h copy C:\Users\Ez\STM32Cube\Repository\STM32Cube_FW_F4_V1.23.0\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F to .</description>
+    </item>
     
     <item>
       <title>加密算法简介</title>
