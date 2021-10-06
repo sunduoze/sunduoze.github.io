@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 27 Sep 2021 13:33:08 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Sep 2021 17:02:21 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Roundup_pow_of_two</title>
+      <link>http://sunduoze.github.io/post/roundup_pow_of_two/</link>
+      <pubDate>Mon, 27 Sep 2021 17:02:21 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/roundup_pow_of_two/</guid>
+      <description>最接近的最大2的指数次幂 #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&amp;quot;bsrl %1,%0\n\t&amp;quot; &amp;quot;jnz 1f\n\t&amp;quot; &amp;quot;movl $-1,%0\n&amp;quot; &amp;quot;1:&amp;quot; : &amp;quot;=r&amp;quot; (r) : &amp;quot;rm&amp;quot; (x)); return r + 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &amp;gt;&amp;gt; 1), position = 0; i != 0; ++position) i</description>
+    </item>
     
     <item>
       <title>Keil_AC6_porting</title>

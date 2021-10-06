@@ -190,10 +190,10 @@
               <p class="post-date">2021年09月27日</p>
           </div>
           <h2 class="post-title">
-              <a href="http://sunduoze.github.io/post/keil_AC6_porting/" rel="bookmark" title="Keil_AC6_porting">Keil_AC6_porting</a>
+              <a href="http://sunduoze.github.io/post/roundup_pow_of_two/" rel="bookmark" title="Roundup_pow_of_two">Roundup_pow_of_two</a>
           </h2>
           <div class="entry excerpt">
-              <p>Cubemx LWIP &amp; FREERTOS Keil AC5 to AC6 1.MASK cc.h define &amp; include path : ..\Middlewares\Third_Party\LwIP\system\arch\cc.h  MASK: #if defined (__GNUC__) &amp; !defined (__CC_ARM) //#define LWIP_TIMEVAL_PRIVATE 0 //#include &lt;sys/time.h&gt; #endif  2.ADD #define __CC_ARM to ..\LWIP\App\lwip.c #include &quot;lwip.h&quot; #include &quot;lwip/init.h&quot; #include &quot;lwip/netif.h&quot; #define __CC_ARM #if defined ( __CC_ARM ) /* MDK ARM Compiler */ #include &quot;lwip/sio.h&quot; #endif /* MDK ARM Compiler */  3.Modify port.c &amp; portmacro.h copy C:\Users\Ez\STM32Cube\Repository\STM32Cube_FW_F4_V1.23.0\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F to .</p>
+              <p>最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r + 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; ++position) i</p>
           </div>
       </div>
   </article>
@@ -202,6 +202,23 @@
               
               <div class="post-list group">
                 
+                
+                
+                
+                <div class="post-row">
+                <article class="post-row type-post status-publish format-standard has-post-thumbnail hentry group">
+  <div class="post-inner post-hover">
+    <div class="post-meta group">
+  <p class="post-date">2021年09月27日</p>
+  <p class="post-title-small"><a href="http://sunduoze.github.io/post/keil_AC6_porting/" rel="bookmark" title="Keil_AC6_porting">Keil_AC6_porting</a></p>
+</div>
+
+  </div>
+  
+</article>
+
+
+                </div>
                 
                 
                 
