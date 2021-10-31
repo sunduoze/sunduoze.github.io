@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://sunduoze.github.io/post/c_doxygen_vscode/</loc>
+    <lastmod>2021-10-31T16:41:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/</loc>
+    <lastmod>2021-10-25T10:59:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sunduoze.github.io/post/robomaster_s1/</loc>
+    <lastmod>2021-10-25T10:57:04+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://sunduoze.github.io/post/roundup_pow_of_two/</loc>
     <lastmod>2021-09-27T17:02:21+08:00</lastmod>
   </url>
@@ -349,13 +364,13 @@
   
   <url>
     <loc>http://sunduoze.github.io/post/</loc>
-    <lastmod>2021-09-27T17:02:21+08:00</lastmod>
+    <lastmod>2021-10-31T16:41:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sunduoze.github.io/</loc>
-    <lastmod>2021-09-27T17:02:21+08:00</lastmod>
+    <lastmod>2021-10-31T16:41:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -384,7 +399,7 @@
   
   <url>
     <loc>http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-09-27T17:02:21+08:00</lastmod>
+    <lastmod>2021-10-31T16:41:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   

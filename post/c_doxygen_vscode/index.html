@@ -12,36 +12,36 @@
         }
     }
   </script>
-  <title>Roundup_pow_of_two - Sun&#39;s Blog</title>
+  <title>c_doxygen_vscode - Sun&#39;s Blog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="keywords" content="技术,">
-<meta name="description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta name="description" content="doxygen 命令关键字 文件信息： @file &ndash;&gt; 文件声明，即当前文件名 @author &ndash;&gt; 作者 @version &ndash;&gt; 版本， @todo &ndash;&gt; 改进，可以指定针对的版本 模块信息： @var &ndash;&gt; 模块变量说明 @typedef &ndash;&gt; 模块变量类型说明">
 <meta name="author" content="sunduoze">
 <meta name="publisher" content="sunduoze">
 <meta name="generator" content="http://gohugo.io/"/>
 
-<meta itemprop="name" content="Roundup_pow_of_two - Sun&#39;s Blog">
-<meta itemprop="description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta itemprop="name" content="c_doxygen_vscode - Sun&#39;s Blog">
+<meta itemprop="description" content="doxygen 命令关键字 文件信息： @file &ndash;&gt; 文件声明，即当前文件名 @author &ndash;&gt; 作者 @version &ndash;&gt; 版本， @todo &ndash;&gt; 改进，可以指定针对的版本 模块信息： @var &ndash;&gt; 模块变量说明 @typedef &ndash;&gt; 模块变量类型说明">
 <meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
-<meta property="og:title" content="Roundup_pow_of_two - Sun&#39;s Blog" />
+<meta property="og:title" content="c_doxygen_vscode - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunduoze.github.io/post/roundup_pow_of_two/" />
+<meta property="og:url" content="http://sunduoze.github.io/post/c_doxygen_vscode/" />
 <meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
-<meta property="og:description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta property="og:description" content="doxygen 命令关键字 文件信息： @file &ndash;&gt; 文件声明，即当前文件名 @author &ndash;&gt; 作者 @version &ndash;&gt; 版本， @todo &ndash;&gt; 改进，可以指定针对的版本 模块信息： @var &ndash;&gt; 模块变量说明 @typedef &ndash;&gt; 模块变量类型说明">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sunduoze">
-<meta name="twitter:title" content="Roundup_pow_of_two - Sun&#39;s Blog">
-<meta name="twitter:description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta name="twitter:title" content="c_doxygen_vscode - Sun&#39;s Blog">
+<meta name="twitter:description" content="doxygen 命令关键字 文件信息： @file &ndash;&gt; 文件声明，即当前文件名 @author &ndash;&gt; 作者 @version &ndash;&gt; 版本， @todo &ndash;&gt; 改进，可以指定针对的版本 模块信息： @var &ndash;&gt; 模块变量说明 @typedef &ndash;&gt; 模块变量类型说明">
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script> = document.documentElement.className.replace("no-js", "js");</script>
-  <link rel="canonical" href="http://sunduoze.github.io/post/roundup_pow_of_two/">
-  <link rel='shortlink' href="http://sunduoze.github.io/post/roundup_pow_of_two/"/>
+  <link rel="canonical" href="http://sunduoze.github.io/post/c_doxygen_vscode/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/c_doxygen_vscode/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
   
 <link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
@@ -187,12 +187,12 @@
                   class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
                 <div class="post-inner group">
 
-                  <h1 class="post-title">Roundup_pow_of_two</h1>
+                  <h1 class="post-title">c_doxygen_vscode</h1>
 
                   <p class="post-byline">
-                    by  · 2021年09月27日 · 425 Words ·
+                    by  · 2021年10月31日 · 450 Words ·
                     ~1min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/roundup_pow_of_two.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/c_doxygen_vscode.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -203,83 +203,150 @@
                       
                       
 
-<h3 id="最接近的最大2的指数次幂">最接近的最大2的指数次幂</h3>
+<h3 id="doxygen-命令关键字">doxygen 命令关键字</h3>
 
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<ul>
+<li>文件信息：</li>
+</ul>
 
-static inline int rpt_fls_asm(int x)
-{
-    int r;
-    __asm__(&quot;bsrl %1,%0\n\t&quot;
-            &quot;jnz 1f\n\t&quot;
-            &quot;movl $-1,%0\n&quot;
-            &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x));
-    return r + 1;
+<ol>
+<li>@file &ndash;&gt; 文件声明，即当前文件名</li>
+<li>@author &ndash;&gt; 作者</li>
+<li>@version &ndash;&gt; 版本，</li>
+<li>@todo &ndash;&gt; 改进，可以指定针对的版本</li>
+</ol>
+
+<ul>
+<li>模块信息：</li>
+</ul>
+
+<ol>
+<li>@var &ndash;&gt; 模块变量说明</li>
+<li>@typedef &ndash;&gt; 模块变量类型说明</li>
+</ol>
+
+<ul>
+<li>函数信息：</li>
+</ul>
+
+<ol>
+<li>@param &ndash;&gt; 参数说明</li>
+<li>@arg &ndash;&gt; 列表说明参数信息</li>
+<li>@return &ndash;&gt; 返回值说明</li>
+<li>@retval &ndash;&gt; 返回值类型说明</li>
+<li>@note &ndash;&gt; 注解</li>
+</ol>
+
+<ul>
+<li>提醒信息：</li>
+</ul>
+
+<ol>
+<li>@brief &ndash;&gt; 摘要，即当前文件说明</li>
+<li>@see &ndash;&gt; 参看</li>
+<li>@attention &ndash;&gt; 注意</li>
+<li>@bug &ndash;&gt; 问题</li>
+<li>@warning &ndash;&gt; 警告</li>
+<li>@sa &ndash;&gt; 参考资料</li>
+</ol>
+
+<h3 id="vs-code-doxygen-documentation-generator">VS code :Doxygen Documentation Generator</h3>
+
+<p>settings.json</p>
+
+<pre><code>{
+    // The prefix that is used for each comment line except for first and last.
+    &quot;doxdocgen.c.commentPrefix&quot;: &quot;  * &quot;,
+
+    // Smart text snippet for factory methods/functions.
+    &quot;doxdocgen.c.factoryMethodText&quot;: &quot;Create a {name} object&quot;,
+
+    // The first line of the comment that gets generated. If empty it won't get generated at all.
+    &quot;doxdocgen.c.firstLine&quot;: &quot;/**&quot;,
+
+    // Smart text snippet for getters.
+    &quot;doxdocgen.c.getterText&quot;: &quot;Get the {name} object&quot;,
+
+    // The last line of the comment that gets generated. If empty it won't get generated at all.
+    &quot;doxdocgen.c.lastLine&quot;: &quot;  */&quot;,
+
+    // Smart text snippet for setters.
+    &quot;doxdocgen.c.setterText&quot;: &quot;Set the {name} object&quot;,
+
+    // Doxygen comment trigger. This character sequence triggers generation of Doxygen comments.
+    &quot;doxdocgen.c.triggerSequence&quot;: &quot;/**&quot;,
+
+    // Smart text snippet for constructors.
+    &quot;doxdocgen.cpp.ctorText&quot;: &quot;Construct a new {name} object&quot;,
+
+    // Smart text snippet for destructors.
+    &quot;doxdocgen.cpp.dtorText&quot;: &quot;Destroy the {name} object&quot;,
+
+    &quot;window.zoomLevel&quot;: 0,
+    &quot;editor.minimap.enabled&quot;: false,
+    &quot;python.pythonPath&quot;: &quot;C:\\Users\\Ez\\AppData\\Local\\Programs\\Python\\Python36\\python.exe&quot;,
+    &quot;workbench.iconTheme&quot;: &quot;vs-seti&quot;,
+    &quot;explorer.autoReveal&quot;: false,   //取消左侧自动聚焦
+    &quot;terminal.external.windowsExec&quot;: &quot;C:\\Program Files\\Git\\bash.exe&quot;,
+    &quot;todo-tree.highlights.enabled&quot;: true,
+    // Doxygen documentation generator set
+    &quot;doxdocgen.file.copyrightTag&quot;: [
+        &quot;@copyright  Copyright (c) {year} Enzo Sun All Right Reserved&quot;
+    ],
+    &quot;doxdocgen.file.customTag&quot;: [
+        &quot;@par modify log:&quot;,
+        &quot;&lt;table&gt;&quot;,
+        &quot;&lt;tr&gt;&lt;th&gt;Date       &lt;th&gt;Version &lt;th&gt;Author  &lt;th&gt;Description&quot;,
+        &quot;&lt;tr&gt;&lt;td&gt;{date} &lt;td&gt;1.0     &lt;td&gt;Enzo    &lt;td&gt;detail&quot;,
+        &quot;&lt;/table&gt;&quot;,
+    ],
+    &quot;doxdocgen.file.fileOrder&quot;: [
+        &quot;file&quot;,
+        &quot;brief&quot;,
+        &quot;author&quot;,
+        &quot;version&quot;,
+        &quot;date&quot;,
+        &quot;empty&quot;,
+        &quot;copyright&quot;,
+        &quot;empty&quot;,
+        &quot;custom&quot;
+    ],
+    &quot;doxdocgen.file.fileTemplate&quot;:     &quot;@file       {name}&quot;,
+    &quot;doxdocgen.file.versionTag&quot;:       &quot;@version    1.0.0&quot;,
+    &quot;doxdocgen.generic.useGitUserName&quot;: false,
+    &quot;doxdocgen.generic.authorEmail&quot;:   &quot;sunduoze@163.com&quot;,
+    &quot;doxdocgen.generic.authorName&quot;:    &quot;  Enzo&quot;,
+    &quot;doxdocgen.generic.authorTag&quot;:     &quot;@author   {author} ({email})&quot;,
+    &quot;doxdocgen.generic.briefTemplate&quot;: &quot;@brief      &lt;h3&gt;template&lt;/h3&gt;&quot;,
+
+    &quot;doxdocgen.generic.dateFormat&quot;:    &quot;YYYY/MM/DD&quot;,
+    &quot;doxdocgen.generic.dateTemplate&quot;: &quot;@date       {date}&quot;,
+    // 根据自动生成的注释模板（目前主要体现在函数注释上）
+    &quot;doxdocgen.generic.order&quot;: [
+        &quot;brief&quot;,
+        &quot;tparam&quot;,
+        &quot;param&quot;,
+        &quot;return&quot;,
+        &quot;arg&quot;,
+        &quot;author&quot;,
+        &quot;date&quot;,
+    ],
+
+    &quot;doxdocgen.generic.paramTemplate&quot;:  &quot;@param[in]  {param} param doc&quot;, ///&lt; &quot;@param[in] {indent:8}{param}{indent:25}param doc&quot;,
+    &quot;doxdocgen.generic.returnTemplate&quot;: &quot;@return     {type}  @arg      0:  @arg      1:&quot;,
+    &quot;doxdocgen.generic.includeTypeAtReturn&quot;: true,
+    &quot;doxdocgen.generic.boolReturnsTrueFalse&quot;: true,
+    &quot;doxdocgen.generic.splitCasingSmartText&quot;: true,
+    &quot;doxdocgen.generic.commandSuggestion&quot;: true,
+    &quot;doxdocgen.generic.generateSmartText&quot;: true,
+    &quot;doxdocgen.generic.commandSuggestionAddPrefix&quot;: true,
+    &quot;tabnine.experimentalAutoImports&quot;: true
+   
 }
 
-static inline int rpt_fls(int x)
-{
-    int position;
-    int i;
-
-    if(0 != x)
-    {
-        for (i = (x &gt;&gt; 1), position = 0; i != 0; ++position)
-            i &gt;&gt;= 1;
-    }
-    else
-    {
-        position = -1;
-    }
-    return position + 1;
-}
-
-
-static inline unsigned int roundup_pow_of_two(unsigned int x)
-{
-    return 1UL &lt;&lt; rpt_fls(x - 1);
-}
-
-
-int main()
-{
-    unsigned int test_value = 0b11010101;
-
-    printf(&quot;Hello world!\n&quot;);
-    printf(&quot;fls test value:%d\r\n&quot;, rpt_fls(test_value));
-
-    printf(&quot;fls test value:%d\r\n&quot;, roundup_pow_of_two(test_value));
-
-    return 0;
-}
 </code></pre>
 
-<h3 id="mcu端高效方法">MCU端高效方法</h3>
-
-<pre><code>//找出最接近 最大2的指数次幂
-uint32_t roundup_pow_of_two(uint32_t data_roundup_pow_of_two )
-{
-    /* 这里采用 STM32 硬件提供的计算前导零指令 CLZ
-     * 举个例子，假如变量date_roundup_pow_of_two 0x09
-     *（二进制为：0000 0000 0000 0000 0000 0000 0000 1001）, 即bit3和bit0为1
-     * 则__clz( (date_roundup_pow_of_two)的值为28,即最高位1 前面有28个0,32-28 =3 代表最高位1 的 位置
-     * 31UL 表示 无符号 int 数字 31，否则默认为 有符号 int 数字 31
-     * 这里参考  FreeRTOS 的 寻找高级优先级任务 的写法，详细解释到朱工博客
-     * 博客地址: http://blog.csdn.net/zhzht19861011/article/details/51418383
-     */
-
-#if defined(__CC_ARM) || defined(__CLANG_ARM)          /* ARM C Compiler */
-  return ( 1UL &lt;&lt; ( 32UL - ( uint32_t ) __CLZ( (data_roundup_pow_of_two) ) ) );
-#elif defined(__GNUC__)                                /* ARM Compiler 6 */
-  return 1UL &lt;&lt; rpt_fls(data_roundup_pow_of_two - 1);
-#elif defined (__ICCARM__) || defined(__ICCRX__)       /* for IAR Compiler */
-  #error &quot;not supported tool chain...&quot;
-#else
-  #error &quot;not supported tool chain...&quot;
-#endif
-}
-</code></pre>
+<p><br/></p>
 
                       
                     </div>
@@ -291,7 +358,7 @@ uint32_t roundup_pow_of_two(uint32_t data_roundup_pow_of_two )
                         <div>
                             <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
-                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/roundup_pow_of_two/">http://sunduoze.github.io/post/roundup_pow_of_two/</a>
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/c_doxygen_vscode/">http://sunduoze.github.io/post/c_doxygen_vscode/</a>
                             <br />
                             文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
                         </div>
@@ -345,20 +412,14 @@ uint32_t roundup_pow_of_two(uint32_t data_roundup_pow_of_two )
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/keil_AC6_porting/" rel="next">
+        <a href="http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>Keil_AC6_porting</span>
+          <span>设备指标</span>
         </a>
         
       </li>
       <li class="previous">
-        
-        <a href="http://sunduoze.github.io/post/robomaster_s1/" rel="prev">
-          <i class="fa fa-chevron-left"></i>
-          <strong>Previous Post</strong>
-          <span>Robomaster_s1</span>
-        </a>
         
       </li>
     </ul>

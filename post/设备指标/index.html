@@ -12,36 +12,36 @@
         }
     }
   </script>
-  <title>Roundup_pow_of_two - Sun&#39;s Blog</title>
+  <title>设备指标 - Sun&#39;s Blog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="keywords" content="技术,">
-<meta name="description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta name="description" content="星云设备 BMS PCBA FCT （for calibration）： para range accuracy remark voltage 0.1-112 V 0.1% ±2mV current 0.1-30 A 0.1% R.D. &#43; 0.05%F.S.±2mA battery simulator 0.1 - 4.8 V 0.1% ± 2mV resolution:1mV BMS PACK TEST （f">
 <meta name="author" content="sunduoze">
 <meta name="publisher" content="sunduoze">
 <meta name="generator" content="http://gohugo.io/"/>
 
-<meta itemprop="name" content="Roundup_pow_of_two - Sun&#39;s Blog">
-<meta itemprop="description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta itemprop="name" content="设备指标 - Sun&#39;s Blog">
+<meta itemprop="description" content="星云设备 BMS PCBA FCT （for calibration）： para range accuracy remark voltage 0.1-112 V 0.1% ±2mV current 0.1-30 A 0.1% R.D. &#43; 0.05%F.S.±2mA battery simulator 0.1 - 4.8 V 0.1% ± 2mV resolution:1mV BMS PACK TEST （f">
 <meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
-<meta property="og:title" content="Roundup_pow_of_two - Sun&#39;s Blog" />
+<meta property="og:title" content="设备指标 - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunduoze.github.io/post/roundup_pow_of_two/" />
+<meta property="og:url" content="http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/" />
 <meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
-<meta property="og:description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta property="og:description" content="星云设备 BMS PCBA FCT （for calibration）： para range accuracy remark voltage 0.1-112 V 0.1% ±2mV current 0.1-30 A 0.1% R.D. &#43; 0.05%F.S.±2mA battery simulator 0.1 - 4.8 V 0.1% ± 2mV resolution:1mV BMS PACK TEST （f">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sunduoze">
-<meta name="twitter:title" content="Roundup_pow_of_two - Sun&#39;s Blog">
-<meta name="twitter:description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta name="twitter:title" content="设备指标 - Sun&#39;s Blog">
+<meta name="twitter:description" content="星云设备 BMS PCBA FCT （for calibration）： para range accuracy remark voltage 0.1-112 V 0.1% ±2mV current 0.1-30 A 0.1% R.D. &#43; 0.05%F.S.±2mA battery simulator 0.1 - 4.8 V 0.1% ± 2mV resolution:1mV BMS PACK TEST （f">
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script> = document.documentElement.className.replace("no-js", "js");</script>
-  <link rel="canonical" href="http://sunduoze.github.io/post/roundup_pow_of_two/">
-  <link rel='shortlink' href="http://sunduoze.github.io/post/roundup_pow_of_two/"/>
+  <link rel="canonical" href="http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
   
 <link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
@@ -187,12 +187,12 @@
                   class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
                 <div class="post-inner group">
 
-                  <h1 class="post-title">Roundup_pow_of_two</h1>
+                  <h1 class="post-title">设备指标</h1>
 
                   <p class="post-byline">
-                    by  · 2021年09月27日 · 425 Words ·
+                    by  · 2021年10月25日 · 98 Words ·
                     ~1min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/roundup_pow_of_two.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/%e8%ae%be%e5%a4%87%e6%8c%87%e6%a0%87.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -203,83 +203,72 @@
                       
                       
 
-<h3 id="最接近的最大2的指数次幂">最接近的最大2的指数次幂</h3>
+<h1 id="星云设备">星云设备</h1>
 
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<h2 id="bms-pcba-fct-for-calibration">BMS PCBA FCT （for calibration）：</h2>
 
-static inline int rpt_fls_asm(int x)
-{
-    int r;
-    __asm__(&quot;bsrl %1,%0\n\t&quot;
-            &quot;jnz 1f\n\t&quot;
-            &quot;movl $-1,%0\n&quot;
-            &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x));
-    return r + 1;
-}
+<table>
+<thead>
+<tr>
+<th align="center">para</th>
+<th align="center">range</th>
+<th align="center">accuracy</th>
+<th align="center">remark</th>
+</tr>
+</thead>
 
-static inline int rpt_fls(int x)
-{
-    int position;
-    int i;
+<tbody>
+<tr>
+<td align="center">voltage</td>
+<td align="center">0.1-112 V</td>
+<td align="center">0.1% ±2mV</td>
+<td align="center"></td>
+</tr>
 
-    if(0 != x)
-    {
-        for (i = (x &gt;&gt; 1), position = 0; i != 0; ++position)
-            i &gt;&gt;= 1;
-    }
-    else
-    {
-        position = -1;
-    }
-    return position + 1;
-}
+<tr>
+<td align="center">current</td>
+<td align="center">0.1-30 A</td>
+<td align="center">0.1% R.D. + 0.05%F.S.±2mA</td>
+<td align="center"></td>
+</tr>
 
+<tr>
+<td align="center">battery simulator</td>
+<td align="center">0.1 - 4.8 V</td>
+<td align="center">0.1% ± 2mV</td>
+<td align="center">resolution:1mV</td>
+</tr>
+</tbody>
+</table>
 
-static inline unsigned int roundup_pow_of_two(unsigned int x)
-{
-    return 1UL &lt;&lt; rpt_fls(x - 1);
-}
+<h2 id="bms-pack-test-for-accuracy-verify">BMS PACK TEST （for accuracy verify）：</h2>
 
+<table>
+<thead>
+<tr>
+<th align="center">para</th>
+<th align="center">range</th>
+<th align="center">accuracy</th>
+<th align="center">remark</th>
+</tr>
+</thead>
 
-int main()
-{
-    unsigned int test_value = 0b11010101;
+<tbody>
+<tr>
+<td align="center">voltage</td>
+<td align="center">5-100V</td>
+<td align="center">0.1%R.D. + 0.05%F.S.</td>
+<td align="center">resolution:1mV</td>
+</tr>
 
-    printf(&quot;Hello world!\n&quot;);
-    printf(&quot;fls test value:%d\r\n&quot;, rpt_fls(test_value));
-
-    printf(&quot;fls test value:%d\r\n&quot;, roundup_pow_of_two(test_value));
-
-    return 0;
-}
-</code></pre>
-
-<h3 id="mcu端高效方法">MCU端高效方法</h3>
-
-<pre><code>//找出最接近 最大2的指数次幂
-uint32_t roundup_pow_of_two(uint32_t data_roundup_pow_of_two )
-{
-    /* 这里采用 STM32 硬件提供的计算前导零指令 CLZ
-     * 举个例子，假如变量date_roundup_pow_of_two 0x09
-     *（二进制为：0000 0000 0000 0000 0000 0000 0000 1001）, 即bit3和bit0为1
-     * 则__clz( (date_roundup_pow_of_two)的值为28,即最高位1 前面有28个0,32-28 =3 代表最高位1 的 位置
-     * 31UL 表示 无符号 int 数字 31，否则默认为 有符号 int 数字 31
-     * 这里参考  FreeRTOS 的 寻找高级优先级任务 的写法，详细解释到朱工博客
-     * 博客地址: http://blog.csdn.net/zhzht19861011/article/details/51418383
-     */
-
-#if defined(__CC_ARM) || defined(__CLANG_ARM)          /* ARM C Compiler */
-  return ( 1UL &lt;&lt; ( 32UL - ( uint32_t ) __CLZ( (data_roundup_pow_of_two) ) ) );
-#elif defined(__GNUC__)                                /* ARM Compiler 6 */
-  return 1UL &lt;&lt; rpt_fls(data_roundup_pow_of_two - 1);
-#elif defined (__ICCARM__) || defined(__ICCRX__)       /* for IAR Compiler */
-  #error &quot;not supported tool chain...&quot;
-#else
-  #error &quot;not supported tool chain...&quot;
-#endif
-}
-</code></pre>
+<tr>
+<td align="center">current</td>
+<td align="center">0.2-30A</td>
+<td align="center">0.1% R.D. + 0.05%F.S.</td>
+<td align="center">resolution:1mA</td>
+</tr>
+</tbody>
+</table>
 
                       
                     </div>
@@ -291,7 +280,7 @@ uint32_t roundup_pow_of_two(uint32_t data_roundup_pow_of_two )
                         <div>
                             <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
-                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/roundup_pow_of_two/">http://sunduoze.github.io/post/roundup_pow_of_two/</a>
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/">http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/</a>
                             <br />
                             文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
                         </div>
@@ -345,19 +334,19 @@ uint32_t roundup_pow_of_two(uint32_t data_roundup_pow_of_two )
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/keil_AC6_porting/" rel="next">
+        <a href="http://sunduoze.github.io/post/robomaster_s1/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>Keil_AC6_porting</span>
+          <span>Robomaster_s1</span>
         </a>
         
       </li>
       <li class="previous">
         
-        <a href="http://sunduoze.github.io/post/robomaster_s1/" rel="prev">
+        <a href="http://sunduoze.github.io/post/c_doxygen_vscode/" rel="prev">
           <i class="fa fa-chevron-left"></i>
           <strong>Previous Post</strong>
-          <span>Robomaster_s1</span>
+          <span>c_doxygen_vscode</span>
         </a>
         
       </li>

@@ -12,36 +12,36 @@
         }
     }
   </script>
-  <title>Roundup_pow_of_two - Sun&#39;s Blog</title>
+  <title>Robomaster_s1 - Sun&#39;s Blog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="keywords" content="技术,">
-<meta name="description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta name="description" content="M-BUS protocol L-A H-B RS-485 Baudrate:921600 轮子接受数据 [00:08:39.422]收←◆00 40 00 40 00 40 00 40 FF FF FF FF DF 7A 55 20 00 1A A0 01 02 00 65 22 A8 FF 60 01 FE FF 00 00 14 01 90 00 DD 77 A0 33">
 <meta name="author" content="sunduoze">
 <meta name="publisher" content="sunduoze">
 <meta name="generator" content="http://gohugo.io/"/>
 
-<meta itemprop="name" content="Roundup_pow_of_two - Sun&#39;s Blog">
-<meta itemprop="description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta itemprop="name" content="Robomaster_s1 - Sun&#39;s Blog">
+<meta itemprop="description" content="M-BUS protocol L-A H-B RS-485 Baudrate:921600 轮子接受数据 [00:08:39.422]收←◆00 40 00 40 00 40 00 40 FF FF FF FF DF 7A 55 20 00 1A A0 01 02 00 65 22 A8 FF 60 01 FE FF 00 00 14 01 90 00 DD 77 A0 33">
 <meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
-<meta property="og:title" content="Roundup_pow_of_two - Sun&#39;s Blog" />
+<meta property="og:title" content="Robomaster_s1 - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunduoze.github.io/post/roundup_pow_of_two/" />
+<meta property="og:url" content="http://sunduoze.github.io/post/robomaster_s1/" />
 <meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
-<meta property="og:description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta property="og:description" content="M-BUS protocol L-A H-B RS-485 Baudrate:921600 轮子接受数据 [00:08:39.422]收←◆00 40 00 40 00 40 00 40 FF FF FF FF DF 7A 55 20 00 1A A0 01 02 00 65 22 A8 FF 60 01 FE FF 00 00 14 01 90 00 DD 77 A0 33">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sunduoze">
-<meta name="twitter:title" content="Roundup_pow_of_two - Sun&#39;s Blog">
-<meta name="twitter:description" content="最接近的最大2的指数次幂 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; static inline int rpt_fls_asm(int x) { int r; __asm__(&quot;bsrl %1,%0\n\t&quot; &quot;jnz 1f\n\t&quot; &quot;movl $-1,%0\n&quot; &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x)); return r &#43; 1; } static inline int rpt_fls(int x) { int position; int i; if(0 != x) { for (i = (x &gt;&gt; 1), position = 0; i != 0; &#43;&#43;position) i">
+<meta name="twitter:title" content="Robomaster_s1 - Sun&#39;s Blog">
+<meta name="twitter:description" content="M-BUS protocol L-A H-B RS-485 Baudrate:921600 轮子接受数据 [00:08:39.422]收←◆00 40 00 40 00 40 00 40 FF FF FF FF DF 7A 55 20 00 1A A0 01 02 00 65 22 A8 FF 60 01 FE FF 00 00 14 01 90 00 DD 77 A0 33">
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script> = document.documentElement.className.replace("no-js", "js");</script>
-  <link rel="canonical" href="http://sunduoze.github.io/post/roundup_pow_of_two/">
-  <link rel='shortlink' href="http://sunduoze.github.io/post/roundup_pow_of_two/"/>
+  <link rel="canonical" href="http://sunduoze.github.io/post/robomaster_s1/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/robomaster_s1/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
   
 <link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
@@ -187,12 +187,12 @@
                   class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
                 <div class="post-inner group">
 
-                  <h1 class="post-title">Roundup_pow_of_two</h1>
+                  <h1 class="post-title">Robomaster_s1</h1>
 
                   <p class="post-byline">
-                    by  · 2021年09月27日 · 425 Words ·
-                    ~1min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/roundup_pow_of_two.md"
+                    by  · 2021年10月25日 · 753 Words ·
+                    ~2min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/robomaster_s1.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -203,82 +203,36 @@
                       
                       
 
-<h3 id="最接近的最大2的指数次幂">最接近的最大2的指数次幂</h3>
+<h3 id="m-bus-protocol">M-BUS protocol</h3>
 
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<p>L-A H-B
+RS-485 Baudrate:921600</p>
 
-static inline int rpt_fls_asm(int x)
-{
-    int r;
-    __asm__(&quot;bsrl %1,%0\n\t&quot;
-            &quot;jnz 1f\n\t&quot;
-            &quot;movl $-1,%0\n&quot;
-            &quot;1:&quot; : &quot;=r&quot; (r) : &quot;rm&quot; (x));
-    return r + 1;
-}
+<pre><code>轮子接受数据
+[00:08:39.422]收←◆00 40 00 40 00 40 00 40 FF FF FF FF DF 7A 55 20 00 1A A0 01 02 00 65 22 A8 FF 60 01 FE FF 00 00 14 01 90 00 DD 77 A0 33 00 00 00 00 62 30 
 
-static inline int rpt_fls(int x)
-{
-    int position;
-    int i;
+55 16 00 9D A0 00 00 03 00 40 00 40 00 40 00 40 FF FF FF FF 72 7F 55 20 00 1A A0 01 03 00 24 23 53 00 75 01 03 00 00 00 40 01 90 00 62 7A A0 33 00 00 00 00 31 CF 
 
-    if(0 != x)
-    {
-        for (i = (x &gt;&gt; 1), position = 0; i != 0; ++position)
-            i &gt;&gt;= 1;
-    }
-    else
-    {
-        position = -1;
-    }
-    return position + 1;
-}
+55 16 00 9D A0 00 00 00 00 40 00 40 00 40 00 40 FF FF FF FF 85 71 55 20 00 1A A0 01 00 00 C0 22 49 00 6B 01 01 00 00 00 2E 01 90 00 5B 03 A1 33 00 00 00 00 3C AE 
+55 16 00 9D A0 00 00 01 00 40 00 40 00 40 00 40 FF FF FF FF 28 74 55 20 00 1A A0 01 01 00 79 23 CA 00 62 01 00 00 00 00 22 01 90 00 E6 7A A1 33 00 00 00 00 7A BB 
+55 16 00 9D A0 00 00 02 00 40 00 40 00 40 00 40 FF FF FF FF DF 7A 55 20 00 1A A0 01 02 00 74 22 A8 FF 60 01 03 00 00 00 14 01 90 00 DD 77 A1 33 00 00 00 00 09 1C 
+55 16 00 9D A0 00 00 03 00 40 00 40 00 40 00 40 FF FF FF FF 72 7F 55 20 00 1A A0 01 03 00 22 23 53 00 75 01 05 00 00 00 41 01 90 00 62 7A A1 33 00 00 00 00 E1 9D 
+
+55 16 00 9D A0 00 00 00 00 40 00 40 00 40 00 40 FF FF FF FF 85 71 55 20 00 1A A0 01 00 00 D9 22 49 00 6B 01 01 00 00 00 2E 01 90 00 5B 03 A2 33 00 00 00 00 DB AC 
+55 16 00 9D A0 00 00 01 00 40 00 40 00 40 00 40 FF FF FF FF 28 74 55 20 00 1A A0 01 01 00 62 23 CA 00 62 01 FE FF 00 00 22 01 90 00 E6 7A A2 33 00 00 00 00 70 3D 
+55 16 00 9D A0 00 00 02 00 40 00 40 00 40 00 40 FF FF FF FF DF 7A 55 20 00 1A A0 01 02 00 85 22 A8 FF 60 01 00 00 00 00 14 01 90 00 DD 77 A2 33 00 00 00 00 FA 72 
+
+55 0D 04 33 03 0C 01 00 40 0C B0 61 4C 
 
 
-static inline unsigned int roundup_pow_of_two(unsigned int x)
-{
-    return 1UL &lt;&lt; rpt_fls(x - 1);
-}
-
-
-int main()
-{
-    unsigned int test_value = 0b11010101;
-
-    printf(&quot;Hello world!\n&quot;);
-    printf(&quot;fls test value:%d\r\n&quot;, rpt_fls(test_value));
-
-    printf(&quot;fls test value:%d\r\n&quot;, roundup_pow_of_two(test_value));
-
-    return 0;
-}
-</code></pre>
-
-<h3 id="mcu端高效方法">MCU端高效方法</h3>
-
-<pre><code>//找出最接近 最大2的指数次幂
-uint32_t roundup_pow_of_two(uint32_t data_roundup_pow_of_two )
-{
-    /* 这里采用 STM32 硬件提供的计算前导零指令 CLZ
-     * 举个例子，假如变量date_roundup_pow_of_two 0x09
-     *（二进制为：0000 0000 0000 0000 0000 0000 0000 1001）, 即bit3和bit0为1
-     * 则__clz( (date_roundup_pow_of_two)的值为28,即最高位1 前面有28个0,32-28 =3 代表最高位1 的 位置
-     * 31UL 表示 无符号 int 数字 31，否则默认为 有符号 int 数字 31
-     * 这里参考  FreeRTOS 的 寻找高级优先级任务 的写法，详细解释到朱工博客
-     * 博客地址: http://blog.csdn.net/zhzht19861011/article/details/51418383
-     */
-
-#if defined(__CC_ARM) || defined(__CLANG_ARM)          /* ARM C Compiler */
-  return ( 1UL &lt;&lt; ( 32UL - ( uint32_t ) __CLZ( (data_roundup_pow_of_two) ) ) );
-#elif defined(__GNUC__)                                /* ARM Compiler 6 */
-  return 1UL &lt;&lt; rpt_fls(data_roundup_pow_of_two - 1);
-#elif defined (__ICCARM__) || defined(__ICCRX__)       /* for IAR Compiler */
-  #error &quot;not supported tool chain...&quot;
-#else
-  #error &quot;not supported tool chain...&quot;
-#endif
-}
+没电关机 200ms间隔发送数据
+[00:11:48.298]收←◆55 0D 04 33 03 0C 01 00 40 0C B0 61 4C 
+[00:11:48.501]收←◆55 0D 04 33 03 2C 02 00 40 0C B0 CD D4 
+[00:11:48.703]收←◆55 0D 04 33 03 4C 03 00 40 0C B0 38 58 
+[00:11:48.922]收←◆55 0D 04 33 03 6C 04 00 40 0C B0 84 ED 
+[00:11:49.125]收←◆55 0D 04 33 03 0C 05 00 40 0C B0 71 61 
+[00:11:49.327]收←◆55 0D 04 33 03 2C 06 00 40 0C B0 DD F9 
+[00:11:49.530]收←◆55 0D 04 33 03 4C 07 00 40 0C B0 28 75 
 </code></pre>
 
                       
@@ -291,7 +245,7 @@ uint32_t roundup_pow_of_two(uint32_t data_roundup_pow_of_two )
                         <div>
                             <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
-                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/roundup_pow_of_two/">http://sunduoze.github.io/post/roundup_pow_of_two/</a>
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/robomaster_s1/">http://sunduoze.github.io/post/robomaster_s1/</a>
                             <br />
                             文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
                         </div>
@@ -345,19 +299,19 @@ uint32_t roundup_pow_of_two(uint32_t data_roundup_pow_of_two )
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/keil_AC6_porting/" rel="next">
+        <a href="http://sunduoze.github.io/post/roundup_pow_of_two/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>Keil_AC6_porting</span>
+          <span>Roundup_pow_of_two</span>
         </a>
         
       </li>
       <li class="previous">
         
-        <a href="http://sunduoze.github.io/post/robomaster_s1/" rel="prev">
+        <a href="http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/" rel="prev">
           <i class="fa fa-chevron-left"></i>
           <strong>Previous Post</strong>
-          <span>Robomaster_s1</span>
+          <span>设备指标</span>
         </a>
         
       </li>

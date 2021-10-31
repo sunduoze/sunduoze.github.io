@@ -194,7 +194,7 @@
                   <h1 class="post-title">ARM_AC5_to_AC6</h1>
 
                   <p class="post-byline">
-                    by  · 2021年06月12日 · 1158 Words ·
+                    by  · 2021年06月12日 · 1299 Words ·
                     ~3min reading time |
                     <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/ARM_AC5_to_AC6.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
@@ -539,6 +539,45 @@ Qt特有
 &lt;qtglobal.h&gt;定义了Q_OS_*和Q_WS_*系列用于判断操作系统。Q_CC_*系列判断编译器。
 具体的可以在Qt Assistant里索引qtglobal.h查看。
 
+</code></pre>
+
+<h3 id="stm32-how-to-use">STM32 how to use</h3>
+
+<pre><code>__ALIGN_BEGIN ETH_DMADescTypeDef  DMARxDscrTab[ETH_RXBUFNB] __ALIGN_END;/* Ethernet Rx MA Descriptor */
+</code></pre>
+
+<p>in stm32f4xx_hal_def.h</p>
+
+<pre><code>#if defined ( __GNUC__ ) &amp;&amp; !defined (__CC_ARM) /* GNU Compiler */
+  #ifndef __weak
+    #define __weak   __attribute__((weak))
+  #endif /* __weak */
+  #ifndef __packed
+    #define __packed __attribute__((__packed__))
+  #endif /* __packed */
+#endif /* __GNUC__ */
+
+
+/* Macro to get variable aligned on 4-bytes, for __ICCARM__ the directive &quot;#pragma data_alignment=4&quot; must be used instead */
+#if defined ( __GNUC__ ) &amp;&amp; !defined (__CC_ARM) /* GNU Compiler */
+  #ifndef __ALIGN_END
+#define __ALIGN_END    __attribute__ ((aligned (4)))
+  #endif /* __ALIGN_END */
+  #ifndef __ALIGN_BEGIN  
+    #define __ALIGN_BEGIN
+  #endif /* __ALIGN_BEGIN */
+#else
+  #ifndef __ALIGN_END
+    #define __ALIGN_END
+  #endif /* __ALIGN_END */
+  #ifndef __ALIGN_BEGIN      
+    #if defined   (__CC_ARM)      /* ARM Compiler */
+#define __ALIGN_BEGIN    __align(4)
+    #elif defined (__ICCARM__)    /* IAR Compiler */
+      #define __ALIGN_BEGIN 
+    #endif /* __CC_ARM */
+  #endif /* __ALIGN_BEGIN */
+#endif /* __GNUC__ */
 </code></pre>
 
                       

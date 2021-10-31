@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 27 Sep 2021 17:02:21 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 31 Oct 2021 16:41:27 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>c_doxygen_vscode</title>
+      <link>http://sunduoze.github.io/post/c_doxygen_vscode/</link>
+      <pubDate>Sun, 31 Oct 2021 16:41:27 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/c_doxygen_vscode/</guid>
+      <description>doxygen 命令关键字 文件信息： @file &amp;ndash;&amp;gt; 文件声明，即当前文件名 @author &amp;ndash;&amp;gt; 作者 @version &amp;ndash;&amp;gt; 版本， @todo &amp;ndash;&amp;gt; 改进，可以指定针对的版本 模块信息： @var &amp;ndash;&amp;gt; 模块变量说明 @typedef &amp;ndash;&amp;gt; 模块变量类型说明</description>
+    </item>
+    
+    <item>
+      <title>设备指标</title>
+      <link>http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/</link>
+      <pubDate>Mon, 25 Oct 2021 10:59:48 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/%E8%AE%BE%E5%A4%87%E6%8C%87%E6%A0%87/</guid>
+      <description>星云设备 BMS PCBA FCT （for calibration）： para range accuracy remark voltage 0.1-112 V 0.1% ±2mV current 0.1-30 A 0.1% R.D. + 0.05%F.S.±2mA battery simulator 0.1 - 4.8 V 0.1% ± 2mV resolution:1mV BMS PACK TEST （f</description>
+    </item>
+    
+    <item>
+      <title>Robomaster_s1</title>
+      <link>http://sunduoze.github.io/post/robomaster_s1/</link>
+      <pubDate>Mon, 25 Oct 2021 10:57:04 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/robomaster_s1/</guid>
+      <description>M-BUS protocol L-A H-B RS-485 Baudrate:921600 轮子接受数据 [00:08:39.422]收←◆00 40 00 40 00 40 00 40 FF FF FF FF DF 7A 55 20 00 1A A0 01 02 00 65 22 A8 FF 60 01 FE FF 00 00 14 01 90 00 DD 77 A0 33</description>
+    </item>
     
     <item>
       <title>Roundup_pow_of_two</title>
@@ -72,7 +99,7 @@
       <pubDate>Sat, 12 Jun 2021 21:22:49 +0800</pubDate>
       
       <guid>http://sunduoze.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE2021_06/</guid>
-      <description>转载，侵删 1、OS 鸿蒙OS： 一款面向全场景的开源分布式操作系统。 RT-Thread：一款小而美的物联网操作系统。 TencentOS tiny：一款面向物联网领</description>
+      <description>IC供应商 hycontek:32bitsMCU-模拟AFE [](http://www.chipsea.com/):混合信号处理 megawin: 个人汇总 鸿蒙</description>
     </item>
     
     <item>
