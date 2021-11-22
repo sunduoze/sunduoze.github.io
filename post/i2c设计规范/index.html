@@ -190,7 +190,7 @@
                   <h1 class="post-title">i2c设计规范</h1>
 
                   <p class="post-byline">
-                    by  · 2021年02月26日 · 921 Words ·
+                    by  · 2021年02月26日 · 985 Words ·
                     ~2min reading time |
                     <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/i2c%e8%ae%be%e8%ae%a1%e8%a7%84%e8%8c%83.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
@@ -382,6 +382,13 @@ This is not a problem if VDD &gt; 3.0 V. If the I2C device is below 3.0 V,
 then there could be a problem if the logic HIGH/LOW levels are not properly recognized.</p>
 
 <p></br></p>
+
+<h2 id="补充">补充</h2>
+
+<p>SCL高电平时才对SDA进行采样，SCL需要保证信号质量（边沿不存在回勾）
+</br></p>
+
+<p>有些人建议源端串联电阻为75欧姆，为减少过冲和回勾</p>
 
 <h2 id="参考文档">参考文档</h2>
 

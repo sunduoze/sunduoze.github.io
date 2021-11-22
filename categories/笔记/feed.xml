@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 05 Nov 2021 22:41:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 Nov 2021 16:19:36 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Single_wire_comm</title>
+      <link>http://sunduoze.github.io/post/Single_wire_comm/</link>
+      <pubDate>Mon, 22 Nov 2021 16:19:36 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/Single_wire_comm/</guid>
+      <description>single wire interface communication NAPA AID com HW circuit AID MASTER: receiver: AID-bus to BUF to MCU thransmiter: MCU to NOR-BUF to mos-gate to mos-drain(AID-bus) + pull-up res to V_DD AID SLAVER: receiver: AID-bus to BUF to MCU thransmiter: MCU to NOR-BUF to mos-gate to mos-drain(AID-bus) AID slaver BOOOOM: Cap:100pF 25V C0G ATCPZ003-UUCZ ATMEL ROSWELL AUTH MFi AS3616A-AFCT-13 BIGTEN I2C IF: ATCPZ003-MXHDB ATMEL ROSWELL AUTH MFi HW timing @DY AID</description>
+    </item>
     
     <item>
       <title>误差放大器</title>
