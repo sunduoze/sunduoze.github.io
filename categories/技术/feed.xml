@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 24 Jan 2022 10:44:35 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 19 Feb 2022 19:44:06 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C语语言_宏重载及函数参数统计</title>
+      <link>http://sunduoze.github.io/post/C%E8%AF%AD%E8%AF%AD%E8%A8%80_%E5%AE%8F%E9%87%8D%E8%BD%BD%E5%8F%8A%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%BB%9F%E8%AE%A1/</link>
+      <pubDate>Sat, 19 Feb 2022 19:44:06 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/C%E8%AF%AD%E8%AF%AD%E8%A8%80_%E5%AE%8F%E9%87%8D%E8%BD%BD%E5%8F%8A%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%BB%9F%E8%AE%A1/</guid>
+      <description>通过宏重载和函数参数统计实现C语言的重载(静态多态) #include &amp;lt;iostream&amp;gt; using namespace std; #define OVERLOADED_MACRO(M, ...) _OVR(M, _COUNT_ARGS(__VA_ARGS__)) (__VA_ARGS__) #define _OVR(macroName, number_of_args) _OVR_EXPAND(macroName, number_of_args) #define _OVR_EXPAND(macroName, number_of_args) macroName##number_of_arg #define _COUNT_ARGS(...) _ARG_PATTERN_MATCH(__VA_ARGS__, 9,8,7,6,5,4,3,2,1) #define _ARG_PATTERN_MATCH(_1,_2,_3,_4,_5,_6,_7,_8,_9, N, ...) N //Example: #define ff(...) OVERLOADED_MACRO(ff, __VA_ARGS__) #define ii(...) OVERLOADED_MACRO(ii, __VA_ARGS__) #define ff3(c, a, b) for (int</description>
+    </item>
     
     <item>
       <title>mcu_ctrl_cmd_demo</title>
