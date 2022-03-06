@@ -223,7 +223,7 @@
                   <h1 class="post-title">markdown之flow_and_wavedrom</h1>
 
                   <p class="post-byline">
-                    by  · 2021年06月06日 · 250 Words ·
+                    by  · 2021年06月06日 · 395 Words ·
                     ~2min reading time |
                     <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/markdown%e4%b9%8bflow_and_wavedrom.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
@@ -247,6 +247,17 @@
   { name: &quot;bus&quot;,  wave: &quot;x.34.5x&quot;,   data: &quot;head body tail&quot; },
   { name: &quot;wire&quot;, wave: &quot;0.1..0.&quot; },
 ]}
+</code></pre>
+
+<p>blog format:</p>
+
+<pre><code>&lt;script type=&quot;WaveDrom&quot;&gt;
+{ signal : [
+  { name: &quot;clk&quot;,  wave: &quot;p......&quot; },
+  { name: &quot;bus&quot;,  wave: &quot;x.34.5x&quot;,   data: &quot;head body tail&quot; },
+  { name: &quot;wire&quot;, wave: &quot;0.1..0.&quot; },
+]}
+&lt;/script&gt;
 </code></pre>
 
 <p></br></p>
@@ -278,6 +289,24 @@
   { name: 'clk3', wave: 'nhNhplPl' },
   { name: 'clk4', wave: 'xlh.L.Hx' },
 ]}
+</code></pre>
+
+<p>blog format:</p>
+
+<pre><code>&lt;script type=&quot;WaveDrom&quot;&gt;
+{ signal: [
+  { name: &quot;pclk&quot;, wave: 'p.......' },
+  { name: &quot;Pclk&quot;, wave: 'P.......' },
+  { name: &quot;nclk&quot;, wave: 'n.......' },
+  { name: &quot;Nclk&quot;, wave: 'N.......' },
+  {},
+  { name: 'clk0', wave: 'phnlPHNL' },
+  { name: 'clk1', wave: 'xhlhLHl.' },
+  { name: 'clk2', wave: 'hpHplnLn' },
+  { name: 'clk3', wave: 'nhNhplPl' },
+  { name: 'clk4', wave: 'xlh.L.Hx' },
+]}
+&lt;/script&gt;
 </code></pre>
 
 <script type="WaveDrom">
@@ -313,6 +342,26 @@
 ]}
 </code></pre>
 
+<p>blog format:</p>
+
+<pre><code>&lt;script type=&quot;WaveDrom&quot;&gt;
+{ assign:[
+  [&quot;out&quot;,
+    [&quot;XNOR&quot;,
+      [&quot;NAND&quot;,
+        [&quot;INV&quot;, &quot;a&quot;],
+        [&quot;NOR&quot;, &quot;b&quot;, [&quot;BUF&quot;,&quot;c&quot;]]
+      ],
+      [&quot;AND&quot;,
+        [&quot;XOR&quot;, &quot;d&quot;, &quot;e&quot;, [&quot;OR&quot;,&quot;f&quot;,&quot;g&quot;]],
+        &quot;h&quot;
+      ]
+    ]
+  ]
+]}
+&lt;/script&gt;
+</code></pre>
+
 <p></br></p>
 
 <script type="WaveDrom">
@@ -333,6 +382,18 @@
 </code></pre>
 
 <p></br></p>
+
+<p>blog format:</p>
+
+<pre><code>&lt;script type=&quot;WaveDrom&quot;&gt;
+{ assign:[
+  [&quot;g0&quot;, [&quot;^&quot;, &quot;b0&quot;, &quot;b1&quot;]],
+  [&quot;g1&quot;, [&quot;^&quot;, &quot;b1&quot;, &quot;b2&quot;]],
+  [&quot;g2&quot;, [&quot;^&quot;, &quot;b2&quot;, &quot;b3&quot;]],
+  [&quot;g3&quot;, [&quot;=&quot;, &quot;b3&quot;]]
+]}
+&lt;/script&gt;
+</code></pre>
 
                       
                     </div>

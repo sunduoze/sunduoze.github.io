@@ -261,7 +261,7 @@ code.has-jax {
                   <h1 class="post-title">markdown之mermaid</h1>
 
                   <p class="post-byline">
-                    by  · 2021年06月06日 · 515 Words ·
+                    by  · 2021年06月06日 · 823 Words ·
                     ~2min reading time |
                     <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/markdown%e4%b9%8bmermaid.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
@@ -294,6 +294,32 @@ gantt
     Tenma            :4-19-18, 1d
 </div>
 
+<p>blog format:</p>
+
+<pre><code>&lt;div class=&quot;mermaid&quot;&gt;
+gantt
+    title Team 项目周进度
+    excludes    weekends
+    dateFormat  MM-DD-HH
+    axisFormat  %m-%d
+    section 3C
+    任务A            :active,a1, 4-18-12, 8h
+    任务B            :after a1, 56h
+    section VC
+    任务C            :crit,done,4-19-02, 12h
+    任务D            :crit,17h
+    section MC
+    任务E            :active,4-18-02, 2d
+    任务F            :2d
+    section 高风险
+    任务E            :4-18-02, 48h
+    任务F            :3d
+    section 新系统开发
+    Tenma            :4-19-18, 1d
+&lt;/div&gt;
+
+</code></pre>
+
 <pre><code>Input       Example             Description:
 YYYY        2014                4 digit year
 YY          14                  2 digit year
@@ -324,6 +350,18 @@ graph TD;
     C-->D;
 </div>  
 
+<p>blog format:</p>
+
+<pre><code>&lt;div class=&quot;mermaid&quot;&gt;
+graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+&lt;/div&gt;  
+
+</code></pre>
+
 <p></br>
 <div class="mermaid">
 journey
@@ -339,12 +377,41 @@ journey
   Sit down:      0: 我,猫,was,hen
 </div></p>
 
+<p>blog format:</p>
+
+<pre><code>&lt;div class=&quot;mermaid&quot;&gt;
+journey
+    title 工作日
+    section 去工作
+      Make tea: 5: 我
+      Go upstairs: 3: 我
+      Do work: 1: 我, 猫
+    section 回家
+      Go downstairs: 5: 我
+      Sit down:      0: 我,猫,was,hen
+  Go downstairs: 5: 我
+  Sit down:      0: 我,猫,was,hen
+&lt;/div&gt;
+
+</code></pre>
+
 <div class="mermaid">
 pie title What Voldemort doesn't have?
          "FRIENDS" : 2
          "FAMILY" : 3
          "NOSE" : 45
 </div> 
+
+<p>blog format:</p>
+
+<pre><code>&lt;div class=&quot;mermaid&quot;&gt;
+pie title What Voldemort doesn't have?
+         &quot;FRIENDS&quot; : 2
+         &quot;FAMILY&quot; : 3
+         &quot;NOSE&quot; : 45
+&lt;/div&gt; 
+
+</code></pre>
 
 <div class="mermaid">
 sequenceDiagram
@@ -357,6 +424,23 @@ sequenceDiagram
     Bob-->Alice: Checking with John...
     Alice->John: Yes... John, how are you?
 </div>
+
+<p>blog format:</p>
+
+<pre><code>&lt;div class=&quot;mermaid&quot;&gt;
+sequenceDiagram
+    Alice -&gt;&gt; Bob: Hello Bob, how are you?
+    Bob--&gt;&gt;John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long&lt;br/&gt;long time, so long&lt;br/&gt;that the text does&lt;br/&gt;not fit on a row.
+
+    Bob--&gt;Alice: Checking with John...
+    Alice-&gt;John: Yes... John, how are you?
+&lt;/div&gt;
+
+
+</code></pre>
 
 <div class="mermaid">
 sequenceDiagram
@@ -372,7 +456,54 @@ sequenceDiagram
     Bob-->>John: Jolly good!
 </div>
 
-<div class="flowchart">
+<p>blog format:</p>
+
+<pre><code>&lt;div class=&quot;mermaid&quot;&gt;
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts&lt;br/&gt;prevail...
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+&lt;/div&gt;
+
+</code></pre>
+
+<div class="mermaid">
+graph LR
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+</div>
+    <!-- mermaid.flowchartConfig = {
+    width: 100%
+} -->
+
+blog format: 
+```
+<div class="mermaid">
+graph LR
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+</div>
+    <!-- mermaid.flowchartConfig = {
+    width: 100%
+} -->
+
+```
+
+
+### flowchart未完成
+
+<div class="flowchart"> <!-- 未完成 -->
     start-->start: 开始
     e-->end: 结束
     start->e
@@ -394,18 +525,7 @@ sequenceDiagram
     two --&gt; c2
 </code></pre>
 
-<div class="mermaid">
-graph LR
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-</div>
-    <!-- mermaid.flowchartConfig = {
-    width: 100%
-} -->
-
-<div class="flowchart">
+<div class="flowchart"> <!-- 未完成 -->
 st=>start: 页面加载
 
 e=>end: End:>http://www.google.com
