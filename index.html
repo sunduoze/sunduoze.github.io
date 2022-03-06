@@ -192,7 +192,7 @@
               <p class="post-date">2022年02月19日</p>
           </div>
           <h2 class="post-title">
-              <a href="http://sunduoze.github.io/post/C%E8%AF%AD%E8%AF%AD%E8%A8%80_%E5%AE%8F%E9%87%8D%E8%BD%BD%E5%8F%8A%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%BB%9F%E8%AE%A1/" rel="bookmark" title="C语语言_宏重载及函数参数统计">C语语言_宏重载及函数参数统计</a>
+              <a href="http://sunduoze.github.io/post/C%E8%AF%AD%E8%A8%80_%E5%AE%8F%E9%87%8D%E8%BD%BD%E5%8F%8A%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%BB%9F%E8%AE%A1/" rel="bookmark" title="C语言_宏重载及函数参数统计">C语言_宏重载及函数参数统计</a>
           </h2>
           <div class="entry excerpt">
               <p>通过宏重载和函数参数统计实现C语言的重载(静态多态) #include &lt;iostream&gt; using namespace std; #define OVERLOADED_MACRO(M, ...) _OVR(M, _COUNT_ARGS(__VA_ARGS__)) (__VA_ARGS__) #define _OVR(macroName, number_of_args) _OVR_EXPAND(macroName, number_of_args) #define _OVR_EXPAND(macroName, number_of_args) macroName##number_of_arg #define _COUNT_ARGS(...) _ARG_PATTERN_MATCH(__VA_ARGS__, 9,8,7,6,5,4,3,2,1) #define _ARG_PATTERN_MATCH(_1,_2,_3,_4,_5,_6,_7,_8,_9, N, ...) N //Example: #define ff(...) OVERLOADED_MACRO(ff, __VA_ARGS__) #define ii(...) OVERLOADED_MACRO(ii, __VA_ARGS__) #define ff3(c, a, b) for (int</p>
