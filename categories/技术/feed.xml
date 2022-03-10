@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 19 Feb 2022 19:44:06 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 Mar 2022 16:15:21 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>EMC</title>
+      <link>http://sunduoze.github.io/post/EMC/</link>
+      <pubDate>Wed, 09 Mar 2022 16:15:21 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/EMC/</guid>
+      <description>SI signal integrity 信号完整性 信号边沿越快，信号越完整，信号品质越好，但对EMI不好 PI power integrity 电源完整性 模拟数字，高频低频混合信号区域若分割不当容易相互串扰（</description>
+    </item>
     
     <item>
       <title>C语言_宏重载及函数参数统计</title>
