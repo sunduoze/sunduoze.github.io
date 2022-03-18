@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 09 Mar 2022 16:15:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Mar 2022 13:06:42 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Arduino_STM32_Get_Start</title>
+      <link>http://sunduoze.github.io/post/Arduino_STM32_Get_Start/</link>
+      <pubDate>Thu, 17 Mar 2022 13:06:42 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/Arduino_STM32_Get_Start/</guid>
+      <description>硬件 STM32 Blue Pill (STM32duino) STM32F103C8 环境配置 安装Arduino环境, 版本1.8.13 下载Arduino_STM32并Arduino_STM32xxx文件夹解压到A</description>
+    </item>
     
     <item>
       <title>EMC</title>
