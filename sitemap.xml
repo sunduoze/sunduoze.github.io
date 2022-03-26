@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://sunduoze.github.io/post/redefine_fopen_malloc/</loc>
+    <lastmod>2022-03-26T22:26:22+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://sunduoze.github.io/post/Arduino_STM32_Get_Start/</loc>
     <lastmod>2022-03-17T13:06:42+08:00</lastmod>
   </url>
@@ -404,13 +409,13 @@
   
   <url>
     <loc>http://sunduoze.github.io/post/</loc>
-    <lastmod>2022-03-17T13:06:42+08:00</lastmod>
+    <lastmod>2022-03-26T22:26:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sunduoze.github.io/</loc>
-    <lastmod>2022-03-17T13:06:42+08:00</lastmod>
+    <lastmod>2022-03-26T22:26:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -433,13 +438,13 @@
   
   <url>
     <loc>http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-03-17T13:06:42+08:00</lastmod>
+    <lastmod>2022-03-26T22:26:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-03-17T13:06:42+08:00</lastmod>
+    <lastmod>2022-03-26T22:26:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   

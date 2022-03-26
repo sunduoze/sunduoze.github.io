@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 17 Mar 2022 13:06:42 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 26 Mar 2022 22:26:22 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Redefine_fopen_malloc</title>
+      <link>http://sunduoze.github.io/post/redefine_fopen_malloc/</link>
+      <pubDate>Sat, 26 Mar 2022 22:26:22 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/redefine_fopen_malloc/</guid>
+      <description>转载链接，侵删 在我们进行嵌入式开发时，难免要移植一些现有的成熟代码库，这些库大部分要借助C标准库中的输入输出接口、内存分配函数等。这也就产生</description>
+    </item>
     
     <item>
       <title>Arduino_STM32_Get_Start</title>

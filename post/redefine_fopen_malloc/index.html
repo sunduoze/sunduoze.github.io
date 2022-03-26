@@ -12,7 +12,7 @@
         }
     }
   </script>
-  <title>Arduino_STM32_Get_Start - Sun&#39;s Blog</title>
+  <title>Redefine_fopen_malloc - Sun&#39;s Blog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,26 +22,26 @@
 <meta name="publisher" content="sunduoze">
 <meta name="generator" content="http://gohugo.io/"/>
 
-<meta itemprop="name" content="Arduino_STM32_Get_Start - Sun&#39;s Blog">
+<meta itemprop="name" content="Redefine_fopen_malloc - Sun&#39;s Blog">
 <meta itemprop="description" content="Resonance,natural language communication">
 <meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
-<meta property="og:title" content="Arduino_STM32_Get_Start - Sun&#39;s Blog" />
+<meta property="og:title" content="Redefine_fopen_malloc - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunduoze.github.io/post/Arduino_STM32_Get_Start/" />
+<meta property="og:url" content="http://sunduoze.github.io/post/redefine_fopen_malloc/" />
 <meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
 <meta property="og:description" content="Resonance,natural language communication">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sunduoze">
-<meta name="twitter:title" content="Arduino_STM32_Get_Start - Sun&#39;s Blog">
+<meta name="twitter:title" content="Redefine_fopen_malloc - Sun&#39;s Blog">
 <meta name="twitter:description" content="Resonance,natural language communication">
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script> = document.documentElement.className.replace("no-js", "js");</script>
-  <link rel="canonical" href="http://sunduoze.github.io/post/Arduino_STM32_Get_Start/">
-  <link rel='shortlink' href="http://sunduoze.github.io/post/Arduino_STM32_Get_Start/"/>
+  <link rel="canonical" href="http://sunduoze.github.io/post/redefine_fopen_malloc/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/redefine_fopen_malloc/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
   
 <link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
@@ -228,12 +228,12 @@ code.has-jax {
                   class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
                 <div class="post-inner group">
 
-                  <h1 class="post-title">Arduino_STM32_Get_Start</h1>
+                  <h1 class="post-title">Redefine_fopen_malloc</h1>
 
                   <p class="post-byline">
-                    by  · 2022年03月17日 · 1107 Words ·
+                    by  · 2022年03月26日 · 1130 Words ·
                     ~3min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/Arduino_STM32_Get_Start.md"
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/redefine_fopen_malloc.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -242,126 +242,315 @@ code.has-jax {
                   <div class="entry">
                     <div class="entry-inner">
                       
-                      
+                      <p><a href="https://www.armbbs.cn/forum.php?mod=viewthread&amp;tid=107885">转载链接，侵删</a></p>
 
-<h2 id="硬件">硬件</h2>
+<p>在我们进行嵌入式开发时，难免要移植一些现有的成熟代码库，这些库大部分要借助C标准库中的输入输出接口、内存分配函数等。这也就产生了库函数重定向的问题。我们最常用重定向库函数为printf函数，重定向的方法为：</p>
 
-<p>STM32 Blue Pill (STM32duino) STM32F103C8</p>
-
-<h2 id="环境配置">环境配置</h2>
-
-<ol>
-<li>安装<a href="https://www.arduino.cc/en/software/OldSoftwareReleases">Arduino环境</a>, 版本1.8.13</li>
-<li>下载<a href="https://github.com/rogerclarkmelbourne/Arduino_STM32/releases/tag/v1.0.0">Arduino_STM32</a>并Arduino_STM32xxx文件夹解压到Arduino安装路径下：<code>C:\Program Files (x86)\Arduino\hardware</code></li>
-<li>安装驱动(Maple DFU driver &amp; Maple Serial driver)，运行路径<code>C:\Program Files (x86)\Arduino\hardware\Arduino_STM32\drivers\win</code>下的install_drivers.bat，安装成功提示：（请勿连接硬件，否则信息会有区别）</li>
-</ol>
-
-<pre><code>Installing Maple DFU driver...
-Extracting driver files...
-  Success
-Installing driver(s)...
-  Success
-
-Installing Maple Serial driver...
-Extracting driver files...
-  Success
-Installing driver(s)...
-  Success
-
-请按任意键继续. . .
-</code></pre>
-
-<ol>
-<li>打开Arduino环境，执行以下几个步骤</li>
-</ol>
-
-<ul>
-<li>选择 &ldquo;工具 -&gt; 开发板:&ldquo;xxxx&rdquo; -&gt; Generic STM32F103C series&rdquo;</li>
-<li>选择 &ldquo;工具 -&gt; Variant:&ldquo;xxxx&rdquo; -&gt; STM32F103C8(20k RAM, 64k Flash)&rdquo;</li>
-<li>选择 &ldquo;工具 -&gt; Upload method:&ldquo;xxxx&rdquo; -&gt; STM32duino bootloader&rdquo;</li>
-<li>选择 &ldquo;工具 -&gt; CPU Speed(MHz):&ldquo;xxxx&rdquo; -&gt; 48Mhz(Slow - with USB)&rdquo;</li>
-<li>选择 &ldquo;工具 -&gt; Optimize:&ldquo;xxxx&rdquo; -&gt; Smallest (default)&rdquo;</li>
-</ul>
-
-<p>test.ino</p>
-
-<pre><code>// the setup function runs once when you press reset or power the board
-void setup() {
-  // initialize digital pin PB1 as an output.
-  pinMode(PC13, OUTPUT);
-
-  Serial.begin(115200); // Ignored by Maple. But needed by boards using hardware serial via a USB to Serial adaptor
-  Serial.println(&quot;setup&quot;);
+<pre><code>AC5:
+#ifndef __MICROLIB  //不勾选微库的话需要关闭半主从模式
+#pragma import(__use_no_semihosting)
+#endif
+int fputc(int ch, FILE *f){
+  //ch为要发送的字符
+  return HAL_UART_Transmit(&amp;huart1, (uint8_t *)&amp;ch, 1, 100)==HAL_OK?ch:-1;
 }
 
-// the loop function runs over and over again forever
-void loop() {
-  digitalWrite(PC13, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(100);              // wait for a second
-  digitalWrite(PC13, LOW);    // turn the LED off by making the voltage LOW
-  delay(100);              // wait for a second
-
-  Serial.println(&quot;Hello world! This is the debug channel.&quot;);
+AC6:
+#ifndef __MICROLIB //不勾选微库的话需要关闭半主从模式
+__asm(&quot;.global __use_no_semihosting\n\t&quot;)
+#endif
+int fputc(int ch, FILE *f){
+//ch为要发送的字符
+return HAL_UART_Transmit(&amp;huart1, (uint8_t *)&amp;ch, 1, 100)==HAL_OK?ch:-1;
 }
 </code></pre>
 
-<p>编译器链接：<code>C:\Users\Ez\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system\CMSIS\Examples\cmsis_example\gcc_arm</code></p>
+<p>有时我们需要重定向malloc、free等内存分配函数，不使用C库的内存分配，这在使用rtos时很常见，重定向malloc、free的方法为：</p>
 
-<h2 id="stm32-blue-pill-第一次配置-烧录bootloader">STM32 Blue Pill 第一次配置（烧录BootLoader）</h2>
+<pre><code>AC5
+#pragma import(__use_no_heap_region)  //声明不使用C库的堆
 
-<p>烧录bootloader后，初次将硬件连接电脑并打开设备管理器，可看到<code>libusb-win32 devices -&gt; Maple DFU</code>设备，此时硬件板卡状态还处于USB DFU设备类状态。</p>
+void *malloc (size_t size){
+        return OS_Malloc(size);
+}
 
-<p>参考<strong>环境配置</strong> 4. 的步骤，编译并上传，</p>
+void free(void* p){
+        OS_Free(p);
+}
 
-<p>显示上传成功并反馈：</p>
+void *realloc(void* p,size_t want){
+        return OS_Realloc(p,want);
+}
 
-<pre><code>项目使用了 15712 字节，占用了 (23%) 程序存储空间。最大为 65536 字节。
-全局变量使用了3128字节，(15%)的动态内存，余留17352字节局部变量。最大为20480字节。
-maple_loader v0.1
-Resetting to bootloader via DTR pulse
-Reset via USB Serial Failed! Did you select the right serial port?
-Searching for DFU device [1EAF:0003]...
-Assuming the board is in perpetual bootloader mode and continuing to attempt dfu programming...
+void *calloc(size_t nmemb, size_t size){
+        return OS_Calloc(nmemb,size);
+}
 
-Found it!
+AC6:
 
-Opening USB Device 0x1eaf:0x0003...
-Found Runtime: [0x1eaf:0x0003] devnum=1, cfg=0, intf=0, alt=2, name=&quot;STM32duino bootloader v1.0  Upload to Flash 0x8002000&quot;
-Setting Configuration 1...
-Claiming USB DFU Interface...
-Setting Alternate Setting ...
-Determining device status: state = dfuIDLE, status = 0
-dfuIDLE, continuing
-Transfer Size = 0x0400
-bytes_per_hash=314
-Starting download: [##################################################] finished!
-state(8) = dfuMANIFEST-WAIT-RESET, status(0) = No error condition is present
-error resetting after download: usb_reset: could not reset device, win error: ָ�������ڵ��豸��
-Done!
+__asm(&quot;.global __use_no_heap_region\n\t&quot;); //声明不使用C库的堆
+void *malloc (size_t size){
+        return OS_Malloc(size);
+}
 
-Resetting USB to switch back to runtime mode
+void free(void* p){
+        OS_Free(p);
+}
+
+void *realloc(void* p,size_t want){
+        return OS_Realloc(p,want);
+}
+
+void *calloc(size_t nmemb, size_t size){
+        return OS_Calloc(nmemb,size);
+}
 </code></pre>
 
-<p>首次使用Arduino环境，执行以上步骤后：
-设备管理器 端口（COM和LPT） -&gt; Maple Serial (COMx)</p>
+<p>有的时候我们需要重定向C库的文件IO，如在移植LUA解释器时，源码中会调用C库的fopen、fread等函数，需要对这些IO重定向，这里以FATFS为例实现重定向。
+最后给出AC5与AC6均适用的例子，包含重定向printf、重定向malloc、free、重定向io，这里需要注意的是，一定要将前面的fputc注释掉，因为在编译时fputc的优先级要大于_sys_write，这就导致printf、fwirte都会重定向到fputc中。</p>
 
-<h2 id="异常处理">异常处理</h2>
+<pre><code>#include &lt;rt_sys.h&gt;
+#include &lt;stdio.h&gt;
 
-<p>上传失败后提示：</p>
+#define SUPPORT_FILE_SYSTEM                0
+#define SUPPORT_MALLOC                     1
 
-<pre><code>...
-上传项目出错
-Resetting to bootloader via DTR pulse
-Reset via USB Serial Failed! Did you select the right serial port?
-Searching for DFU device [1EAF:0003]...
-Assuming the board is in perpetual bootloader mode and continuing to attempt dfu programming...
+#include &quot;stm32h7xx_hal.h&quot;
+extern UART_HandleTypeDef huart1;
 
-dfu-util - (C) 2007-2008 by OpenMoko Inc.
-Couldn't find the DFU device: [1EAF:0003]
-This program is Free Software and has ABSOLUTELY NO WARRANTY
+//约定返回值为1函数执行成功，0函数执行失败
+#define MESSAGE_PRINT(BUF,LEN)  HAL_UART_Transmit(&amp;huart1, (uint8_t*)BUF,LEN, 100)==HAL_OK
+#define MESSAGE_SCANF(BUF,LEN) 0
+#define OS_Malloc(SIZE)   NULL
+#define OS_Free(P)
+#define OS_Calloc(N,SIZE) NULL
+#define OS_Realloc(P,SIZE) NULL
+
+#if SUPPORT_FILE_SYSTEM
+        #include &quot;ff.h&quot;
+#endif
+
+#if defined(__clang__)
+        __asm(&quot;.global __use_no_semihosting\n\t&quot;);
+        #if SUPPORT_MALLOC
+                __asm(&quot;.global __use_no_heap_region\n\t&quot;);
+        #endif
+#elif defined(__CC_ARM)
+        #pragma import(__use_no_semihosting)
+        #if SUPPORT_MALLOC
+                #pragma import(__use_no_heap_region)
+        #endif
+#endif
+
+#if defined(__MICROLIB)
+        #if defined(__clang__)
+                __asm(&quot;.global __use_full_stdio\n\t&quot;);
+        #elif defined(__CC_ARM)
+                #pragma import(__use_full_stdio)
+        #endif
+#endif
+
+#define STDIN        0
+#define STDOUT        1
+#define STDERR        2
+#define IS_STD(fn)        ((fn)&gt;=0&amp;&amp;(fn)&lt;=2)
+/*
+* These names are used during library initialization as the
+* file names opened for stdin, stdout, and stderr.
+* As we define _sys_open() to always return the same file handle,
+* these can be left as their default values.
+*/
+const char __stdin_name[] = &quot;:tt&quot;;
+const char __stdout_name[] = &quot;:tt&quot;;
+const char __stderr_name[] = &quot;:tt&quot;;
+
+
+FILEHANDLE _sys_open(const char *pcFile, int openmode)
+{
+#if SUPPORT_FILE_SYSTEM
+        BYTE mode;
+        FIL *fp;
+        FRESULT fr;
+#endif
+        if(pcFile==__stdin_name)
+                return STDIN;
+        else if(pcFile==__stdout_name)
+                return STDOUT;
+        else if(pcFile==__stderr_name)
+                return STDERR;
+#if SUPPORT_FILE_SYSTEM
+        fp=malloc(sizeof(FIL));
+        if(fp==NULL){
+                printf(&quot;malloc fail!\r\n&quot;);
+                return -1;
+        }
+        /* http://elm-chan.org/fsw/ff/doc/open.html */
+        if(openmode &amp; OPEN_W){
+                mode = FA_CREATE_ALWAYS | FA_WRITE;
+                if (openmode &amp; OPEN_PLUS)
+                        mode |= FA_READ;
+        }
+        else if(openmode &amp; OPEN_A){
+                mode = FA_OPEN_APPEND | FA_WRITE;
+                if (openmode &amp; OPEN_PLUS)
+                        mode |= FA_READ;
+        }
+        else{
+                mode = FA_READ;
+                if (openmode &amp; OPEN_PLUS)
+                        mode |= FA_WRITE;
+        }
+
+        fr = f_open(fp, pcFile, mode);
+        if (fr == FR_OK)
+                return (FILEHANDLE)fp;
+
+        free(fp);
+#endif
+        return -1;
+}
+
+int _sys_close(FILEHANDLE fh)
+{
+#if SUPPORT_FILE_SYSTEM
+        FRESULT fr;
+#endif
+        if(IS_STD(fh))
+                return 0;
+#if SUPPORT_FILE_SYSTEM
+        fr = f_close((FIL *)fh);
+        if (fr == FR_OK){
+                free((void *)fh);
+                return 0;
+        }
+#endif
+        return -1;
+}
+
+int _sys_write(FILEHANDLE fh, const unsigned char *buf,\
+        unsigned len, int mode)
+{        
+#if SUPPORT_FILE_SYSTEM
+        FRESULT fr;
+        UINT bw;
+#endif
+        if(fh==STDIN)
+                return -1;
+        
+        if(fh==STDOUT||fh==STDERR){
+                return MESSAGE_PRINT(buf,len)?0:-1;
+        }
+#if SUPPORT_FILE_SYSTEM        
+        fr = f_write((FIL *)fh, buf, len, &amp;bw);
+        if (fr == FR_OK)
+                return len - bw;
+#endif        
+        return -1;
+}
+
+int _sys_read(FILEHANDLE fh, unsigned char *buf,\
+        unsigned len, int mode)
+{
+#if SUPPORT_FILE_SYSTEM
+        FRESULT fr;
+        UINT br;
+#endif
+        if(fh==STDOUT||fh==STDERR){
+                return -1;
+        }
+        if(fh==STDIN){
+                return MESSAGE_SCANF(buf,len)?0:-1;
+        }
+#if SUPPORT_FILE_SYSTEM                
+        fr = f_read((FIL *)fh, buf, len, &amp;br);
+        if (fr == FR_OK)
+                return len - br;
+#endif
+        return -1;
+}
+
+void _ttywrch(int ch)
+{
+        char c = ch;
+        MESSAGE_PRINT(&amp;c,1);
+}
+
+int _sys_istty(FILEHANDLE fh)
+{
+        return IS_STD(fh); /* buffered output */
+}
+
+int _sys_seek(FILEHANDLE fh, long pos)
+{
+#if SUPPORT_FILE_SYSTEM
+        FRESULT fr;
+        if(!IS_STD(fh)){
+                fr = f_lseek((FIL *)fh, pos);
+                if (fr == FR_OK)
+                        return 0;
+        }
+#endif
+        return -1;
+}
+
+long _sys_flen(FILEHANDLE fh)
+{
+#if SUPPORT_FILE_SYSTEM
+        if (!IS_STD(fh))
+                return f_size((FIL *)fh);
+#endif
+        return -1;
+}
+int _sys_ensure(FILEHANDLE fh){
+#if SUPPORT_FILE_SYSTEM
+        if (!IS_STD(fh)){
+                if(f_sync((FIL*)fh)==FR_OK)
+                        return 0;
+        }
+#endif
+        return -1;
+}
+void _sys_exit(int code){
+        printf(&quot;This Program unexpected exit! err:%d\r\n&quot;,code);
+        while(1);
+}
+
+int remove(const char *pcPath){
+#if SUPPORT_FILE_SYSTEM
+        if(pcPath==__stdin_name||pcPath==__stdout_name||pcPath==__stderr_name)
+                return -1;
+        if(f_unlink(pcPath)==FR_OK)
+                return 0;
+#endif
+        return -1;
+}
+
+//不清楚如何实现
+int _sys_tmpnam(char * name, int sig, unsigned maxlen){
+        return 0;
+}
+
+//重定向内存分配的相关库函数
+#if SUPPORT_MALLOC
+void *malloc (size_t size){
+        return OS_Malloc(size);
+}
+
+void free(void* p){
+        OS_Free(p);
+}
+
+void *realloc(void* p,size_t want){
+        return OS_Realloc(p,want);
+}
+
+void *calloc(size_t nmemb, size_t size){
+        return OS_Calloc(nmemb,size);
+}
+
+#endif
+
 </code></pre>
-
-<p>出现此问题时，需要在报出错误前手动按一下STM32 Blue Pill复位按键</p>
 
                       
                     </div>
@@ -373,7 +562,7 @@ This program is Free Software and has ABSOLUTELY NO WARRANTY
                         <div>
                             <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
-                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/Arduino_STM32_Get_Start/">http://sunduoze.github.io/post/Arduino_STM32_Get_Start/</a>
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/redefine_fopen_malloc/">http://sunduoze.github.io/post/redefine_fopen_malloc/</a>
                             <br />
                             文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
                         </div>
@@ -427,20 +616,14 @@ This program is Free Software and has ABSOLUTELY NO WARRANTY
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/EMC/" rel="next">
+        <a href="http://sunduoze.github.io/post/Arduino_STM32_Get_Start/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>EMC</span>
+          <span>Arduino_STM32_Get_Start</span>
         </a>
         
       </li>
       <li class="previous">
-        
-        <a href="http://sunduoze.github.io/post/redefine_fopen_malloc/" rel="prev">
-          <i class="fa fa-chevron-left"></i>
-          <strong>Previous Post</strong>
-          <span>Redefine_fopen_malloc</span>
-        </a>
         
       </li>
     </ul>
