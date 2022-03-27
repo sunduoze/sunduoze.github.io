@@ -12,7 +12,7 @@
         }
     }
   </script>
-  <title>Redefine_fopen_malloc - Sun&#39;s Blog</title>
+  <title>Cv_2022 - Sun&#39;s Blog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,26 +22,26 @@
 <meta name="publisher" content="sunduoze">
 <meta name="generator" content="http://gohugo.io/"/>
 
-<meta itemprop="name" content="Redefine_fopen_malloc - Sun&#39;s Blog">
+<meta itemprop="name" content="Cv_2022 - Sun&#39;s Blog">
 <meta itemprop="description" content="Resonance,natural language communication">
 <meta itemprop="image" content="http://sunduoze.github.io//public/sunduoze.png">
 
-<meta property="og:title" content="Redefine_fopen_malloc - Sun&#39;s Blog" />
+<meta property="og:title" content="Cv_2022 - Sun&#39;s Blog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://sunduoze.github.io/post/redefine_fopen_malloc/" />
+<meta property="og:url" content="http://sunduoze.github.io/post/cv_2022/" />
 <meta property="og:image" content="http://sunduoze.github.io//public/sunduoze.png" />
 <meta property="og:description" content="Resonance,natural language communication">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sunduoze">
-<meta name="twitter:title" content="Redefine_fopen_malloc - Sun&#39;s Blog">
+<meta name="twitter:title" content="Cv_2022 - Sun&#39;s Blog">
 <meta name="twitter:description" content="Resonance,natural language communication">
 <meta name="twitter:creator" content="@sunduoze">
 <meta name="twitter:image" content="http://sunduoze.github.io//public/sunduoze.png">
 
   <script> = document.documentElement.className.replace("no-js", "js");</script>
-  <link rel="canonical" href="http://sunduoze.github.io/post/redefine_fopen_malloc/">
-  <link rel='shortlink' href="http://sunduoze.github.io/post/redefine_fopen_malloc/"/>
+  <link rel="canonical" href="http://sunduoze.github.io/post/cv_2022/">
+  <link rel='shortlink' href="http://sunduoze.github.io/post/cv_2022/"/>
   <link rel="shortcut icon" href="http://sunduoze.github.io//public/favicon.ico"/>
   
 <link rel="stylesheet" id="human-style-css" href="http://sunduoze.github.io/wp-content/themes/hueman/style.css" type="text/css" media="all"/>
@@ -212,11 +212,11 @@ code.has-jax {
               <ul class="meta-single group">
                 
                 <li class="category">
-                  <a href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="category tag">笔记</a>
+                  <a href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/" rel="category tag">技术</a>
                 </li>
                 
                 <li class="category">
-                  <a href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/" rel="category tag">技术</a>
+                  <a href="http://sunduoze.github.io/categories/%E6%80%9D%E8%80%83/" rel="category tag">思考</a>
                 </li>
                 
               </ul>
@@ -228,12 +228,12 @@ code.has-jax {
                   class="post type-post status-publish format-standard has-post-thumbnail hentry category-australien tag-bondi-beach tag-city2surf tag-sydney">
                 <div class="post-inner group">
 
-                  <h1 class="post-title">Redefine_fopen_malloc</h1>
+                  <h1 class="post-title">Cv_2022</h1>
 
                   <p class="post-byline">
-                    by  · 2022年03月26日 · 1130 Words ·
-                    ~3min reading time |
-                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/redefine_fopen_malloc.md"
+                    by  · 2022年03月27日 · 1759 Words ·
+                    ~4min reading time |
+                    <a href="https://github.com/sunduoze/sunduoze.github.io/blog/master/content/post/cv_2022.md"
                        target="_blank">Improve on <i class="fa fa-github"></i></a>
                   </p>
 
@@ -242,315 +242,173 @@ code.has-jax {
                   <div class="entry">
                     <div class="entry-inner">
                       
-                      <p><a href="https://www.armbbs.cn/forum.php?mod=viewthread&amp;tid=107885">转载链接，侵删</a></p>
+                      
 
-<p>在我们进行嵌入式开发时，难免要移植一些现有的成熟代码库，这些库大部分要借助C标准库中的输入输出接口、内存分配函数等。这也就产生了库函数重定向的问题。我们最常用重定向库函数为printf函数，重定向的方法为：</p>
+<hr />
 
-<pre><code>AC5:
-#ifndef __MICROLIB  //不勾选微库的话需要关闭半主从模式
-#pragma import(__use_no_semihosting)
-#endif
-int fputc(int ch, FILE *f){
-  //ch为要发送的字符
-  return HAL_UART_Transmit(&amp;huart1, (uint8_t *)&amp;ch, 1, 100)==HAL_OK?ch:-1;
-}
+<hr />
 
-AC6:
-#ifndef __MICROLIB //不勾选微库的话需要关闭半主从模式
-__asm(&quot;.global __use_no_semihosting\n\t&quot;)
-#endif
-int fputc(int ch, FILE *f){
-//ch为要发送的字符
-return HAL_UART_Transmit(&amp;huart1, (uint8_t *)&amp;ch, 1, 100)==HAL_OK?ch:-1;
-}
-</code></pre>
+<hr />
 
-<p>有时我们需要重定向malloc、free等内存分配函数，不使用C库的内存分配，这在使用rtos时很常见，重定向malloc、free的方法为：</p>
+<h2 id="center-taylor-https-taylor-top-xxx工程师-center"><center><a href="https://taylor.top">Taylor</a> | xxx工程师</center></h2>
 
-<pre><code>AC5
-#pragma import(__use_no_heap_region)  //声明不使用C库的堆
+<p><em><center><a href="https://taylor.top">6666@163.com</a> | +86 166 6666 6666 | Guangzhou</center></em></p>
 
-void *malloc (size_t size){
-        return OS_Malloc(size);
-}
+<blockquote>
+<h4 id="教育经历">教育经历</h4>
+</blockquote>
 
-void free(void* p){
-        OS_Free(p);
-}
+<div style="font:bold 30px" >
+    <strong>xxxx大学</strong>
+    <div style="float:right;">
+        2013年09月 - 2017年06月
+    </div>
+</div>
 
-void *realloc(void* p,size_t want){
-        return OS_Realloc(p,want);
-}
+<p><a href="https://docs.qq.com/doc">自动化</a> 本科
+奖项：全国大学生电子设计竞赛四川省一等奖（队长）；全国大学生智能汽车竞赛西部赛区一等奖；校级创新基金项目优秀结题（负责人，学院唯一）。</p>
 
-void *calloc(size_t nmemb, size_t size){
-        return OS_Calloc(nmemb,size);
-}
+<blockquote>
+<h4 id="工作经历">工作经历</h4>
+</blockquote>
 
-AC6:
+<div style="" >
+    <strong>12345股份有限公司</strong>
+    <div style="float:right;">广州</div>
+</div>
 
-__asm(&quot;.global __use_no_heap_region\n\t&quot;); //声明不使用C库的堆
-void *malloc (size_t size){
-        return OS_Malloc(size);
-}
+<div style="" >
+    测试设备开发主管
+    <div style="float:right;">2019年10月 - 2022年03月</div>
+</div>
 
-void free(void* p){
-        OS_Free(p);
-}
+<ul>
+<li>负责测试系统方案设计及器件选型，关键电路模块仿真，固件框架编写，引导团队成员高效且规范的开发；</li>
+<li>预研行业前沿技术，评估多套设计方案，加快项目瓶颈技术的突破，获得3项技术从0到1的突破；</li>
+<li>培训团队成员开发技能，分配项目任务，管理项目开发进度，指导设计及调试工作，促进成员成长；</li>
+<li>负责新产品设计评审及DFM检查，起草相关检查清单，确保产品正常导入，减少后期制造成本；</li>
+<li>协调各方资源，组织跨部门沟通，推进项目进度，实现100%的准时交付。</li>
+</ul>
 
-void *realloc(void* p,size_t want){
-        return OS_Realloc(p,want);
-}
+<div style="" >
+    <strong>23456有限公司（上市公司）</strong>
+    <div style="float:right;">珠海</div>
+</div>
 
-void *calloc(size_t nmemb, size_t size){
-        return OS_Calloc(nmemb,size);
-}
-</code></pre>
+<div style="" >
+    电子工程师
+    <div style="float:right;">2017年07月 - 2019年10月</div>
+</div>
 
-<p>有的时候我们需要重定向C库的文件IO，如在移植LUA解释器时，源码中会调用C库的fopen、fread等函数，需要对这些IO重定向，这里以FATFS为例实现重定向。
-最后给出AC5与AC6均适用的例子，包含重定向printf、重定向malloc、free、重定向io，这里需要注意的是，一定要将前面的fputc注释掉，因为在编译时fputc的优先级要大于_sys_write，这就导致printf、fwirte都会重定向到fputc中。</p>
+<ul>
+<li>根据客户需求，负责硬件方案的立项调研，编写硬件及固件部分的设计方案；</li>
+<li>负责对助理工程师培训工作，对接IC供应商、PCB板厂、SMT贴片厂，确保新人能力可有效提高；</li>
+<li>负责公司项目信息收集和共性分析，负责标准化电路的设计，电路器件选型，加快新项目开发进度，减少物料种类及成本；</li>
+<li>负责产品的器件选型、原理图设计、PCB设计、审核、BOM输出，控制产品研发过程中的成本、风险及质量等；</li>
+<li>负责硬件电路调试和嵌入式软件开发，配合PC软件设计调试，编写硬件及嵌入式软件相关文档，帮助他人快速了解项目。</li>
+</ul>
 
-<pre><code>#include &lt;rt_sys.h&gt;
-#include &lt;stdio.h&gt;
+<blockquote>
+<h4 id="项目经历">项目经历</h4>
+</blockquote>
 
-#define SUPPORT_FILE_SYSTEM                0
-#define SUPPORT_MALLOC                     1
+<div style="" >
+    <strong>精密电流测量模块开发</strong>
+    <div style="float:right;">2021年10月 - 2022年02月</div>
+</div>
 
-#include &quot;stm32h7xx_hal.h&quot;
-extern UART_HandleTypeDef huart1;
+<p>负责人</br></p>
 
-//约定返回值为1函数执行成功，0函数执行失败
-#define MESSAGE_PRINT(BUF,LEN)  HAL_UART_Transmit(&amp;huart1, (uint8_t*)BUF,LEN, 100)==HAL_OK
-#define MESSAGE_SCANF(BUF,LEN) 0
-#define OS_Malloc(SIZE)   NULL
-#define OS_Free(P)
-#define OS_Calloc(N,SIZE) NULL
-#define OS_Realloc(P,SIZE) NULL
+<p>该项目是为设计PCBA功能测试设备的电流检测部分，解决10nA-100A宽动态的高端电流检测问题，设计并实物验证了多种电路方案，运用
+Kalman滤波算法处理数据，评估得出10nA分辨率的低档用于微弱波动电流的测量，2mA分辨率的高档用于正常电流的测量。</p>
 
-#if SUPPORT_FILE_SYSTEM
-        #include &quot;ff.h&quot;
-#endif
+<div style="" >
+    <strong>系统控制板开发</strong>
+    <div style="float:right;">2021年03月 - 2021年08月</div>
+</div>
 
-#if defined(__clang__)
-        __asm(&quot;.global __use_no_semihosting\n\t&quot;);
-        #if SUPPORT_MALLOC
-                __asm(&quot;.global __use_no_heap_region\n\t&quot;);
-        #endif
-#elif defined(__CC_ARM)
-        #pragma import(__use_no_semihosting)
-        #if SUPPORT_MALLOC
-                #pragma import(__use_no_heap_region)
-        #endif
-#endif
+<p>负责人</br></p>
 
-#if defined(__MICROLIB)
-        #if defined(__clang__)
-                __asm(&quot;.global __use_full_stdio\n\t&quot;);
-        #elif defined(__CC_ARM)
-                #pragma import(__use_full_stdio)
-        #endif
-#endif
+<p>公司设备应用控制单元的场景多，为减少重复开发任务及成本，搜集当前和未来可能需求，设计了包含Ethernet、I2C、SPI、UART通讯及独立电源接口、USB升级等功能的通用控制模块，实现了多设备统一的标准化系统控制板。</p>
 
-#define STDIN        0
-#define STDOUT        1
-#define STDERR        2
-#define IS_STD(fn)        ((fn)&gt;=0&amp;&amp;(fn)&lt;=2)
-/*
-* These names are used during library initialization as the
-* file names opened for stdin, stdout, and stderr.
-* As we define _sys_open() to always return the same file handle,
-* these can be left as their default values.
-*/
-const char __stdin_name[] = &quot;:tt&quot;;
-const char __stdout_name[] = &quot;:tt&quot;;
-const char __stderr_name[] = &quot;:tt&quot;;
+<div style="" >
+    <strong>万用表模块开发</strong>
+    <div style="float:right;">2020年10月  - 2020年12月</div>
+</div>
 
+<p>负责人</br></p>
 
-FILEHANDLE _sys_open(const char *pcFile, int openmode)
-{
-#if SUPPORT_FILE_SYSTEM
-        BYTE mode;
-        FIL *fp;
-        FRESULT fr;
-#endif
-        if(pcFile==__stdin_name)
-                return STDIN;
-        else if(pcFile==__stdout_name)
-                return STDOUT;
-        else if(pcFile==__stderr_name)
-                return STDERR;
-#if SUPPORT_FILE_SYSTEM
-        fp=malloc(sizeof(FIL));
-        if(fp==NULL){
-                printf(&quot;malloc fail!\r\n&quot;);
-                return -1;
-        }
-        /* http://elm-chan.org/fsw/ff/doc/open.html */
-        if(openmode &amp; OPEN_W){
-                mode = FA_CREATE_ALWAYS | FA_WRITE;
-                if (openmode &amp; OPEN_PLUS)
-                        mode |= FA_READ;
-        }
-        else if(openmode &amp; OPEN_A){
-                mode = FA_OPEN_APPEND | FA_WRITE;
-                if (openmode &amp; OPEN_PLUS)
-                        mode |= FA_READ;
-        }
-        else{
-                mode = FA_READ;
-                if (openmode &amp; OPEN_PLUS)
-                        mode |= FA_WRITE;
-        }
+<p>该项目是开发电池功能测试设备的万用表模块，解决小体积低成本实现电压电阻测量的问题，采用INA + ADC driver + ADC方案，设计、仿真并实物验证，实现半掌大的体积及电压电阻5位半的指标。</p>
 
-        fr = f_open(fp, pcFile, mode);
-        if (fr == FR_OK)
-                return (FILEHANDLE)fp;
+<div style="" >
+    <strong>两象限电源模块开发</strong>
+    <div style="float:right;">2020年03月 - 2020年10月</div>
+</div>
 
-        free(fp);
-#endif
-        return -1;
-}
+<p>负责人</br></p>
 
-int _sys_close(FILEHANDLE fh)
-{
-#if SUPPORT_FILE_SYSTEM
-        FRESULT fr;
-#endif
-        if(IS_STD(fh))
-                return 0;
-#if SUPPORT_FILE_SYSTEM
-        fr = f_close((FIL *)fh);
-        if (fr == FR_OK){
-                free((void *)fh);
-                return 0;
-        }
-#endif
-        return -1;
-}
+<p>该项目任务是设计电池功能测试设备的主电源，解决激励DUT充放电及触发过流保护功能的问题，使用DC/DC + 分立LDO架构，设计电路、仿真到设计实物验证，评估得出峰值电流50A，正常量程0.5mA精度，&gt;0.5A/us瞬态。</p>
 
-int _sys_write(FILEHANDLE fh, const unsigned char *buf,\
-        unsigned len, int mode)
-{        
-#if SUPPORT_FILE_SYSTEM
-        FRESULT fr;
-        UINT bw;
-#endif
-        if(fh==STDIN)
-                return -1;
-        
-        if(fh==STDOUT||fh==STDERR){
-                return MESSAGE_PRINT(buf,len)?0:-1;
-        }
-#if SUPPORT_FILE_SYSTEM        
-        fr = f_write((FIL *)fh, buf, len, &amp;bw);
-        if (fr == FR_OK)
-                return len - bw;
-#endif        
-        return -1;
-}
+<div style="" >
+    <strong>A客户J系统开发</strong>
+    <div style="float:right;">2018年11月 - 2019年10月</div>
+</div>
 
-int _sys_read(FILEHANDLE fh, unsigned char *buf,\
-        unsigned len, int mode)
-{
-#if SUPPORT_FILE_SYSTEM
-        FRESULT fr;
-        UINT br;
-#endif
-        if(fh==STDOUT||fh==STDERR){
-                return -1;
-        }
-        if(fh==STDIN){
-                return MESSAGE_SCANF(buf,len)?0:-1;
-        }
-#if SUPPORT_FILE_SYSTEM                
-        fr = f_read((FIL *)fh, buf, len, &amp;br);
-        if (fr == FR_OK)
-                return len - br;
-#endif
-        return -1;
-}
+<p>嵌入式软件开发</br></p>
 
-void _ttywrch(int ch)
-{
-        char c = ch;
-        MESSAGE_PRINT(&amp;c,1);
-}
+<p>该项目是与A客户共同开发替代N设备的通用设备，解决原设备价格昂贵效率低的问题，设计的FW包含了多通道外部ADC、MUX、DAC驱动  及抗工频干扰处理、时间及脉宽测量、USB通讯等模块，设计多级log功能方便了调试及维护，设计指令解析表提高了代码可读性及可扩展性， 使用Doxygen完成代码文档编写，运用Git完成代码版本管控，与团队共同完成多倍于N设备效率的系统开发。</p>
 
-int _sys_istty(FILEHANDLE fh)
-{
-        return IS_STD(fh); /* buffered output */
-}
+<blockquote>
+<h4 id="其他">其他</h4>
+</blockquote>
 
-int _sys_seek(FILEHANDLE fh, long pos)
-{
-#if SUPPORT_FILE_SYSTEM
-        FRESULT fr;
-        if(!IS_STD(fh)){
-                fr = f_lseek((FIL *)fh, pos);
-                if (fr == FR_OK)
-                        return 0;
-        }
-#endif
-        return -1;
-}
+<ul>
+<li><strong>技能</strong>：熟练掌握Altium Designer进行电路原理图和PCB的设计，能熟练运用LTspice、TINA软件进行电路仿真，熟练掌握Ethernet、USB、I2C、SPI、UART等接口电路设计，擅长运用模拟器件设计精密信号检测电路，熟练设计DC/DC、LDO电源电路，对EMI有一定的了解。</li>
+<li><strong>兴趣爱好</strong>： 跑步，写博客，游泳，DIY</li>
+</ul>
 
-long _sys_flen(FILEHANDLE fh)
-{
-#if SUPPORT_FILE_SYSTEM
-        if (!IS_STD(fh))
-                return f_size((FIL *)fh);
-#endif
-        return -1;
-}
-int _sys_ensure(FILEHANDLE fh){
-#if SUPPORT_FILE_SYSTEM
-        if (!IS_STD(fh)){
-                if(f_sync((FIL*)fh)==FR_OK)
-                        return 0;
-        }
-#endif
-        return -1;
-}
-void _sys_exit(int code){
-        printf(&quot;This Program unexpected exit! err:%d\r\n&quot;,code);
-        while(1);
-}
+<blockquote>
+<h4 id="专业技能">专业技能</h4>
+</blockquote>
 
-int remove(const char *pcPath){
-#if SUPPORT_FILE_SYSTEM
-        if(pcPath==__stdin_name||pcPath==__stdout_name||pcPath==__stderr_name)
-                return -1;
-        if(f_unlink(pcPath)==FR_OK)
-                return 0;
-#endif
-        return -1;
-}
+<p><strong>硬件开发</strong>：<em>Altium Designer（熟练），LTspice （熟练），TINA（熟练）</em>
+</br></p>
 
-//不清楚如何实现
-int _sys_tmpnam(char * name, int sig, unsigned maxlen){
-        return 0;
-}
+<p><strong>固件开发</strong>：<em>C （熟练）， C++（一般），Keil（熟练），IAR（一般）</em>
+</br></p>
 
-//重定向内存分配的相关库函数
-#if SUPPORT_MALLOC
-void *malloc (size_t size){
-        return OS_Malloc(size);
-}
+<p><strong>软件开发</strong>：<em>Lua（熟练），Python（一般）</em></p>
 
-void free(void* p){
-        OS_Free(p);
-}
+<hr />
 
-void *realloc(void* p,size_t want){
-        return OS_Realloc(p,want);
-}
+<hr />
 
-void *calloc(size_t nmemb, size_t size){
-        return OS_Calloc(nmemb,size);
-}
+<hr />
 
-#endif
+<hr />
 
-</code></pre>
+<p></br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br></p>
+
+<h2 id="项目技术是关键-难度和深度">项目技术是关键，难度和深度</h2>
+
+<ul>
+<li><p>技术经历</p>
+
+<pre><code>不要单纯列出一堆技术名词，而是明确自己做过的事情，这样面试官比较容易对我的技术有个初步判断 
+</code></pre></li>
+
+<li><p>STAR 法则: Situation Task Action Result</p></li>
+</ul>
+
+<!-- <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html> -->
 
                       
                     </div>
@@ -562,7 +420,7 @@ void *calloc(size_t nmemb, size_t size){
                         <div>
                             <p style="margin-top:0px;">作者：<a target="_blank" href="http://enzo-sun.top/">EnzoSun</a>
                             <br />微信关注：勿忘初兴
-                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/redefine_fopen_malloc/">http://sunduoze.github.io/post/redefine_fopen_malloc/</a>
+                            <br />本文出处：<a target="_blank" href="http://sunduoze.github.io/post/cv_2022/">http://sunduoze.github.io/post/cv_2022/</a>
                             <br />
                             文章版权归本人所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。 </p>
                         </div>
@@ -616,20 +474,14 @@ void *calloc(size_t nmemb, size_t size){
     <ul class="post-nav group">
       <li class="next">
         
-        <a href="http://sunduoze.github.io/post/Arduino_STM32_Get_Start/" rel="next">
+        <a href="http://sunduoze.github.io/post/redefine_fopen_malloc/" rel="next">
           <i class="fa fa-chevron-right"></i>
           <strong>Next post</strong>
-          <span>Arduino_STM32_Get_Start</span>
+          <span>Redefine_fopen_malloc</span>
         </a>
         
       </li>
       <li class="previous">
-        
-        <a href="http://sunduoze.github.io/post/cv_2022/" rel="prev">
-          <i class="fa fa-chevron-left"></i>
-          <strong>Previous Post</strong>
-          <span>Cv_2022</span>
-        </a>
         
       </li>
     </ul>
