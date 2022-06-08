@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 26 Mar 2022 22:26:22 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 May 2022 22:06:23 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/%E7%AC%94%E8%AE%B0/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>EE杂记整理</title>
+      <link>http://sunduoze.github.io/post/EE%E6%9D%82%E8%AE%B0%E6%95%B4%E7%90%86/</link>
+      <pubDate>Sun, 22 May 2022 22:06:23 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/EE%E6%9D%82%E8%AE%B0%E6%95%B4%E7%90%86/</guid>
+      <description>EE杂记整理 电容 聚丙烯电容 负温度系数 高电流场合使用钽电容务必要十分注意 聚丙乙烯 特氟龙 电介质较佳 薄膜电容损耗因子&amp;lt;0.1% ! 无论快速or</description>
+    </item>
     
     <item>
       <title>Redefine_fopen_malloc</title>
@@ -217,7 +226,7 @@
       <pubDate>Sun, 06 Jun 2021 16:53:33 +0800</pubDate>
       
       <guid>http://sunduoze.github.io/post/markdown%E4%B9%8B%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
-      <description>符号 markdown $\pm$ \$\pm$ $\times$ \$\times$ $\cdot$ \$\cdot$ $\div$ \$\div$ $\sum$ \$\sum$ $\neq$ \$\neq$ $\leq$ \$\leq$ $\geq$ \$\geq$ $\bigoplus$ \$\bigoplus$ $\int$ \$\int$ $\infty$ \$\infty$ $\Rightarrow$ \$\Rightarrow$ $\rightarrow$ \$\rightarrow$ $\because$ \$\because$ $\therefore$ \$\therefore$ 公式 markdown $y = k \times x + b$ \$y = k \times x + b$ $k = \frac{y_2-y_1}{x_2-x_1}$ \$k = \frac{y_2-y_1}{x_2-x_1}$ $num = \sum_{i=0}^{t}(\sigma_i^2 - \overline{X})$ \$num = \sum_{i=0}^{t}(\sigma_i^2 - \overline{X})$ $e^{2\pi+\tau} \cdots$ \$e^{2\pi+\tau} \cdots$</description>
+      <description>符号 markdown $\pm$ \$\pm$ $\times$ \$\times$ $\cdot$ \$\cdot$ $\div$ \$\div$ $\sum$ \$\sum$ $\neq$ \$\neq$ $\leq$ \$\leq$ $\geq$ \$\geq$ $\bigoplus$ \$\bigoplus$ $\int$ \$\int$ $\infty$ \$\infty$ $\Rightarrow$ \$\Rightarrow$ $\rightarrow$ \$\rightarrow$ $\because$ \$\because$ $\therefore$ \$\therefore$ 字母 渲染 Markdown α $\alpha$ \$\alpha$ β $\beta$ \$\beta$ γ $\gamma$ \$\gamma$ Γ $\Gamma$ \$\Gamma$ δ $\delta$ \$\delta$ Δ $\Delta$ \$\Delta$ ϵ $\epsilon$ \$\epsilon$ ε $\varepsilon$ \$\varepsilon$ ζ $\zeta$ \$\zeta$ η $\eta$ \$\eta$ θ $\theta$</description>
     </item>
     
     <item>

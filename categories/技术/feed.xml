@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 27 Mar 2022 21:45:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 May 2022 22:06:23 +0800</lastBuildDate>
     
 	<atom:link href="http://sunduoze.github.io/categories/%E6%8A%80%E6%9C%AF/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>EE杂记整理</title>
+      <link>http://sunduoze.github.io/post/EE%E6%9D%82%E8%AE%B0%E6%95%B4%E7%90%86/</link>
+      <pubDate>Sun, 22 May 2022 22:06:23 +0800</pubDate>
+      
+      <guid>http://sunduoze.github.io/post/EE%E6%9D%82%E8%AE%B0%E6%95%B4%E7%90%86/</guid>
+      <description>EE杂记整理 电容 聚丙烯电容 负温度系数 高电流场合使用钽电容务必要十分注意 聚丙乙烯 特氟龙 电介质较佳 薄膜电容损耗因子&amp;lt;0.1% ! 无论快速or</description>
+    </item>
     
     <item>
       <title>Cv_2022</title>
