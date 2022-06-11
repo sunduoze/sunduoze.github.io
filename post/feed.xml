@@ -216,8 +216,7 @@
       <pubDate>Sun, 06 Jun 2021 21:19:19 +0800</pubDate>
       
       <guid>http://sunduoze.github.io/post/markdown%E4%B9%8Bflow_and_wavedrom/</guid>
-      <description>{ signal : [ { name: &#34;clk&#34;, wave: &#34;p......&#34; }, { name: &#34;bus&#34;, wave: &#34;x.34.5x&#34;, data: &#34;head body tail&#34; }, { name: &#34;wire&#34;, wave: &#34;0.1..0.&#34; }, ]}  { signal : [ { name: &amp;quot;clk&amp;quot;, wave: &amp;quot;p......&amp;quot; }, { name: &amp;quot;bus&amp;quot;, wave: &amp;quot;x.34.5x&amp;quot;, data: &amp;quot;head body tail&amp;quot; }, { name: &amp;quot;wire&amp;quot;, wave: &amp;quot;0.1..0.&amp;quot; }, ]}  blog format:
-&amp;lt;script type=&amp;quot;WaveDrom&amp;quot;&amp;gt; { signal : [ { name: &amp;quot;clk&amp;quot;, wave: &amp;quot;p......&amp;quot; }, { name: &amp;quot;bus&amp;quot;, wave: &amp;quot;x.</description>
+      <description>{ signal : [ { name: &#34;clk&#34;, wave: &#34;p......&#34; }, { name: &#34;bus&#34;, wave: &#34;x.34.5x&#34;, data: &#34;head body tail&#34; }, { name: &#34;wire&#34;, wave: &#34;0.1..0.&#34; }, ]} { signal : [ { name: &amp;quot;clk&amp;quot;, wave: &amp;quot;p......&amp;quot; }, { name: &amp;quot;bus&amp;quot;, wave: &amp;quot;x.34.5x&amp;quot;, data: &amp;quot;head body tail&amp;quot; }, { name: &amp;quot;wire&amp;quot;, wave: &amp;quot;0.1..0.&amp;quot; }, ]} blog format: &amp;lt;script type=&amp;quot;WaveDrom&amp;quot;&amp;gt; { signal : [ { name: &amp;quot;clk&amp;quot;, wave: &amp;quot;p......&amp;quot; }, { name:</description>
     </item>
     
     <item>
